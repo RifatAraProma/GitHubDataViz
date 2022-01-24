@@ -1,0 +1,100 @@
+
+body {
+	font-family: -apple-system,Helvetica Neue,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,sans-serif;
+	font-size: 14px;
+}
+
+h1 {
+	font-size: 22px;
+	padding: 0;
+	margin: 0 0 10px;
+}
+
+h2 {
+	font-size: 20px;
+	padding: 0;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+h3 {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 0;
+	margin-top: 30px;
+}
+
+.default_svg {
+	border: 2px solid lightgray;
+	margin-top: 10px;
+    width: 98%;
+    height: 700px;
+}
+
+.page {
+	margin-left: 15px;
+	padding-top: 10px;
+}
+
+.tick text{
+	color: #8E8883;
+	font-size: 12px;
+}
+
+.tick line{
+	stroke: #C0C0BB;
+}
+
+.axis-label{
+	fill: #8E8883;
+	font-size: 16px;
+}
+
+.line-path-setosa {
+	fill: none;
+	stroke: #9ACD32;
+	stroke-width: 5;
+	stroke-linejoin: round;
+  }
+
+.line-path-versicolor {
+	fill: none;
+	stroke: #FFA500;
+	stroke-width: 5;
+	stroke-linejoin: round;
+  }
+
+.line-path-virginica {
+	fill: none;
+	stroke: #9500ff;
+	stroke-width: 5;
+	stroke-linejoin: round;
+  }
+
+.commit {
+	background-color: #C0C0BB;
+	margin: 10px;
+}
+
+.collapsible {
+	background-color: #777;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+	background-color: #555;
+  }
+  
+  .content {
+	padding: 0 18px;
+	display: none;
+	overflow: hidden;
+	background-color: #f1f1f1;
+  }

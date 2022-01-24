@@ -19,7 +19,9 @@ def write_issue_to_csv(issue_list):
     for issue in issue_list:
         createdTimeUTC = convert_date_to_utc(issue.created_date)
         closedTimeUTC = convert_date_to_utc(issue.closed_date)
-        writer.writerow([issue.title, createdTimeUTC, closedTimeUTC])
+        createdTime = issue.created_date
+        closedTime = issue.closed_date
+        writer.writerow([issue.title, createdTimeUTC, closedTimeUTC, createdTime, closedTime])
 
     csvWriter.close()
 
@@ -41,7 +43,7 @@ def get_issues(url):
 
     issue_list = []
 
-    issue_json_list = response.json();
+    issue_json_list = response.json()
 
     for i in issue_json_list:
         title = i['title']
@@ -106,6 +108,7 @@ def get_commits(url):
     for i in commit_json_list:
         ref = i["sha"]
         filesUpdated = get_updated_files_by_commit(url + "/" + ref)
+        #filesUpdated = []
         commit_json = i["commit"]
         msg = commit_json["message"]
         date = commit_json["committer"]["date"]
@@ -113,6 +116,7 @@ def get_commits(url):
         commit_list.append(commit)
 
     return commit_list
+
 
 ##There is a limit on requests. you can't send more than 100 requests per repo per hour
 

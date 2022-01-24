@@ -1,0 +1,172 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+
+<head>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+    <script src="https://d3js.org/d3.v5.js"
+        integrity="sha384-qbNa7U27VV0Cghe/43y8zEMkmA5M4VxV6MI0k0vdVJKTrBoT2SnBqwccpD0vX+Is"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!--*******************************************-->
+    <!--***** IMPORT EXTERNAL JAVASCRIPT CODE *****-->
+    <script src="js/bar_chart.js"></script>
+    <!--*******************************************-->
+
+    <!-- 
+    <title>CAP 4744/5745 - Interactive Data Visualization - Project 3</title> -->
+
+</head>
+
+<body>
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Project 3: Rifat Ara Proma</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="titanic.html">Titanic Passenger List</a></li>
+            <li class="nav-item"><a class="nav-link" href="health_stroke.html">Stroke Prediction</a></li>
+        </ul>
+    </div>
+</nav> -->
+
+    <div class="page">
+        <svg id="vis_1" name="vis_1" class="default_svg"></svg>
+        <div id="commits"></div>
+        <svg id="vis_2" name="vis_2" class="default_svg"></svg>
+    </div>
+
+
+    <script>
+
+        /*************************************************/
+        /* EXAMPLE CODE FOR LOADING AND VISUALIZING DATA */
+
+        let data = null;
+        let vis_1 = null;
+        let commits = null;
+        let commit_div = document.getElementById('commits');
+        let vis_2 = null;
+        let updated_files_summary = [];
+
+        d3.csv("data/commit_details.csv", (row, i) => {
+            return {
+                message: row.message,
+                created: row.created,
+                files_updated: row.files_updated,
+            };
+        }).then(rows => {
+
+            commits = rows;
+            let file_list = [];
+            let counts = {};
+
+            commits.forEach((commit) => {
+                let files = commit.files_updated.replace("[", "").replace("]", "").replaceAll("'", "").split(',');
+                files.forEach(file => {
+                    file_list.push(file.trim());
+                });
+            });
+
+            file_list.forEach(file => {
+                counts[file] = counts[file] ? counts[file] + 1 : 1;
+            });
+
+            console.log(counts);
+
+            d3.csv("data/issue_details.csv", (row, i) => {
+                return {
+                    title: row.title,
+                    created: row.created,
+                    closed: row.closed,
+                };
+            }).then(rows => {
+                data = rows;
+
+                let title_vis1 = "Issues with their creation and closing dates";
+                let x_title_vis1 = "Date";
+                vis_1 = load_timeline("#vis_1", data, title_vis1, "created", "closed", "title", x_title_vis1);
+
+            }).catch(error => {
+                console.log(error);
+            });
+
+        }).catch(error => {
+            console.log(error);
+        });
+
+
+        function showCommitBetween(time1, time2) {
+            commit_div.innerHTML = '';
+            var i = 0;
+            commits.forEach(commit => {
+                if (commit.created >= time1 && commit.created <= time2) {
+                    commit_div.innerHTML += '<button type="button" class="collapsible">' + commit.message + '</button><div class="content" id=' + i + '></div>';
+
+                    // delete the first and last square bracket and also the first quotes
+                    let files = commit.files_updated.replace("[", "").replace("]", "").replaceAll("'", "").split(',');
+                    files.forEach(file => {
+                        document.getElementById(i).innerHTML += '<p>' + file + '</p> </div>'
+                    })
+                }
+
+                i++;
+            });
+
+            var coll = document.getElementsByClassName("collapsible");
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        }
+
+        function getCommitBetween(time1, time2) {
+            var commitBetweenInterval = [];
+            commits.forEach(commit => {
+
+                if (commit.created >= time1 && commit.created <= time2) {
+                    commitBetweenInterval.push(commit);
+                }
+
+            });
+
+            return commitBetweenInterval;
+        }
+
+    </script>
+
+</body>
+
+</html>

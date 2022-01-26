@@ -5,11 +5,8 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
       let chart_width = $(svg_name).width();
       let chart_height = $(svg_name).height();
 
-      // chart.attr("viewBox", [0, 0, chart_width, chart_height])
-      // .call(zoom);
 
       // Margins, Height & Width
-      const margin = { top: 50, right: 100, bottom: 77, left: 90 };
       const innerWidth = chart_width - margin.left - margin.right;
       const innerHeight = chart_height - margin.top - margin.bottom;
 
@@ -62,7 +59,7 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
             .data(data).enter()
             .append("rect")
             .attr("class", "issue_duration_bars")
-            .attr("fill", "#ff5959")
+            .attr("fill", "cornflowerblue")
             .attr("x", d => xScale(d[x1_field]))
             .attr("y", d => yScale(d[y_field]))
             .attr("rx", 6)
@@ -110,21 +107,22 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
 
 
       // Generate bars for commits
-      var color = d3.scaleOrdinal()
-      .domain([0,1,2,3])
-      .range(['#11144c', '#3a9679', '#fabc60', '#8d3434']);
+      const COLOR_PALETTE = ["#FFFF54", "#EF8432", "#EA3323"];
       var i = 0;
       var commitRect = g.selectAll("rect_commit")
                         .data(data).enter();
       data.forEach(d => {
             let commits = getCommitBetween(d.created, d.closed); 
             let offset = (xScale(d[x2_field]) - xScale(d[x1_field])) / commits.length;  
-            let delX = 0;          
+            let delX = 0;
+            var color = d3.scaleLinear()
+                              .domain(Array.from(Array(commits.length).keys()))
+                              .range(COLOR_PALETTE);         
             commits.forEach(c =>{
                         
                   commitRect.append("rect")
                         .attr("class", "commit_bars" + i)
-                        .attr("fill", color(commits.indexOf(c) % 4) )
+                        .attr("fill", color(commits.indexOf(c)) )
                         .attr("x", xScale(d[x1_field]) + delX)
                         .attr("y", yScale(d[y_field]) + 15)
                         .attr("rx", 6)

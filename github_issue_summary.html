@@ -76,7 +76,7 @@
         d3.csv("data/commit_details.csv", (row, i) => {
             return {
                 message: row.message,
-                created: row.created,
+                created: row.created * 1000, // millisecond
                 files_updated: row.files_updated,
             };
         }).then(rows => {
@@ -101,8 +101,8 @@
             d3.csv("data/issue_details.csv", (row, i) => {
                 return {
                     title: row.title,
-                    created: row.created,
-                    closed: row.closed,
+                    created: row.created * 1000, // millisec
+                    closed: row.closed * 1000,
                 };
             }).then(rows => {
                 data = rows;

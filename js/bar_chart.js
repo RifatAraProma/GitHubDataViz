@@ -7,6 +7,7 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
 
 
       // Margins, Height & Width
+      const margin = { top: 50, right: 100, bottom: 77, left: 90 };
       const innerWidth = chart_width - margin.left - margin.right;
       const innerHeight = chart_height - margin.top - margin.bottom;
 
@@ -17,9 +18,12 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
             x_min = Math.min(x_min, data[i].created)
       }
 
+      // Date format
+      //let parseDate = d3.time.format("%Y-%m-%d").parse;
+
       // Scales & Axis
-      const xScale = d3.scaleLinear()
-            .domain([1637650000, 1638200000])
+      const xScale = d3.scaleTime()
+            .domain([new Date(x_min), new Date(x_max)])
             .range([0, innerWidth]);
 
       const yScale = d3.scaleBand()
@@ -39,9 +43,10 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
 
       const xAxis = d3.axisBottom(xScale)
             .tickSize(-innerHeight)
-            .tickValues(xScale.ticks().concat(xScale.domain()));
+            .tickValues(xScale.ticks())
+            .tickFormat(d3.timeFormat("%b %d"));
 
-      const xAxisG = g.append("g").call(xAxis)
+      const xAxisG = g.append("g").attr("class", "x-axis").call(xAxis)
             .attr("transform", `translate(0,${innerHeight})`);
 
 
@@ -69,28 +74,28 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
             .on('click', function (d) {
                   showCommitBetween(d.created, d.closed);
                   // focusing the selected bar and reducing opacity of all other bars
-                  if(selectedBar != this){
+                  if (selectedBar != this) {
                         g.selectAll("rect[class='issue_duration_bars']")
                               .style("opacity", 0.5)
                               .attr("height", yScale.bandwidth());
-                        
+
                         d3.select(this)
                               .style("opacity", 1)
-                              .attr("height", yScale.bandwidth() * 2 );
+                              .attr("height", yScale.bandwidth() * 2);
                         //g.selectAll("rect[class='commit_bars']").style("visibility", "visible");
-                        data.forEach(item =>{
-                              g.selectAll("rect[class='commit_bars"+ data.indexOf(item) +"']").style("visibility", "hidden");
+                        data.forEach(item => {
+                              g.selectAll("rect[class='commit_bars" + data.indexOf(item) + "']").style("visibility", "hidden");
                         })
-                        g.selectAll("rect[class='commit_bars" + data.indexOf(d) +"']").style("visibility", "visible");
+                        g.selectAll("rect[class='commit_bars" + data.indexOf(d) + "']").style("visibility", "visible");
                         // g.selectAll("rect[id='"+ d.title + "']").style("visibility", "visible");
                         selectedBar = this;
                   }
-                  else{
+                  else {
                         g.selectAll("rect[class='issue_duration_bars']")
                               .style("opacity", 1)
                               .attr("height", yScale.bandwidth());;
-                        data.forEach(item =>{
-                              g.selectAll("rect[class='commit_bars"+ data.indexOf(item) +"']").style("visibility", "hidden");
+                        data.forEach(item => {
+                              g.selectAll("rect[class='commit_bars" + data.indexOf(item) + "']").style("visibility", "hidden");
                         });
 
                         selectedBar = null;
@@ -101,7 +106,7 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
             })
             .append("title")
             .text(function (d) {
-                  return d[y_field];
+                  return d[y_field] + "\ncreated: " + new Date(d[x1_field]) + "\nclosed; " + new Date(d[x2_field]);
             });
 
 
@@ -110,19 +115,19 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
       const COLOR_PALETTE = ["#FFFF54", "#EF8432", "#EA3323"];
       var i = 0;
       var commitRect = g.selectAll("rect_commit")
-                        .data(data).enter();
+            .data(data).enter();
       data.forEach(d => {
-            let commits = getCommitBetween(d.created, d.closed); 
-            let offset = (xScale(d[x2_field]) - xScale(d[x1_field])) / commits.length;  
+            let commits = getCommitBetween(d.created, d.closed);
+            let offset = (xScale(d[x2_field]) - xScale(d[x1_field])) / commits.length;
             let delX = 0;
             var color = d3.scaleLinear()
-                              .domain(Array.from(Array(commits.length).keys()))
-                              .range(COLOR_PALETTE);         
-            commits.forEach(c =>{
-                        
+                  .domain(Array.from(Array(commits.length).keys()))
+                  .range(COLOR_PALETTE);
+            commits.forEach(c => {
+
                   commitRect.append("rect")
                         .attr("class", "commit_bars" + i)
-                        .attr("fill", color(commits.indexOf(c)) )
+                        .attr("fill", color(commits.indexOf(c)))
                         .attr("x", xScale(d[x1_field]) + delX)
                         .attr("y", yScale(d[y_field]) + 15)
                         .attr("rx", 6)
@@ -131,7 +136,7 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
                         .attr("height", yScale.bandwidth())
                         .style("visibility", "hidden")
                         .append("title")
-                        .text(c.message); 
+                        .text(c.message);
                   delX += offset;
             })
             i++;

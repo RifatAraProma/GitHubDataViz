@@ -10,8 +10,15 @@
 
 
     <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -29,9 +36,14 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
+
+    <!-- <script type="text/javascript" src="src/jquery.multiselect.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
     <!--*******************************************-->
     <!--***** IMPORT EXTERNAL JAVASCRIPT CODE *****-->
     <script src="js/bar_chart.js"></script>
+    <script src="js/donut_chart.js"></script>
     <!--*******************************************-->
 
     <!-- 
@@ -57,46 +69,88 @@
     <div class="page">
         <svg id="vis_1" name="vis_1" class="default_svg"></svg>
         <div id="commits"></div>
-        <svg id="vis_2" name="vis_2" class="default_svg"></svg>
+        <div class="default_svg" style="height: 500px;">
+            <div>
+                <select id="updateCountSelectButton" class="js-select2" onchange="updateLineCountChange()"
+                    multiple="multiple">
+                </select>
+            </div>
+            <div id="vis_2" style="text-align:center;"></div>
+            <!-- <svg id="vis_2" name="vis_2" class="default_svg" style="border: none;"></svg> -->
+        </div>
     </div>
 
 
     <script>
-
-        /*************************************************/
-        /* EXAMPLE CODE FOR LOADING AND VISUALIZING DATA */
-
         let data = null;
         let vis_1 = null;
         let commits = null;
         let commit_div = document.getElementById('commits');
         let vis_2 = null;
         let updated_files_summary = [];
+        let file_update_freq = [];
+
 
         d3.csv("data/commit_details.csv", (row, i) => {
             return {
                 message: row.message,
                 created: row.created * 1000, // millisecond
                 files_updated: row.files_updated,
+                diff: row.diff
             };
         }).then(rows => {
 
             commits = rows;
             let file_list = [];
-            let counts = {};
-
+            let file_update_count = {};
             commits.forEach((commit) => {
                 let files = commit.files_updated.replace("[", "").replace("]", "").replaceAll("'", "").split(',');
+                let files_diff = getFilesDiffList(commit.diff);
                 files.forEach(file => {
-                    file_list.push(file.trim());
+                    let fileName = file.trim();
+
+                    if (!file_list.find(file => file == fileName)){
+                        file_list.push(fileName);
+                    }
+                    
+                    files_diff.forEach(file_diff => {
+                        if (file_update_count[fileName] == undefined) {
+                            file_update_count[fileName] = 0;
+                        }
+                        if (file_diff.name == fileName) {
+                            file_update_count[fileName] += file_diff.added_lines.length + file_diff.deleted_lines.length;
+                        }
+                    });
                 });
             });
 
-            file_list.forEach(file => {
-                counts[file] = counts[file] ? counts[file] + 1 : 1;
+            var dropDownForFiles = document.getElementById("updateCountSelectButton");
+
+            file_list.forEach(file =>{
+                file_update_freq.push({name: file, update_freq: file_update_count[file]});
             });
 
-            console.log(counts);
+            file_update_freq.sort((a, b) => (a.update_freq > b.update_freq) ? -1 : 1);
+
+            let top_five = [];
+            let i = 0;
+            file_update_freq.forEach(entry =>{
+                var option = document.createElement("option");
+                option.value = i; // setting index of the entry as value to access it easy later on
+                option.text = entry.name;
+                dropDownForFiles.appendChild(option);
+                
+                
+                if (top_five.length != 5){
+                    top_five.push(i);
+                }
+                
+                i++;
+            });
+
+            $("#updateCountSelectButton").val(top_five);
+            //show top 5 most updated files
+            vis_2 = load_file_update_summary("#vis_2", file_update_freq.slice(0, 5));
 
             d3.csv("data/issue_details.csv", (row, i) => {
                 return {
@@ -126,11 +180,18 @@
             commits.forEach(commit => {
                 if (commit.created >= time1 && commit.created <= time2) {
                     commit_div.innerHTML += '<button type="button" class="collapsible">' + commit.message + '</button><div class="content" id=' + i + '></div>';
-
                     // delete the first and last square bracket and also the first quotes
-                    let files = commit.files_updated.replace("[", "").replace("]", "").replaceAll("'", "").split(',');
+                    let files = commit.files_updated.replace("[", "").replace("]", "").replaceAll("'", "").split(', ');
+                    let files_diff = getFilesDiffList(commit.diff);
                     files.forEach(file => {
-                        document.getElementById(i).innerHTML += '<p>' + file + '</p> </div>'
+                        document.getElementById(i).innerHTML += '<p>' + file;
+
+                        files_diff.forEach(diff => {
+                            if (diff.name == file) {
+                                document.getElementById(i).innerHTML += "Added lines: " + diff.added_lines.length
+                                document.getElementById(i).innerHTML += " Deleted lines: " + diff.deleted_lines.length + '</p> </div>'
+                            }
+                        });
                     })
                 }
 
@@ -164,6 +225,41 @@
 
             return commitBetweenInterval;
         }
+
+        function getFilesDiffList(diffString) {
+            //console.log(diffString);
+            diff = diffString.replace('[', '');
+            indexOfLastSquareBracket = diff.lastIndexOf(']');
+            diff = diff.substr(0, indexOfLastSquareBracket);
+            diff = diff.split("),");
+            files_diff_list = [];
+
+            diff.forEach((file => {
+                // console.log(file);
+                file = file.replace('(', '').replace(')', '').split(', [');
+                files_diff = { name: "", deleted_lines: [], added_lines: [] };
+                files_diff.name = file[0].replaceAll("'", '').replace(' ', '');
+                files_diff.deleted_lines = file[1].replace(']', '').split(', ');
+                files_diff.added_lines = file[2].replace(']', '').split(', ');
+                files_diff_list.push(files_diff);
+            }));
+
+            return files_diff_list;
+        }
+
+        function updateLineCountChange() {
+            let selected = $('#updateCountSelectButton').select2('data');
+            let data = [];
+            selected.forEach(selection =>{
+                data.push(file_update_freq[selection.id])
+            })
+            vis_2 = null;
+            vis_2 = load_file_update_summary("#vis_2", data);
+        }
+
+        //$('#updateCountSelectButton').select2().find('option').prop('selected', 'selected').end().select2();
+        $('#updateCountSelectButton').select2({placeholder: "Select files"});
+        // $('#updateCountSelectButton').val(file_list);
 
     </script>
 

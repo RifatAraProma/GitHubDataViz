@@ -1,9 +1,11 @@
 function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_title) {
 
       // General Variables
-      let chart = d3.select(svg_name);
       let chart_width = $(svg_name).width();
       let chart_height = $(svg_name).height();
+      let chart = d3.select(svg_name).append("svg").attr("viewBox", [0, 0, chart_width, chart_height])
+                  .attr("width", chart_width)
+                  .attr("height", chart_height);
 
 
       // Margins, Height & Width
@@ -31,7 +33,7 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
             .range([0, innerHeight])
             .padding(0.2);
 
-      const g = chart.append("g")
+      const g = chart.call(d3.zoom().on("zoom", zoomed)).append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`);
 
 
@@ -112,7 +114,9 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
 
 
       // Generate bars for commits
-      const COLOR_PALETTE = ["#FFFF54", "#EF8432", "#EA3323"];
+      const COLOR_PALETTE = ["#68FF42", "#FFFF54", "#EF8432", "#EA3323",
+                              "#8C1A4B", "#8C1A4B", "#721324", "#721324",
+                              "#721324", "#721324"];
       var i = 0;
       var commitRect = g.selectAll("rect_commit")
             .data(data).enter();
@@ -121,8 +125,8 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
             let offset = (xScale(d[x2_field]) - xScale(d[x1_field])) / commits.length;
             let delX = 0;
             var color = d3.scaleLinear()
-                  .domain(Array.from(Array(commits.length).keys()))
-                  .range(COLOR_PALETTE);
+                              .domain(Array.from(Array(commits.length).keys()))
+                              .range(COLOR_PALETTE);
             commits.forEach(c => {
 
                   commitRect.append("rect")
@@ -142,7 +146,18 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
             i++;
       });
 
-
+      var shadowScale = xScale.copy();
+      
+      function zoomed () {
+            //chart.attr("transform", d3.event.transform);
+            
+            xScale.domain(d3.event.transform.rescaleX(shadowScale).domain());
+            g.selectAll("rect[class='issue_duration_bars']")
+                  .attr("x", d => xScale(d[x1_field]))
+                  .attr("width", d => xScale(d[x2_field]) - xScale(d[x1_field]));
+            xAxisG.call(xAxis);
+            console.log("zoom");
+      };
 
       return {
             chart: chart,

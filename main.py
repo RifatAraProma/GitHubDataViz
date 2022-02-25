@@ -62,7 +62,7 @@ def get_issues(url):
 
 
 def write_commit_to_csv(commit_list):
-    csvWriter = open('commit_details_new.csv', 'w', newline='')
+    csvWriter = open('commit_details.csv', 'w', newline='')
     writer = csv.writer(csvWriter)
     writer.writerow(["Commit Message", "Created Date (UTC Timestamp)", "Files Updated", "Diff"])
 
@@ -168,8 +168,8 @@ def get_commits(url):
 
 # There is a limit on requests. you can't send more than 100 requests per repo per hour
 
-list_of_issues = get_issues("https://api.github.com/repos/freeCodeCamp/freeCodeCamp/issues?state=closed")
-write_issue_to_csv(list_of_issues)
+# list_of_issues = get_issues("https://api.github.com/repos/freeCodeCamp/freeCodeCamp/issues?state=closed")
+# write_issue_to_csv(list_of_issues)
 
 #list_of_commits = get_commits("https://api.github.com/repos/freeCodeCamp/freeCodeCamp/commits")
 # print(list_of_commits)

@@ -53,19 +53,6 @@
 
 <body>
 
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.html">Project 3: Rifat Ara Proma</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="titanic.html">Titanic Passenger List</a></li>
-            <li class="nav-item"><a class="nav-link" href="health_stroke.html">Stroke Prediction</a></li>
-        </ul>
-    </div>
-</nav> -->
-
     <div class="page">
         <svg id="vis_1" name="vis_1" class="default_svg"></svg>
         <div id="commits"></div>
@@ -76,7 +63,6 @@
                 </select>
             </div>
             <div id="vis_2" style="text-align:center;"></div>
-            <!-- <svg id="vis_2" name="vis_2" class="default_svg" style="border: none;"></svg> -->
         </div>
     </div>
 
@@ -149,8 +135,21 @@
             });
 
             $("#updateCountSelectButton").val(top_five);
+
+            let data_to_show = [];
+            let freqCounter = 0;
+            file_update_freq.forEach((file) =>{
+                if(data_to_show.length < 5){
+                    data_to_show.push(file);
+                }
+                else{
+                    freqCounter += file.update_freq;
+                }
+            });
+
+            data_to_show.push({name: "other", update_freq: freqCounter});
             //show top 5 most updated files
-            vis_2 = load_file_update_summary("#vis_2", file_update_freq.slice(0, 5));
+            vis_2 = load_file_update_summary("#vis_2", data_to_show);
 
             d3.csv("data/issue_details.csv", (row, i) => {
                 return {
@@ -252,7 +251,14 @@
             let data = [];
             selected.forEach(selection =>{
                 data.push(file_update_freq[selection.id])
+            });
+            let freqCounter = 0;
+            file_update_freq.forEach((file) =>{
+                if(data.find(({ name }) => name === file.name) == undefined){
+                    freqCounter += file.update_freq;
+                }
             })
+            data.push({name: "other", update_freq: freqCounter});
             vis_2 = null;
             vis_2 = load_file_update_summary("#vis_2", data);
         }

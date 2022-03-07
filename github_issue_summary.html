@@ -57,12 +57,41 @@
         <svg id="vis_1" name="vis_1" class="default_svg"></svg>
         <div id="commits"></div>
         <div class="default_svg" style="height: 500px;">
-            <div>
-                <select id="updateCountSelectButton" class="js-select2" onchange="updateLineCountChange()"
-                    multiple="multiple">
-                </select>
-            </div>
+
+            <!-- Trigger/Open The Modal -->
+            <button id="optionsBtn" class="default-button">Options <i class="fa fa-ellipsis-v"
+                    aria-hidden="true"></i></button>
+
+
             <div id="vis_2" style="text-align:center;"></div>
+        </div>
+        <!-- The Modal -->
+        <div id="optionsModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div>
+                    <span class="close">&times;</span>
+                </div>
+                <div>
+                    <h1>Files to display</h1>
+                    <h2>Files woth 1-500 lines of update</h2>
+                    <select id="updateCountSelectButton" class="js-select2" onchange="updateLineCountChange()"
+                        multiple="multiple">
+                    </select>
+                </div>
+                <div>
+                    <h1>Show file update frequency as: </h1>
+                    <label class="container">Number of Lines
+                        <input id="numberOfLines" type="radio" checked="checked" name="radio"
+                            onclick="updateFileFreqDisplay()">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Percentage
+                        <input id="percentage" type="radio" name="radio" onclick="updateFileFreqDisplay()">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -95,10 +124,10 @@
                 files.forEach(file => {
                     let fileName = file.trim();
 
-                    if (!file_list.find(file => file == fileName)){
+                    if (!file_list.find(file => file == fileName)) {
                         file_list.push(fileName);
                     }
-                    
+
                     files_diff.forEach(file_diff => {
                         if (file_update_count[fileName] == undefined) {
                             file_update_count[fileName] = 0;
@@ -110,27 +139,35 @@
                 });
             });
 
+            //initialize filter modal
+            initializeOptionModal();
+
             var dropDownForFiles = document.getElementById("updateCountSelectButton");
 
-            file_list.forEach(file =>{
-                file_update_freq.push({name: file, update_freq: file_update_count[file]});
+            file_list.forEach(file => {
+                file_update_freq.push({ name: file, update_freq: file_update_count[file] });
             });
 
             file_update_freq.sort((a, b) => (a.update_freq > b.update_freq) ? -1 : 1);
 
+            var option = document.createElement("option");
+            option.value = -1; // setting index of the entry as value to access it easy later on
+            option.text = "Select All";
+            dropDownForFiles.appendChild(option);
+
             let top_five = [];
             let i = 0;
-            file_update_freq.forEach(entry =>{
-                var option = document.createElement("option");
+            file_update_freq.forEach(entry => {
+                option = document.createElement("option");
                 option.value = i; // setting index of the entry as value to access it easy later on
                 option.text = entry.name;
                 dropDownForFiles.appendChild(option);
-                
-                
-                if (top_five.length != 5){
+
+
+                if (top_five.length != 5) {
                     top_five.push(i);
                 }
-                
+
                 i++;
             });
 
@@ -138,18 +175,18 @@
 
             let data_to_show = [];
             let freqCounter = 0;
-            file_update_freq.forEach((file) =>{
-                if(data_to_show.length < 5){
+            file_update_freq.forEach((file) => {
+                if (data_to_show.length < 5) {
                     data_to_show.push(file);
                 }
-                else{
+                else {
                     freqCounter += file.update_freq;
                 }
             });
 
-            data_to_show.push({name: "other", update_freq: freqCounter});
+            data_to_show.push({ name: "other", update_freq: freqCounter });
             //show top 5 most updated files
-            vis_2 = load_file_update_summary("#vis_2", data_to_show);
+            vis_2 = load_file_update_summary("#vis_2", data_to_show, "number of lines");
 
             d3.csv("data/issue_details.csv", (row, i) => {
                 return {
@@ -246,25 +283,101 @@
             return files_diff_list;
         }
 
+        function initializeOptionModal() {
+            // Get the modal
+            var modal = document.getElementById("optionsModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("optionsBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+
         function updateLineCountChange() {
             let selected = $('#updateCountSelectButton').select2('data');
             let data = [];
-            selected.forEach(selection =>{
+            selected.forEach(selection => {
+                if (selection.id == -1) {
+                    selectAllFiles();
+                    return;
+                }
                 data.push(file_update_freq[selection.id])
             });
             let freqCounter = 0;
-            file_update_freq.forEach((file) =>{
-                if(data.find(({ name }) => name === file.name) == undefined){
+            file_update_freq.forEach((file) => {
+                if (data.find(({ name }) => name === file.name) == undefined) {
                     freqCounter += file.update_freq;
                 }
             })
-            data.push({name: "other", update_freq: freqCounter});
+            data.push({ name: "other", update_freq: freqCounter });
+
+            loadData(data);
+        }
+
+        function selectAllFiles() {
+            let data = [];
+            let selectedOptions = [];
+            let i = 0;
+            file_update_freq.forEach((file) => {
+                data.push({ name: file.name, update_freq: file.update_freq });
+                selectedOptions.push(i);
+                i++;
+            });
+
+            $("#updateCountSelectButton").val(selectedOptions);
+            var dropDownForFiles = document.getElementById("updateCountSelectButton");
+            if ( dropDownForFiles.children[0].text == "Select All" ){
+                dropDownForFiles.children[0].text = "De-select All";
+            }
+            else{
+                dropDownForFiles.children[0].text = "Select All";
+            }
+            console.log(dropDownForFiles.children[0]);
+
+            loadData(data);
+        }
+
+        function loadData(data) {
+            let status = document.getElementById("numberOfLines").checked;
+            let type = status == true ? "number of lines" : "percentage";
             vis_2 = null;
-            vis_2 = load_file_update_summary("#vis_2", data);
+            vis_2 = load_file_update_summary("#vis_2", data, type);
+        }
+
+        function updateFileFreqDisplay() {
+            //checking status of number of lines button. if it is false, percentage button is pressed
+            // status = document.getElementById("numberOfLines").checked;
+
+            // if (status){
+            //     update_file_freq_display("number of lines");
+            // }
+            // else{
+            //     update_file_freq_display("percentage");
+            // }
+            updateLineCountChange();
+
         }
 
         //$('#updateCountSelectButton').select2().find('option').prop('selected', 'selected').end().select2();
-        $('#updateCountSelectButton').select2({placeholder: "Select files"});
+        $('#updateCountSelectButton').select2({ placeholder: "Select files" });
         // $('#updateCountSelectButton').val(file_list);
 
     </script>

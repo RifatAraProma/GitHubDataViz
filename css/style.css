@@ -1,6 +1,5 @@
-
 body {
-	font-family: -apple-system,Helvetica Neue,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,sans-serif;
+	font-family: -apple-system, Helvetica Neue, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, sans-serif;
 	font-size: 14px;
 }
 
@@ -27,8 +26,8 @@ h3 {
 .default_svg {
 	border: 2px solid lightgray;
 	margin-top: 10px;
-    width: 1000px;
-    height: 700px;
+	width: 1000px;
+	height: 700px;
 }
 
 .page {
@@ -36,16 +35,16 @@ h3 {
 	padding-top: 10px;
 }
 
-.tick text{
+.tick text {
 	color: #8E8883;
 	font-size: 12px;
 }
 
-.tick line{
+.tick line {
 	stroke: #C0C0BB;
 }
 
-.axis-label{
+.axis-label {
 	fill: #8E8883;
 	font-size: 16px;
 }
@@ -55,21 +54,21 @@ h3 {
 	stroke: #9ACD32;
 	stroke-width: 5;
 	stroke-linejoin: round;
-  }
+}
 
 .line-path-versicolor {
 	fill: none;
 	stroke: #FFA500;
 	stroke-width: 5;
 	stroke-linejoin: round;
-  }
+}
 
 .line-path-virginica {
 	fill: none;
 	stroke: #9500ff;
 	stroke-width: 5;
 	stroke-linejoin: round;
-  }
+}
 
 .commit {
 	background-color: #C0C0BB;
@@ -86,93 +85,236 @@ h3 {
 	text-align: left;
 	outline: none;
 	font-size: 15px;
-  }
-  
-  .active, .collapsible:hover {
+}
+
+.active, .collapsible:hover {
 	background-color: #555;
-  }
-  
-  .content {
+}
+
+.content {
 	padding: 0 18px;
 	display: none;
 	overflow: hidden;
 	background-color: #f1f1f1;
-  }
+}
 
-  .select2-container {
-  min-width: 400px;
+.select2-container {
+	min-width: 400px;
 }
 
 .select2-results__option {
-  padding-right: 20px;
-  vertical-align: middle;
+	padding-right: 20px;
+	vertical-align: middle;
 }
+
 .select2-results__option:before {
-  content: "";
-  display: inline-block;
-  position: relative;
-  height: 20px;
-  width: 20px;
-  border: 2px solid #e9e9e9;
-  border-radius: 4px;
-  background-color: #fff;
-  margin-right: 20px;
-  vertical-align: middle;
+	content: "";
+	display: inline-block;
+	position: relative;
+	height: 20px;
+	width: 20px;
+	border: 2px solid #e9e9e9;
+	border-radius: 4px;
+	background-color: #fff;
+	margin-right: 20px;
+	vertical-align: middle;
 }
+
 .select2-results__option[aria-selected=true]:before {
-  font-family:fontAwesome;
-  content: "\f00c";
-  color: #fff;
-  background-color: #f77750;
-  border: 0;
-  display: inline-block;
-  padding-left: 3px;
+	font-family: fontAwesome;
+	content: "\f00c";
+	color: #fff;
+	background-color: #f77750;
+	border: 0;
+	display: inline-block;
+	padding-left: 3px;
 }
+
 .select2-container--default .select2-results__option[aria-selected=true] {
 	background-color: #fff;
 }
+
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
 	background-color: #eaeaeb;
 	color: #272727;
 }
+
 .select2-container--default .select2-selection--multiple {
 	margin-bottom: 10px;
 }
+
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
 	border-radius: 4px;
 }
+
 .select2-container--default.select2-container--focus .select2-selection--multiple {
 	border-color: #f77750;
 	border-width: 2px;
 }
+
 .select2-container--default .select2-selection--multiple {
 	border-width: 2px;
 }
+
 .select2-container--open .select2-dropdown--below {
-	
+
 	border-radius: 6px;
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
+
 .select2-selection .select2-selection--multiple:after {
 	content: 'hhghgh';
 }
+
 /* select with icons badges single*/
 .select-icon .select2-selection__placeholder .badge {
 	display: none;
 }
+
 .select-icon .placeholder {
 	display: none;
 }
+
 .select-icon .select2-results__option:before,
 .select-icon .select2-results__option[aria-selected=true]:before {
 	display: none !important;
 	/* content: "" !important; */
 }
-.select-icon  .select2-search--dropdown {
+
+.select-icon .select2-search--dropdown {
 	display: none;
 }
 
 .select2-selection__choice {
+display: none;
+}
+
+/* The Modal (background) */
+.modal {
 	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	padding-top: 100px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+/* The Close Button */
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	position: relative;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.default-button {
+	background-color: dodgerblue;
+	opacity: 0.8;
+	color: #eaeaeb;
+	margin: 1%;
+	padding: 0.8%;
+	border-radius: 5px;
+	border-color: #888;
+	float: right;
+}
+
+.default-button:hover {
+	opacity: 1;
+}
+
+/* radio button */
+/* The container */
+.container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 14px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+	background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked~.checkmark {
+	background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked~.checkmark:after {
+	display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+	top: 6px;
+	left: 6px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }

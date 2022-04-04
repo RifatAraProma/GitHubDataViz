@@ -44,6 +44,7 @@
     <!--***** IMPORT EXTERNAL JAVASCRIPT CODE *****-->
     <script src="js/bar_chart.js"></script>
     <script src="js/donut_chart.js"></script>
+    <script src="js/histogram"></script>
     <!--*******************************************-->
 
     <!-- 
@@ -54,15 +55,20 @@
 <body>
 
     <div class="page">
-        <svg id="vis_1" name="vis_1" class="default_svg"></svg>
-        <div id="commits"></div>
-        <div class="default_svg" style="height: 500px;">
+        <div>
+            <button id="vizToggleBtn" class="toggle-viz-button" onclick="changeViz()">Show File Update Summary</button>
+        </div>
+        <div id="commit-details-div">
+            <div class="container-div"><svg id="vis_1" name="vis_1" class="default_svg"></svg></div>
+            <div id="commits"></div>
+        </div>
+        <div id="file-update-summary-div" class="default_svg" style="display: none;">
 
             <!-- Trigger/Open The Modal -->
             <button id="optionsBtn" class="default-button">Options <i class="fa fa-ellipsis-v"
                     aria-hidden="true"></i></button>
 
-
+            <div id="vis_3" style="text-align:center;"></div>
             <div id="vis_2" style="text-align:center;"></div>
         </div>
         <!-- The Modal -->
@@ -74,9 +80,13 @@
                 </div>
                 <div>
                     <h1>Files to display</h1>
-                    <h2>Files woth 1-500 lines of update</h2>
-                    <select id="updateCountSelectButton" class="js-select2" onchange="updateLineCountChange()"
-                        multiple="multiple">
+                    <h2 id="lessUpdatedFilesHeader"></h2>
+                    <select id="lessUpdatedFiles" class="js-select2"
+                        onchange="updateLineCountChange('#lessUpdatedFiles')" multiple="multiple">
+                    </select>
+                    <h2 id="moreUpdatedFilesHeader"></h2>
+                    <select id="moreUpdatedFiles" class="js-select2"
+                        onchange="updateLineCountChange('#moreUpdatedFiles')" multiple="multiple">
                     </select>
                 </div>
                 <div>
@@ -104,6 +114,9 @@
         let vis_2 = null;
         let updated_files_summary = [];
         let file_update_freq = [];
+        let data_to_show = [];
+        let viz_3 = null;
+        let threshold = 200;
 
 
         d3.csv("data/commit_details.csv", (row, i) => {
@@ -142,8 +155,10 @@
             //initialize filter modal
             initializeOptionModal();
 
-            var dropDownForFiles = document.getElementById("updateCountSelectButton");
-
+            var dropDownForFilesWithMoreUpdates = document.getElementById("moreUpdatedFiles");
+            var dropDownForFilesWithLessUpdates = document.getElementById("lessUpdatedFiles");
+            document.getElementById("lessUpdatedFilesHeader").innerHTML = "Files with 1 - " + threshold + " lines of updates";
+            document.getElementById("moreUpdatedFilesHeader").innerHTML = "Files with more than " + threshold + " lines of updates";
             file_list.forEach(file => {
                 file_update_freq.push({ name: file, update_freq: file_update_count[file] });
             });
@@ -153,7 +168,14 @@
             var option = document.createElement("option");
             option.value = -1; // setting index of the entry as value to access it easy later on
             option.text = "Select All";
-            dropDownForFiles.appendChild(option);
+            option.id = "selectAllLessUpdates"
+            dropDownForFilesWithLessUpdates.appendChild(option);
+
+            option = document.createElement("option");
+            option.value = -1; // setting index of the entry as value to access it easy later on
+            option.text = "Select All";
+            option.id = "selectAllMoreUpdates"
+            dropDownForFilesWithMoreUpdates.appendChild(option);
 
             let top_five = [];
             let i = 0;
@@ -161,7 +183,11 @@
                 option = document.createElement("option");
                 option.value = i; // setting index of the entry as value to access it easy later on
                 option.text = entry.name;
-                dropDownForFiles.appendChild(option);
+
+                if (entry.update_freq <= threshold)
+                    dropDownForFilesWithLessUpdates.appendChild(option);
+                else
+                    dropDownForFilesWithMoreUpdates.appendChild(option);
 
 
                 if (top_five.length != 5) {
@@ -171,9 +197,8 @@
                 i++;
             });
 
-            $("#updateCountSelectButton").val(top_five);
+            $("#moreUpdatedFiles").val(top_five);
 
-            let data_to_show = [];
             let freqCounter = 0;
             file_update_freq.forEach((file) => {
                 if (data_to_show.length < 5) {
@@ -187,6 +212,7 @@
             data_to_show.push({ name: "other", update_freq: freqCounter });
             //show top 5 most updated files
             vis_2 = load_file_update_summary("#vis_2", data_to_show, "number of lines");
+            //vis_3 = load_histogram("#vis_3", file_update_freq)
 
             d3.csv("data/issue_details.csv", (row, i) => {
                 return {
@@ -311,16 +337,30 @@
             }
         }
 
-        function updateLineCountChange() {
-            let selected = $('#updateCountSelectButton').select2('data');
+        function updateLineCountChange(selectedDropDown) {
+            let selected = $(selectedDropDown).select2('data');
+            let otherDropDown = selectedDropDown == '#lessUpdatedFiles' ? $('#moreUpdatedFiles').select2('data') : $('#lessUpdatedFiles').select2('data')
             let data = [];
+            console.log(selected);
+            let selectDeselectAll = false;
             selected.forEach(selection => {
                 if (selection.id == -1) {
-                    selectAllFiles();
+                    selectAllFiles(selection, selectedDropDown, otherDropDown);
+                    selectDeselectAll = true;
                     return;
                 }
                 data.push(file_update_freq[selection.id])
             });
+
+            if (selectDeselectAll)
+                return;
+
+            otherDropDown.forEach(selection => {
+                if (selection.id != -1) {
+                    data.push(file_update_freq[selection.id]);
+                }
+            });
+
             let freqCounter = 0;
             file_update_freq.forEach((file) => {
                 if (data.find(({ name }) => name === file.name) == undefined) {
@@ -329,30 +369,53 @@
             })
             data.push({ name: "other", update_freq: freqCounter });
 
-            loadData(data);
+            data_to_show = data;
+            loadData(data_to_show);
         }
 
-        function selectAllFiles() {
+        function selectAllFiles(option, dropDown, otherDropDown) {
             let data = [];
             let selectedOptions = [];
-            let i = 0;
-            file_update_freq.forEach((file) => {
-                data.push({ name: file.name, update_freq: file.update_freq });
-                selectedOptions.push(i);
-                i++;
+            let more = dropDown == '#moreUpdatedFiles' ? true : false;
+            $(dropDown).select2('close');
+
+            if (option.text == "Select All") {
+                option.text = "De-select All";
+                let i = 0;
+                file_update_freq.forEach((file) => {
+                    if(more && file.update_freq > threshold){
+                        data.push({ name: file.name, update_freq: file.update_freq });
+                        selectedOptions.push(i);
+                    }
+                    else if(!more && file.update_freq <= threshold){
+                        data.push({ name: file.name, update_freq: file.update_freq });
+                        selectedOptions.push(i);
+                    }
+                    i++;
+                });
+            }
+            else {
+                option.text = "Select All";
+            }
+
+            $(dropDown).val(selectedOptions);
+
+            otherDropDown.forEach(selection => {
+                if (selection.id != -1) {
+                    data.push(file_update_freq[selection.id]);
+                }
             });
 
-            $("#updateCountSelectButton").val(selectedOptions);
-            var dropDownForFiles = document.getElementById("updateCountSelectButton");
-            if ( dropDownForFiles.children[0].text == "Select All" ){
-                dropDownForFiles.children[0].text = "De-select All";
-            }
-            else{
-                dropDownForFiles.children[0].text = "Select All";
-            }
-            console.log(dropDownForFiles.children[0]);
+            let freqCounter = 0;
+            file_update_freq.forEach((file) => {
+                if (data.find(({ name }) => name === file.name) == undefined) {
+                    freqCounter += file.update_freq;
+                }
+            })
+            data.push({ name: "other", update_freq: freqCounter });
 
-            loadData(data);
+            data_to_show = data;
+            loadData(data_to_show);
         }
 
         function loadData(data) {
@@ -372,12 +435,28 @@
             // else{
             //     update_file_freq_display("percentage");
             // }
-            updateLineCountChange();
+            loadData(data_to_show);
 
         }
 
+        function changeViz() {
+            var btn = document.getElementById("vizToggleBtn");
+
+            if (btn.innerText == "Show File Update Summary") {
+                btn.innerText = "Show Commit Details";
+                document.getElementById("commit-details-div").style = "display: none";
+                document.getElementById("file-update-summary-div").style = "display: block "
+            }
+            else {
+                btn.innerText = "Show File Update Summary";
+                document.getElementById("commit-details-div").style = "display: block";
+                document.getElementById("file-update-summary-div").style = "display: none "
+            }
+        }
+
         //$('#updateCountSelectButton').select2().find('option').prop('selected', 'selected').end().select2();
-        $('#updateCountSelectButton').select2({ placeholder: "Select files" });
+        $('#moreUpdatedFiles').select2({ placeholder: "Select files" });
+        $('#lessUpdatedFiles').select2({ placeholder: "Select files" });
         // $('#updateCountSelectButton').val(file_list);
 
     </script>

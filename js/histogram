@@ -1,0 +1,102 @@
+var width;
+var height;
+var margin;
+function load_histogram(div_name, data) {
+    console.log(data);
+    // set the dimensions and margins of the graph
+    margin = { top: 10, right: 30, bottom: 30, left: 30 },
+    width = 1000;
+    height = 400;
+
+    // append the svg object to the body of the page
+    var svg = d3.select(div_name)
+        .append("svg")
+        .attr("viewBox", [0, 0, width + margin.left + margin.right, height + margin.top + margin.bottom])
+        .call(zoom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    // svg.append("rect")
+    //     .attr("width", "100%")
+    //     .attr("height", "100%")
+    //     .attr("fill", "pink");
+
+    let x_max = -1;
+    let x_min = Infinity;
+    for (i = 0; i < data.length; i++) {
+        x_max = Math.max(x_max, data[i].update_freq);
+        x_min = Math.min(x_min, data[i].update_freq);
+    }
+
+    // X axis: scale and draw:
+    var x = d3.scaleLinear()
+        .domain([x_min, x_max])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
+        .range([0, width]);
+
+    svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x));
+
+    // set the parameters for the histogram
+    var histogram = d3.histogram()
+        .value(function (d) { return d.update_freq; })   // I need to give the vector of value
+        .domain(x.domain())  // then the domain of the graphic
+        .thresholds(x.ticks(200)); // then the numbers of bins
+
+    // And apply this function to data to get the bins
+    var bins = histogram(data);
+
+    // Y axis: scale and draw:
+    var y = d3.scaleLinear()
+        .range([height, 0]);
+    y.domain([0, d3.max(bins, function (d) { return d.length; })]);   // d3.hist has to be called before the Y axis obviously
+    svg.append("g")
+        .call(d3.axisLeft(y));
+
+    // append the bar rectangles to the svg element
+    console.log(bins);
+    svg.selectAll("rect")
+        .data(bins)
+        .enter()
+        .append("rect")
+        .attr("x", 1)
+        .attr("transform", function (d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function (d) { return x(d.x1) - x(d.x0) - 1; })
+        .attr("height", function (d) { return height - y(d.length); })
+        .style("fill", "#69b3a2")
+        .on("mouseover", function() {
+            d3.select(this)
+                .style("fill", "#4169e1");
+        })
+        .on("mouseout", function() {
+            d3.select(this)
+                .style("fill", "#69b3a2");
+        })
+        .on("click", function(d) {
+            console.log("here");
+            document.getElementById("lessUpdatedFilesHeader").innerHTML = "Files with 1 - " + d.x1 + " lines of updates";
+            document.getElementById("moreUpdatedFilesHeader").innerHTML = "Files with more than " + d.x1 + " lines of updates";
+        })
+        .append("title")
+        .text(function (d) {
+            return d.x1;
+        })
+
+}
+
+function zoom(svg) {
+    // const extent = [[margin.left, margin.top], [width - margin.right, height - margin.top]];
+  
+    // svg.call(d3.zoom()
+    //     .scaleExtent([1, 8])
+    //     .translateExtent(extent)
+    //     .extent(extent)
+    //     .on("zoom", zoomed));
+  
+    // function zoomed(event) {
+    //   x.range([margin.left, width - margin.right].map(d => event.transform.applyX(d)));
+    //   svg.selectAll(".bars rect").attr("x", d => x(d.x1)).attr("width", x.bandwidth());
+    //   svg.selectAll(".x-axis").call(xAxis);
+    // }
+  }

@@ -25,9 +25,24 @@ h3 {
 
 .default_svg {
 	border: 2px solid lightgray;
-	margin-top: 10px;
-	width: 1000px;
-	height: 700px;
+	margin-top: 1%;
+	margin-right: 7%;
+	width: 80%;
+	height: 500px;
+}
+
+#file-update-summary-div {
+	border: 2px solid lightgray;
+	margin-top: 1%;
+	margin-right: 7%;
+	width: 80%;
+	height: fit-content;
+}
+
+.container-div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .page {
@@ -187,7 +202,7 @@ h3 {
 }
 
 .select2-selection__choice {
-display: none;
+	display: none;
 }
 
 /* The Modal (background) */
@@ -243,6 +258,7 @@ display: none;
 	background-color: dodgerblue;
 	opacity: 0.8;
 	color: #eaeaeb;
+	font-weight: bold;
 	margin: 1%;
 	padding: 0.8%;
 	border-radius: 5px;
@@ -251,6 +267,21 @@ display: none;
 }
 
 .default-button:hover {
+	opacity: 1;
+}
+
+.toggle-viz-button {
+	background-color: dodgerblue;
+	opacity: 0.8;
+	color: #eaeaeb;
+	font-weight: bold;
+	margin: 1%;
+	padding: 0.8%;
+	border-radius: 5px;
+	border-color: #888;
+}
+
+.toggle-viz-butto:hover {
 	opacity: 1;
 }
 

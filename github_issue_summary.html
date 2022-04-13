@@ -62,14 +62,14 @@
             <div class="container-div"><svg id="vis_1" name="vis_1" class="default_svg"></svg></div>
             <div id="commits"></div>
         </div>
-        <div id="file-update-summary-div" class="default_svg" style="display: none;">
+        <div id="file-update-summary-div"style="display: none">
 
             <!-- Trigger/Open The Modal -->
             <button id="optionsBtn" class="default-button">Options <i class="fa fa-ellipsis-v"
                     aria-hidden="true"></i></button>
 
-            <div id="vis_3" style="text-align:center;"></div>
             <div id="vis_2" style="text-align:center;"></div>
+            <div id="vis_3" style="text-align:center;"></div>
         </div>
         <!-- The Modal -->
         <div id="optionsModal" class="modal">
@@ -212,7 +212,7 @@
             data_to_show.push({ name: "other", update_freq: freqCounter });
             //show top 5 most updated files
             vis_2 = load_file_update_summary("#vis_2", data_to_show, "number of lines");
-            //vis_3 = load_histogram("#vis_3", file_update_freq)
+            vis_3 = load_histogram("#vis_3", file_update_freq)
 
             d3.csv("data/issue_details.csv", (row, i) => {
                 return {

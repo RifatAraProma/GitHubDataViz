@@ -32,10 +32,9 @@ h3 {
 }
 
 #file-update-summary-div {
-	border: 2px solid lightgray;
 	margin-top: 1%;
 	margin-right: 7%;
-	width: 80%;
+	width: 100%;
 	height: fit-content;
 }
 
@@ -348,4 +347,10 @@ h3 {
 	height: 8px;
 	border-radius: 50%;
 	background: white;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
 }

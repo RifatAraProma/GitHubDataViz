@@ -2,11 +2,10 @@ var width;
 var height;
 var margin;
 function load_histogram(div_name, data) {
-    console.log(data);
     // set the dimensions and margins of the graph
-    margin = { top: 10, right: 30, bottom: 30, left: 30 },
-    width = 1000;
-    height = 400;
+    margin = { top: 10, right: 3, bottom: 30, left: 3 },
+    width = 600;
+    height = 300;
 
     // append the svg object to the body of the page
     var svg = d3.select(div_name)
@@ -30,11 +29,12 @@ function load_histogram(div_name, data) {
     }
 
     // X axis: scale and draw:
-    var x = d3.scaleLinear()
+    var x = d3.scaleLog()
         .domain([x_min, x_max])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
         .range([0, width]);
 
     svg.append("g")
+        .style("font", "12px times")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x));
 
@@ -42,7 +42,7 @@ function load_histogram(div_name, data) {
     var histogram = d3.histogram()
         .value(function (d) { return d.update_freq; })   // I need to give the vector of value
         .domain(x.domain())  // then the domain of the graphic
-        .thresholds(x.ticks(200)); // then the numbers of bins
+        .thresholds(x.ticks(50)); // then the numbers of bins
 
     // And apply this function to data to get the bins
     var bins = histogram(data);
@@ -55,7 +55,6 @@ function load_histogram(div_name, data) {
         .call(d3.axisLeft(y));
 
     // append the bar rectangles to the svg element
-    console.log(bins);
     svg.selectAll("rect")
         .data(bins)
         .enter()
@@ -74,9 +73,9 @@ function load_histogram(div_name, data) {
                 .style("fill", "#69b3a2");
         })
         .on("click", function(d) {
-            console.log("here");
             document.getElementById("lessUpdatedFilesHeader").innerHTML = "Files with 1 - " + d.x1 + " lines of updates";
             document.getElementById("moreUpdatedFilesHeader").innerHTML = "Files with more than " + d.x1 + " lines of updates";
+            selectedUpdateFreq(d.x1);
         })
         .append("title")
         .text(function (d) {

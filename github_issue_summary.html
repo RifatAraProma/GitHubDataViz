@@ -68,8 +68,11 @@
             <button id="optionsBtn" class="default-button">Options <i class="fa fa-ellipsis-v"
                     aria-hidden="true"></i></button>
 
-            <div id="vis_2" style="text-align:center;"></div>
-            <div id="vis_3" style="text-align:center;"></div>
+            <div id="vis_2" style="text-align:center;" class="float-child"></div>
+            <div id="vis_3" style="text-align:center;" class="float-child"></div>
+            <!-- <div class="float-container">
+               
+            </div> -->
         </div>
         <!-- The Modal -->
         <div id="optionsModal" class="modal">
@@ -452,6 +455,29 @@
                 document.getElementById("commit-details-div").style = "display: block";
                 document.getElementById("file-update-summary-div").style = "display: none "
             }
+        }
+
+        function selectedUpdateFreq(threshold) {
+            let freqCounter = 0;
+            let data = [];
+            console.log(threshold);
+
+            file_update_freq.forEach((file) => {
+                if (file.update_freq >= threshold - 100 && file.update_freq < threshold){
+                    data.push(file);
+                    console.log(file.update_freq);
+                }
+            })
+
+            // file_update_freq.forEach((file) => {
+            //     if (data.find(({ name }) => name === file.name) == undefined) {
+            //         freqCounter += file.update_freq;
+            //     }
+            // })
+            // data.push({ name: "other", update_freq: freqCounter });
+
+            data_to_show = data;
+            loadData(data_to_show);
         }
 
         //$('#updateCountSelectButton').select2().find('option').prop('selected', 'selected').end().select2();

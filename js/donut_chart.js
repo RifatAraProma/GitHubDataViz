@@ -13,7 +13,7 @@ function load_file_update_summary(div_name, data, freq_type) {
     // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
     radius = Math.min(width, height) / 2 - margin;
 
-    let title = "Files update summary";
+    let title = "Updated file's summary";
 
 
 
@@ -26,17 +26,30 @@ function load_file_update_summary(div_name, data, freq_type) {
         .append("g")
         .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-    // svg.append("text")
-    //     .text(`${title}`)
-    //     .attr("font-size", "20px")
-    //     .attr("x", 0)
-    //     .attr("y", 0);
+    svg.append("text")
+        .text(`${title}`)
+        .attr("font-size", "20px")
+        .attr("x", -200)
+        .attr("y", -210);
 
+
+        const COLOR_PALETTE = ["#68FF42", "#FFFF54", "#EF8432", "#EA3323",
+                                "#8C1A4B", "#8C1A4B", "#721324", "#721324",
+                                "#721324", "#721324"];
     // set the color scale
+    // var min = Math.min(...data.map(item => item.update_freq));
+    // var max = Math.max(...data.map(item => item.update_freq));
+
+    update_freq_arr = []
+
+    data.forEach(item =>{
+        update_freq_arr.push(item.update_freq);})
+
+    update_freq_arr.sort(function(a, b){return a - b});
+
     color = d3.scaleOrdinal()
-        .domain(data)
-        .range(["#003f5c", "#2f4b7c", "#665191", "#a05195", "#d45087", "#f95d6a", "#ff7c43", "#ffa600"
-        ])
+        .domain(update_freq_arr)
+        .range(COLOR_PALETTE)
 
     totalUpdatedLines = 0;
     data.forEach(entry => {
@@ -85,6 +98,7 @@ function showPercentage(data_ready, arc, arcOver) {
                 .attr("d", arcOver);
             var updatedLineCount = Math.round((d.data.value.update_freq / totalUpdatedLines) * 100) + "% of total change";
             svg.append("text")
+                .attr("class", "updatedLineCount")
                 .attr("text-anchor", "middle")
                 .text(updatedLineCount);
         })
@@ -92,7 +106,7 @@ function showPercentage(data_ready, arc, arcOver) {
             d3.select(this).transition()
                 .duration(500)
                 .attr("d", arc);
-            svg.select("text").remove();
+            svg.select(".updatedLineCount").remove();
         })
         .append("title")
         .text(function (d) {
@@ -117,6 +131,7 @@ function showNumberOfLines(data_ready, arc, arcOver){
             .attr("d", arcOver);
         var updatedLineCount = d.data.value.update_freq + " lines were updated";
         svg.append("text")
+            .attr("class", "updatedLineCountTextClass")
             .attr("text-anchor", "middle")
             .text(updatedLineCount);
     })
@@ -124,7 +139,7 @@ function showNumberOfLines(data_ready, arc, arcOver){
         d3.select(this).transition()
             .duration(500)
             .attr("d", arc);
-        svg.select("text").remove();
+        svg.selectAll("text.updatedLineCountTextClass").remove();
     })
     .append("title")
     .text(function (d) {

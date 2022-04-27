@@ -34,8 +34,9 @@ h3 {
 #file-update-summary-div {
 	margin-top: 1%;
 	margin-right: 7%;
-	width: 100%;
-	height: fit-content;
+	width: 98%;
+	height: 500px;
+	border: 2px solid lightgray;
 }
 
 .container-div {
@@ -353,4 +354,5 @@ h3 {
     width: 50%;
     float: left;
     padding: 20px;
+	margin-top: 20px;
 }

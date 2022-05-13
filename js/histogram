@@ -57,11 +57,10 @@ function load_histogram(div_name, data, title) {
     length_arr = [];
 
     bins.forEach((item =>{
-        length_arr.push(item.length);}))
+        if (item.length > 0)
+            length_arr.push(item.length);}))
     
     length_arr.sort(function(a, b){return a - b});
-
-    console.log(length_arr);
     
     color = d3.scaleOrdinal()
                 .domain(length_arr)
@@ -92,7 +91,7 @@ function load_histogram(div_name, data, title) {
         .attr("x", 0)
         .attr("transform", function (d) { return "translate(" + 0 + "," + y(d.x1) + ")"; })
         .attr("width", function (d) { return  x(d.length); })
-        .attr("height", function (d) { console.log(d.x0);return y(d.x0) - y(d.x1); })
+        .attr("height", function (d) { return y(d.x0) - y(d.x1); })
         .style("fill", function (d) { return color(d.length);})
         .style("opacity", 0.8)
         .style("stroke", "black")

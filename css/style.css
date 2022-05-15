@@ -31,6 +31,12 @@ h3 {
 	height: 500px;
 }
 
+.sankey_svg {
+	margin-right: 7%;
+	width: 80%;
+	height: 2500px;
+}
+
 #file-update-summary-div {
 	margin-top: 1%;
 	margin-right: 7%;

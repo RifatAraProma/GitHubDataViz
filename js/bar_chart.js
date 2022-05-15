@@ -75,6 +75,7 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
             .attr("height", yScale.bandwidth())
             .on('click', function (d) {
                   showCommitBetween(d.created, d.closed);
+                  showCommitBetweenWithSankey(d.created, d.closed);
                   // focusing the selected bar and reducing opacity of all other bars
                   if (selectedBar != this) {
                         g.selectAll("rect[class='issue_duration_bars']")
@@ -91,6 +92,7 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
                         g.selectAll("rect[class='commit_bars" + data.indexOf(d) + "']").style("visibility", "visible");
                         // g.selectAll("rect[id='"+ d.title + "']").style("visibility", "visible");
                         selectedBar = this;
+                        document.getElementById('vis_4').scrollIntoView();
                   }
                   else {
                         g.selectAll("rect[class='issue_duration_bars']")

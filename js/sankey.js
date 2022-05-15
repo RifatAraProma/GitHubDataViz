@@ -172,9 +172,7 @@ d3.sankey = function() {
       }
   
       function initializeNodeDepth() {
-        var ky = d3.min(nodesByBreadth, function(nodes) {
-          return (size[1] - (nodes.length - 1) * nodePadding) / d3.sum(nodes, value);
-        });
+        var ky = 2;
   
         nodesByBreadth.forEach(function(nodes) {
           nodes.forEach(function(node, i) {

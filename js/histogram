@@ -3,17 +3,18 @@ var height;
 var margin;
 function load_histogram(div_name, data, title) {
     // set the dimensions and margins of the graph
-    margin = { top: 40, right: 3, bottom: 50, left: 45 },
+    margin = { top: 40, right: 2, bottom: 50, left: 55 },
     width = 950;
-    height = 700;
+    height = 800;
 
-    const COLOR_PALETTE = ["#68FF42", "#FFFF54", "#EF8432", "#EA3323", "#8C1A4B", "#721324"];
+    const COLOR_PALETTE = ["#68FF42", "#FFFF54", "#EF8432", "#EA3323",
+                                "#8C1A4B", "#8C1A4B", "#721324", "#721324",
+                                "#721324", "#721324"];
 
     // append the svg object to the body of the page
     var svg = d3.select(div_name)
         .append("svg")
         .attr("viewBox", [0, 0, width + margin.left + margin.right, height + margin.top + margin.bottom])
-        .call(zoom)
         .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
@@ -42,8 +43,7 @@ function load_histogram(div_name, data, title) {
         .attr("fill", "black")
         .attr("x", -height/3)
         .attr("y", -35)
-        .attr("transform", "rotate(-90)")
-        .attr("font-size", "16px");
+        .attr("transform", "rotate(-90)");
 
     // set the parameters for the histogram
     var histogram = d3.histogram()
@@ -64,7 +64,7 @@ function load_histogram(div_name, data, title) {
     
     color = d3.scaleOrdinal()
                 .domain(length_arr)
-                .range(COLOR_PALETTE)
+                .range(COLOR_PALETTE);
 
     // Y axis: scale and draw:
     var x = d3.scaleLinear()
@@ -80,8 +80,7 @@ function load_histogram(div_name, data, title) {
         .attr("class", "axis-label")
         .attr("fill", "black")
         .attr("y", 40)
-        .attr("x", width / 2)
-        .attr("font-size", "16px");
+        .attr("x", width / 2);
 
     // append the bar rectangles to the svg element
     svg.selectAll("rect")
@@ -104,8 +103,8 @@ function load_histogram(div_name, data, title) {
                 .style("opacity", 0.8);
         })
         .on("click", function(d) {
-            document.getElementById("lessUpdatedFilesHeader").innerHTML = "Files with 1 - " + d.x1 + " lines of updates";
-            document.getElementById("moreUpdatedFilesHeader").innerHTML = "Files with more than " + d.x1 + " lines of updates";
+            document.getElementById("displayedFilesListHeader").innerHTML = "Files with 1 - " + d.x1 + " lines of updates";
+            document.getElementById("otherFilesListHeader").innerHTML = "Files with more than " + d.x1 + " lines of updates";
             selectedUpdateFreq(d.x0, d.x1);
         })
         .append("title")
@@ -114,19 +113,3 @@ function load_histogram(div_name, data, title) {
         })
 
 }
-
-function zoom(svg) {
-    // const extent = [[margin.left, margin.top], [width - margin.right, height - margin.top]];
-  
-    // svg.call(d3.zoom()
-    //     .scaleExtent([1, 8])
-    //     .translateExtent(extent)
-    //     .extent(extent)
-    //     .on("zoom", zoomed));
-  
-    // function zoomed(event) {
-    //   x.range([margin.left, width - margin.right].map(d => event.transform.applyX(d)));
-    //   svg.selectAll(".bars rect").attr("x", d => x(d.x1)).attr("width", x.bandwidth());
-    //   svg.selectAll(".x-axis").call(xAxis);
-    // }
-  }

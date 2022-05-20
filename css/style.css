@@ -41,8 +41,7 @@ h3 {
 	margin-top: 1%;
 	margin-right: 7%;
 	width: 98%;
-	height: 700px;
-	border: 2px solid lightgray;
+	height: 100%;
 }
 
 .container-div {
@@ -58,7 +57,7 @@ h3 {
 
 .tick text {
 	color: #8E8883;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .tick line {
@@ -67,7 +66,7 @@ h3 {
 
 .axis-label {
 	fill: #8E8883;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 .line-path-setosa {
@@ -357,7 +356,6 @@ h3 {
 }
 
 .float-child {
-    width: 50%;
     float: left;
     padding: 20px;
 	margin-top: 20px;

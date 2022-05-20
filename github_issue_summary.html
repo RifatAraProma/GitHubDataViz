@@ -73,8 +73,8 @@
             <button id="optionsBtn" class="default-button">Options <i class="fa fa-ellipsis-v"
                     aria-hidden="true"></i></button>
 
-            <div id="vis_2" style="text-align:center;" class="float-child"></div>
-            <div id="vis_3" style="text-align:center;" class="float-child"></div>
+            <div id="vis_2" style="text-align:center; width: 40%;" class="float-child"></div>
+            <div id="vis_3" style="text-align:center; width: 60%;" class="float-child"></div>
             <!-- <div class="float-container">
                
             </div> -->
@@ -88,13 +88,14 @@
                 </div>
                 <div>
                     <h1>Files to display</h1>
-                    <h2 id="lessUpdatedFilesHeader"></h2>
-                    <select id="lessUpdatedFiles" class="js-select2"
-                        onchange="updateLineCountChange('#lessUpdatedFiles')" multiple="multiple">
-                    </select>
-                    <h2 id="moreUpdatedFilesHeader"></h2>
+                    <h2 id="displayedFilesListHeader"></h2>
                     <select id="moreUpdatedFiles" class="js-select2"
                         onchange="updateLineCountChange('#moreUpdatedFiles')" multiple="multiple">
+                    </select>
+                    
+                    <h2 id="otherFilesListHeader"></h2>
+                    <select id="lessUpdatedFiles" class="js-select2"
+                        onchange="updateLineCountChange('#lessUpdatedFiles')" multiple="multiple">
                     </select>
                 </div>
                 <div>
@@ -167,8 +168,8 @@
 
             var dropDownForFilesWithMoreUpdates = document.getElementById("moreUpdatedFiles");
             var dropDownForFilesWithLessUpdates = document.getElementById("lessUpdatedFiles");
-            document.getElementById("lessUpdatedFilesHeader").innerHTML = "Files with 1 - " + threshold + " lines of updates";
-            document.getElementById("moreUpdatedFilesHeader").innerHTML = "Files with more than " + threshold + " lines of updates";
+            document.getElementById("displayedFilesListHeader").innerHTML = "Top 5 files with most updates";
+            document.getElementById("otherFilesListHeader").innerHTML = "Other files";
             file_list.forEach(file => {
                 file_update_freq.push({ name: file, update_freq: file_update_count[file] });
             });

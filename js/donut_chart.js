@@ -6,14 +6,14 @@ var totalUpdatedLines;
 function load_file_update_summary(div_name, data, freq_type) {
     d3.select(div_name).select("svg").remove();
     var width = 450
-    height = 450
+    height = 650
     margin = 40
     let chart_width = $(div_name).width();
     let chart_height = $(div_name).height();
     // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
     radius = Math.min(width, height) / 2 - margin;
 
-    let title = "Updated file's summary";
+    let title = "File update summary";
 
 
 
@@ -30,7 +30,7 @@ function load_file_update_summary(div_name, data, freq_type) {
         .text(`${title}`)
         .attr("font-size", "20px")
         .attr("x", -200)
-        .attr("y", -210);
+        .attr("y", -220);
 
 
         const COLOR_PALETTE = ["#68FF42", "#FFFF54", "#EF8432", "#EA3323",

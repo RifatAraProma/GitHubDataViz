@@ -103,8 +103,6 @@ function load_histogram(div_name, data, title) {
                 .style("opacity", 0.8);
         })
         .on("click", function(d) {
-            document.getElementById("displayedFilesListHeader").innerHTML = "Files with 1 - " + d.x1 + " lines of updates";
-            document.getElementById("otherFilesListHeader").innerHTML = "Files with more than " + d.x1 + " lines of updates";
             selectedUpdateFreq(d.x0, d.x1);
         })
         .append("title")

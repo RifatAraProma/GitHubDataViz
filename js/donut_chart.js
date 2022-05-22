@@ -15,8 +15,6 @@ function load_file_update_summary(div_name, data, freq_type) {
 
     let title = "File update summary";
 
-
-
     svg = d3.select(div_name)
         .append("svg")
         .attr("width", width)

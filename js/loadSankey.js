@@ -3,7 +3,7 @@ function load_sankey(svg_name, graph) {
   var units = "Widgets";
 
   // set the dimensions and margins of the graph
-  var margin = { top: 10, right: 10, bottom: 100, left: 10 };
+  var margin = { top: 10, right: 10, bottom: 30, left: 10 };
   width = $(svg_name).width() - margin.left - margin.right;
   // height = $(svg_name).height() - margin.top - margin.bottom;
   //$(svg_name).setAttribute("height", graph.nodes.length -1 * 10 + "px");
@@ -83,9 +83,9 @@ function load_sankey(svg_name, graph) {
     .style("stroke", function (d) {
       return d3.rgb(d.color).darker(2);
     })
-    .append("title");
-  // .text(function(d) { 
-  //     return d.name + "\n" + format(d.value); });
+    .append("title")
+    .text(function(d) { 
+      return d.name; });
 
   // add in the title for the nodes
   node.append("text")
@@ -94,7 +94,7 @@ function load_sankey(svg_name, graph) {
     .attr("dy", ".35em")
     .attr("text-anchor", "end")
     .attr("transform", null)
-    .text(function (d) { return d.name; })
+    .text(function (d) { return d.name.slice(0, 20); })
     .filter(function (d) { return d.x < width / 2; })
     .attr("x", 6 + sankey.nodeWidth())
     .attr("text-anchor", "start");

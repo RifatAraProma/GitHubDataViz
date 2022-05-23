@@ -319,7 +319,13 @@
             var i = 0;
             commits.forEach(commit => {
                 if (commit.created >= time1 && commit.created <= time2) {
-                    commit_div.innerHTML += '<button type="button" class="collapsible">' + commit.message + '</button><div class="content" id=' + i + '></div>';
+                    if (commit.message.includes("fix")){
+                        commit_div.innerHTML += '<button type="button" style="background-color: red" class="collapsible">' + commit.message + '</button><div class="content" id=' + i + '></div>';
+                    }
+                    else{
+                        commit_div.innerHTML += '<button type="button" class="collapsible">' + commit.message + '</button><div class="content" id=' + i + '></div>';
+                    }
+                    
                     // delete the first and last square bracket and also the first quotes
                     let files = commit.files_updated.replace("[", "").replace("]", "").replaceAll("'", "").split(', ');
                     let files_diff = getFilesDiffList(commit.diff);

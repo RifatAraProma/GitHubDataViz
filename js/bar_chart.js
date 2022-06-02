@@ -116,8 +116,8 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
 
 
       // Generate bars for commits
-      const COLOR_PALETTE = ["#68FF42", "#FFFF54", "#EF8432", "#EA3323",
-                              "#8C1A4B", "#8C1A4B", "#721324", "#721324",
+      const COLOR_PALETTE = ["#68FF42","#68FF42", "#FFFF54", "#FFFF54", "#EF8432", "#EF8432",
+                              "#EA3323", "#EA3323", "#8C1A4B", "#8C1A4B", "#721324", "#721324",
                               "#721324", "#721324"];
       var i = 0;
       var commitRect = g.selectAll("rect_commit")

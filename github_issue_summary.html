@@ -489,11 +489,11 @@
                 option.text = "De-select All";
                 let i = 0;
                 file_update_freq.forEach((file) => {
-                    if (displayDropDown && file.update_freq >= lowerBound && (upperBound != -1 && file.update_freq <= upperBound)) {
+                    if (displayDropDown && file.update_freq >= lowerBound && (upperBound == -1 || file.update_freq <= upperBound)) {
                         data.push({ name: file.name, update_freq: file.update_freq });
                         selectedOptions.push(i);
                     }
-                    else if (!displayDropDown && (file.update_freq < lowerBound || (upperBound != -1 && file.update_freq > upperBound))) {
+                    else if (!displayDropDown && (file.update_freq < lowerBound || (upperBound == -1 || file.update_freq > upperBound))) {
                         data.push({ name: file.name, update_freq: file.update_freq });
                         selectedOptions.push(i);
                     }

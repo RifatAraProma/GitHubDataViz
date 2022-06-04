@@ -112,6 +112,18 @@
                         <span class="checkmark"></span>
                     </label>
                 </div>
+                <div>
+                    <h1>Filter files: </h1>
+                    <label class="container">All updated files
+                        <input id="allUpdatedFiles" type="radio" checked="checked" name="radio1"
+                            onclick="updateFilesToBeDisplayed()">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Files updated during bug fix only
+                        <input id="bugFixFiles" type="radio" name="radio1" onclick="updateFilesToBeDisplayed()">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
             </div>
         </div>
     </div>
@@ -146,6 +158,7 @@
             commits = rows;
             let file_list = [];
             let file_update_count = {};
+            let file_update_for_bugfix_map = {};
             commits.forEach((commit) => {
                 let files = commit.files_updated.replace("[", "").replace("]", "").replaceAll("'", "").split(',');
                 let files_diff = getFilesDiffList(commit.diff);
@@ -154,6 +167,9 @@
 
                     if (!file_list.find(file => file == fileName)) {
                         file_list.push(fileName);
+                    }
+                    if (commit.message.includes("fix") && file_update_for_bugfix_map[fileName] == undefined){
+                        file_update_for_bugfix_map[fileName] = true;
                     }
 
                     files_diff.forEach(file_diff => {
@@ -175,7 +191,7 @@
             document.getElementById("displayedFilesListHeader").innerHTML = "Top 5 files with most updates";
             document.getElementById("otherFilesListHeader").innerHTML = "Other files";
             file_list.forEach(file => {
-                file_update_freq.push({ name: file, update_freq: file_update_count[file] });
+                file_update_freq.push({ name: file, update_freq: file_update_count[file], bugfix: file_update_for_bugfix_map[file] });
             });
 
             file_update_freq.sort((a, b) => (a.update_freq > b.update_freq) ? -1 : 1);
@@ -224,7 +240,7 @@
                 }
             });
 
-            data_to_show.push({ name: "other", update_freq: freqCounter });
+            data_to_show.push({ name: "other", update_freq: freqCounter, bugfix: false });
             //show top 5 most updated files
             vis_2 = load_file_update_summary("#vis_2", data_to_show, "number of lines");
             vis_3 = load_histogram("#vis_3", file_update_freq)
@@ -447,7 +463,6 @@
             let selected = $(selectedDropDown).select2('data');
             let otherDropDown = selectedDropDown == '#otherFilesList' ? $('#displayedFilesList').select2('data') : $('#otherFilesList').select2('data')
             let data = [];
-            console.log(selected);
             let selectDeselectAll = false;
             selected.forEach(selection => {
                 if (selection.id == -1) {
@@ -473,8 +488,8 @@
                     freqCounter += file.update_freq;
                 }
             })
-            data.push({ name: "other", update_freq: freqCounter });
-
+            data.push({ name: "other", update_freq: freqCounter, bugfix: false });
+            document.getElementById("allUpdatedFiles").checked = true;
             data_to_show = data;
             loadData(data_to_show);
         }
@@ -490,11 +505,11 @@
                 let i = 0;
                 file_update_freq.forEach((file) => {
                     if (displayDropDown && file.update_freq >= lowerBound && (upperBound == -1 || file.update_freq <= upperBound)) {
-                        data.push({ name: file.name, update_freq: file.update_freq });
+                        data.push({ name: file.name, update_freq: file.update_fre, bugfix: file.bugfix });
                         selectedOptions.push(i);
                     }
                     else if (!displayDropDown && (file.update_freq < lowerBound || (upperBound == -1 || file.update_freq > upperBound))) {
-                        data.push({ name: file.name, update_freq: file.update_freq });
+                        data.push({ name: file.name, update_freq: file.update_freq, bugfix: file.bugfix });
                         selectedOptions.push(i);
                     }
                     i++;
@@ -518,8 +533,8 @@
                     freqCounter += file.update_freq;
                 }
             })
-            data.push({ name: "other", update_freq: freqCounter });
-
+            data.push({ name: "other", update_freq: freqCounter, bugfix: false });
+            document.getElementById("allUpdatedFiles").checked = true;
             data_to_show = data;
             loadData(data_to_show);
         }
@@ -612,7 +627,7 @@
 
             $("#displayedFilesList").val(selected);
 
-
+            document.getElementById("allUpdatedFiles").checked = true;
             data_to_show = data;
             loadData(data_to_show);
         }
@@ -628,6 +643,23 @@
         function goBack(){          
             document.getElementById("commit-details-div").style = "display: block";
             document.getElementById("commit-details-sankey-div").style = "display: none ";
+        }
+
+        function updateFilesToBeDisplayed(){
+            let status = document.getElementById("bugFixFiles").checked;
+            if (!status){
+                loadData(data_to_show);
+                return;
+            }
+            let data = [];
+            data_to_show.forEach(file => {
+                if (status && file.bugfix) {
+                    data.push(file);
+                }
+                
+            });
+
+            loadData(data);
         }
 
         //$('#updateCountSelectButton').select2().find('option').prop('selected', 'selected').end().select2();

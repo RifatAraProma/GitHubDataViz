@@ -1,3 +1,4 @@
+from cProfile import label
 from difflib import unified_diff
 import requests
 import csv
@@ -19,24 +20,26 @@ def write_issue_to_csv(issue_list):
     csvWriter = open('issue_details.csv', 'w', newline='')
     writer = csv.writer(csvWriter)
     writer.writerow(
-        ["Issue Title", "Created Date (UTC Timestamp)", "Closed Date (UTC Timestamp)"])
+        ["Issue Title", "Created Date (UTC Timestamp)", "Closed Date (UTC Timestamp)", "Label"])
 
     for issue in issue_list:
         createdTimeUTC = convert_date_to_utc(issue.created_date)
         closedTimeUTC = convert_date_to_utc(issue.closed_date)
         createdTime = issue.created_date
         closedTime = issue.closed_date
+        label = issue.label
         writer.writerow([issue.title, createdTimeUTC,
-                        closedTimeUTC, createdTime, closedTime])
+                        closedTimeUTC, createdTime, closedTime, label])
 
     csvWriter.close()
 
 
 class Issue:
-    def __init__(self, _title, _created_date, _closed_date):
+    def __init__(self, _title, _created_date, _closed_date, _label):
         self.title = _title
         self.created_date = _created_date
         self.closed_date = _closed_date
+        self.label = _label
 
 
 def get_issues(url):
@@ -45,6 +48,7 @@ def get_issues(url):
 
     if response_code != 200:
         print("Error occurred while fetching issues")
+        print(response.reason)
         return
 
     issue_list = []
@@ -52,10 +56,15 @@ def get_issues(url):
     issue_json_list = response.json()
 
     for i in issue_json_list:
+        label = 'none'
+        if len(i['labels']) != 0:
+            label_obj = i['labels'][0]
+            label = label_obj['name']
         title = i['title']
         created_date = i['created_at']
         closed_date = i['closed_at']
-        issue = Issue(title, created_date, closed_date)
+        
+        issue = Issue(title, created_date, closed_date, label)
         issue_list.append(issue)
 
     return issue_list
@@ -68,7 +77,6 @@ def write_commit_to_csv(commit_list):
 
     for commit in commit_list:
         createdTimeUTC = convert_date_to_utc(commit.date)
-        print(commit)
         writer.writerow([commit.msg, createdTimeUTC, commit.filesChanged, commit.diff, commit.author.name])
 
     csvWriter.close()
@@ -91,6 +99,7 @@ def get_updated_files_by_commit(url):
     if response_code != 200:
         print("error occurred while fetching commit with ref: " +
               ref[len(ref) - 1])
+        print(response.reason)
         return files
 
     commit_details_json = response.json()
@@ -112,8 +121,11 @@ def get_diff_by_commit(url):
 
     if response_code != 200:
         print("error occurred while fetching commit with ref: " + ref[len(ref) - 1])
+        print(response.reason)
         return files
     commit_pull_json = response.json()
+    if (len(commit_pull_json) == 0):
+        return
     diff_url = commit_pull_json[0]["diff_url"]
 
     diff = urllib.request.urlopen(diff_url)
@@ -148,6 +160,7 @@ def get_commits(url):
 
     if response_code != 200:
         print("Error occurred while fetching commits")
+        print(response.reason)
         return
 
     commit_list = []
@@ -174,4 +187,9 @@ def get_commits(url):
 # list_of_commits = get_commits("https://api.github.com/repos/freeCodeCamp/freeCodeCamp/commits")
 # print(list_of_commits)
 # write_commit_to_csv(list_of_commits)
-author = ['camperbot', 'camperbot', 'camperbot', 'Renovate Bot', 'camperbot', 'Shaun Hamilton']
+
+# list_of_issues = get_issues("https://api.github.com/repos/vaxerski/Hyprland/issues?state=closed")
+# write_issue_to_csv(list_of_issues)
+
+list_of_commits = get_commits("https://api.github.com/repos/vaxerski/Hyprland/commits")
+write_commit_to_csv(list_of_commits)

@@ -66,7 +66,10 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
             .data(data).enter()
             .append("rect")
             .attr("class", "issue_duration_bars")
-            .attr("fill", "cornflowerblue")
+            .attr("fill", d => {
+                  if (d.label == 'bug') return 'pink';
+                  else return "cornflowerblue";
+            })
             .attr("x", d => xScale(d[x1_field]))
             .attr("y", d => yScale(d[y_field]))
             .attr("rx", 6)

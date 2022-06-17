@@ -74,20 +74,20 @@ def write_commit_to_csv(commit_list):
     csvWriter = open('commit_details.csv', 'w', newline='')
     writer = csv.writer(csvWriter)
     writer.writerow(["Commit Message", "Created Date (UTC Timestamp)", "Files Updated", "Diff", "Author"])
-
     for commit in commit_list:
         createdTimeUTC = convert_date_to_utc(commit.date)
-        writer.writerow([commit.msg, createdTimeUTC, commit.filesChanged, commit.diff, commit.author.name])
+        writer.writerow([commit.msg, createdTimeUTC, commit.filesChanged, commit.diff, commit.author])
 
     csvWriter.close()
 
 
 class Commit:
-    def __init__(self, _msg, _date, _filesChanged, _diff):
+    def __init__(self, _msg, _date, _filesChanged, _diff, _author):
         self.msg = _msg
         self.date = _date
         self.filesChanged = _filesChanged
         self.diff = _diff
+        self.author = _author
 
 
 def get_updated_files_by_commit(url):
@@ -165,16 +165,20 @@ def get_commits(url):
 
     commit_list = []
     commit_json_list = response.json()
-
-    for i in commit_json_list:
-        ref = i["sha"]
+   
+    for i in range(20,26):
+        ref = commit_json_list[i]["sha"]
         filesUpdated = get_updated_files_by_commit(url + "/" + ref)
         diff = get_diff_by_commit(url + "/" + ref + "/pulls")
-        commit_json = i["commit"]
+        commit_json = commit_json_list[i]["commit"]
         msg = commit_json["message"]
         date = commit_json["committer"]["date"]
-        commit = Commit(msg, date, filesUpdated, diff)
-        commit_list.append(commit)        
+        author = commit_json["author"]["name"]
+        commit = Commit(msg, date, filesUpdated, diff, author)
+        commit_list.append(commit)
+        # print(msg)
+        # print(i)
+        # print("\n")
 
     return commit_list
 
@@ -193,3 +197,6 @@ def get_commits(url):
 
 list_of_commits = get_commits("https://api.github.com/repos/vaxerski/Hyprland/commits")
 write_commit_to_csv(list_of_commits)
+
+# list_of_issues = get_issues("https://api.github.com/repos/vaxerski/Hyprland/commits")
+# write_issue_to_csv(list_of_issues)

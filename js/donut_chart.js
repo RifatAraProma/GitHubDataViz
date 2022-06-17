@@ -51,7 +51,7 @@ function load_file_update_summary(div_name, data, freq_type) {
 
     totalUpdatedLines = 0;
     data.forEach(entry => {
-        totalUpdatedLines += entry.update_freq; ''
+        totalUpdatedLines += entry.update_freq;
     });
     updateDonutChart(data, freq_type);
 }

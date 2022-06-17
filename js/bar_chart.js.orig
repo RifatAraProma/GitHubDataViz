@@ -66,11 +66,17 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
             .data(data).enter()
             .append("rect")
             .attr("class", "issue_duration_bars")
+<<<<<<< Updated upstream
+            .attr("fill", d => {
+                  if (d.label == 'bug') return 'pink';
+                  else return "cornflowerblue";
+=======
             .attr("fill", (d) =>{
-                  if (d.label == "bug" )
+                  if (d.title.includes("fix"))
                         return "deeppink";
                   else
                         return "cornflowerblue";
+>>>>>>> Stashed changes
             })
             .attr("x", d => xScale(d[x1_field]))
             .attr("y", d => yScale(d[y_field]))

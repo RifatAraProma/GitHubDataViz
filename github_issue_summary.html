@@ -139,7 +139,7 @@
         let file_update_freq = [];
         let data_to_show = [];
         let viz_3 = null;
-        let threshold = 200;
+        let threshold = 19;
         let lowerBound = threshold;
         let upperBound = -1;
 
@@ -164,6 +164,10 @@
                 let files_diff = getFilesDiffList(commit.diff);
                 files.forEach(file => {
                     let fileName = file.trim();
+                    if (fileName.includes("Compositor.cpp"))
+                    {
+                        console.log("here");
+                    }
 
                     if (!file_list.find(file => file == fileName)) {
                         file_list.push(fileName);
@@ -171,7 +175,6 @@
                     if (commit.message.includes("fix") && file_update_for_bugfix_map[fileName] == undefined){
                         file_update_for_bugfix_map[fileName] = true;
                     }
-
                     files_diff.forEach(file_diff => {
                         if (file_update_count[fileName] == undefined) {
                             file_update_count[fileName] = 0;
@@ -215,14 +218,12 @@
                 option.value = i; // setting index of the entry as value to access it easy later on
                 option.text = entry.name;
 
-                if (entry.update_freq <= threshold)
-                    dropDownForOtherFiles.appendChild(option);
-                else
-                    dropDownForFilesBeingDisplayed.appendChild(option);
-
-
                 if (top_five.length != 5) {
                     top_five.push(i);
+                    dropDownForFilesBeingDisplayed.appendChild(option);
+                }
+                else {
+                    dropDownForOtherFiles.appendChild(option);
                 }
 
                 i++;
@@ -231,7 +232,11 @@
             $("#displayedFilesList").val(top_five);
 
             let freqCounter = 0;
+            console.log(file_update_freq);
             file_update_freq.forEach((file) => {
+                if(file.update_freq == undefined){
+                    file.update_freq = 0;
+                }
                 if (data_to_show.length < 5) {
                     data_to_show.push(file);
                 }
@@ -250,6 +255,7 @@
                     title: row.title,
                     created: row.created * 1000, // millisec
                     closed: row.closed * 1000,
+                    label: row.label
                 };
             }).then(rows => {
                 data = rows;
@@ -411,7 +417,7 @@
         }
 
         function getFilesDiffList(diffString) {
-            //console.log(diffString);
+            if (diffString == "") return [];
             diff = diffString.replace('[', '');
             indexOfLastSquareBracket = diff.lastIndexOf(']');
             diff = diff.substr(0, indexOfLastSquareBracket);

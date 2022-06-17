@@ -1,31 +1,31 @@
-Issue Title,Created Date (UTC Timestamp),Closed Date (UTC Timestamp),Label
-Segfault on launch,1654613911.0,1654628300.0,2022-06-07T14:58:31Z,2022-06-07T18:58:20Z,bug
-AUR go brrr,1654553176.0,1654553550.0,2022-06-06T22:06:16Z,2022-06-06T22:12:30Z,none
- Bug: hyprctl commands not response  after ...,1654507555.0,1654516101.0,2022-06-06T09:25:55Z,2022-06-06T11:48:21Z,bug
-Fix error: attribute 'lastModifiedDate' missing,1654507546.0,1654513600.0,2022-06-06T09:25:46Z,2022-06-06T11:06:40Z,none
-Some games don't work properly,1654505486.0,1654535419.0,2022-06-06T08:51:26Z,2022-06-06T17:10:19Z,bug
-No possible build this package with cmake,1654503368.0,1654505329.0,2022-06-06T08:16:08Z,2022-06-06T08:48:49Z,enhancement
-MPV behaves very strangely,1654494133.0,1654534592.0,2022-06-06T05:42:13Z,2022-06-06T16:56:32Z,bug
-Feature: `app_id` in `hyprctl clients`,1654366049.0,1654367563.0,2022-06-04T18:07:29Z,2022-06-04T18:32:43Z,enhancement
-Quick question: What bar was used in the screenshot? Im asking becuase i couldnt find any bar that supported the workspaces,1654318385.0,1654320888.0,2022-06-04T04:53:05Z,2022-06-04T05:34:48Z,none
-"Hooray, more AUR stuff!",1654281243.0,1654281670.0,2022-06-03T18:34:03Z,2022-06-03T18:41:10Z,none
-New release,1654251897.0,1654271892.0,2022-06-03T10:24:57Z,2022-06-03T15:58:12Z,enhancement
-Checks incase you move a window to the currently focused workspace,1654245638.0,1654247980.0,2022-06-03T08:40:38Z,2022-06-03T09:19:40Z,bug
-Small issue in workspace numbering/switching when special workspace present,1654181171.0,1654181933.0,2022-06-02T14:46:11Z,2022-06-02T14:58:53Z,bug
-Defining variables as the output to commands,1654165158.0,1654165766.0,2022-06-02T10:19:18Z,2022-06-02T10:29:26Z,enhancement
-Hardcoded /tmp/hypr problematic,1654138308.0,1654271477.0,2022-06-02T02:51:48Z,2022-06-03T15:51:17Z,bug
-Crashes when closing a window with multiple monitors connected,1654134356.0,1654161819.0,2022-06-02T01:45:56Z,2022-06-02T09:23:39Z,bug
-Window rules improvements,1654111438.0,1654161705.0,2022-06-01T19:23:58Z,2022-06-02T09:21:45Z,enhancement
-Scale animation fails for firefox,1654098265.0,1654102823.0,2022-06-01T15:44:25Z,2022-06-01T17:00:23Z,bug
-Drag fullscreen windows,1654097972.0,1654110803.0,2022-06-01T15:39:32Z,2022-06-01T19:13:23Z,bug
-Setting wayland gui toolkit environment variables on startup,1654080515.0,1654095344.0,2022-06-01T10:48:35Z,2022-06-01T14:55:44Z,bug
-Workspaces and disabling / enabling monitors.,1654078507.0,1654509628.0,2022-06-01T10:15:07Z,2022-06-06T10:00:28Z,bug
-Overlay windows glitch with full damage tracking,1654070097.0,1654194924.0,2022-06-01T07:54:57Z,2022-06-02T18:35:24Z,bug
-Crash when resuming from suspend,1654067413.0,1654071059.0,2022-06-01T07:10:13Z,2022-06-01T08:10:59Z,bug
-Fix Nix build and add updater,1654038103.0,1654192074.0,2022-05-31T23:01:43Z,2022-06-02T17:47:54Z,none
-OpenGL errors while using mpv,1654035951.0,1654534605.0,2022-05-31T22:25:51Z,2022-06-06T16:56:45Z,bug
-Issues with compiled releases,1654028438.0,1654028641.0,2022-05-31T20:20:38Z,2022-05-31T20:24:01Z,none
-More AUR stuff,1654028246.0,1654030156.0,2022-05-31T20:17:26Z,2022-05-31T20:49:16Z,none
-Add option to hide borders when 1 window is open,1654017717.0,1654018449.0,2022-05-31T17:21:57Z,2022-05-31T17:34:09Z,enhancement
-Docs: add info on decoration,1654017530.0,1654017608.0,2022-05-31T17:18:50Z,2022-05-31T17:20:08Z,enhancement
-Gtk4 windows dont render correctly,1654013425.0,1654013562.0,2022-05-31T16:10:25Z,2022-05-31T16:12:42Z,bug
+title,created,closed,,,label
+Resolves #204. Enables numlock on startup when configured to do so,1655398621,1655400817,2022-06-16T16:57:01Z,2022-06-16T17:33:37Z,none
+Assign specific workspaces to specific monitors,1655394261,1655395372,2022-06-16T15:44:21Z,2022-06-16T16:02:52Z,enhancement
+Failed to allocate device list.,1655386473,1655386565,2022-06-16T13:34:33Z,2022-06-16T13:36:05Z,bug
+[HOWTO] Screen sharing in Hyprland with Firefox & Brave,1655278499,1655291519,2022-06-15T07:34:59Z,2022-06-15T11:11:59Z,enhancement
+Create config directory if it doesn't exist,1655274665,1655275266,2022-06-15T06:31:05Z,2022-06-15T06:41:06Z,none
+some gtk4 apps look weird,1655243875,1655244987,2022-06-14T21:57:55Z,2022-06-14T22:16:27Z,bug
+support for modal bindings,1655243419,1655309419,2022-06-14T21:50:19Z,2022-06-15T16:10:19Z,enhancement
+Cannot compile also how do I open a script in the terminal?,1655238341,1655307578,2022-06-14T20:25:41Z,2022-06-15T15:39:38Z,bug
+Change wlroots submodule url to github mirror,1655154687,1655154988,2022-06-13T21:11:27Z,2022-06-13T21:16:28Z,none
+Broken Contribute link in README,1655145456,1655152245,2022-06-13T18:37:36Z,2022-06-13T20:30:45Z,bug
+Make GitHub mirror of wlroots on Freedesktop,1655137806,1655155005,2022-06-13T16:30:06Z,2022-06-13T21:16:45Z,enhancement
+Assigning to workspaces,1655118295,1655118760,2022-06-13T11:04:55Z,2022-06-13T11:12:40Z,enhancement
+Write a changelog on release,1655114821,1655137287,2022-06-13T10:07:01Z,2022-06-13T16:21:27Z,enhancement
+Include `assets` and `LICENSE` in binary releases,1655086388,1655137001,2022-06-13T02:13:08Z,2022-06-13T16:16:41Z,bug
+Not compiling in Void Linux,1655075614,1655151645,2022-06-12T23:13:34Z,2022-06-13T20:20:45Z,bug
+Enable numlock on startup,1655052328,1655400819,2022-06-12T16:45:28Z,2022-06-16T17:33:39Z,enhancement
+[QUESTION] Is it working with i3?,1655040962,1655041965,2022-06-12T13:36:02Z,2022-06-12T13:52:45Z,none
+Screen flicker on first start,1655034864,1655142982,2022-06-12T11:54:24Z,2022-06-13T17:56:22Z,bug
+Added Touchpad Config options,1655012801,1655137817,2022-06-12T05:46:41Z,2022-06-13T16:30:17Z,none
+More options for touchpad/clickpad,1655004031,1655137825,2022-06-12T03:20:31Z,2022-06-13T16:30:25Z,enhancement
+Add loose follow_mouse option,1654993419,1655037067,2022-06-12T00:23:39Z,2022-06-12T12:31:07Z,none
+screen capturing doesn't work ,1654975080,1654977849,2022-06-11T19:18:00Z,2022-06-11T20:04:09Z,bug
+Add natural_scrolling option for touchpads only,1654961103,1654964784,2022-06-11T15:25:03Z,2022-06-11T16:26:24Z,none
+fullscreen fix,1654958595,1654959979,2022-06-11T14:43:15Z,2022-06-11T15:06:19Z,none
+Natural scrolling for touchpad only,1654957033,1654964878,2022-06-11T14:17:13Z,2022-06-11T16:27:58Z,enhancement
+SuperShift+BackTab binding not working,1654937410,1654977725,2022-06-11T08:50:10Z,2022-06-11T20:02:05Z,bug
+Hyprland crashes on keypress after start from tty,1654919007,1655137233,2022-06-11T03:43:27Z,2022-06-13T16:20:33Z,bug
+Workspace or any sway/module is not showing in Waybar,1654914964,1654947246,2022-06-11T02:36:04Z,2022-06-11T11:34:06Z,bug
+Scaling on HiDPI,1654905126,1654938119,2022-06-10T23:52:06Z,2022-06-11T09:01:59Z,none
+System tray not clickable on waybar,1654866270,1654868109,2022-06-10T13:04:30Z,2022-06-10T13:35:09Z,bug

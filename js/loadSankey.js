@@ -70,12 +70,15 @@ function load_sankey(svg_name, graph) {
 
   // add the rectangles for the nodes
   node.append("rect")
-    .attr("height", function (d) { return d.dy; })
+    .attr("height", function (d) { return 20; })
     .attr("width", sankey.nodeWidth())
     .style("fill", function (d) {
       if (d.type == "commit" && d.name.includes("fix")){
         return "#e62e00";
-      }else{
+      }else if(d.type == "commit"){
+        return "cornflowerblue"
+      }
+      else{
         return d.color = color(d.name.replace(/ .*/, ""));
       }
     })
@@ -89,7 +92,7 @@ function load_sankey(svg_name, graph) {
   // add in the title for the nodes
   node.append("text")
     .attr("x", -6)
-    .attr("y", function (d) { return d.dy / 2; })
+    .attr("y", function (d) { return 5; })
     .attr("dy", ".35em")
     .attr("text-anchor", "end")
     .attr("transform", null)

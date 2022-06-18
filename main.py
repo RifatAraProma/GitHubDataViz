@@ -20,7 +20,7 @@ def write_issue_to_csv(issue_list):
     csvWriter = open('issue_details.csv', 'w', newline='')
     writer = csv.writer(csvWriter)
     writer.writerow(
-        ["Issue Title", "Created Date (UTC Timestamp)", "Closed Date (UTC Timestamp)", "Label"])
+        ["title", "created", "closed", "label"])
 
     for issue in issue_list:
         createdTimeUTC = convert_date_to_utc(issue.created_date)
@@ -56,10 +56,14 @@ def get_issues(url):
     issue_json_list = response.json()
 
     for i in issue_json_list:
-        label = 'none'
-        if len(i['labels']) != 0:
-            label_obj = i['labels'][0]
-            label = label_obj['name']
+        label = 'other'
+        for l in i['labels']:
+            label_obj = l
+            if "bug" in  label_obj['name']:
+                label = "bug"
+        if (label == "other" and ("fix" in i['title'] or "bug" in i[title])):
+            label = "bug"
+            
         title = i['title']
         created_date = i['created_at']
         closed_date = i['closed_at']
@@ -192,11 +196,11 @@ def get_commits(url):
 # print(list_of_commits)
 # write_commit_to_csv(list_of_commits)
 
-# list_of_issues = get_issues("https://api.github.com/repos/vaxerski/Hyprland/issues?state=closed")
-# write_issue_to_csv(list_of_issues)
+list_of_issues = get_issues("https://api.github.com/repos/vaxerski/Hyprland/issues?state=closed")
+write_issue_to_csv(list_of_issues)
 
-list_of_commits = get_commits("https://api.github.com/repos/vaxerski/Hyprland/commits")
-write_commit_to_csv(list_of_commits)
+# list_of_commits = get_commits("https://api.github.com/repos/vaxerski/Hyprland/commits")
+# write_commit_to_csv(list_of_commits)
 
 # list_of_issues = get_issues("https://api.github.com/repos/vaxerski/Hyprland/commits")
 # write_issue_to_csv(list_of_issues)

@@ -118,7 +118,11 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
                   return d[y_field] + "\ncreated: " + new Date(d[x1_field]) + "\nclosed; " + new Date(d[x2_field]);
             });
 
-
+            // Legends for Gantt
+            g.append("circle").attr("cx",innerWidth + 10).attr("cy",10).attr("r", 6).style("fill", "cornflowerblue")
+            g.append("circle").attr("cx",innerWidth + 10).attr("cy",30).attr("r", 6).style("fill", "deeppink")
+            g.append("text").attr("x", innerWidth + 20).attr("y", 10).text("Other issues").style("font-size", "10px").attr("alignment-baseline","middle")
+            g.append("text").attr("x", innerWidth + 20).attr("y", 30).text("Bug related issues").style("font-size", "10px").attr("alignment-baseline","middle")
 
       // Generate bars for commits
       const COLOR_PALETTE = ["#68FF42","#68FF42", "#FFFF54", "#FFFF54", "#EF8432", "#EF8432",

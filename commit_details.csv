@@ -1,9 +1,0 @@
-Commit Message,Created Date (UTC Timestamp),Files Updated,Diff,Author
-find surfaces in reverse for focus,1654867110.0,['src/Compositor.cpp'],,vaxerski
-added focuswindowbyclass,1654855587.0,"['src/managers/KeybindManager.cpp', 'src/managers/KeybindManager.hpp']",,vaxerski
-cyclenext,1654854112.0,['src/managers/KeybindManager.cpp'],,vaxerski
-Added circlenext,1654853946.0,"['src/managers/KeybindManager.cpp', 'src/managers/KeybindManager.hpp']",,vaxerski
-"Merge pull request #174 from ThatOneCalculator/main
-
-Change features section in readme",1654805626.0,['README.md'],"[('README.md', [54, 57, 59, 60, 61, 62, 63, 65, 67, 69], [54, 57, 59, 60, 61, 62, 64, 66])]",vaxerski
-remove unfocusall,1654805253.0,"['src/managers/input/InputManager.cpp', 'src/managers/input/InputManager.hpp', 'src/managers/input/Tablets.cpp']",,vaxerski

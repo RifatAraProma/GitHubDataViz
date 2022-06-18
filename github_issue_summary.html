@@ -62,12 +62,13 @@
         </div>
         <div id="commit-details-div">
             <div class="container-div"><svg id="vis_1" name="vis_1" class="default_svg"></svg></div>
-            <div id="commits"></div>
         </div>
         <div id="commit-details-sankey-div" style="display: none">
             <button id="backBtn" class="default-button" style="float: left" onclick="goBack()"><i class="fa fa-arrow-circle-left"
                 aria-hidden="true"></i> Back</button>
-            <div class="container-div"><svg id="vis_4" name="vis_4" class="sankey_svg"></svg></div>
+            <button id="backBtn" class="default-button" style="float: right" onclick="viewChange()">List View</button>
+            <div id="commits" style="display: none"></div>
+            <div id="sankey"><div class="container-div"><svg id="vis_4" name="vis_4" class="sankey_svg"></svg></div></div>
         </div>
         <div id="file-update-summary-div" style="display: none">
 
@@ -649,6 +650,17 @@
         function goBack(){          
             document.getElementById("commit-details-div").style = "display: block";
             document.getElementById("commit-details-sankey-div").style = "display: none ";
+        }
+
+        function viewChange(){
+            if (document.getElementById("commits").style.display == "none"){
+                document.getElementById("commits").style.display = "block";
+                document.getElementById("sankey").style.display = "none";
+            }
+            else{
+                document.getElementById("sankey").style.display = "block";
+                document.getElementById("commits").style.display = "none";
+            }
         }
 
         function updateFilesToBeDisplayed(){

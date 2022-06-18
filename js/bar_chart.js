@@ -79,8 +79,8 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
             .attr("width", d => xScale(d[x2_field]) - xScale(d[x1_field]))
             .attr("height", yScale.bandwidth())
             .on('click', function (d) {
-                  showCommitBetween(d.created, d.closed);
-                  showCommitBetweenWithSankey(d.created, d.closed);
+                  showCommitBetween(d.created, d.closed, d.title);
+                  showCommitBetweenWithSankey(d.created, d.closed, d.title);
                   // focusing the selected bar and reducing opacity of all other bars
                   if (selectedBar != this) {
                         g.selectAll("rect[class='issue_duration_bars']")
@@ -132,7 +132,7 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
       var commitRect = g.selectAll("rect_commit")
             .data(data).enter();
       data.forEach(d => {
-            let commits = getCommitBetween(d.created, d.closed);
+            let commits = getCommitBetween(d.created, d.closed, d.title);
             let offset = (xScale(d[x2_field]) - xScale(d[x1_field])) / commits.length;
             let delX = 0;
             var color = d3.scaleLinear()

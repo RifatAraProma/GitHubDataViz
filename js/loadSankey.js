@@ -73,10 +73,13 @@ function load_sankey(svg_name, graph) {
     .attr("height", function (d) { return d.dy; })
     .attr("width", sankey.nodeWidth())
     .style("fill", function (d) {
-      if (d.type == "commit" && d.name.includes("fix")){
-        return "#e62e00";
-      }else if(d.type == "commit"){
-        return "cornflowerblue"
+      if (d.type == "commit"){
+        if (d.label == "important")
+          return "red";
+        else if (d.label == "bugfix")
+          return "darkorange"
+        else
+          return "cornflowerblue"
       }
       else{
         return d.color = color(d.name.replace(/ .*/, ""));

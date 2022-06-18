@@ -66,7 +66,7 @@
         <div id="commit-details-sankey-div" style="display: none">
             <button id="backBtn" class="default-button" style="float: left" onclick="goBack()"><i class="fa fa-arrow-circle-left"
                 aria-hidden="true"></i> Back</button>
-            <button id="viewChangeBtn" class="default-button" style="float: right" onclick="viewChange()">List View</button>
+            <button id="viewChangeBtn" class="default-button" style="float: right" onclick="commitViewChange()">List View</button>
             <div id="commits" style="display: none"></div>
             <div id="sankey"><div class="container-div"><svg id="vis_4" name="vis_4" class="sankey_svg"></svg></div></div>
         </div>
@@ -273,7 +273,7 @@
         });
 
 
-        function showCommitBetweenWithSankey(time1, time2) {
+        function showCommitBetweenWithSankey(time1, time2, title) {
             var sankeyJson= {
                 "nodes": [],
                 "links":[]
@@ -283,10 +283,18 @@
             var author_dict = [];
             commits.forEach(commit => {
                 if (commit.created >= time1 && commit.created <= time2) {
+                    let label;
+                    if(commit.message.includes(title)){
+                        label = "important";
+                    }
+                    else if (commit.message.includes("fix")){
+                        label = "bugfix";
+                    }
                     sankeyJson.nodes.push({
                         "node" : i,
                         "name" : commit.message,
-                        "type": "commit"
+                        "type": "commit",
+                        "label": label
                     })
 
                     var commit_index = i;
@@ -359,13 +367,16 @@
             load_sankey("#vis_4", sankeyJson);
         }
 
-            function showCommitBetween(time1, time2) {
+            function showCommitBetween(time1, time2, title) {
             commit_div.innerHTML = '';
             var i = 0;
             commits.forEach(commit => {
                 if (commit.created >= time1 && commit.created <= time2) {
-                    if (commit.message.includes("fix")){
+                    if (commit.message.includes(title)){
                         commit_div.innerHTML += '<button type="button" style="background-color: red" class="collapsible">' + commit.message + '</button><div class="content" id=' + i + '></div>';
+                    }
+                    else if (commit.message.includes("fix")){
+                        commit_div.innerHTML += '<button type="button" style="background-color: darkorange" class="collapsible">' + commit.message + '</button><div class="content" id=' + i + '></div>';
                     }
                     else{
                         commit_div.innerHTML += '<button type="button" class="collapsible">' + commit.message + '</button><div class="content" id=' + i + '></div>';
@@ -652,16 +663,16 @@
             document.getElementById("commit-details-sankey-div").style = "display: none ";
         }
 
-        function viewChange(){
+        function commitViewChange(){
             if (document.getElementById("commits").style.display == "none"){
                 document.getElementById("commits").style.display = "block";
                 document.getElementById("sankey").style.display = "none";
-                document.getElementById("viewChangeBtn").text = "Diagram view"
+                document.getElementById("viewChangeBtn").innerHTML = "Diagram view"
             }
             else{
                 document.getElementById("sankey").style.display = "block";
                 document.getElementById("commits").style.display = "none";
-                document.getElementById("viewChangeBtn").text = "List view"
+                document.getElementById("viewChangeBtn").innerHTML = "List view"
             }
         }
 

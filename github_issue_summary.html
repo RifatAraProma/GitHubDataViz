@@ -61,7 +61,7 @@
             <button id="vizToggleBtn" class="toggle-viz-button" onclick="changeViz()">Show File Update Summary</button>
         </div>
         <div id="commit-details-div">
-            <div class="container-div"><svg id="vis_1" name="vis_1" class="default_svg"></svg></div>
+            <div class="container-div"><svg id="timeline" name="timeline" class="default_svg"></svg></div>
         </div>
         <div id="commit-details-sankey-div" style="display: none">
             <button id="backBtn" class="default-button" style="float: left" onclick="goBack()"><i class="fa fa-arrow-circle-left"
@@ -76,8 +76,8 @@
             <button id="optionsBtn" class="default-button">Options <i class="fa fa-ellipsis-v"
                     aria-hidden="true"></i></button>
 
-            <div id="vis_2" style="text-align:center; width: 40%;" class="float-child"></div>
-            <div id="vis_3" style="text-align:center; width: 60%;" class="float-child"></div>
+            <div id="file_update" style="text-align:center; width: 40%;" class="float-child"></div>
+            <div id="histogram" style="text-align:center; width: 60%;" class="float-child"></div>
             <!-- <div class="float-container">
                
             </div> -->
@@ -132,14 +132,14 @@
 
     <script>
         let data = null;
-        let vis_1 = null;
+        let timeline = null;
         let commits = null;
         let commit_div = document.getElementById('commits');
-        let vis_2 = null;
+        let file_update = null;
         let updated_files_summary = [];
         let file_update_freq = [];
         let data_to_show = [];
-        let viz_3 = null;
+        let histogram = null;
         let threshold = 19;
         let lowerBound = threshold;
         let upperBound = -1;
@@ -248,8 +248,8 @@
 
             data_to_show.push({ name: "other", update_freq: freqCounter, bugfix: false });
             //show top 5 most updated files
-            vis_2 = load_file_update_summary("#vis_2", data_to_show, "number of lines");
-            vis_3 = load_histogram("#vis_3", file_update_freq)
+            file_update = load_file_update_summary("#file_update", data_to_show, "number of lines");
+            histogram = load_histogram("#histogram", file_update_freq)
 
             d3.csv("data/issue_details.csv", (row, i) => {
                 return {
@@ -263,7 +263,7 @@
 
                 let title_vis1 = "Issues with their creation and closing dates";
                 let x_title_vis1 = "Date";
-                vis_1 = load_timeline("#vis_1", data, title_vis1, "created", "closed", "title", x_title_vis1);
+                timeline = load_timeline("#timeline", data, title_vis1, "created", "closed", "title", x_title_vis1);
             }).catch(error => {
                 console.log(error);
             });
@@ -560,8 +560,8 @@
         function loadData(data) {
             let status = document.getElementById("numberOfLines").checked;
             let type = status == true ? "number of lines" : "percentage";
-            vis_2 = null;
-            vis_2 = load_file_update_summary("#vis_2", data, type);
+            file_update = null;
+            file_update = load_file_update_summary("#file_update", data, type);
         }
 
         function updateFileFreqDisplay() {

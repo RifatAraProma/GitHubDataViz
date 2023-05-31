@@ -196,7 +196,7 @@ def get_commits(url):
 # print(list_of_commits)
 # write_commit_to_csv(list_of_commits)
 
-list_of_issues = get_issues("https://api.github.com/repos/vaxerski/Hyprland/issues?state=closed")
+list_of_issues = get_issues("https://api.github.com/repos/vaxerski/Hyprland/issues?")
 write_issue_to_csv(list_of_issues)
 
 # list_of_commits = get_commits("https://api.github.com/repos/vaxerski/Hyprland/commits")

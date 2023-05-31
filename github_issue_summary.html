@@ -61,14 +61,23 @@
             <button id="vizToggleBtn" class="toggle-viz-button" onclick="changeViz()">Show File Update Summary</button>
         </div>
         <div id="commit-details-div">
+            <div class="dropdown-container-div">
+                <select id="issueOptionSelect">
+                    <option value="state">Show issues state</option>
+                    <option value="label">Show issue labels</option>
+                </select>
+            </div>
             <div class="container-div"><svg id="timeline" name="timeline" class="default_svg"></svg></div>
         </div>
         <div id="commit-details-sankey-div" style="display: none">
-            <button id="backBtn" class="default-button" style="float: left" onclick="goBack()"><i class="fa fa-arrow-circle-left"
-                aria-hidden="true"></i> Back</button>
-            <button id="viewChangeBtn" class="default-button" style="float: right" onclick="commitViewChange()">List View</button>
+            <button id="backBtn" class="default-button" style="float: left" onclick="goBack()"><i
+                    class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back</button>
+            <button id="viewChangeBtn" class="default-button" style="float: right" onclick="commitViewChange()">List
+                View</button>
             <div id="commits" style="display: none"></div>
-            <div id="sankey"><div class="container-div"><svg id="vis_4" name="vis_4" class="sankey_svg"></svg></div></div>
+            <div id="sankey">
+                <div class="container-div"><svg id="vis_4" name="vis_4" class="sankey_svg"></svg></div>
+            </div>
         </div>
         <div id="file-update-summary-div" style="display: none">
 
@@ -95,10 +104,10 @@
                     <select id="displayedFilesList" class="js-select2"
                         onchange="updateLineCountChange('#displayedFilesList')" multiple="multiple">
                     </select>
-                    
+
                     <h2 id="otherFilesListHeader"></h2>
-                    <select id="otherFilesList" class="js-select2"
-                        onchange="updateLineCountChange('#otherFilesList')" multiple="multiple">
+                    <select id="otherFilesList" class="js-select2" onchange="updateLineCountChange('#otherFilesList')"
+                        multiple="multiple">
                     </select>
                 </div>
                 <div>
@@ -145,7 +154,7 @@
         let upperBound = -1;
 
         // load_sankey("#vis_4")
-       
+
         d3.csv("data/commit_details.csv", (row, i) => {
             return {
                 message: row.message,
@@ -165,15 +174,14 @@
                 let files_diff = getFilesDiffList(commit.diff);
                 files.forEach(file => {
                     let fileName = file.trim();
-                    if (fileName.includes("Compositor.cpp"))
-                    {
+                    if (fileName.includes("Compositor.cpp")) {
                         console.log("here");
                     }
 
                     if (!file_list.find(file => file == fileName)) {
                         file_list.push(fileName);
                     }
-                    if (commit.message.includes("fix") && file_update_for_bugfix_map[fileName] == undefined){
+                    if (commit.message.includes("fix") && file_update_for_bugfix_map[fileName] == undefined) {
                         file_update_for_bugfix_map[fileName] = true;
                     }
                     files_diff.forEach(file_diff => {
@@ -233,9 +241,8 @@
             $("#displayedFilesList").val(top_five);
 
             let freqCounter = 0;
-            console.log(file_update_freq);
             file_update_freq.forEach((file) => {
-                if(file.update_freq == undefined){
+                if (file.update_freq == undefined) {
                     file.update_freq = 0;
                 }
                 if (data_to_show.length < 5) {
@@ -252,18 +259,25 @@
             histogram = load_histogram("#histogram", file_update_freq)
 
             d3.csv("data/issue_details.csv", (row, i) => {
+                row.created = new Date(row.created);
+                row.closed = row.closed == '' ? new Date() : new Date(row.closed);
+                jsonString = row.labels.replace(/'/g, '"').replace(/False/g, 'false').replace(/True/g, 'true')
+                label_list = JSON.parse(jsonString);
+                console.log(row)
+
                 return {
                     title: row.title,
-                    created: row.created * 1000, // millisec
-                    closed: row.closed * 1000,
-                    label: row.label
+                    created: row.created.getTime(), // millisec
+                    closed: row.closed.getTime(),
+                    labels: label_list,
+                    state: row.state
                 };
             }).then(rows => {
                 data = rows;
-
-                let title_vis1 = "Issues with their creation and closing dates";
-                let x_title_vis1 = "Date";
-                timeline = load_timeline("#timeline", data, title_vis1, "created", "closed", "title", x_title_vis1);
+                let title = "Issues with their creation and closing dates";
+                let x_title = "Date";
+                let type = 'state'
+                timeline = load_timeline("#timeline", data, title, "created", "closed", "title", x_title, type);
             }).catch(error => {
                 console.log(error);
             });
@@ -274,9 +288,9 @@
 
 
         function showCommitBetweenWithSankey(time1, time2, title) {
-            var sankeyJson= {
+            var sankeyJson = {
                 "nodes": [],
-                "links":[]
+                "links": []
             };
             var i = 0;
             var file_dict = [];
@@ -284,15 +298,15 @@
             commits.forEach(commit => {
                 if (commit.created >= time1 && commit.created <= time2) {
                     let label;
-                    if(commit.message.includes(title)){
+                    if (commit.message.includes(title)) {
                         label = "important";
                     }
-                    else if (commit.message.includes("fix")){
+                    else if (commit.message.includes("fix")) {
                         label = "bugfix";
                     }
                     sankeyJson.nodes.push({
-                        "node" : i,
-                        "name" : commit.message,
+                        "node": i,
+                        "name": commit.message,
                         "type": "commit",
                         "label": label
                     })
@@ -300,17 +314,17 @@
                     var commit_index = i;
                     i++;
 
-                    if (author_dict[commit.author] == undefined){
+                    if (author_dict[commit.author] == undefined) {
                         sankeyJson.nodes.push({
-                            "node" : i,
-                            "name" : commit.author,
+                            "node": i,
+                            "name": commit.author,
                             "type": "author"
                         })
 
                         author_dict[commit.author] = i;
                         var author_index = i;
                         i++;
-                    }else{
+                    } else {
                         var author_index = author_dict[commit.author];
                     }
 
@@ -318,14 +332,13 @@
                     let files = commit.files_updated.replace("[", "").replace("]", "").replaceAll("'", "").split(', ');
                     let files_diff = getFilesDiffList(commit.diff);
                     files.forEach(file => {
-                        if (file_dict[file] == undefined)
-                        {
+                        if (file_dict[file] == undefined) {
 
                             file_dict[file] = i;
                             sankeyJson.nodes.push({
-                                "node" : i,
-                                "name" : file,
-                                "type" : "file"
+                                "node": i,
+                                "name": file,
+                                "type": "file"
                             })
 
                             sankeyJson.links.push({
@@ -342,7 +355,7 @@
 
                             i++;
                         }
-                        else{
+                        else {
                             sankeyJson.links.push({
                                 "source": commit_index,
                                 "target": file_dict[file],
@@ -355,8 +368,8 @@
                                 "value": 2
                             })
                         }
-                        
-                        
+
+
                     })
 
                 }
@@ -367,21 +380,21 @@
             load_sankey("#vis_4", sankeyJson);
         }
 
-            function showCommitBetween(time1, time2, title) {
+        function showCommitBetween(time1, time2, title) {
             commit_div.innerHTML = '';
             var i = 0;
             commits.forEach(commit => {
                 if (commit.created >= time1 && commit.created <= time2) {
-                    if (commit.message.includes(title)){
+                    if (commit.message.includes(title)) {
                         commit_div.innerHTML += '<button type="button" style="background-color: red" class="collapsible">' + commit.message + '</button><div class="content" id=' + i + '></div>';
                     }
-                    else if (commit.message.includes("fix")){
+                    else if (commit.message.includes("fix")) {
                         commit_div.innerHTML += '<button type="button" style="background-color: darkorange" class="collapsible">' + commit.message + '</button><div class="content" id=' + i + '></div>';
                     }
-                    else{
+                    else {
                         commit_div.innerHTML += '<button type="button" class="collapsible">' + commit.message + '</button><div class="content" id=' + i + '></div>';
                     }
-                    
+
                     // delete the first and last square bracket and also the first quotes
                     let files = commit.files_updated.replace("[", "").replace("]", "").replaceAll("'", "").split(', ');
                     let files_diff = getFilesDiffList(commit.diff);
@@ -610,7 +623,7 @@
             var dropDownForOtherFiles = document.getElementById("otherFilesList");
             document.getElementById("displayedFilesListHeader").innerHTML = "Files with " + lowerBound + " - " + upperBound + " lines of updates";
             document.getElementById("otherFilesListHeader").innerHTML = "Files with more than " + upperBound + " lines of updates";
-            
+
             clearChildren(dropDownForFilesBeingDisplayed);
             clearChildren(dropDownForOtherFiles);
             var option = document.createElement("option");
@@ -632,7 +645,7 @@
                 option.value = i; // setting index of the entry as value to access it easy later on
                 option.text = entry.name;
 
-                if (entry.update_freq >= lowerBound && entry.update_freq <= upperBound ){
+                if (entry.update_freq >= lowerBound && entry.update_freq <= upperBound) {
                     dropDownForFilesBeingDisplayed.appendChild(option);
                     data.push(entry);
                     selected.push(i);
@@ -650,35 +663,35 @@
             loadData(data_to_show);
         }
 
-        function clearChildren(parent){
-            var child = parent.lastElementChild; 
+        function clearChildren(parent) {
+            var child = parent.lastElementChild;
             while (child) {
                 parent.removeChild(child);
                 child = parent.lastElementChild;
             }
         }
 
-        function goBack(){          
+        function goBack() {
             document.getElementById("commit-details-div").style = "display: block";
             document.getElementById("commit-details-sankey-div").style = "display: none ";
         }
 
-        function commitViewChange(){
-            if (document.getElementById("commits").style.display == "none"){
+        function commitViewChange() {
+            if (document.getElementById("commits").style.display == "none") {
                 document.getElementById("commits").style.display = "block";
                 document.getElementById("sankey").style.display = "none";
                 document.getElementById("viewChangeBtn").innerHTML = "Diagram view"
             }
-            else{
+            else {
                 document.getElementById("sankey").style.display = "block";
                 document.getElementById("commits").style.display = "none";
                 document.getElementById("viewChangeBtn").innerHTML = "List view"
             }
         }
 
-        function updateFilesToBeDisplayed(){
+        function updateFilesToBeDisplayed() {
             let status = document.getElementById("bugFixFiles").checked;
-            if (!status){
+            if (!status) {
                 loadData(data_to_show);
                 return;
             }
@@ -687,7 +700,7 @@
                 if (status && file.bugfix) {
                     data.push(file);
                 }
-                
+
             });
 
             loadData(data);
@@ -697,6 +710,37 @@
         $('#displayedFilesList').select2({ placeholder: "Select files" });
         $('#otherFilesList').select2({ placeholder: "Select files" });
         // $('#updateCountSelectButton').val(file_list);
+
+        // Method to handle the change event of the select element
+        function handleOptionChange() {
+            var selectedOption = document.getElementById("issueOptionSelect").value;
+            // Perform actions based on the selected option
+            if (selectedOption === "state") {
+                // Call a method to show issues state
+                showIssuesState();
+            } else if (selectedOption === "label") {
+                // Call a method to show issue labels
+                showIssueLabels();
+            }
+        }
+
+        // Attach the event listener to the select element
+        document.getElementById("issueOptionSelect").addEventListener("change", handleOptionChange);
+
+        // Methods to show issues state and issue labels
+        function showIssuesState() {
+            console.log("Showing issues state");
+            let title = "Issues with their creation and closing dates";
+            let x_title = "Date";
+            timeline = load_timeline("#timeline", data, title, "created", "closed", "title", x_title, "state");
+        }
+
+        function showIssueLabels() {
+            console.log("Showing issue labels");
+            let title = "Issues with their creation and closing dates";
+            let x_title = "Date";
+            timeline = load_timeline("#timeline", data, title, "created", "closed", "title", x_title, "label");
+        }
 
     </script>
 

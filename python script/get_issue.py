@@ -8,13 +8,13 @@ from datetime import timezone
 from unidiff import PatchSet
 import urllib.request
 import pandas as pd
-
+from urllib.parse import urlparse
 
 
 def convert_date_to_utc(date_time_str):
     if date_time_str == None:
         return datetime.datetime.utcnow()
-    
+
     date_time_obj = datetime.datetime.strptime(
         date_time_str, '%Y-%m-%dT%H:%M:%SZ')
     timestamp = date_time_obj.replace(tzinfo=timezone.utc).timestamp()
@@ -28,6 +28,50 @@ def write_json_to_csv(json_list, filename):
         writer.writeheader()
         for obj in json_list:
             writer.writerow(obj)
+
+def getPRInfo(pull_request_url):
+    pull_request_response = requests.get(pull_request_url)
+    info = {}
+    if pull_request_response.status_code == 200:
+        pull_request_data = pull_request_response.json()
+        creator = pull_request_data["user"]["login"]
+        info['creator'] = creator
+    else:
+        info['creator'] = None
+        print(f"Error: {pull_request_response.status_code} - {pull_request_response.text}")
+
+    # Get pull request commits
+    commits_url = pull_request_data["commits_url"].split("{")[0]
+    commits_response = requests.get(commits_url)
+    if commits_response.status_code == 200:
+        commits_data = commits_response.json()
+        commit = []
+        for commit in commits_data:
+            sha = commit["sha"]
+            message = commit["commit"]["message"]
+            commit.append({'sha': sha, 'message': message})
+            print(f"Commit SHA: {sha}")
+            print(f"Commit message: {message}")
+        
+    else:
+        print(f"Error: {commits_response.status_code} - {commits_response.text}")
+    info['commits'] = commit
+
+def getPR(issue_number):
+    pr_url = f"https://api.github.com/repos/{owner}/{repo}/issues/{issue_number}"
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        if "pull_request" in data:
+            pull_request_url = data["pull_request"]["url"]
+            # Do something with the pull request URL
+            print(pull_request_url)
+        else:
+            # The issue is not associated with a pull request
+            print("No pull request associated with the issue.")
+    else:
+        # Handle the request error
+        print(f"Error: {response.status_code} - {response.text}")
 
 # Replace with your GitHub repository details
 owner = 'freeCodeCamp'
@@ -56,20 +100,35 @@ if response1.status_code == 200 and response2.status_code == 200:
     csvWriter = open('issue_details.csv', 'w', newline='')
     writer = csv.writer(csvWriter)
     writer.writerow(
-        ["issue_id", "issue_number", "title", "state",  "created", "closed", "labels"])
+        ["issue_id", "issue_number", "title", "state",  "created", "closed", "labels", "user", "assignees", "pr_title", "pr_number" "pr_sha", "pr_message", "pr_creator"])
 
     # Loop through the issues and print relevant information
     for issue in issues:
-        if('pull_request' in issue):
+        if ('pull_request' in issue):
             continue
         createdTime = convert_date_to_utc(issue['created_at'])
         closedTime = convert_date_to_utc(issue['closed_at'])
         labels = issue['labels']
-        writer.writerow([issue['id'], issue['number'], issue['title'], issue['state'], createdTime, closedTime, labels])
+        pr_number = ''
+        pr_title = ''
+        pr_creator = ''
+        pr_message = ''
+        pr_sha = ''
+        if (issue['state'] == 'closed'):
+            pull_request_url = getPR(issue['number'])
+            if pull_request_url != None:
+                parsed_url = urlparse(pull_request_url.encode())
+                path_parts = parsed_url.path.split("/")
 
+                pr_number = int(path_parts[-1])
+                pr_title = path_parts[-2]
+        
+
+        writer.writerow([issue['id'], issue['number'], issue['title'], issue['state'],
+                        createdTime, closedTime, labels, issue['user'], issue['assignee'], pr_title, pr_number, pr_sha, pr_message, pr_creator])
 
     csvWriter.close()
 
 else:
     # Print an error message if request fails
-    print(f"Failed to fetch issues. HTTP status code: {response.status_code}")
+    print(f"Failed to fetch issues. HTTP status code: {response2.status_code}")

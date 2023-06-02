@@ -42,6 +42,7 @@
     <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/sankey.js"></script>
     <!--*******************************************-->
     <!--***** IMPORT EXTERNAL JAVASCRIPT CODE *****-->
+    <script src="js/load_network.js"></script>
     <script src="js/bar_chart.js"></script>
     <script src="js/donut_chart.js"></script>
     <script src="js/histogram"></script>
@@ -75,8 +76,8 @@
             <button id="viewChangeBtn" class="default-button" style="float: right" onclick="commitViewChange()">List
                 View</button>
             <div id="commits" style="display: none"></div>
-            <div id="sankey">
-                <div class="container-div"><svg id="vis_4" name="vis_4" class="sankey_svg"></svg></div>
+            <div id="network-container">
+                
             </div>
         </div>
         <div id="file-update-summary-div" style="display: none">
@@ -259,21 +260,38 @@
             histogram = load_histogram("#histogram", file_update_freq)
 
             d3.csv("data/issue_details.csv", (row, i) => {
-                row.created = new Date(row.created);
-                row.closed = row.closed == '' ? new Date() : new Date(row.closed);
-                jsonString = row.labels.replace(/'/g, '"').replace(/False/g, 'false').replace(/True/g, 'true')
+                // console.log(row.created)
+                // row.created = new Date(row.created);
+                row.closed = row.closed == '' | row.closed == NaN ? new Date().getTime() : parseInt(row.closed) * 1000;
+
+                jsonString = row.labels.replace(/'/g, '"').replace(/\bFalse\b/g, 'false')
+                                        .replace(/\bTrue\b/g, 'true')
+                                        .replace(/"s(\s|")/g, "'s$1");
+                
+
+
+                if(jsonString == "[]"){
+                    jsonString = '[{"id": 0, "node_id": "0", "url": "", "name": "no label", "color": "4682B4", "default": false, "description": ""}]'
+                }
                 label_list = JSON.parse(jsonString);
-                console.log(row)
 
                 return {
                     title: row.title,
-                    created: row.created.getTime(), // millisec
-                    closed: row.closed.getTime(),
+                    created: parseInt(row.created) * 1000, // millisec
+                    closed: row.closed,
                     labels: label_list,
-                    state: row.state
+                    state: row.state,
+                    user: row.user,
+                    assignees: row.assignees,
+                    pr_title: row.pr_title,
+                    pr_number: row.pr_number,
+                    pr_sha: row.pr_sha,
+                    pr_message: row.pr_message,
+                    pr_creator: row.pr_creator
                 };
             }).then(rows => {
                 data = rows;
+                console.log(data)
                 let title = "Issues with their creation and closing dates";
                 let x_title = "Date";
                 let type = 'state'
@@ -287,97 +305,10 @@
         });
 
 
-        function showCommitBetweenWithSankey(time1, time2, title) {
-            var sankeyJson = {
-                "nodes": [],
-                "links": []
-            };
-            var i = 0;
-            var file_dict = [];
-            var author_dict = [];
-            commits.forEach(commit => {
-                if (commit.created >= time1 && commit.created <= time2) {
-                    let label;
-                    if (commit.message.includes(title)) {
-                        label = "important";
-                    }
-                    else if (commit.message.includes("fix")) {
-                        label = "bugfix";
-                    }
-                    sankeyJson.nodes.push({
-                        "node": i,
-                        "name": commit.message,
-                        "type": "commit",
-                        "label": label
-                    })
-
-                    var commit_index = i;
-                    i++;
-
-                    if (author_dict[commit.author] == undefined) {
-                        sankeyJson.nodes.push({
-                            "node": i,
-                            "name": commit.author,
-                            "type": "author"
-                        })
-
-                        author_dict[commit.author] = i;
-                        var author_index = i;
-                        i++;
-                    } else {
-                        var author_index = author_dict[commit.author];
-                    }
-
-                    // delete the first and last square bracket and also the first quotes
-                    let files = commit.files_updated.replace("[", "").replace("]", "").replaceAll("'", "").split(', ');
-                    let files_diff = getFilesDiffList(commit.diff);
-                    files.forEach(file => {
-                        if (file_dict[file] == undefined) {
-
-                            file_dict[file] = i;
-                            sankeyJson.nodes.push({
-                                "node": i,
-                                "name": file,
-                                "type": "file"
-                            })
-
-                            sankeyJson.links.push({
-                                "source": commit_index,
-                                "target": i,
-                                "value": 2
-                            })
-
-                            sankeyJson.links.push({
-                                "source": i,
-                                "target": author_index,
-                                "value": 2
-                            })
-
-                            i++;
-                        }
-                        else {
-                            sankeyJson.links.push({
-                                "source": commit_index,
-                                "target": file_dict[file],
-                                "value": 2
-                            })
-
-                            sankeyJson.links.push({
-                                "source": file_dict[file],
-                                "target": author_index,
-                                "value": 2
-                            })
-                        }
-
-
-                    })
-
-                }
-
-            });
-            document.getElementById("commit-details-div").style = "display: none";
+        function showCommitBetweenWithSankey(selected_issue) {
+            load_network(selected_issue)
             document.getElementById("commit-details-sankey-div").style = "display: block ";
-            load_sankey("#vis_4", sankeyJson);
+            
         }
 
         function showCommitBetween(time1, time2, title) {

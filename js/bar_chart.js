@@ -132,8 +132,8 @@ function load_issue_status(g, xScale, yScale, x1_field, x2_field, y_field, inner
             .append("g")
             .attr("class", "issue_group")
             .on('click', function (d) {
-                  showCommitBetween(d.created, d.closed, d.title);
-                  showCommitBetweenWithSankey(d.created, d.closed, d.title);
+                  console.log(d)
+                  showCommitBetweenWithSankey(d);
                   // ...
             });
 

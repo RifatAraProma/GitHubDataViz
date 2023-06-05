@@ -112,6 +112,16 @@ function ForceGraph({
     if (T) node.append("title").text(({ index: i }) => nodes_copy[i]["name"]);
     if (invalidation != null) invalidation.then(() => simulation.stop());
 
+     // Legends for Gantt
+     legend_distance_x = innerWidth -100
+     legend_distance_y = 20
+
+     nodeGroups.forEach(group =>{
+           svg.append("rect").attr("x", legend_distance_x).attr("y", legend_distance_y).attr("width", 20).attr("height", 20).style("fill", color[group])
+           svg.append("text").attr("class", "legend-text").attr("x", legend_distance_x + 30).attr("y", legend_distance_y + 10).text(group).style("font-size", "16px").style("font-weight", "600").attr("alignment-baseline", "middle")
+           legend_distance_y = legend_distance_y + 30
+     })
+
     function intern(value) {
         return value !== null && typeof value === "object" ? value.valueOf() : value;
     }

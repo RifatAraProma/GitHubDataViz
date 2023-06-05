@@ -97,7 +97,7 @@ function showPercentage(data_ready, arc, arcOver) {
             d3.select(this).transition()
                 .duration(500)
                 .attr("d", arcOver);
-            var updatedLineCount = Math.round((d.data.update_freq / totalUpdatedLines) * 100) + "% of total change";
+            var updatedLineCount = Math.round((d.currentTarget.__data__.data.update_freq / totalUpdatedLines) * 100) + "% of total change";
             svg.append("text")
                 .attr("class", "updatedLineCount")
                 .attr("text-anchor", "middle")
@@ -130,7 +130,7 @@ function showNumberOfLines(data_ready, arc, arcOver) {
             d3.select(this).transition()
                 .duration(500)
                 .attr("d", arcOver);
-            var updatedLineCount = d.data.update_freq + " lines were updated";
+            var updatedLineCount = d.currentTarget.__data__.data.update_freq + " lines were updated";
             svg.append("text")
                 .attr("class", "updatedLineCountTextClass")
                 .attr("text-anchor", "middle")

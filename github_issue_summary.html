@@ -31,8 +31,8 @@
     <!-- <script src="https://d3js.org/d3.v5.js"
         integrity="sha384-qbNa7U27VV0Cghe/43y8zEMkmA5M4VxV6MI0k0vdVJKTrBoT2SnBqwccpD0vX+Is"
         crossorigin="anonymous"></script> -->
-    
-        <script src="https://d3js.org/d3.v6.js"></script>
+
+    <script src="https://d3js.org/d3.v6.js"></script>
 
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
@@ -79,11 +79,12 @@
             <button id="viewChangeBtn" class="default-button" style="float: right" onclick="commitViewChange()">List
                 View</button>
             <div id="commits" style="display: none"></div>
-           
+
             <div id="sankey">
                 <div id="network-container">
-                
-                </div><div class="container-div"><svg id="vis_4" name="vis_4" class="sankey_svg"></svg></div>
+
+                </div>
+                <div class="container-div"><svg id="vis_4" name="vis_4" class="sankey_svg"></svg></div>
             </div>
         </div>
         <div id="file-update-summary-div" style="display: none">
@@ -271,17 +272,17 @@
                 row.closed = row.closed == '' | row.closed == NaN ? new Date().getTime() : parseInt(row.closed) * 1000;
 
                 jsonString = row.labels.replace(/'/g, '"').replace(/\bFalse\b/g, 'false')
-                                        .replace(/\bTrue\b/g, 'true')
-                                        .replace(/"s(\s|")/g, "'s$1");
-                
+                    .replace(/\bTrue\b/g, 'true')
+                    .replace(/"s(\s|")/g, "'s$1");
 
 
-                if(jsonString == "[]"){
+
+                if (jsonString == "[]") {
                     jsonString = '[{"id": 0, "node_id": "0", "url": "", "name": "no label", "color": "4682B4", "default": false, "description": ""}]'
                 }
                 label_list = JSON.parse(jsonString);
 
-                
+
 
                 return {
                     title: row.title,
@@ -320,6 +321,60 @@
             var i = 0;
             var file_dict = [];
             var author_dict = [];
+            let creator_id = i;
+            sankeyJson.nodes.push({
+                "id": i,
+                "name": JSON.parse(selected_issue["user"].replace(/'/g, '"').replace(/\bFalse\b/g, 'false')
+                    .replace(/\bTrue\b/g, 'true')
+                    .replace(/"s(\s|")/g, "'s$1"))["login"],
+                "type": "creator"
+            })
+
+            i++;
+            issue_id = i
+            sankeyJson.nodes.push({
+                "id": i,
+                "name": selected_issue["title"],
+                "type": "issue"
+            })
+
+            sankeyJson.links.push({
+                "source": creator_id,
+                "target": issue_id,
+                "value": 2
+            })
+
+            i++;
+            // assignee_list = JSON.parse(selected_issue["assignees"])
+
+            // assignee_list.forEach(assignee => {
+            //     sankeyJson.nodes.push({
+            //         "id": i,
+            //         "name": assignee["login"],
+            //         "type": "assignee"
+            //     })
+            //         sankeyJson.links.push({
+            //         "source": issue_id,
+            //         "target": i
+            //     })
+            //     i++;
+            // });
+
+            sankeyJson.nodes.push({
+                "id": i,
+                "name": selected_issue["closed_by"],
+                "type": "closed by"
+            })
+
+            sankeyJson.links.push({
+                "source": issue_id,
+                "target": i,
+                "value": 2
+            })
+
+
+            i++;
+
             commits.forEach(commit => {
                 if (commit.created >= time1 && commit.created <= time2) {
                     let label;
@@ -334,6 +389,11 @@
                         "name": commit.message,
                         "type": "commit",
                         "label": label
+                    })
+                    sankeyJson.links.push({
+                        "source": issue_id,
+                        "target": i,
+                        "value": 2
                     })
 
                     var commit_index = i;

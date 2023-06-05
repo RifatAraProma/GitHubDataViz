@@ -216,6 +216,8 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
       // Generate bars
       var labelRect = g.selectAll("rect_label")
             .data(data).enter();
+
+
       data.forEach(d => {
             let labels = d.labels;
             let offset =  Math.abs(xScale(d[x2_field]) - xScale(d[x1_field]) - 20) / labels.length;
@@ -231,8 +233,13 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
                         .attr("height", yScale.bandwidth())
                         .attr("rx", 6)
                         .attr("ry", 6)
+                        .on('click', function () {
+                              console.log(d)
+                              showCommitBetweenWithSankey(d);
+                              // ...
+                        })
                         .append("title")
-                        .text(l["name"]);
+                        .text(d["title"]);
                   delX += offset;
             })
             i++;

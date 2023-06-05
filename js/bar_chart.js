@@ -133,7 +133,7 @@ function load_issue_status(g, xScale, yScale, x1_field, x2_field, y_field, inner
             .attr("class", "issue_group")
             .on('click', function (d) {
                   console.log(d)
-                  showCommitBetweenWithSankey(d);
+                  showCommitBetweenWithSankey(d.currentTarget.__data__);
                   // ...
             });
 

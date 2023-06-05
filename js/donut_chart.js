@@ -31,19 +31,20 @@ function load_file_update_summary(div_name, data, freq_type) {
         .attr("y", -220);
 
 
-        const COLOR_PALETTE = ["#68FF42", "#FFFF54", "#EF8432", "#EA3323",
-                                "#8C1A4B", "#8C1A4B", "#721324", "#721324",
-                                "#721324", "#721324"];
+    const COLOR_PALETTE = ["#68FF42", "#FFFF54", "#EF8432", "#EA3323",
+        "#8C1A4B", "#8C1A4B", "#721324", "#721324",
+        "#721324", "#721324"];
     // set the color scale
     // var min = Math.min(...data.map(item => item.update_freq));
     // var max = Math.max(...data.map(item => item.update_freq));
 
     update_freq_arr = []
 
-    data.forEach(item =>{
-        update_freq_arr.push(item.update_freq);})
+    data.forEach(item => {
+        update_freq_arr.push(item.update_freq);
+    })
 
-    update_freq_arr.sort(function(a, b){return a - b});
+    update_freq_arr.sort(function (a, b) { return a - b });
 
     color = d3.scaleOrdinal()
         .domain(update_freq_arr)
@@ -58,9 +59,11 @@ function load_file_update_summary(div_name, data, freq_type) {
 
 function updateDonutChart(data, freq_type) {
     // Compute the position of each group on the pie:
-    var pie = d3.pie()
-        .value(function (d) { return d.value.update_freq; });
-    var data_ready = pie(d3.entries(data));
+    const pie = d3.pie()
+        .value(d => d ? d.update_freq : 0);
+
+    const dataValues = Object.values(data);
+    const data_ready = pie(dataValues);
 
     var arc = d3.arc()
         .innerRadius(100)         // This is the size of the donut hole
@@ -86,7 +89,7 @@ function showPercentage(data_ready, arc, arcOver) {
         .enter()
         .append('path')
         .attr('d', arc)
-        .attr('fill', function (d) { return (color(d.data.value.update_freq)) })
+        .attr('fill', function (d) { return (color(d.data.update_freq)) })
         .attr("stroke", "black")
         .style("stroke-width", "2px")
         .style("opacity", 0.7)
@@ -94,7 +97,7 @@ function showPercentage(data_ready, arc, arcOver) {
             d3.select(this).transition()
                 .duration(500)
                 .attr("d", arcOver);
-            var updatedLineCount = Math.round((d.data.value.update_freq / totalUpdatedLines) * 100) + "% of total change";
+            var updatedLineCount = Math.round((d.data.update_freq / totalUpdatedLines) * 100) + "% of total change";
             svg.append("text")
                 .attr("class", "updatedLineCount")
                 .attr("text-anchor", "middle")
@@ -109,39 +112,39 @@ function showPercentage(data_ready, arc, arcOver) {
         .append("title")
         .text(function (d) {
 
-            return d.data.value.name + '\n' + Math.round((d.data.value.update_freq / totalUpdatedLines) * 100) + "% of total change";
+            return d.data.name + '\n' + Math.round((d.data.update_freq / totalUpdatedLines) * 100) + "% of total change";
         });
 }
 
-function showNumberOfLines(data_ready, arc, arcOver){
+function showNumberOfLines(data_ready, arc, arcOver) {
     svg.selectAll('arc')
-    .data(data_ready)
-    .enter()
-    .append('path')
-    .attr('d', arc)
-    .attr('fill', function (d) { return (color(d.data.value.update_freq)) })
-    .attr("stroke", "black")
-    .style("stroke-width", "2px")
-    .style("opacity", 0.7)
-    .on("mouseover", function (d) {
-        d3.select(this).transition()
-            .duration(500)
-            .attr("d", arcOver);
-        var updatedLineCount = d.data.value.update_freq + " lines were updated";
-        svg.append("text")
-            .attr("class", "updatedLineCountTextClass")
-            .attr("text-anchor", "middle")
-            .text(updatedLineCount);
-    })
-    .on("mouseout", function (d) {
-        d3.select(this).transition()
-            .duration(500)
-            .attr("d", arc);
-        svg.selectAll("text.updatedLineCountTextClass").remove();
-    })
-    .append("title")
-    .text(function (d) {
-        return d.data.value.name + '\n' + d.data.value.update_freq + " lines were updated";
-    });
+        .data(data_ready)
+        .enter()
+        .append('path')
+        .attr('d', arc)
+        .attr('fill', function (d) { return (color(d.data.update_freq)) })
+        .attr("stroke", "black")
+        .style("stroke-width", "2px")
+        .style("opacity", 0.7)
+        .on("mouseover", function (d) {
+            d3.select(this).transition()
+                .duration(500)
+                .attr("d", arcOver);
+            var updatedLineCount = d.data.update_freq + " lines were updated";
+            svg.append("text")
+                .attr("class", "updatedLineCountTextClass")
+                .attr("text-anchor", "middle")
+                .text(updatedLineCount);
+        })
+        .on("mouseout", function (d) {
+            d3.select(this).transition()
+                .duration(500)
+                .attr("d", arc);
+            svg.selectAll("text.updatedLineCountTextClass").remove();
+        })
+        .append("title")
+        .text(function (d) {
+            return d.data.name + '\n' + d.data.update_freq + " lines were updated";
+        });
 
 }

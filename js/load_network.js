@@ -1,59 +1,60 @@
-function load_network(issue) {
-    // Assuming you have a container element with id "network-container" for the network diagram
-    const container = d3.select("#network-container");
+function load_network(data) {
+    console.log(data)
+    
+    // set the dimensions and margins of the graph
+    var margin = { top: 10, right: 30, bottom: 30, left: 40 },
+        width = window.innerWidth - margin.left - margin.right,
+        height = window.innerHeight - margin.top - margin.bottom;
 
-    // Sample data
-    const data = {
-        assignees: "John Doe",
-        issueTitle: "Issue with Quality Assurance certification coding challenge",
-        prCreator: "Jane Smith",
-        prCommits: 5
-        // Add more properties as needed
-    };
+    // append the svg object to the body of the page
+    var svg = d3.select("#network-container")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
 
-    // Create a SVG element within the container
-    const svg = container.append("svg")
-        .attr("width", 400)
-        .attr("height", 200);
 
-    // Define colors for different node types
-    const colors = {
-        user: "blue",
-        issueTitle: "green",
-        assignees: "red",
-        pr: "orange",
-        commits: "purple"
-    };
+    // Initialize the links
+    var link = svg
+        .selectAll("line")
+        .data(data.links)
+        .enter()
+        .append("line")
+        .style("stroke", "#aaa")
 
-    // Create nodes and assign corresponding colors
-    const nodes = Object.keys(data).map((key, index) => ({
-        id: key,
-        color: colors[key],
-        value: data[key],
-        x: 100 + index * 80,
-        y: 100
-    }));
-
-    // Bind nodes data to circle elements
-    const circles = svg.selectAll("circle")
-        .data(nodes)
+    // Initialize the nodes
+    var node = svg
+        .selectAll("circle")
+        .data(data.nodes)
         .enter()
         .append("circle")
-        .attr("cx", d => d.x)
-        .attr("cy", d => d.y)
         .attr("r", 20)
-        .attr("fill", d => d.color);
+        .style("fill", "#69b3a2")
 
-    // Add labels to the circles
-    svg.selectAll("text")
-        .data(nodes)
-        .enter()
-        .append("text")
-        .attr("x", d => d.x)
-        .attr("y", d => d.y)
-        .attr("text-anchor", "middle")
-        .attr("dominant-baseline", "middle")
-        .attr("fill", "black")
-        .text(d => d.value);
+    // Let's list the force we wanna apply on the network
+    var simulation = d3.forceSimulation(data.nodes)                 // Force algorithm is applied to data.nodes
+        .force("link", d3.forceLink()                               // This force provides links between nodes
+            .id(function (d) { return d.id; })                     // This provide  the id of a node
+            .links(data.links)                                    // and this the list of links
+        )
+        .force("charge", d3.forceManyBody().strength(-400))         // This adds repulsion between nodes. Play with the -400 for the repulsion strength
+        .force("center", d3.forceCenter(width / 2, height / 2))     // This force attracts nodes to the center of the svg area
+        .on("end", ticked);
+
+    // This function is run at each iteration of the force algorithm, updating the nodes position.
+    function ticked() {
+        link
+            .attr("x1", function (d) { return d.source.x; })
+            .attr("y1", function (d) { return d.source.y; })
+            .attr("x2", function (d) { return d.target.x; })
+            .attr("y2", function (d) { return d.target.y; });
+
+        node
+            .attr("cx", function (d) { return d.x + 6; })
+            .attr("cy", function (d) { return d.y - 6; });
+    }
+
 
 }

@@ -6,7 +6,7 @@ import datetime
 from datetime import timezone
 from unidiff import PatchSet
 import urllib.request
-
+import json
 
 def convert_date_to_utc(date_time_str):
     date_time_obj = datetime.datetime.strptime(
@@ -167,10 +167,33 @@ def get_commits(url):
         print(response.reason)
         return
 
-    commit_list = []
+    
     commit_json_list = response.json()
-   
-    for i in range(20,26):
+
+    # Save commits to a file
+    with open("commits.json", "w") as file:
+        json.dump(commit_json_list, file, indent=4)
+
+    print("commits saved successfully!")
+
+    
+
+def get_commit_list (url):
+    # Specify the path to your JSON file
+    json_file_path = "commits.json"
+
+    # Open the JSON file for reading
+    with open(json_file_path, "r") as file:
+        # Load the JSON data
+        data = json.load(file)
+
+    # If the JSON file contains a list, you can access it directly
+    commit_json_list = data
+
+    commit_list = []
+    for i in range(10,21):
+        if(i >= len(commit_json_list)):
+            break
         ref = commit_json_list[i]["sha"]
         filesUpdated = get_updated_files_by_commit(url + "/" + ref)
         diff = get_diff_by_commit(url + "/" + ref + "/pulls")
@@ -185,16 +208,18 @@ def get_commits(url):
         # print("\n")
 
     return commit_list
+   
 
 
 # There is a limit on requests. you can't send more than 100 requests per repo per hour
 
-list_of_issues = get_issues("https://api.github.com/repos/freeCodeCamp/freeCodeCamp/issues?state=closed")
-write_issue_to_csv(list_of_issues)
+# list_of_issues = get_issues("https://api.github.com/repos/freeCodeCamp/freeCodeCamp/issues?state=closed")
+# write_issue_to_csv(list_of_issues)
 
 # list_of_commits = get_commits("https://api.github.com/repos/freeCodeCamp/freeCodeCamp/commits")
-# print(list_of_commits)
-# write_commit_to_csv(list_of_commits)
+list_of_commits = get_commit_list("https://api.github.com/repos/freeCodeCamp/freeCodeCamp/commits")
+print(list_of_commits)
+write_commit_to_csv(list_of_commits)
 
 # list_of_issues = get_issues("https://api.github.com/repos/vaxerski/Hyprland/issues?")
 # write_issue_to_csv(list_of_issues)

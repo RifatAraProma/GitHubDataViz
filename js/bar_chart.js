@@ -151,7 +151,7 @@ function load_issue_status(g, xScale, yScale, x1_field, x2_field, y_field, inner
             .attr("rx", 6)
             .attr("ry", 6)
             .attr("width", function (d) {
-                  return xScale(d[x2_field]) - xScale(d[x1_field]) - 20;
+                  return Math.abs(xScale(d[x2_field]) - xScale(d[x1_field]) - 20);
             })
             .attr("height", yScale.bandwidth());
 
@@ -218,7 +218,7 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
             .data(data).enter();
       data.forEach(d => {
             let labels = d.labels;
-            let offset = (xScale(d[x2_field]) - xScale(d[x1_field])) / labels.length;
+            let offset =  Math.abs(xScale(d[x2_field]) - xScale(d[x1_field]) - 20) / labels.length;
             let delX = 0;
             labels.forEach(l => {
 

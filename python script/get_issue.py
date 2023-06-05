@@ -9,6 +9,7 @@ from unidiff import PatchSet
 import urllib.request
 import pandas as pd
 from urllib.parse import urlparse
+import json
 
 
 def convert_date_to_utc(date_time_str):
@@ -73,6 +74,20 @@ def getPR(issue_number):
         # Handle the request error
         print(f"Error: {response.status_code} - {response.text}")
 
+def getClosedBy(issue_number):
+    closed_url = f"https://api.github.com/repos/{owner}/{repo}/issues/{issue_number}"
+    response = requests.get(closed_url)
+    closed_by = ""
+    if response.status_code == 200:
+        data = response.json()
+        closed_by = data["closed_by"]["login"]
+    else:
+        # Handle the request error
+        print(f"Error: {response.status_code} - {response.text}")
+
+    return closed_by
+
+
 # Replace with your GitHub repository details
 owner = 'freeCodeCamp'
 repo = 'freeCodeCamp'
@@ -97,37 +112,41 @@ response2 = requests.get(url, params=params)
 if response1.status_code == 200 and response2.status_code == 200:
     # Extract the JSON response
     issues = response1.json() + response2.json()
+    # Save issues to a file
+    with open("issues.json", "w") as file:
+        json.dump(issues, file, indent=4)
+
     csvWriter = open('issue_details.csv', 'w', newline='')
     writer = csv.writer(csvWriter)
     writer.writerow(
-        ["issue_id", "issue_number", "title", "state",  "created", "closed", "labels", "user", "assignees", "pr_title", "pr_number" "pr_sha", "pr_message", "pr_creator"])
+        ["issue_id", "issue_number", "title", "state",  "created", "closed", "labels", "user", "assignees", "closed_by"])
+    
+    pr_list = []
 
     # Loop through the issues and print relevant information
     for issue in issues:
         if ('pull_request' in issue):
+            pr_list.append(issue)
             continue
+        
         createdTime = convert_date_to_utc(issue['created_at'])
         closedTime = convert_date_to_utc(issue['closed_at'])
         labels = issue['labels']
-        pr_number = ''
-        pr_title = ''
-        pr_creator = ''
-        pr_message = ''
-        pr_sha = ''
-        if (issue['state'] == 'closed'):
-            pull_request_url = getPR(issue['number'])
-            if pull_request_url != None:
-                parsed_url = urlparse(pull_request_url.encode())
-                path_parts = parsed_url.path.split("/")
-
-                pr_number = int(path_parts[-1])
-                pr_title = path_parts[-2]
+        closed_by = ''
+        if(issue['state'] == "closed"):
+            
+            closed_by = getClosedBy(issue['number'])
         
 
         writer.writerow([issue['id'], issue['number'], issue['title'], issue['state'],
-                        createdTime, closedTime, labels, issue['user'], issue['assignee'], pr_title, pr_number, pr_sha, pr_message, pr_creator])
+                        createdTime, closedTime, labels, issue['user'], issue['assignee'], closed_by])
 
     csvWriter.close()
+
+    # Save PR to a file
+    with open("pull_requests.json", "w") as file:
+        json.dump(pr_list, file, indent=4)
+
 
 else:
     # Print an error message if request fails

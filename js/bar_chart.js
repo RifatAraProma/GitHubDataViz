@@ -225,30 +225,6 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
             let offset =  10;
             let delX = 0;
             while (j < segment_length){
-            
-                  // labels.forEach(l => {
-
-                  //       labelRect.append("rect")
-                  //             .attr("class", "issue_label_bars" + i)
-                  //             .attr("fill", label_dict[l["id"]]["color"])
-                  //             .attr("x", xScale(d[x1_field]) + delX)
-                  //             .attr("y", yScale(d[y_field]))
-                  //             .attr("width", offset)
-                  //             .attr("height", yScale.bandwidth())
-                  //             .attr("rx", 6)
-                  //             .attr("ry", 6)
-                  //             .on('click', function () {
-                  //                   console.log(d)
-                  //                   showCommitBetweenWithSankey(d);
-                  //                   // ...
-                  //             })
-                  //             .append("title")
-                  //             .text(d["title"]);
-                  //       delX += offset;
-                  //       if(delX > d[x1_field]){
-                  //             break;
-                  //       }
-                  // })
 
                   for(let k = 0; k < labels.length; k++){
                               let l = labels[k]

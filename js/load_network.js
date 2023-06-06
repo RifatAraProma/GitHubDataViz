@@ -8,7 +8,7 @@ function load_network(selected_issue_json) {
         // // nodeTitle: d => `${d.id}\n${d.group}`,
         linkStrokeWidth: l => Math.sqrt(l.value),
         width: window.innerWidth,
-        height: window.innerHeight,
+        height: window.innerHeight * 1.5,
         // // invalidation // a promise to stop the simulation when the cell is re-run
     })
     console.log(chart)
@@ -84,7 +84,7 @@ function ForceGraph({
         .attr("width", width)
         .attr("height", height)
         .attr("viewBox", [-width / 2, -height / 2, width, height])
-        .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+        .attr("style", "max-width: 100%; height: auto; height: intrinsic;  background-color: #f2f2f2");
 
     const link = svg.append("g")
         .attr("stroke", typeof linkStroke !== "function" ? linkStroke : null)

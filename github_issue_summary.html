@@ -76,8 +76,6 @@
         <div id="commit-details-sankey-div" style="display: none">
             <button id="backBtn" class="default-button" style="float: left" onclick="goBack()"><i
                     class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back</button>
-            <button id="viewChangeBtn" class="default-button" style="float: right" onclick="commitViewChange()">List
-                View</button>
             <div id="commits" style="display: none"></div>
 
             <div id="sankey">
@@ -163,7 +161,7 @@
 
         // load_sankey("#vis_4")
 
-        d3.csv("data/commit_details.csv", (row, i) => {
+        d3.csv("data/freeCodeCamp/commit_details.csv", (row, i) => {
             return {
                 message: row.message,
                 created: row.created * 1000, // millisecond
@@ -266,7 +264,7 @@
             file_update = load_file_update_summary("#file_update", data_to_show, "number of lines");
             histogram = load_histogram("#histogram", file_update_freq)
 
-            d3.csv("data/issue_details.csv", (row, i) => {
+            d3.csv("data/freeCodeCamp/issue_details.csv", (row, i) => {
                 // console.log(row.created)
                 // row.created = new Date(row.created);
                 row.closed = row.closed == '' | row.closed == NaN ? new Date().getTime() : parseInt(row.closed) * 1000;
@@ -403,7 +401,7 @@
                         sankeyJson.nodes.push({
                             "id": i,
                             "name": commit.author,
-                            "type": "author"
+                            "type": "commit author"
                         })
 
                         author_dict[commit.author] = i;

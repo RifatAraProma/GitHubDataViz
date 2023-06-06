@@ -164,8 +164,8 @@ function load_issue_status(g, xScale, yScale, x1_field, x2_field, y_field, inner
                   var x1 = xScale(d[x2_field]);
                   var x2 = x1 - 22;
                   var y1 = yScale(d[y_field]) + yScale.bandwidth() / 2;
-                  var y2 = y1 + 13;
-                  var y3 = y1 - 13;
+                  var y2 = y1 + 17;
+                  var y3 = y1 - 17;
                   return x1 + "," + y1 + " " + x2 + "," + y2 + " " + x2 + "," + y3;
             })
             .attr("fill", function (d) {
@@ -220,33 +220,76 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
 
       data.forEach(d => {
             let labels = d.labels;
-            let offset =  Math.abs(xScale(d[x2_field]) - xScale(d[x1_field]) - 20) / labels.length;
+            let segment_length = Math.abs(xScale(d[x2_field]) - xScale(d[x1_field]) - 20) / (labels.length * 10) ;
+            let j = 0
+            let offset =  10;
             let delX = 0;
-            labels.forEach(l => {
+            while (j < segment_length){
+            
+                  // labels.forEach(l => {
 
-                  labelRect.append("rect")
-                        .attr("class", "issue_label_bars" + i)
-                        .attr("fill", label_dict[l["id"]]["color"])
-                        .attr("x", xScale(d[x1_field]) + delX)
-                        .attr("y", yScale(d[y_field]))
-                        .attr("width", offset)
-                        .attr("height", yScale.bandwidth())
-                        .attr("rx", 6)
-                        .attr("ry", 6)
-                        .on('click', function () {
-                              console.log(d)
-                              showCommitBetweenWithSankey(d);
-                              // ...
-                        })
-                        .append("title")
-                        .text(d["title"]);
-                  delX += offset;
-            })
-            i++;
+                  //       labelRect.append("rect")
+                  //             .attr("class", "issue_label_bars" + i)
+                  //             .attr("fill", label_dict[l["id"]]["color"])
+                  //             .attr("x", xScale(d[x1_field]) + delX)
+                  //             .attr("y", yScale(d[y_field]))
+                  //             .attr("width", offset)
+                  //             .attr("height", yScale.bandwidth())
+                  //             .attr("rx", 6)
+                  //             .attr("ry", 6)
+                  //             .on('click', function () {
+                  //                   console.log(d)
+                  //                   showCommitBetweenWithSankey(d);
+                  //                   // ...
+                  //             })
+                  //             .append("title")
+                  //             .text(d["title"]);
+                  //       delX += offset;
+                  //       if(delX > d[x1_field]){
+                  //             break;
+                  //       }
+                  // })
+
+                  for(let k = 0; k < labels.length; k++){
+                              let l = labels[k]
+                              labelRect.append("rect")
+                              .attr("class", "issue_label_bars" + i)
+                              .attr("fill", label_dict[l["id"]]["color"])
+                              .attr("x", xScale(d[x1_field]) + delX)
+                              .attr("y", yScale(d[y_field]))
+                              .attr("width", offset)
+                              .attr("height", yScale.bandwidth())
+                              .attr("rx", 6)
+                              .attr("ry", 6)
+                              .on('click', function () {
+                                    console.log(d)
+                                    showCommitBetweenWithSankey(d);
+                                    // ...
+                              })
+                              .append("title")
+                              .text(d["title"]);
+
+                              delX += offset;
+                              if(delX >= xScale(d[x2_field])){
+                                    break;
+                              }
+                  }
+
+                  i++;
+                  j++
+            }
+            
+      });
+
+      labelRect.append("title")
+      .text(function (d) {
+            var closed_time = d.state == 'open' ? '' : "\nclosed: " + new Date(d[x2_field]);
+            var tooltip = d[y_field] + "\ncreated: " + new Date(d[x1_field]) + closed_time;
+            return tooltip;
       });
 
 
-
+      
       // labelRect.append("title")
       //       .text(function (d) {
       //             var closed_time = d.state == 'open' ? '' : "\nclosed: " + new Date(d[x2_field]);

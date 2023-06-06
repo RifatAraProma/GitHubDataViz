@@ -28,8 +28,8 @@ h3 {
 	border: 2px solid lightgray;
 	margin-top: 1%;
 	margin-right: 2%;
-	width: 80%;
-	height: 50vh;
+	width: 90%;
+	height: 80vh;
 }
 
 .sankey_svg {
@@ -271,7 +271,7 @@ h3 {
 	opacity: 0.8;
 	color: #eaeaeb;
 	font-weight: bold;
-	margin: 1%;
+	margin-left: 1%;
 	padding: 0.8%;
 	border-radius: 5px;
 	border-color: #888;
@@ -293,7 +293,7 @@ h3 {
 	border-color: #888;
 }
 
-.toggle-viz-butto:hover {
+.toggle-viz-button:hover {
 	opacity: 1;
 }
 

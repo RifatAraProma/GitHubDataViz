@@ -391,7 +391,9 @@ h3 {
 
   :root {
 	--closed-issue-color: #1a7f37;
-	--open-issue-color: #8250df;
+	--open-issue-color: #8250df; 
+	--bug: #d73a4a;
+	--color-severe-fg: #bc4c00;
   }
   
   .dropdown-container-div {

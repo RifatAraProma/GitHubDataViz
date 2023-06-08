@@ -283,6 +283,8 @@
 
 
                 return {
+                    id: row.issue_id,
+                    number: row.issue_number,
                     title: row.title,
                     created: parseInt(row.created) * 1000, // millisec
                     closed: row.closed,
@@ -330,10 +332,12 @@
 
             i++;
             issue_id = i
+            // this order matters in the network graph
             sankeyJson.nodes.push({
                 "id": i,
                 "name": selected_issue["title"],
-                "type": "issue"
+                "type": "issue",
+                "state": selected_issue["state"]
             })
 
             sankeyJson.links.push({
@@ -461,7 +465,7 @@
             document.getElementById("commit-details-div").style = "display: none";
             document.getElementById("commit-details-sankey-div").style = "display: block ";
             // load_sankey("#vis_4", sankeyJson);
-            load_network(sankeyJson)
+            load_network(sankeyJson, selected_issue)
         }
 
         function showCommitBetween(time1, time2, title) {

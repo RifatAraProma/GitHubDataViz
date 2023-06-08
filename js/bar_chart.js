@@ -132,7 +132,6 @@ function load_issue_status(g, xScale, yScale, x1_field, x2_field, y_field, inner
             .append("g")
             .attr("class", "issue_group")
             .on('click', function (d) {
-                  console.log(d)
                   showCommitBetweenWithSankey(d.currentTarget.__data__);
                   // ...
             });
@@ -211,13 +210,15 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
             })
             
       })
+      console.log(label_dict)
       
       
       // Generate bars
       var labelRect = g.selectAll("rect_label")
             .data(data).enter();
 
-
+      let color_dict = {}
+      let end_point_dict = {}
       data.forEach(d => {
             let labels = d.labels;
             let segment_length = Math.abs(xScale(d[x2_field]) - xScale(d[x1_field]) - 20) / (labels.length * 10) ;
@@ -228,6 +229,7 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
 
                   for(let k = 0; k < labels.length; k++){
                               let l = labels[k]
+                              color_dict[d["title"]] = label_dict[l["id"]]["color"]
                               labelRect.append("rect")
                               .attr("class", "issue_label_bars" + i)
                               .attr("fill", label_dict[l["id"]]["color"])
@@ -235,10 +237,9 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
                               .attr("y", yScale(d[y_field]))
                               .attr("width", offset)
                               .attr("height", yScale.bandwidth())
-                              .attr("rx", 6)
-                              .attr("ry", 6)
+                              .attr("rx", 2)
+                              .attr("ry", 2)
                               .on('click', function () {
-                                    console.log(d)
                                     showCommitBetweenWithSankey(d);
                                     // ...
                               })
@@ -246,15 +247,40 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
                               .text(d["title"]);
 
                               delX += offset;
-                              if(delX >= xScale(d[x2_field])){
+                              if(d["state"] == "open" && xScale(d[x1_field]) + delX + 20 >= xScale(d[x2_field])){
+                                    end_point_dict[d["title"]] = xScale(d[x1_field]) + delX
                                     break;
                               }
+                              if(xScale(d[x1_field]) + delX >= xScale(d[x2_field])){
+                                    end_point_dict[d["title"]] = xScale(d[x1_field]) + delX
+                                    break;
+                              }
+
+                              end_point_dict[d["title"]] = xScale(d[x1_field]) + delX
+                              
                   }
 
                   i++;
                   j++
             }
             
+      });
+
+      labelRect.append("polygon")
+      .attr("class", "bar_triangle")
+      .attr("points", function (d) {
+            if (d.state == "closed")
+                  return;
+
+            var x1 = xScale(d[x2_field]);
+            var x2 = end_point_dict[d["title"]];
+            var y1 = yScale(d[y_field]) + yScale.bandwidth() / 2;
+            var y2 = y1 + 17;
+            var y3 = y1 - 17;
+            return x1 + "," + y1 + " " + x2 + "," + y2 + " " + x2 + "," + y3;
+      })
+      .attr("fill", function (d) {
+            return color_dict[d["title"]];
       });
 
       labelRect.append("title")

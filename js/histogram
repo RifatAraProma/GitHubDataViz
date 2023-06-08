@@ -4,12 +4,10 @@ var margin;
 function load_histogram(div_name, data, title) {
     // set the dimensions and margins of the graph
     margin = { top: 40, right: 2, bottom: 50, left: 55 },
-    width = 950;
-    height = 800;
+    width = window.innerWidth * 0.5;
+    height = window.innerWidth * 0.5;
 
-    const COLOR_PALETTE = ["#68FF42", "#FFFF54", "#EF8432", "#EA3323",
-                                "#8C1A4B", "#8C1A4B", "#721324", "#721324",
-                                "#721324", "#721324"];
+    const COLOR_PALETTE = ["var(--color-severe-fg)"];
 
     // append the svg object to the body of the page
     var svg = d3.select(div_name)
@@ -103,6 +101,7 @@ function load_histogram(div_name, data, title) {
                 .style("opacity", 0.8);
         })
         .on("click", function(d) {
+            console.log(d)
             selectedUpdateFreq(d.x0, d.x1);
         })
         .append("title")

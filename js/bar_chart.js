@@ -1,12 +1,12 @@
 function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_title, type) {
 
       // General Variables
-      let chart_width = $(svg_name).width()* 0.95;
-      let chart_height = $(svg_name).height()* 0.95;
+      let chart_width = $(svg_name).width() * 0.95;
+      let chart_height = $(svg_name).height() * 0.95;
       let chart = d3.select(svg_name).append("svg")
-                  .attr("viewBox", [0, 0, chart_width, chart_height])
-                  .attr("width", chart_width)
-                  .attr("height", chart_height);
+            .attr("viewBox", [0, 0, chart_width, chart_height])
+            .attr("width", chart_width)
+            .attr("height", chart_height);
 
 
       // Margins, Height & Width
@@ -202,96 +202,155 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
 
       let labels = []
       let label_dict = {}
-      
-      data.forEach(d =>{
+
+      data.forEach(d => {
             labels.push(d.labels)
             d.labels.forEach(label => {
-                  label_dict[label["id"]] = {"name": label["name"], "color": '#'+label["color"]}
+                  label_dict[label["id"]] = { "name": label["name"], "color": '#' + label["color"] }
             })
-            
+
       })
-      console.log(label_dict)
-      
-      
-      // Generate bars
-      var labelRect = g.selectAll("rect_label")
-            .data(data).enter();
 
-      let color_dict = {}
-      let end_point_dict = {}
-      data.forEach(d => {
-            let labels = d.labels;
-            let segment_length = Math.abs(xScale(d[x2_field]) - xScale(d[x1_field]) - 20) / (labels.length * 10) ;
-            let j = 0
-            let offset =  10;
-            let delX = 0;
-            while (j < segment_length){
 
-                  for(let k = 0; k < labels.length; k++){
-                              let l = labels[k]
-                              color_dict[d["title"]] = label_dict[l["id"]]["color"]
-                              labelRect.append("rect")
-                              .attr("class", "issue_label_bars" + i)
-                              .attr("fill", label_dict[l["id"]]["color"])
-                              .attr("x", xScale(d[x1_field]) + delX)
-                              .attr("y", yScale(d[y_field]))
-                              .attr("width", offset)
-                              .attr("height", yScale.bandwidth())
-                              .attr("rx", 2)
-                              .attr("ry", 2)
-                              .on('click', function () {
-                                    showCommitBetweenWithSankey(d);
-                                    // ...
-                              })
-                              .append("title")
-                              .text(d["title"]);
+      data.forEach((d) => {
+            let labels = d.labels
+            var colors = []
+            labels.forEach(l => {
+                  colors.push(label_dict[l["id"]]["color"])
+            })
 
-                              delX += offset;
-                              if(d["state"] == "open" && xScale(d[x1_field]) + delX + 20 >= xScale(d[x2_field])){
-                                    end_point_dict[d["title"]] = xScale(d[x1_field]) + delX
-                                    break;
-                              }
-                              if(xScale(d[x1_field]) + delX >= xScale(d[x2_field])){
-                                    end_point_dict[d["title"]] = xScale(d[x1_field]) + delX
-                                    break;
-                              }
+            var svg = d3.select('body')
+                  .append('svg')
+                  .attr('width', 100)
+                  .attr('height', 200);
 
-                              end_point_dict[d["title"]] = xScale(d[x1_field]) + delX
-                              
-                  }
+            var grad = svg.append('defs')
+                  .append('linearGradient')
+                  .attr('id', 'grad' + d.id)
+                  .attr('x1', '0%')
+                  .attr('x2', '100%')
+                  .attr('y1', '0%')
+                  .attr('y2', '100%');
 
-                  i++;
-                  j++
-            }
-            
-      });
+            grad.selectAll('stop')
+                  .data(colors)
+                  .enter()
+                  .append('stop')
+                  .style('stop-color', function (d) { return d; })
+                  .attr('offset', function (d, i) {
+                        return 100 * (i / (colors.length - 1)) + '%';
+                  })
 
-      labelRect.append("polygon")
-      .attr("class", "bar_triangle")
-      .attr("points", function (d) {
-            if (d.state == "closed")
-                  return;
-
-            var x1 = xScale(d[x2_field]);
-            var x2 = end_point_dict[d["title"]];
-            var y1 = yScale(d[y_field]) + yScale.bandwidth() / 2;
-            var y2 = y1 + 17;
-            var y3 = y1 - 17;
-            return x1 + "," + y1 + " " + x2 + "," + y2 + " " + x2 + "," + y3;
       })
-      .attr("fill", function (d) {
-            return color_dict[d["title"]];
-      });
 
-      labelRect.append("title")
-      .text(function (d) {
-            var closed_time = d.state == 'open' ? '' : "\nclosed: " + new Date(d[x2_field]);
-            var tooltip = d[y_field] + "\ncreated: " + new Date(d[x1_field]) + closed_time;
-            return tooltip;
-      });
+      var bars = g.selectAll("rect_issue")
+            .data(data)
+            .enter()
+            .append("g")
+            .attr("class", "issue_group")
+            .on('click', function (d) {
+                  showCommitBetweenWithSankey(d.currentTarget.__data__);
+                  // ...
+            });
+
+      bars.append("rect")
+            .attr("class", "issue_duration_bars")
+            .attr("fill", function (d) {
+                  return 'url(#grad' + d.id +')';
+            })
+            .attr("x", function (d) {
+                  return xScale(d[x1_field]);
+            })
+            .attr("y", function (d) {
+                  return yScale(d[y_field]);
+            })
+            .attr("rx", 6)
+            .attr("ry", 6)
+            .attr("width", function (d) {
+                  return Math.abs(xScale(d[x2_field]) - xScale(d[x1_field]) - 20);
+            })
+            .attr("height", yScale.bandwidth());
 
 
-      
+      // // Generate bars
+      // var labelRect = g.selectAll("rect_label")
+      //       .data(data).enter();
+
+      // let color_dict = {}
+      // let end_point_dict = {}
+      // data.forEach(d => {
+      //       let labels = d.labels;
+      //       let segment_length = Math.abs(xScale(d[x2_field]) - xScale(d[x1_field]) - 20) / (labels.length * 10) ;
+      //       let j = 0
+      //       let offset =  10;
+      //       let delX = 0;
+      //       while (j < segment_length){
+
+      //             for(let k = 0; k < labels.length; k++){
+      //                         let l = labels[k]
+      //                         color_dict[d["title"]] = label_dict[l["id"]]["color"]
+      //                         labelRect.append("rect")
+      //                         .attr("class", "issue_label_bars" + i)
+      //                         .attr("fill", label_dict[l["id"]]["color"])
+      //                         .attr("x", xScale(d[x1_field]) + delX)
+      //                         .attr("y", yScale(d[y_field]))
+      //                         .attr("width", offset)
+      //                         .attr("height", yScale.bandwidth())
+      //                         .attr("rx", 2)
+      //                         .attr("ry", 2)
+      //                         .on('click', function () {
+      //                               showCommitBetweenWithSankey(d);
+      //                               // ...
+      //                         })
+      //                         .append("title")
+      //                         .text(d["title"]);
+
+      //                         delX += offset;
+      //                         if(d["state"] == "open" && xScale(d[x1_field]) + delX + 20 >= xScale(d[x2_field])){
+      //                               end_point_dict[d["title"]] = xScale(d[x1_field]) + delX
+      //                               break;
+      //                         }
+      //                         if(xScale(d[x1_field]) + delX >= xScale(d[x2_field])){
+      //                               end_point_dict[d["title"]] = xScale(d[x1_field]) + delX
+      //                               break;
+      //                         }
+
+      //                         end_point_dict[d["title"]] = xScale(d[x1_field]) + delX
+
+      //             }
+
+      //             i++;
+      //             j++
+      //       }
+
+      // });
+
+      // labelRect.append("polygon")
+      // .attr("class", "bar_triangle")
+      // .attr("points", function (d) {
+      //       if (d.state == "closed")
+      //             return;
+
+      //       var x1 = xScale(d[x2_field]);
+      //       var x2 = end_point_dict[d["title"]];
+      //       var y1 = yScale(d[y_field]) + yScale.bandwidth() / 2;
+      //       var y2 = y1 + 17;
+      //       var y3 = y1 - 17;
+      //       return x1 + "," + y1 + " " + x2 + "," + y2 + " " + x2 + "," + y3;
+      // })
+      // .attr("fill", function (d) {
+      //       return color_dict[d["title"]];
+      // });
+
+      // labelRect.append("title")
+      //       .text(function (d) {
+      //             var closed_time = d.state == 'open' ? '' : "\nclosed: " + new Date(d[x2_field]);
+      //             var tooltip = d[y_field] + "\ncreated: " + new Date(d[x1_field]) + closed_time;
+      //             return tooltip;
+      //       });
+
+
+
       // labelRect.append("title")
       //       .text(function (d) {
       //             var closed_time = d.state == 'open' ? '' : "\nclosed: " + new Date(d[x2_field]);
@@ -303,36 +362,36 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
       legend_distance_x = innerWidth + 28
       legend_distance_y = 20
 
-      Object.keys(label_dict).forEach(key =>{
+      Object.keys(label_dict).forEach(key => {
             g.append("rect").attr("x", legend_distance_x).attr("y", legend_distance_y).attr("width", 20).attr("height", 20).style("fill", label_dict[key]["color"])
             g.append("text").attr("class", "legend-text").attr("x", legend_distance_x + 30).attr("y", legend_distance_y + 10).text(label_dict[key]["name"]).style("font-size", "16px").style("font-weight", "600").attr("alignment-baseline", "middle")
             legend_distance_y = legend_distance_y + 30
       })
-       
+
 
 
       // Legends for Gantt
 
 }
 
-function clearChart(){
+function clearChart() {
       var svgElement = document.getElementById('timeline');
 
       // Remove all <rect> elements within the SVG
       var rectElements = svgElement.querySelectorAll('rect');
-      rectElements.forEach(function(rect) {
-        rect.remove();
-      });
-      
-      // Remove all <polygon> elements within the SVG
-      var polygonElements = svgElement.querySelectorAll('polygon');
-      polygonElements.forEach(function(polygon) {
-        polygon.remove();
+      rectElements.forEach(function (rect) {
+            rect.remove();
       });
 
-       // Remove all <text> elements within the SVG
-       var textElements = svgElement.querySelectorAll('.legend-text');
-       textElements.forEach(function(text) {
-         text.remove();
-       });
+      // Remove all <polygon> elements within the SVG
+      var polygonElements = svgElement.querySelectorAll('polygon');
+      polygonElements.forEach(function (polygon) {
+            polygon.remove();
+      });
+
+      // Remove all <text> elements within the SVG
+      var textElements = svgElement.querySelectorAll('.legend-text');
+      textElements.forEach(function (text) {
+            text.remove();
+      });
 }

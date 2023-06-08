@@ -8,13 +8,24 @@ function linkStroke_mapper(link){
     return "#999";
 }
 
+function node_redius_mapper(d){
+    let mult = 1
+    nodeRadius = 10
+    if(node_list[d.index].type == 'issue')
+        mult = 2;
+    else if(node_list[d.index].type == 'commit')
+        mult = 1.25
+
+    return mult * nodeRadius;
+}
+
 function load_network(selected_issue_json, selected_issue) {
     clearDiv()
     node_list = selected_issue_json.nodes
     chart = ForceGraph(selected_issue_json, {
         nodeId: d => d.id,
         nodeGroup: d => d.type,
-        nodeRadius: 10,
+        nodeRadius: node_redius_mapper,
         nodeTitle: d => `${d.id}\n${d.type}`,
         linkStroke: linkStroke_mapper,
         linkStrokeWidth: l => Math.sqrt(l.value),
@@ -66,6 +77,7 @@ function ForceGraph({
     const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);
     const W = typeof linkStrokeWidth !== "function" ? null : d3.map(links, linkStrokeWidth);
     const L = typeof linkStroke !== "function" ? null : d3.map(links, linkStroke);
+    const R = typeof nodeRadius !== "function" ? null : null;
 
     // Replace the input nodes and links with mutable objects for the simulation.
     nodes_copy = nodes;

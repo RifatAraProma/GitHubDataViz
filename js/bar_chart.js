@@ -275,8 +275,8 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
             var x1 = xScale(d[x2_field]);
             var x2 = end_point_dict[d["title"]];
             var y1 = yScale(d[y_field]) + yScale.bandwidth() / 2;
-            var y2 = y1 + 17;
-            var y3 = y1 - 17;
+            var y2 = y1 + yScale.bandwidth() *0.5;
+            var y3 = y1 - yScale.bandwidth() *0.5;
             return x1 + "," + y1 + " " + x2 + "," + y2 + " " + x2 + "," + y3;
       })
       .attr("fill", function (d) {

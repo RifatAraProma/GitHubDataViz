@@ -89,8 +89,8 @@ def getClosedBy(issue_number):
 
 
 # Replace with your GitHub repository details
-owner = 'freeCodeCamp'
-repo = 'freeCodeCamp'
+owner = 'vaxerski'
+repo = 'Hyprland'
 
 # Set the API endpoint
 url = f'https://api.github.com/repos/{owner}/{repo}/issues'

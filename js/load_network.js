@@ -77,7 +77,6 @@ function ForceGraph({
     const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);
     const W = typeof linkStrokeWidth !== "function" ? null : d3.map(links, linkStrokeWidth);
     const L = typeof linkStroke !== "function" ? null : d3.map(links, linkStroke);
-    const R = typeof nodeRadius !== "function" ? null : null;
 
     // Replace the input nodes and links with mutable objects for the simulation.
     nodes_copy = nodes;

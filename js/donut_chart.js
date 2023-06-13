@@ -62,7 +62,7 @@ function load_file_update_summary(div_name, donut_data, freq_type) {
 
     color = d3.scaleOrdinal()
         .domain(update_freq_arr)
-        .range(COLOR_PALETTE)
+        .range(update_freq_arr.map((_, i) => COLOR_PALETTE[i % COLOR_PALETTE.length]))
 
     radius_scale = d3.scaleOrdinal()
         .domain(update_freq_arr)

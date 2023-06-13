@@ -75,18 +75,23 @@ def get_issues(url):
 
 
 def write_commit_to_csv(commit_list):
-    csvWriter = open('commit_details.csv', 'w', newline='')
-    writer = csv.writer(csvWriter)
-    writer.writerow(["Commit Message", "Created Date (UTC Timestamp)", "Files Updated", "Diff", "Author"])
-    for commit in commit_list:
-        createdTimeUTC = convert_date_to_utc(commit.date)
-        writer.writerow([commit.msg, createdTimeUTC, commit.filesChanged, commit.diff, commit.author])
+    with open('commit_details.csv', 'w', newline='', encoding='utf-8') as csvFile:
+        writer = csv.writer(csvFile)
+        writer.writerow(["sha", "message", "created", "files_updated", "diff", "author"])
+        for commit in commit_list:
+            createdTimeUTC = convert_date_to_utc(commit.date)
+            sha = commit.sha.encode('utf-8', errors='ignore').decode('utf-8')
+            msg = commit.msg.encode('utf-8', errors='ignore').decode('utf-8')
 
-    csvWriter.close()
+            diff = commit.diff
+
+            author = commit.author.encode('utf-8', errors='ignore').decode('utf-8')
+            writer.writerow([sha, msg, createdTimeUTC, commit.filesChanged, diff, author])
 
 
 class Commit:
-    def __init__(self, _msg, _date, _filesChanged, _diff, _author):
+    def __init__(self, _sha, _msg, _date, _filesChanged, _diff, _author):
+        self.sha = _sha
         self.msg = _msg
         self.date = _date
         self.filesChanged = _filesChanged
@@ -191,21 +196,25 @@ def get_commit_list (url):
     commit_json_list = data
 
     commit_list = []
-    for i in range(10,21):
+    print(len(data))
+    for i in range(29, len(data)):
         if(i >= len(commit_json_list)):
             break
         ref = commit_json_list[i]["sha"]
         filesUpdated = get_updated_files_by_commit(url + "/" + ref)
+        if(len(filesUpdated) == 0):
+            return commit_list
         diff = get_diff_by_commit(url + "/" + ref + "/pulls")
         commit_json = commit_json_list[i]["commit"]
+        sha = commit_json["tree"]["sha"]
         msg = commit_json["message"]
         date = commit_json["committer"]["date"]
         author = commit_json["author"]["name"]
-        commit = Commit(msg, date, filesUpdated, diff, author)
+        commit = Commit(sha, msg, date, filesUpdated, diff, author)
         commit_list.append(commit)
-        # print(msg)
-        # print(i)
-        # print("\n")
+        print(msg)
+        print(i)
+        print("\n")
 
     return commit_list
    
@@ -217,15 +226,17 @@ def get_commit_list (url):
 # write_issue_to_csv(list_of_issues)
 
 # list_of_commits = get_commits("https://api.github.com/repos/freeCodeCamp/freeCodeCamp/commits")
-list_of_commits = get_commit_list("https://api.github.com/repos/freeCodeCamp/freeCodeCamp/commits")
-print(list_of_commits)
-write_commit_to_csv(list_of_commits)
+# list_of_commits = get_commit_list("https://api.github.com/repos/freeCodeCamp/freeCodeCamp/commits")
+# print(list_of_commits)
+# write_commit_to_csv(list_of_commits)
 
 # list_of_issues = get_issues("https://api.github.com/repos/vaxerski/Hyprland/issues?")
 # write_issue_to_csv(list_of_issues)
 
 # list_of_commits = get_commits("https://api.github.com/repos/vaxerski/Hyprland/commits")
-# write_commit_to_csv(list_of_commits)
+list_of_commits = get_commit_list("https://api.github.com/repos/vaxerski/Hyprland/commits")
+print(list_of_commits)
+write_commit_to_csv(list_of_commits)
 
 # list_of_issues = get_issues("https://api.github.com/repos/vaxerski/Hyprland/commits")
 # write_issue_to_csv(list_of_issues)

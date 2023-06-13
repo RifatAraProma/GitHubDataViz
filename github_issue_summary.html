@@ -161,7 +161,7 @@
 
         // load_sankey("#vis_4")
 
-        d3.csv("data/freeCodeCamp/commit_details.csv", (row, i) => {
+        d3.csv("data/Hyperland/commit_details.csv", (row, i) => {
             return {
                 message: row.message,
                 created: row.created * 1000, // millisecond
@@ -180,9 +180,9 @@
                 let files_diff = getFilesDiffList(commit.diff);
                 files.forEach(file => {
                     let fileName = file.trim();
-                    if (fileName.includes("Compositor.cpp")) {
-                        console.log("here");
-                    }
+                    // if (fileName.includes("Compositor.cpp")) {
+                    //     console.log("here");
+                    // }
 
                     if (!file_list.find(file => file == fileName)) {
                         file_list.push(fileName);
@@ -209,7 +209,7 @@
             document.getElementById("displayedFilesListHeader").innerHTML = "Top 5 files with most updates";
             document.getElementById("otherFilesListHeader").innerHTML = "Other files";
             file_list.forEach(file => {
-                file_update_freq.push({ name: file, update_freq: file_update_count[file] == undefined ? 0 : file_update_count[file], bugfix: file_update_for_bugfix_map[file] == undefined ? false : file_update_for_bugfix_map[file]});
+                file_update_freq.push({ name: file, update_freq: file_update_count[file] == undefined ? 1 : file_update_count[file], bugfix: file_update_for_bugfix_map[file] == undefined ? false : file_update_for_bugfix_map[file]});
             });
             file_update_freq.sort((a, b) => { return b.update_freq - a.update_freq});
             let fileListLen = file_update_freq.length;
@@ -267,7 +267,7 @@
             file_update = load_file_update_summary("#file_update", data_to_show, "number of lines");
             histogram = load_histogram("#histogram", file_update_freq)
 
-            d3.csv("data/freeCodeCamp/issue_details.csv", (row, i) => {
+            d3.csv("data/Hyperland/issue_details.csv", (row, i) => {
                 // console.log(row.created)
                 // row.created = new Date(row.created);
                 row.closed = row.closed == '' | row.closed == NaN ? new Date().getTime() : parseInt(row.closed) * 1000;
@@ -300,7 +300,6 @@
                 };
             }).then(rows => {
                 data = rows;
-                console.log(data)
                 let title = "Issues with their creation and closing dates";
                 let x_title = "Date";
                 let type = 'state'

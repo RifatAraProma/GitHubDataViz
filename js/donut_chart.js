@@ -2,16 +2,20 @@ var radius;
 var svg;
 var color;
 var totalUpdatedLines;
+var radius_scale;
+var inner_radius;
 
-function load_file_update_summary(div_name, data, freq_type) {
+function load_file_update_summary(div_name, donut_data, freq_type) {
     d3.select(div_name).select("svg").remove();
-    var width = 450
-    height = 650
-    margin = 40
+    width = window.innerWidth;
+    height = window.innerHeight * 0.6;
+    margin = Math.min(width, height)  * 0.1;
     let chart_width = $(div_name).width();
     let chart_height = $(div_name).height();
     // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
     radius = Math.min(width, height) / 2 - margin;
+
+    inner_radius = width / 20;
 
     let title = "File update summary";
 
@@ -21,26 +25,36 @@ function load_file_update_summary(div_name, data, freq_type) {
         .attr("height", height)
         .attr("x", chart_width / 4)
         .attr("y", chart_height / 5)
+        .style("background-color", "#f2f2f2")
         .append("g")
         .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-    svg.append("text")
-        .text(`${title}`)
-        .attr("font-size", "20px")
-        .attr("x", -200)
-        .attr("y", -220);
+    // svg.append("text")
+    //     .text(`${title}`)
+    //     .attr("font-size", "20px")
+    //     .attr("x", -200)
+    //     .attr("y", -100);
 
 
-    const COLOR_PALETTE = ["#68FF42", "#FFFF54", "#EF8432", "#EA3323",
-        "#8C1A4B", "#8C1A4B", "#721324", "#721324",
-        "#721324", "#721324"];
+    const COLOR_PALETTE = ["#a6cee3",
+                            "#1f78b4",
+                            "#b2df8a",
+                            "#33a02c",
+                            "#fb9a99",
+                            "#e31a1c",
+                            "#fdbf6f",
+                            "#ff7f00",
+                            "#cab2d6",
+                            "#6a3d9a",
+                            "#ffff99",
+                            "#b15928"];
     // set the color scale
     // var min = Math.min(...data.map(item => item.update_freq));
     // var max = Math.max(...data.map(item => item.update_freq));
 
     update_freq_arr = []
 
-    data.forEach(item => {
+    donut_data.forEach(item => {
         update_freq_arr.push(item.update_freq);
     })
 
@@ -50,11 +64,15 @@ function load_file_update_summary(div_name, data, freq_type) {
         .domain(update_freq_arr)
         .range(COLOR_PALETTE)
 
+    radius_scale = d3.scaleOrdinal()
+        .domain(update_freq_arr)
+        .range([radius + 20, radius + 30])
+
     totalUpdatedLines = 0;
-    data.forEach(entry => {
+    donut_data.forEach(entry => {
         totalUpdatedLines += entry.update_freq;
     });
-    updateDonutChart(data, freq_type);
+    updateDonutChart(donut_data, freq_type);
 }
 
 function updateDonutChart(data, freq_type) {
@@ -66,11 +84,11 @@ function updateDonutChart(data, freq_type) {
     const data_ready = pie(dataValues);
 
     var arc = d3.arc()
-        .innerRadius(100)         // This is the size of the donut hole
-        .outerRadius(radius);
+        .innerRadius(inner_radius)         // This is the size of the donut hole
+        .outerRadius(radius_scale);
 
     var arcOver = d3.arc()
-        .innerRadius(100)         // This is the size of the donut hole
+        .innerRadius(inner_radius)         // This is the size of the donut hole
         .outerRadius(radius + 20);
 
     // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
@@ -88,15 +106,20 @@ function showPercentage(data_ready, arc, arcOver) {
         .data(data_ready)
         .enter()
         .append('path')
-        .attr('d', arc)
+        .attr('d', d3.arc()
+        .innerRadius(inner_radius) // Set the inner radius
+        .outerRadius(function(d) { return radius_scale(d.data.update_freq); })
+    )
         .attr('fill', function (d) { return (color(d.data.update_freq)) })
         .attr("stroke", "black")
         .style("stroke-width", "2px")
-        .style("opacity", 0.7)
+        .style("opacity", 1)
         .on("mouseover", function (d) {
             d3.select(this).transition()
                 .duration(500)
-                .attr("d", arcOver);
+                .attr("d", d3.arc()
+                .innerRadius(inner_radius) // Set the inner radius
+                .outerRadius(function(d) { return radius_scale(d.data.update_freq) + 20; }));
             var updatedLineCount = Math.round((d.currentTarget.__data__.data.update_freq / totalUpdatedLines) * 100) + "% of total change";
             svg.append("text")
                 .attr("class", "updatedLineCount")
@@ -106,7 +129,10 @@ function showPercentage(data_ready, arc, arcOver) {
         .on("mouseout", function (d) {
             d3.select(this).transition()
                 .duration(500)
-                .attr("d", arc);
+                .attr("d", d3.arc()
+                .innerRadius(inner_radius) // Set the inner radius
+                .outerRadius(function(d) { return radius_scale(d.data.update_freq); })
+            );
             svg.select(".updatedLineCount").remove();
         })
         .append("title")
@@ -121,7 +147,10 @@ function showNumberOfLines(data_ready, arc, arcOver) {
         .data(data_ready)
         .enter()
         .append('path')
-        .attr('d', arc)
+        .attr('d', d3.arc()
+            .innerRadius(inner_radius) // Set the inner radius
+            .outerRadius(function(d) { return radius_scale(d.data.update_freq); })
+        )
         .attr('fill', function (d) { return (color(d.data.update_freq)) })
         .attr("stroke", "black")
         .style("stroke-width", "2px")
@@ -129,7 +158,9 @@ function showNumberOfLines(data_ready, arc, arcOver) {
         .on("mouseover", function (d) {
             d3.select(this).transition()
                 .duration(500)
-                .attr("d", arcOver);
+                .attr("d", d3.arc()
+                .innerRadius(inner_radius) // Set the inner radius
+                .outerRadius(function(d) { return radius_scale(d.data.update_freq) + 20; }));
             var updatedLineCount = d.currentTarget.__data__.data.update_freq + " lines were updated";
             svg.append("text")
                 .attr("class", "updatedLineCountTextClass")
@@ -139,7 +170,10 @@ function showNumberOfLines(data_ready, arc, arcOver) {
         .on("mouseout", function (d) {
             d3.select(this).transition()
                 .duration(500)
-                .attr("d", arc);
+                .attr("d", d3.arc()
+                .innerRadius(inner_radius) // Set the inner radius
+                .outerRadius(function(d) { return radius_scale(d.data.update_freq); })
+            );
             svg.selectAll("text.updatedLineCountTextClass").remove();
         })
         .append("title")

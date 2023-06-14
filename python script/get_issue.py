@@ -80,7 +80,10 @@ def getClosedBy(issue_number):
     closed_by = ""
     if response.status_code == 200:
         data = response.json()
-        closed_by = data["closed_by"]["login"]
+        if data["closed_by"] != None:
+            closed_by = data["closed_by"]["login"]
+        else:
+            closed_by = ''
     else:
         # Handle the request error
         print(f"Error: {response.status_code} - {response.text}")
@@ -89,8 +92,8 @@ def getClosedBy(issue_number):
 
 
 # Replace with your GitHub repository details
-owner = 'vaxerski'
-repo = 'Hyprland'
+owner = 'facebook'
+repo = 'react-native'
 
 # Set the API endpoint
 url = f'https://api.github.com/repos/{owner}/{repo}/issues'
@@ -116,7 +119,7 @@ if response1.status_code == 200 and response2.status_code == 200:
     with open("issues.json", "w") as file:
         json.dump(issues, file, indent=4)
 
-    csvWriter = open('issue_details.csv', 'w', newline='')
+    csvWriter = open('issue_details.csv', 'w', newline='', encoding='utf-8')
     writer = csv.writer(csvWriter)
     writer.writerow(
         ["issue_id", "issue_number", "title", "state",  "created", "closed", "labels", "user", "assignees", "closed_by"])

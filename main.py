@@ -197,7 +197,7 @@ def get_commit_list (url):
 
     commit_list = []
     print(len(data))
-    for i in range(29, len(data)):
+    for i in range(13, len(data)):
         if(i >= len(commit_json_list)):
             break
         ref = commit_json_list[i]["sha"]
@@ -233,10 +233,25 @@ def get_commit_list (url):
 # list_of_issues = get_issues("https://api.github.com/repos/vaxerski/Hyprland/issues?")
 # write_issue_to_csv(list_of_issues)
 
-# list_of_commits = get_commits("https://api.github.com/repos/vaxerski/Hyprland/commits")
-list_of_commits = get_commit_list("https://api.github.com/repos/vaxerski/Hyprland/commits")
-print(list_of_commits)
-write_commit_to_csv(list_of_commits)
+# # list_of_commits = get_commits("https://api.github.com/repos/vaxerski/Hyprland/commits")
+# list_of_commits = get_commit_list("https://api.github.com/repos/vaxerski/Hyprland/commits")
+# print(list_of_commits)
+# write_commit_to_csv(list_of_commits)
 
 # list_of_issues = get_issues("https://api.github.com/repos/vaxerski/Hyprland/commits")
 # write_issue_to_csv(list_of_issues)
+
+# # list_of_commits = get_commits("https://api.github.com/repos/d3/d3/commits")
+# list_of_commits = get_commit_list("https://api.github.com/repos/d3/d3/commits")
+# print(list_of_commits)
+# write_commit_to_csv(list_of_commits)
+
+# # list_of_commits = get_commits("https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits")
+# list_of_commits = get_commit_list("https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits")
+# print(list_of_commits)
+# write_commit_to_csv(list_of_commits)
+
+# list_of_commits = get_commits("https://api.github.com/repos/facebook/react-native/commits")
+list_of_commits = get_commit_list("https://api.github.com/repos/facebook/react-native/commits")
+print(list_of_commits)
+write_commit_to_csv(list_of_commits)

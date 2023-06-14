@@ -62,7 +62,14 @@ function ForceGraph({
     linkStrokeWidth = 4, // given d in links, returns a stroke width in pixels
     linkStrokeLinecap = "round", // link stroke linecap
     linkStrength,
-    colors = d3.schemeTableau10, // an array of color strings, for the node groups
+    colors = ["#a6cee3",
+    "#1f78b4",
+    "#b2df8a",
+    "#33a02c",
+    "#fb9a99",
+    "#e31a1c",
+    "#fdbf6f",
+    "#ff7f00"], // an array of color strings, for the node groups
     width = 640, // outer width, in pixels
     height = 400, // outer height, in pixels
     invalidation // when this promise resolves, stop the simulation

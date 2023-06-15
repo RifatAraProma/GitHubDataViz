@@ -1,0 +1,69 @@
+sha,message,created,files_updated,diff,author
+1d25716df77a25a77d2bcf19548cd85efe8865bd,input: update surface input on changeworkspace,1686306040,['src/managers/KeybindManager.cpp'],,vaxerski
+43a606f40c0844d18449c5fc1629f6f19fbbc1f5,main: fix segfault when -c is given with no other arguments (#2470),1686305718,['src/main.cpp'],"[('src/main.cpp', [54], [54])]",eriedaberrie
+b3b5bb73811ac196cd6cbaa7cd61f58c0fedbb4e,"chore: fix typos (#2463)
+
+Some typos when spelling Hyprland",1686161919,['nix/hm-module.nix'],"[('nix/hm-module.nix', [58, 68, 122, 162], [58, 68, 122, 162])]",Michał
+a93e2b085a543492ce9ec4b9b2124d88133ca7e7,"Fix fractional scale updates in some cases (#2447)
+
+* fix fractional scale update in moveWorkspaceToMonitor
+
+* fix fractional scale update in moveToWorkspace
+
+* Revert ""fix fractional scale update in moveWorkspaceToMonitor""
+
+This reverts commit 6612197a38e6e55a730bb786ed12861830e9f40e.
+
+* Revert ""fix fractional scale update in moveToWorkspace""
+
+This reverts commit 75d9795a065c0122e42d622fbeb83b18c47d4bbc.
+
+* move fractional scale code to updateSurfaceOutputs
+
+* remove duplicate check
+
+* remove superfluous setPreferredScale()",1686037687,['src/Window.cpp'],"[('src/Window.cpp', [287, 288, 289, 290, 291, 292, 293], [294, 307, 308, 310, 311, 313, 314, 315, 316, 317, 318, 319])]",Franz Berger
+d36d14529e8e85573c1ec46487e132df652849ee,"xwayland: disconnect events on destroy
+
+thanks Kirill Primak",1685991107,['src/events/Windows.cpp'],,vaxerski
+668cf6635f42142b1a229e49f449b13895db551f,window: recalc on deco remove,1685951361,['src/Window.cpp'],,vaxerski
+73eb4d4a0132b32ee12439ee969f67700ba70608,"Make movetoworkspace register previous workspace (#2436)
+
+* Make movetoworkspace register previous workspace
+
+* style: no braces + format with clang-format",1685951053,['src/managers/KeybindManager.cpp'],"[('src/managers/KeybindManager.cpp', [884, 885, 886, 887, 908, 909], [884, 885, 886])]",staz
+651ff387ff056adcf204d97ec8c3242ea01c08fc,hyprctl: recalc layout on setprop,1685907323,['src/debug/HyprCtl.cpp'],,vaxerski
+609c1cb58b7052cfeb22062557bc304a2d5ef398,layouts: make aware of borderSize prop,1685907323,"['src/layout/DwindleLayout.cpp', 'src/layout/MasterLayout.cpp']",,vaxerski
+eebd7b2b777d04985481710449680d74f8bb7498,internal: make borderSize prop overridable,1685907323,"['src/Window.hpp', 'src/debug/HyprCtl.cpp', 'src/render/Renderer.cpp']",,vaxerski
+a321d3a07553432dc9eff692cb00618030d9b7f9,[gha] bump flake inputs,1685808451,"['flake.lock', 'subprojects/wlroots.wrap']",,vaxerski
+54cfe7e1b7d3de0f52e9921fdf839aab8e0df279,deps: update wlroots,1685807971,['subprojects/wlroots'],,vaxerski
+46aee37383f64b9fd91ba0aa038f67bd0855a8d7,noxwl: add missing stubs,1685790092,['src/helpers/XWaylandStubs.hpp'],,vaxerski
+1411ea7f62e0c454d11604962b5247a43bfafdd0,[gha] bump flake inputs,1685788105,"['flake.lock', 'subprojects/wlroots.wrap']",,vaxerski
+d19ba0103a7a60803e4aa90224273eae7ccfff2b,deps: update wlroots,1685787628,"['src/Compositor.cpp', 'src/Window.cpp', 'src/Window.hpp', 'src/events/Events.hpp', 'src/events/Layers.cpp', 'src/events/Misc.cpp', 'src/events/Popups.cpp', 'src/events/Windows.cpp', 'src/helpers/SubsurfaceTree.cpp', 'src/managers/SessionLockManager.cpp', 'src/managers/input/InputMethodRelay.cpp', 'subprojects/wlroots']",,vaxerski
+289dd774161f192d90aea3c6f5e3a78fc986c410,"feat: add ipc set title window event (#2419)
+
+* feat: add ipc set title window event
+
+* chore: add EMIT_HOOK_EVENT and change event name",1685783929,['src/events/Windows.cpp'],"[('src/events/Windows.cpp', [808, 809], [])]",Cyril Levis
+994173f636aa5066f034f043f11f6be14239777b,[gha] build man pages,1685783497,"['docs/Hyprland.1', 'docs/hyprctl.1']",,vaxerski
+1fbb35cb11b7fa46f934f0e6438129e3485688b3,"Update ISSUE_GUIDELINES.md faq link to the wiki (#2424)
+
+Co-authored-by: local <>",1685783473,['docs/ISSUE_GUIDELINES.md'],"[('docs/ISSUE_GUIDELINES.md', [5], [5])]",asdfer
+b3d3a79de00d9687d851a6a8ea13f90867687ccf,internal: properly set monitor props on special windows,1685729674,['src/helpers/Monitor.cpp'],,vaxerski
+919dff6ce4dca6db4f116ffcb6f91ea1039f7331,events: remove old comment,1685728202,['src/events/Monitors.cpp'],,vaxerski
+23a8480ca04ad407f5c1297d809d2ad195812335,[gha] bump flake inputs,1685724782,"['flake.lock', 'subprojects/wlroots.wrap']",,vaxerski
+a2a19b077da0b68b13242beb7920bbfeb8d5ae06,deps: update wlroots,1685724245,['subprojects/wlroots'],,vaxerski
+f75bd23822da9f96f025e3715004c2241a202b74,"[hyprctl] Expose the special workspace id and name of the monitor (#2392)
+
+* [hyprctl] Expose the special workspace id of the monitor
+
+So that we know if a special workspace is shown on a monitor
+
+* [hyprctl] Add special workspace name to the output",1685705133,['src/debug/HyprCtl.cpp'],"[('src/debug/HyprCtl.cpp', [22, 23, 24, 25, 26, 27, 28, 29, 57, 58, 59, 60, 71, 72, 85, 86, 92, 93, 94], [58, 71, 77, 78])]",Sinkerine
+d674db37ce1fd4074d4c41ad97e1c669c0748c65,debug: add WITH_ASAN flag in cmake,1685632091,['CMakeLists.txt'],,vaxerski
+4bbf46a61a36fea9b89a2083be67b90d70f3a410,rules: add nodim,1685560280,"['src/Compositor.cpp', 'src/Window.cpp', 'src/Window.hpp', 'src/config/ConfigManager.cpp', 'src/debug/HyprCtl.cpp', 'src/events/Windows.cpp']",,vaxerski
+f43bd125a744ae6a77bd04ffc606258be4d2e794,input: force focus on movefocus,1685559578,"['src/managers/KeybindManager.cpp', 'src/managers/input/InputManager.cpp', 'src/managers/input/InputManager.hpp']",,vaxerski
+ec3664ce1f502f7ea81f0083bce86e3fba96a2d5,groupbars: fix damage calcs,1685555638,['src/render/decorations/CHyprGroupBarDecoration.cpp'],,vaxerski
+4c8f09129a26061cceb3f2c9b257a99a15b285bd,[gha] bump flake inputs,1685542719,['flake.lock'],,vaxerski
+5a2e016f3098df1f9e9cd9181c9fc8416cba5477,deps: update wlroots,1685542165,['subprojects/wlroots'],,vaxerski
+639ced1e455f01974ab6b2b03683ba10a605ee8e,gradient: fix warn,1685541354,['src/config/ConfigDataValues.hpp'],,vaxerski

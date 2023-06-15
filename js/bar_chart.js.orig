@@ -1,0 +1,182 @@
+function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_title) {
+
+      // General Variables
+      let chart_width = $(svg_name).width();
+      let chart_height = $(svg_name).height();
+      let chart = d3.select(svg_name).append("svg").attr("viewBox", [0, 0, chart_width, chart_height])
+                  .attr("width", chart_width)
+                  .attr("height", chart_height);
+
+
+      // Margins, Height & Width
+      const margin = { top: 50, right: 100, bottom: 77, left: 90 };
+      const innerWidth = chart_width - margin.left - margin.right;
+      const innerHeight = chart_height - margin.top - margin.bottom;
+
+      let x_max = -1;
+      let x_min = Infinity;
+      for (i = 0; i < data.length; i++) {
+            x_max = Math.max(x_max, data[i].closed);
+            x_min = Math.min(x_min, data[i].created)
+      }
+
+      // Date format
+      //let parseDate = d3.time.format("%Y-%m-%d").parse;
+
+      // Scales & Axis
+      const xScale = d3.scaleTime()
+            .domain([new Date(x_min), new Date(x_max)])
+            .range([0, innerWidth]);
+
+      const yScale = d3.scaleBand()
+            .domain(data.map(d => d[y_field]))
+            .range([0, innerHeight])
+            .padding(0.2);
+
+      const g = chart.call(d3.zoom().on("zoom", zoomed)).append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+
+      g.append("text")
+            .text(`${title}`)
+            .attr("font-size", "20px")
+            .attr("y", -20);
+
+
+      const xAxis = d3.axisBottom(xScale)
+            .tickSize(-innerHeight)
+            .tickValues(xScale.ticks())
+            .tickFormat(d3.timeFormat("%b %d"));
+
+      const xAxisG = g.append("g").attr("class", "x-axis").call(xAxis)
+            .attr("transform", `translate(0,${innerHeight})`);
+
+
+      xAxisG.append("text")
+            .text(`${x_title}`)
+            .attr("class", "axis-label")
+            .attr("fill", "black")
+            .attr("y", 40)
+            .attr("x", innerWidth / 2)
+            .attr("font-size", "16px");
+
+      // Generate bars
+      var selectedBar = null;
+      var bars = g.selectAll("rect_issue")
+            .data(data).enter()
+            .append("rect")
+            .attr("class", "issue_duration_bars")
+<<<<<<< Updated upstream
+            .attr("fill", d => {
+                  if (d.label == 'bug') return 'pink';
+                  else return "cornflowerblue";
+=======
+            .attr("fill", (d) =>{
+                  if (d.title.includes("fix"))
+                        return "deeppink";
+                  else
+                        return "cornflowerblue";
+>>>>>>> Stashed changes
+            })
+            .attr("x", d => xScale(d[x1_field]))
+            .attr("y", d => yScale(d[y_field]))
+            .attr("rx", 6)
+            .attr("ry", 6)
+            .attr("width", d => xScale(d[x2_field]) - xScale(d[x1_field]))
+            .attr("height", yScale.bandwidth())
+            .on('click', function (d) {
+                  showCommitBetween(d.created, d.closed);
+                  showCommitBetweenWithSankey(d.created, d.closed);
+                  // focusing the selected bar and reducing opacity of all other bars
+                  if (selectedBar != this) {
+                        g.selectAll("rect[class='issue_duration_bars']")
+                              .style("opacity", 0.5)
+                              .attr("height", yScale.bandwidth());
+
+                        d3.select(this)
+                              .style("opacity", 1)
+                              .attr("height", yScale.bandwidth() * 2);
+                        //g.selectAll("rect[class='commit_bars']").style("visibility", "visible");
+                        data.forEach(item => {
+                              g.selectAll("rect[class='commit_bars" + data.indexOf(item) + "']").style("visibility", "hidden");
+                        })
+                        g.selectAll("rect[class='commit_bars" + data.indexOf(d) + "']").style("visibility", "visible");
+                        // g.selectAll("rect[id='"+ d.title + "']").style("visibility", "visible");
+                        selectedBar = this;
+                        document.getElementById('vis_4').scrollIntoView();
+                  }
+                  else {
+                        g.selectAll("rect[class='issue_duration_bars']")
+                              .style("opacity", 1)
+                              .attr("height", yScale.bandwidth());;
+                        data.forEach(item => {
+                              g.selectAll("rect[class='commit_bars" + data.indexOf(item) + "']").style("visibility", "hidden");
+                        });
+
+                        selectedBar = null;
+                        // g.selectAll("rect[id='"+ d.title + "']").style("visibility", "hidden");
+                        //g.selectAll("rect[class='commit_bars']").style("visibility", "hidden");
+                  }
+
+            })
+            .append("title")
+            .text(function (d) {
+                  return d[y_field] + "\ncreated: " + new Date(d[x1_field]) + "\nclosed; " + new Date(d[x2_field]);
+            });
+
+
+
+      // Generate bars for commits
+      const COLOR_PALETTE = ["#68FF42","#68FF42", "#FFFF54", "#FFFF54", "#EF8432", "#EF8432",
+                              "#EA3323", "#EA3323", "#8C1A4B", "#8C1A4B", "#721324", "#721324",
+                              "#721324", "#721324"];
+      var i = 0;
+      var commitRect = g.selectAll("rect_commit")
+            .data(data).enter();
+      data.forEach(d => {
+            let commits = getCommitBetween(d.created, d.closed);
+            let offset = (xScale(d[x2_field]) - xScale(d[x1_field])) / commits.length;
+            let delX = 0;
+            var color = d3.scaleLinear()
+                              .domain(Array.from(Array(commits.length).keys()))
+                              .range(COLOR_PALETTE);
+            commits.forEach(c => {
+
+                  commitRect.append("rect")
+                        .attr("class", "commit_bars" + i)
+                        .attr("fill", color(commits.indexOf(c)))
+                        .attr("x", xScale(d[x1_field]) + delX)
+                        .attr("y", yScale(d[y_field]) + 15)
+                        .attr("rx", 6)
+                        .attr("ry", 6)
+                        .attr("width", offset)
+                        .attr("height", yScale.bandwidth())
+                        .style("visibility", "hidden")
+                        .append("title")
+                        .text(c.message);
+                  delX += offset;
+            })
+            i++;
+      });
+
+      var shadowScale = xScale.copy();
+      
+      function zoomed () {
+            //chart.attr("transform", d3.event.transform);
+            
+            xScale.domain(d3.event.transform.rescaleX(shadowScale).domain());
+            g.selectAll("rect[class='issue_duration_bars']")
+                  .attr("x", d => xScale(d[x1_field]))
+                  .attr("width", d => xScale(d[x2_field]) - xScale(d[x1_field]));
+            xAxisG.call(xAxis);
+            console.log("zoom");
+      };
+
+      return {
+            chart: chart,
+            chart_width: chart_width,
+            chart_height: chart_height,
+            x_scale: xScale,
+            y_scale: yScale,
+      }
+}

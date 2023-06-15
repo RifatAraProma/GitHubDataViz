@@ -1,0 +1,2412 @@
+[
+    {
+        "sha": "65ba999f91afbac63b5777dfcbc8646bade38439",
+        "node_id": "C_kwDOJRAMAtoAKDY1YmE5OTlmOTFhZmJhYzYzYjU3NzdkZmNiYzg2NDZiYWRlMzg0Mzk",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-06-11T05:57:13Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-06-11T05:57:13Z"
+            },
+            "message": "FIXED LINKS",
+            "tree": {
+                "sha": "fcd713f82b5cef83b54b4ef9017471812b215e77",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/fcd713f82b5cef83b54b4ef9017471812b215e77"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/65ba999f91afbac63b5777dfcbc8646bade38439",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkhWI5CRBK7hj4Ov3rIwAAkFUIAFzkS/rg1pq5krrYXEE3h48t\nqG6Pb5sisIF5tv7xjWhwqhptg4kRMQaNxRsHmrR4mnYtt79aiqSO3FkSSxV48yRO\nnTEnGLkQODvndkkoLA1TT5TizHnSHMi4BRnIdp0fNNWNHDkLMu+w7AxwxcO7Nx8a\ndoSScvuX+KExIBqpLIWhYpP+ODzviyDAqDSZ0qfnFHMhKKlLKSDZLcNKub//jW0H\nruYtKTW5jJT00GmStavjZhp/4yLc4PdaVl1vKTb6+C11qQUC9bUP0kWZq8z9TBfP\nAZjRB90ELcAgRU3BhneorIlJa0xdQv4mpOZF9oM35rHwfC8POUtcRqHmLv+1+Fw=\n=iElT\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree fcd713f82b5cef83b54b4ef9017471812b215e77\nparent 964fe2106635a985275a3af31d7b55937ed65871\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1686463033 +1000\ncommitter GitHub <noreply@github.com> 1686463033 +1000\n\nFIXED LINKS"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/65ba999f91afbac63b5777dfcbc8646bade38439",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/65ba999f91afbac63b5777dfcbc8646bade38439",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/65ba999f91afbac63b5777dfcbc8646bade38439/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "964fe2106635a985275a3af31d7b55937ed65871",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/964fe2106635a985275a3af31d7b55937ed65871",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/964fe2106635a985275a3af31d7b55937ed65871"
+            }
+        ]
+    },
+    {
+        "sha": "964fe2106635a985275a3af31d7b55937ed65871",
+        "node_id": "C_kwDOJRAMAtoAKDk2NGZlMjEwNjYzNWE5ODUyNzVhM2FmMzFkN2I1NTkzN2VkNjU4NzE",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-06-04T21:38:41Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-06-04T21:38:41Z"
+            },
+            "message": "Merge pull request #52 from kid101x/patch-1\n\nUpdate README.md, URL error",
+            "tree": {
+                "sha": "4bee1bdc0aeab163ba3a2b69c2ae997842263450",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/4bee1bdc0aeab163ba3a2b69c2ae997842263450"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/964fe2106635a985275a3af31d7b55937ed65871",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkfQRhCRBK7hj4Ov3rIwAAZZwIAFcxPA7Oc1mf9DzlxASiFFgX\nvBsTRysihnfrSuAn+F1LU6ujVWLAZGh1JqhYmrw5IyxnHuSdRfpgqUJWibNXA8mY\n5Ppxw2r34sQy5TF005HUlugzU6cl0c2XZOXn2q16QSN7604Y82xq+8/GhTDsyuxY\njfW0hO7zSMYpsohC25kG+OJRFIRxwBYhbbtfj57Rxy0oitS7bUMipb0XGOzZU4ID\njkotSbtkMcsfxhLdpy+qp/AtpP+aW3oXYYjc4Fl0IKxeo8THYxgBTaGZp5s+t0bF\nXcl21Ug4IbvOg5gdJ2WdSEE18+HloNU2f5kKCx6FLvmRrsa7WtMY0WtfL3lS3UM=\n=A329\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 4bee1bdc0aeab163ba3a2b69c2ae997842263450\nparent f5efc1e017f1777888634d72ca73dbfa3301feae\nparent 60cfe19c891bd43837353ff5436fce817e04ee9f\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1685914721 +1000\ncommitter GitHub <noreply@github.com> 1685914721 +1000\n\nMerge pull request #52 from kid101x/patch-1\n\nUpdate README.md, URL error"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/964fe2106635a985275a3af31d7b55937ed65871",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/964fe2106635a985275a3af31d7b55937ed65871",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/964fe2106635a985275a3af31d7b55937ed65871/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f5efc1e017f1777888634d72ca73dbfa3301feae",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/f5efc1e017f1777888634d72ca73dbfa3301feae",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/f5efc1e017f1777888634d72ca73dbfa3301feae"
+            },
+            {
+                "sha": "60cfe19c891bd43837353ff5436fce817e04ee9f",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/60cfe19c891bd43837353ff5436fce817e04ee9f",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/60cfe19c891bd43837353ff5436fce817e04ee9f"
+            }
+        ]
+    },
+    {
+        "sha": "60cfe19c891bd43837353ff5436fce817e04ee9f",
+        "node_id": "C_kwDOJRAMAtoAKDYwY2ZlMTljODkxYmQ0MzgzNzM1M2ZmNTQzNmZjZTgxN2UwNGVlOWY",
+        "commit": {
+            "author": {
+                "name": "kid101x",
+                "email": "kid101x+github@gmail.com",
+                "date": "2023-06-04T17:32:18Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-06-04T17:32:18Z"
+            },
+            "message": "Update README.md\n\nURL error",
+            "tree": {
+                "sha": "4bee1bdc0aeab163ba3a2b69c2ae997842263450",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/4bee1bdc0aeab163ba3a2b69c2ae997842263450"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/60cfe19c891bd43837353ff5436fce817e04ee9f",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkfMqiCRBK7hj4Ov3rIwAAXdIIAEv77ivxmtjW/OvQ6fpVi4RE\nN9xHEHnNxPYdjoJq8Fa1Ln8z2AGQOIdy5VHKlG54m8c96lmgK8Ufmr2A34fFgW5O\n4BfiLNjFAUi1FxjEDOxrJT0sevrihc+DQz9hUiYLKKS4cSy7xCG4kRMQO6xWeQNV\n15pbYUDa4/zExEZiSQyVF+U6grSMQAMHgsKqKR6/hqJz7+AWMjxQ3js7L72+aaBH\nT8BS/ADLDIwLzt50z9cxRyyA01Gt2Sxv/KAjHjGxm7Iw74xpq3pZ1s1stIrv4eTg\nHuEwoT9IX+q+VNx84LqZf/33KIpUi1TAyRF3HpZuAG9aQW6dKzWgaW+ZYMB2jL4=\n=b1uM\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 4bee1bdc0aeab163ba3a2b69c2ae997842263450\nparent f5efc1e017f1777888634d72ca73dbfa3301feae\nauthor kid101x <kid101x+github@gmail.com> 1685899938 +0800\ncommitter GitHub <noreply@github.com> 1685899938 +0800\n\nUpdate README.md\n\nURL error"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/60cfe19c891bd43837353ff5436fce817e04ee9f",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/60cfe19c891bd43837353ff5436fce817e04ee9f",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/60cfe19c891bd43837353ff5436fce817e04ee9f/comments",
+        "author": {
+            "login": "kid101x",
+            "id": 15882560,
+            "node_id": "MDQ6VXNlcjE1ODgyNTYw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15882560?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/kid101x",
+            "html_url": "https://github.com/kid101x",
+            "followers_url": "https://api.github.com/users/kid101x/followers",
+            "following_url": "https://api.github.com/users/kid101x/following{/other_user}",
+            "gists_url": "https://api.github.com/users/kid101x/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/kid101x/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/kid101x/subscriptions",
+            "organizations_url": "https://api.github.com/users/kid101x/orgs",
+            "repos_url": "https://api.github.com/users/kid101x/repos",
+            "events_url": "https://api.github.com/users/kid101x/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/kid101x/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f5efc1e017f1777888634d72ca73dbfa3301feae",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/f5efc1e017f1777888634d72ca73dbfa3301feae",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/f5efc1e017f1777888634d72ca73dbfa3301feae"
+            }
+        ]
+    },
+    {
+        "sha": "f5efc1e017f1777888634d72ca73dbfa3301feae",
+        "node_id": "C_kwDOJRAMAtoAKGY1ZWZjMWUwMTdmMTc3Nzg4ODYzNGQ3MmNhNzNkYmZhMzMwMWZlYWU",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-05-28T05:52:34Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-05-28T05:52:34Z"
+            },
+            "message": "Update README.md",
+            "tree": {
+                "sha": "abc57f940d64ae57f85317067f7d671b828a7e7b",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/abc57f940d64ae57f85317067f7d671b828a7e7b"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/f5efc1e017f1777888634d72ca73dbfa3301feae",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkcuwiCRBK7hj4Ov3rIwAAMVYIAAYQMcI/SelLH9fQ50x2WNhT\nGeINljJIDVUhGFiQC1S+eMj0n07i+nkPGbEMGtUO4ySRdN62vt5NJjd5x3KBfo5+\nfG5TzxMUipD0VTeH4stsYeHUPG9IG0MnpQKkNFcIQ0pukmFtQvuJM06hjz75LDwP\nAuLw0LVio/HfWxW4HyLnBy6px0nM95c8I7C8cbX8GRAAGrgm/oxZE0ZtCG5y0MEs\nu3JfnGMFieBEb3cdqnMSpcjfKW/fs95fqwRGgrDh9Lb9J5XGWtbKMlaSTDeYEw74\n0QbLOJQG5HE/zKCnZv0fWCzwnefgZb0QgR9HqzzWftaHXPygv35tVODWoyMp6AM=\n=P3+z\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree abc57f940d64ae57f85317067f7d671b828a7e7b\nparent 5f4b63d0b5dbd2c6177ff4e239ac54d7517054da\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1685253154 +1000\ncommitter GitHub <noreply@github.com> 1685253154 +1000\n\nUpdate README.md"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/f5efc1e017f1777888634d72ca73dbfa3301feae",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/f5efc1e017f1777888634d72ca73dbfa3301feae",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/f5efc1e017f1777888634d72ca73dbfa3301feae/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "5f4b63d0b5dbd2c6177ff4e239ac54d7517054da",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/5f4b63d0b5dbd2c6177ff4e239ac54d7517054da",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/5f4b63d0b5dbd2c6177ff4e239ac54d7517054da"
+            }
+        ]
+    },
+    {
+        "sha": "5f4b63d0b5dbd2c6177ff4e239ac54d7517054da",
+        "node_id": "C_kwDOJRAMAtoAKDVmNGI2M2QwYjVkYmQyYzYxNzdmZjRlMjM5YWM1NGQ3NTE3MDU0ZGE",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-05-27T14:23:47Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-05-27T14:23:47Z"
+            },
+            "message": "Update README.md",
+            "tree": {
+                "sha": "52732d22b956ba2d8e5fdb63944023d68aec2e25",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/52732d22b956ba2d8e5fdb63944023d68aec2e25"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/5f4b63d0b5dbd2c6177ff4e239ac54d7517054da",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkchJzCRBK7hj4Ov3rIwAAqmYIACmSbhNyB55Qizgq7BBfPryM\nvtYcNXOhsFQGHU9uy/i9Ua+fM4Ev66bthm3qFYE+sur98371AJPdL0MCVM7i1mz6\nEont7Zo33yNRjDyE3t6XP+meAviFJQW3gsFvNFLHkezS1hv0P5NGziz8Sy2OyM3A\n+C8J0XJJ585OvrW5k2AcWXvJGYbKM1e2yDN5zqt9v5/49Kqato0uhVvyKeZjsV+S\ntXs1re7l3BSuTAJX0NW0VdhdTK9lOAuSZjkbAQALFT+b+/MojJbBCphGYe3UY07L\n0/EBdFiyoF9mrAXVzaKLRB9Fx6J/l+ALqSwsagqETGp0UsT4Io5aRMCKrYGrNhE=\n=KfuX\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 52732d22b956ba2d8e5fdb63944023d68aec2e25\nparent 4684bcc77fd784ded7ca88b4052863189d9a303e\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1685197427 +1000\ncommitter GitHub <noreply@github.com> 1685197427 +1000\n\nUpdate README.md"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/5f4b63d0b5dbd2c6177ff4e239ac54d7517054da",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/5f4b63d0b5dbd2c6177ff4e239ac54d7517054da",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/5f4b63d0b5dbd2c6177ff4e239ac54d7517054da/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "4684bcc77fd784ded7ca88b4052863189d9a303e",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/4684bcc77fd784ded7ca88b4052863189d9a303e",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/4684bcc77fd784ded7ca88b4052863189d9a303e"
+            }
+        ]
+    },
+    {
+        "sha": "4684bcc77fd784ded7ca88b4052863189d9a303e",
+        "node_id": "C_kwDOJRAMAtoAKDQ2ODRiY2M3N2ZkNzg0ZGVkN2NhODhiNDA1Mjg2MzE4OWQ5YTMwM2U",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-05-27T05:19:33Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-05-27T05:19:33Z"
+            },
+            "message": "direct links to conversations, fix",
+            "tree": {
+                "sha": "ef39857cb1795854debd832d063dcea2ac7dff49",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/ef39857cb1795854debd832d063dcea2ac7dff49"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/4684bcc77fd784ded7ca88b4052863189d9a303e",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkcZLlCRBK7hj4Ov3rIwAA9OAIAI7zk6cxkIyMkVdzWnKHQuFI\nvPaMLDZZ7iUGkYtLI3CVKDDQOrHrBmJuXdvADvo8ouyf3xbTfhEDvCwkbtD92Ums\nhthTTdVeBvRfArKN/i9tzsBAFGKyg6LJkRSrQMinkqmPzHcyWMKo57dUnKMYVoov\nBiWWibgeLvpQWLDCceLLoM0O5i2VVC0s0nFfE5fzWMPE4cQssWwT5oOSb2KeQaM0\npVZBOQqpaE43BMZAlpE6e6i32sSsxMJW8dp2mPdwFH8ROlx+QoAbny7/4ml/MdVZ\nXXA7k8vZ62AWOzyxPcXlLnLcqVpjlb3rgEJXz6Xbj8XPHkqLTRSRcsbihsUhdrQ=\n=vh43\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree ef39857cb1795854debd832d063dcea2ac7dff49\nparent 23afb40180490ddb27c557a8d07673970fb677f6\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1685164773 +1000\ncommitter GitHub <noreply@github.com> 1685164773 +1000\n\ndirect links to conversations, fix"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/4684bcc77fd784ded7ca88b4052863189d9a303e",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/4684bcc77fd784ded7ca88b4052863189d9a303e",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/4684bcc77fd784ded7ca88b4052863189d9a303e/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "23afb40180490ddb27c557a8d07673970fb677f6",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/23afb40180490ddb27c557a8d07673970fb677f6",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/23afb40180490ddb27c557a8d07673970fb677f6"
+            }
+        ]
+    },
+    {
+        "sha": "23afb40180490ddb27c557a8d07673970fb677f6",
+        "node_id": "C_kwDOJRAMAtoAKDIzYWZiNDAxODA0OTBkZGIyN2M1NTdhOGQwNzY3Mzk3MGZiNjc3ZjY",
+        "commit": {
+            "author": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-27T05:18:23Z"
+            },
+            "committer": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-27T05:18:23Z"
+            },
+            "message": "Merge branch 'main' of https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor",
+            "tree": {
+                "sha": "66112998a9f9386f106c7edb74242e2a87cde88f",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/66112998a9f9386f106c7edb74242e2a87cde88f"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/23afb40180490ddb27c557a8d07673970fb677f6",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/23afb40180490ddb27c557a8d07673970fb677f6",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/23afb40180490ddb27c557a8d07673970fb677f6",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/23afb40180490ddb27c557a8d07673970fb677f6/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "73db757bd94f7cf586b397781a5adca58b3d8dad",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/73db757bd94f7cf586b397781a5adca58b3d8dad",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/73db757bd94f7cf586b397781a5adca58b3d8dad"
+            },
+            {
+                "sha": "215ffcb1f644d04cd562045967c83e7bf3e017b1",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/215ffcb1f644d04cd562045967c83e7bf3e017b1",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/215ffcb1f644d04cd562045967c83e7bf3e017b1"
+            }
+        ]
+    },
+    {
+        "sha": "73db757bd94f7cf586b397781a5adca58b3d8dad",
+        "node_id": "C_kwDOJRAMAtoAKDczZGI3NTdiZDk0ZjdjZjU4NmIzOTc3ODFhNWFkY2E1OGIzZDhkYWQ",
+        "commit": {
+            "author": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-27T05:18:19Z"
+            },
+            "committer": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-27T05:18:19Z"
+            },
+            "message": "Add direct links to the conversation",
+            "tree": {
+                "sha": "cd9b9f319897ff744801a22b831efb37c701dd89",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/cd9b9f319897ff744801a22b831efb37c701dd89"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/73db757bd94f7cf586b397781a5adca58b3d8dad",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/73db757bd94f7cf586b397781a5adca58b3d8dad",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/73db757bd94f7cf586b397781a5adca58b3d8dad",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/73db757bd94f7cf586b397781a5adca58b3d8dad/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "3bd1157008b44dc8456cb02e556061fdb6cf8914",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/3bd1157008b44dc8456cb02e556061fdb6cf8914",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/3bd1157008b44dc8456cb02e556061fdb6cf8914"
+            }
+        ]
+    },
+    {
+        "sha": "215ffcb1f644d04cd562045967c83e7bf3e017b1",
+        "node_id": "C_kwDOJRAMAtoAKDIxNWZmY2IxZjY0NGQwNGNkNTYyMDQ1OTY3YzgzZTdiZjNlMDE3YjE",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-05-26T16:24:19Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-05-26T16:24:19Z"
+            },
+            "message": "Update README.md",
+            "tree": {
+                "sha": "e97a62aad4e07dcd063b149682b6015862173cde",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/e97a62aad4e07dcd063b149682b6015862173cde"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/215ffcb1f644d04cd562045967c83e7bf3e017b1",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkcN0zCRBK7hj4Ov3rIwAAAzkIABNv0TzpddRI/iSIdaYAjQWA\nC14K9goEH/y5Ve8XywqFCDan6OL6Suk9Go+AAvwo7cM+JCETJLbO8IUSxCBNKchO\nvsULNXGRPIBs7bXTW+xHHkk7q4rX4mJwWzfZHzFUUjlyF2HxNSUkovE8uuDpom7R\n0AelItib2Mbksn/kC5+BLVyKxMl2e2heUUs4RwZ9Pao+9yjAFJLzDNlNWFFGo+lv\nIIzsBNBa4sVDRJmrROKzYnPBrY5Jvv+s6Tq12c9m2wbgLf8SN55/k19Uo/gPbJw1\nyfyAHL0K4pcyn5QKdFDjaW53BywBWP3FtF3Gf5tNXZQ6NcFt8xKVeQcRoEWjDxw=\n=zU/J\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree e97a62aad4e07dcd063b149682b6015862173cde\nparent 0dbf4cea959c53f5dc370a857e4907dcf4c65576\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1685118259 +1000\ncommitter GitHub <noreply@github.com> 1685118259 +1000\n\nUpdate README.md"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/215ffcb1f644d04cd562045967c83e7bf3e017b1",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/215ffcb1f644d04cd562045967c83e7bf3e017b1",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/215ffcb1f644d04cd562045967c83e7bf3e017b1/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0dbf4cea959c53f5dc370a857e4907dcf4c65576",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/0dbf4cea959c53f5dc370a857e4907dcf4c65576",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/0dbf4cea959c53f5dc370a857e4907dcf4c65576"
+            }
+        ]
+    },
+    {
+        "sha": "0dbf4cea959c53f5dc370a857e4907dcf4c65576",
+        "node_id": "C_kwDOJRAMAtoAKDBkYmY0Y2VhOTU5YzUzZjVkYzM3MGE4NTdlNDkwN2RjZjRjNjU1NzY",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-05-25T12:18:51Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-05-25T12:18:51Z"
+            },
+            "message": "Added notes for AI search models, updated plugins note",
+            "tree": {
+                "sha": "37786d3d0df71a910417aaec30bf82a27d6542c7",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/37786d3d0df71a910417aaec30bf82a27d6542c7"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/0dbf4cea959c53f5dc370a857e4907dcf4c65576",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkb1IrCRBK7hj4Ov3rIwAAf54IAHccCMoiSSuMcFsaaaVln3j2\n2yWy+q9821K99grha3jgcBjMD2h+8NZvpFTqXERKOO3xO0uIk0Un3/B4vkvV6yqh\nx3KZq5tvrF83bbpI/i4AIBxzfEkch4HWg8Cq8awdLXvGXuDiOjMfbRVqGFcRnSCi\nsXeZhOERzR2hJeRKNX/dzIVV5bpHmb41jZ8quj+dyWv+Fw9qafW6ERIe/4245Dx/\nSo7830gh/n1TeDqY1fE82gOZvhfH4YYrWpgMrdRsIPaNz0ObzPkZjHbmgwMW7z2q\n7EWZpIdK7iQ+7tcnQ8lHazm3mcVGR40ibrdY0fBk77ysZKlmtx87GS3zWwr6PWk=\n=aose\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 37786d3d0df71a910417aaec30bf82a27d6542c7\nparent 01489f969e424ac5a54eda1a835a84ab3a3ebab1\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1685017131 +1000\ncommitter GitHub <noreply@github.com> 1685017131 +1000\n\nAdded notes for AI search models, updated plugins note"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/0dbf4cea959c53f5dc370a857e4907dcf4c65576",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/0dbf4cea959c53f5dc370a857e4907dcf4c65576",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/0dbf4cea959c53f5dc370a857e4907dcf4c65576/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "01489f969e424ac5a54eda1a835a84ab3a3ebab1",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/01489f969e424ac5a54eda1a835a84ab3a3ebab1",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/01489f969e424ac5a54eda1a835a84ab3a3ebab1"
+            }
+        ]
+    },
+    {
+        "sha": "01489f969e424ac5a54eda1a835a84ab3a3ebab1",
+        "node_id": "C_kwDOJRAMAtoAKDAxNDg5Zjk2OWU0MjRhYzVhNTRlZGExYTgzNWE4NGFiM2EzZWJhYjE",
+        "commit": {
+            "author": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-18T15:27:03Z"
+            },
+            "committer": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-18T15:27:03Z"
+            },
+            "message": "v2.5 Release",
+            "tree": {
+                "sha": "93bbdc6373db6cdca885b51fff3e918643aa235e",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/93bbdc6373db6cdca885b51fff3e918643aa235e"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/01489f969e424ac5a54eda1a835a84ab3a3ebab1",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/01489f969e424ac5a54eda1a835a84ab3a3ebab1",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/01489f969e424ac5a54eda1a835a84ab3a3ebab1",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/01489f969e424ac5a54eda1a835a84ab3a3ebab1/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "81e36e599dfc1b66a3f6c035368889fa5a959e77",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/81e36e599dfc1b66a3f6c035368889fa5a959e77",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/81e36e599dfc1b66a3f6c035368889fa5a959e77"
+            }
+        ]
+    },
+    {
+        "sha": "81e36e599dfc1b66a3f6c035368889fa5a959e77",
+        "node_id": "C_kwDOJRAMAtoAKDgxZTM2ZTU5OWRmYzFiNjZhM2Y2YzAzNTM2ODg4OWZhNWE5NTllNzc",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-05-16T16:06:31Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-05-16T16:06:31Z"
+            },
+            "message": "Update README.md",
+            "tree": {
+                "sha": "f661b0c38692bce7c5eded56d5de28a2d6ac5648",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/f661b0c38692bce7c5eded56d5de28a2d6ac5648"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/81e36e599dfc1b66a3f6c035368889fa5a959e77",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkY6oHCRBK7hj4Ov3rIwAAlQ8IAFELNUz/JXI+46ulZCIB/6ZT\nrCYZle+3+39yhdDHwlzOqEYomwK9LUkz9tSTblsEynx92uYvnLAln/AW3XJ268z6\nfaiHPZzRx/9RciP9cKWSO+sHeap+JFkrPCPxKfGOhg64DA2hsggrduntk7M3JfRU\n7wPLNN6kQMADW4lCI3Af7IT0CFJ39gAvazVIk0Hl+n+3X7jnCPDrZjFMOQRLTPO+\ngiEe0WBYyPRvMGOVo5nKDajDls3GRMDnh0GebomnwUN8INIZVdEkepc8GIVC+AgA\nftMbxSqZmXt9i4GkVNqFW+07vrcZioa2I2/XMQluQy6Yf+fF9aBvqD9nQhBIWJQ=\n=tc75\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree f661b0c38692bce7c5eded56d5de28a2d6ac5648\nparent dfcbeb34fb2cae658f3c493f3ef5746931a14c4a\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1684253191 +1000\ncommitter GitHub <noreply@github.com> 1684253191 +1000\n\nUpdate README.md"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/81e36e599dfc1b66a3f6c035368889fa5a959e77",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/81e36e599dfc1b66a3f6c035368889fa5a959e77",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/81e36e599dfc1b66a3f6c035368889fa5a959e77/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "dfcbeb34fb2cae658f3c493f3ef5746931a14c4a",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/dfcbeb34fb2cae658f3c493f3ef5746931a14c4a",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/dfcbeb34fb2cae658f3c493f3ef5746931a14c4a"
+            }
+        ]
+    },
+    {
+        "sha": "dfcbeb34fb2cae658f3c493f3ef5746931a14c4a",
+        "node_id": "C_kwDOJRAMAtoAKGRmY2JlYjM0ZmIyY2FlNjU4ZjNjNDkzZjNlZjU3NDY5MzFhMTRjNGE",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-05-11T14:08:09Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-05-11T14:08:09Z"
+            },
+            "message": "Update README.md",
+            "tree": {
+                "sha": "44c4acfc87d5b0f6c6c674a0321e146a593ac8ac",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/44c4acfc87d5b0f6c6c674a0321e146a593ac8ac"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/dfcbeb34fb2cae658f3c493f3ef5746931a14c4a",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkXPbJCRBK7hj4Ov3rIwAAxBMIADWdJfBlKv6qpfoe+VMw8aZw\nr5KtmOKIvJOPeGghGXIRQhS20soMQ5IpUv24EWNCBEbXCUWzeM1REAoDF2e8fIAM\nAmmc4mWpSGJpxoKlYsvBnAz+8xCd0QW1lEY9P21opK+vjjhJ4OYnx0z+poirJy37\nvDh5BTNdekM+kfsEl8jh5QoJz4FJ84CKP0imi9EGSn6rriEbPEEyglkE8JoxZo4e\neIbLO20YNz34NiLVFFhcPpH7WWzGb5vcn5zKvR2gcwUKb7J3rCGvV/XgT1QozfLl\n/DyAinIK3gnL292ow101TLqa0hz5E3JrXNUDivBdCyO+pQ+ipWhYAEAmHYNRpBg=\n=Vwz0\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 44c4acfc87d5b0f6c6c674a0321e146a593ac8ac\nparent 9b7861426faba5d4c7ac5e1c7166027b015914e7\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1683814089 +1000\ncommitter GitHub <noreply@github.com> 1683814089 +1000\n\nUpdate README.md"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/dfcbeb34fb2cae658f3c493f3ef5746931a14c4a",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/dfcbeb34fb2cae658f3c493f3ef5746931a14c4a",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/dfcbeb34fb2cae658f3c493f3ef5746931a14c4a/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "9b7861426faba5d4c7ac5e1c7166027b015914e7",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/9b7861426faba5d4c7ac5e1c7166027b015914e7",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/9b7861426faba5d4c7ac5e1c7166027b015914e7"
+            }
+        ]
+    },
+    {
+        "sha": "9b7861426faba5d4c7ac5e1c7166027b015914e7",
+        "node_id": "C_kwDOJRAMAtoAKDliNzg2MTQyNmZhYmE1ZDRjN2FjNWUxYzcxNjYwMjdiMDE1OTE0ZTc",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-05-11T12:51:49Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-05-11T12:51:49Z"
+            },
+            "message": "Added bleeding branch link",
+            "tree": {
+                "sha": "a0bc886183615429d57c28df14159f6ab43349ab",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/a0bc886183615429d57c28df14159f6ab43349ab"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/9b7861426faba5d4c7ac5e1c7166027b015914e7",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkXOTlCRBK7hj4Ov3rIwAA2CAIAH4jHBUKL9M0igaR6nKFchAS\nxEWrTtAeaCsqcUOtYov2BN/miY1mSbGStY/Oh+o+XXIVvFIecJHVy/q5RYitmEOX\n4fDY8u6LdQ7bgSpfDpM4sJrN8buI6oxheL3Pz2qaHJ9/7M63ZL1cD0E4TL2oeCdY\nq9bbTVCR/Guf2CF/NjxcjEHpLX3aOxpF/kIZ45lUD3rm7/ZjLle7BgpWiEMXZJMG\nO+Kyrut1rvkFvIRlzizj6Y4JxU61aBW0jWE6jMduYFcQ0bHYwjhsoEdBjuudvu2A\nKYX95nK1hYWpsS9e/Ibs9oAxqr1lnKREmJGBNCLTCUyUBTr1XUPoM+nr6FWkRqI=\n=oQSx\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree a0bc886183615429d57c28df14159f6ab43349ab\nparent 3bd1157008b44dc8456cb02e556061fdb6cf8914\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1683809509 +1000\ncommitter GitHub <noreply@github.com> 1683809509 +1000\n\nAdded bleeding branch link"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/9b7861426faba5d4c7ac5e1c7166027b015914e7",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/9b7861426faba5d4c7ac5e1c7166027b015914e7",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/9b7861426faba5d4c7ac5e1c7166027b015914e7/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "3bd1157008b44dc8456cb02e556061fdb6cf8914",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/3bd1157008b44dc8456cb02e556061fdb6cf8914",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/3bd1157008b44dc8456cb02e556061fdb6cf8914"
+            }
+        ]
+    },
+    {
+        "sha": "3bd1157008b44dc8456cb02e556061fdb6cf8914",
+        "node_id": "C_kwDOJRAMAtoAKDNiZDExNTcwMDhiNDRkYzg0NTZjYjAyZTU1NjA2MWZkYjZjZjg5MTQ",
+        "commit": {
+            "author": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-10T10:37:39Z"
+            },
+            "committer": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-10T10:37:39Z"
+            },
+            "message": "fixed incorrect no. of tokens in md prompt",
+            "tree": {
+                "sha": "f39b76eb07244c6f057d2c3e707831c661f8c1c4",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/f39b76eb07244c6f057d2c3e707831c661f8c1c4"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/3bd1157008b44dc8456cb02e556061fdb6cf8914",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/3bd1157008b44dc8456cb02e556061fdb6cf8914",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/3bd1157008b44dc8456cb02e556061fdb6cf8914",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/3bd1157008b44dc8456cb02e556061fdb6cf8914/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0d48b15091e51a6f85681d3ddcd939a930aa8a65",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/0d48b15091e51a6f85681d3ddcd939a930aa8a65",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/0d48b15091e51a6f85681d3ddcd939a930aa8a65"
+            }
+        ]
+    },
+    {
+        "sha": "0d48b15091e51a6f85681d3ddcd939a930aa8a65",
+        "node_id": "C_kwDOJRAMAtoAKDBkNDhiMTUwOTFlNTFhNmY4NTY4MWQzZGRjZDkzOWE5MzBhYThhNjU",
+        "commit": {
+            "author": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-07T11:48:13Z"
+            },
+            "committer": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-07T11:48:13Z"
+            },
+            "message": "v2.4.16",
+            "tree": {
+                "sha": "feb454a3c7d914dfab1d47707834f7fc208a4ac8",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/feb454a3c7d914dfab1d47707834f7fc208a4ac8"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/0d48b15091e51a6f85681d3ddcd939a930aa8a65",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/0d48b15091e51a6f85681d3ddcd939a930aa8a65",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/0d48b15091e51a6f85681d3ddcd939a930aa8a65",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/0d48b15091e51a6f85681d3ddcd939a930aa8a65/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "dce8ae6979153ca386758719d1f60aa64a74ed05",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/dce8ae6979153ca386758719d1f60aa64a74ed05",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/dce8ae6979153ca386758719d1f60aa64a74ed05"
+            }
+        ]
+    },
+    {
+        "sha": "dce8ae6979153ca386758719d1f60aa64a74ed05",
+        "node_id": "C_kwDOJRAMAtoAKGRjZThhZTY5NzkxNTNjYTM4Njc1ODcxOWQxZjYwYWE2NGE3NGVkMDU",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-05-06T14:26:35Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-05-06T14:26:35Z"
+            },
+            "message": "Update README.md",
+            "tree": {
+                "sha": "38b922cf249cade8b159c92d96fed3ec6cc2c5d0",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/38b922cf249cade8b159c92d96fed3ec6cc2c5d0"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/dce8ae6979153ca386758719d1f60aa64a74ed05",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkVmObCRBK7hj4Ov3rIwAAWIUIAIVu+f05ZQ+gZ4cgWDY/HHp2\ntcut8UAfT2O7YaAxD/zwcLxi7WvEH/yk//+5jAHfcEjWtmaUp+bdkF+jxEReJoco\nb9RLIG/l5khjMkVpekGG94bLDQicO3iycIpzRF/9uoeD89Lplas8uSnqnKph4nbw\njqzowb781eatwn7b8Y4FGIfd+EecoBIc+OGbAIWWhsCcraEwrOBTAiUft6RrJLgx\nlLwajgV83eSY9JilqPEvUVPngB/IgmwjK7GEEsIwniuZqU725m+0jRifBCxfWx1C\ns2zEP2DnAHF2CWt+9qmc5zm7C7v7XI8CMP9mKqdqqYN5zxfSmWMuHECdWtPlcrE=\n=Vh/P\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 38b922cf249cade8b159c92d96fed3ec6cc2c5d0\nparent 0ff5746532ce05794e5464be8143e522fdf7d8c4\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1683383195 +1000\ncommitter GitHub <noreply@github.com> 1683383195 +1000\n\nUpdate README.md"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/dce8ae6979153ca386758719d1f60aa64a74ed05",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/dce8ae6979153ca386758719d1f60aa64a74ed05",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/dce8ae6979153ca386758719d1f60aa64a74ed05/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0ff5746532ce05794e5464be8143e522fdf7d8c4",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/0ff5746532ce05794e5464be8143e522fdf7d8c4",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/0ff5746532ce05794e5464be8143e522fdf7d8c4"
+            }
+        ]
+    },
+    {
+        "sha": "0ff5746532ce05794e5464be8143e522fdf7d8c4",
+        "node_id": "C_kwDOJRAMAtoAKDBmZjU3NDY1MzJjZTA1Nzk0ZTU0NjRiZTgxNDNlNTIyZmRmN2Q4YzQ",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-05-06T03:26:30Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-05-06T03:26:30Z"
+            },
+            "message": "Merge pull request #23 from yzfly/main\n\nfix spell error \"langauge\" in markdown",
+            "tree": {
+                "sha": "17790618145ddef85101719fcf307ab71d501055",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/17790618145ddef85101719fcf307ab71d501055"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/0ff5746532ce05794e5464be8143e522fdf7d8c4",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkVcjmCRBK7hj4Ov3rIwAA8PYIAIBIePe9kmk7xmurSHAYIH7Y\nBHbyPG0hOSfLsjo40143xbk5mmsMdBJkzGUhy7lrTk3UatOCh5sJyelDeIWn+o6E\niU399b3QCdIQ3G0j0ENLacqu0NMfJGjFQz/yFbF40r1JkuUOVIXW6MbHtXejlG50\naS8dmIpHvoubMFqM/PpiyxvaitOzK4MRpsQggjpuYF29ag//MMkuDji3zkDOL/Sd\nzUJeRhZ2O+zOrtdnb5SCMBbrM/hN9TfSuZ0xCoXrhwnP1FJI2sQyKZidsLTAIZzh\nm+TvqTuULgVu+ncNUFb3YxjXV762ybJYzxUPfNc1kH+hcqOoBeYb6ge07s7nvOo=\n=bmYo\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 17790618145ddef85101719fcf307ab71d501055\nparent 5803deee1827f2da561c75ce6b228fbadbcc056f\nparent 9faa142d124d709117e21f5d7031e6186c1866f4\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1683343590 +1000\ncommitter GitHub <noreply@github.com> 1683343590 +1000\n\nMerge pull request #23 from yzfly/main\n\nfix spell error \"langauge\" in markdown"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/0ff5746532ce05794e5464be8143e522fdf7d8c4",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/0ff5746532ce05794e5464be8143e522fdf7d8c4",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/0ff5746532ce05794e5464be8143e522fdf7d8c4/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "5803deee1827f2da561c75ce6b228fbadbcc056f",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/5803deee1827f2da561c75ce6b228fbadbcc056f",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/5803deee1827f2da561c75ce6b228fbadbcc056f"
+            },
+            {
+                "sha": "9faa142d124d709117e21f5d7031e6186c1866f4",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/9faa142d124d709117e21f5d7031e6186c1866f4",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/9faa142d124d709117e21f5d7031e6186c1866f4"
+            }
+        ]
+    },
+    {
+        "sha": "5803deee1827f2da561c75ce6b228fbadbcc056f",
+        "node_id": "C_kwDOJRAMAtoAKDU4MDNkZWVlMTgyN2YyZGE1NjFjNzVjZTZiMjI4ZmJhZGJjYzA1NmY",
+        "commit": {
+            "author": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-06T03:24:02Z"
+            },
+            "committer": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-06T03:24:02Z"
+            },
+            "message": "Updated screenshots in README.md",
+            "tree": {
+                "sha": "238d639bc10ef4ecd5686433c43437e73a3c64de",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/238d639bc10ef4ecd5686433c43437e73a3c64de"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/5803deee1827f2da561c75ce6b228fbadbcc056f",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/5803deee1827f2da561c75ce6b228fbadbcc056f",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/5803deee1827f2da561c75ce6b228fbadbcc056f",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/5803deee1827f2da561c75ce6b228fbadbcc056f/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f17f68f9b6b9e9bb563dc47dd3a6934a188c0dbe",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/f17f68f9b6b9e9bb563dc47dd3a6934a188c0dbe",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/f17f68f9b6b9e9bb563dc47dd3a6934a188c0dbe"
+            }
+        ]
+    },
+    {
+        "sha": "9faa142d124d709117e21f5d7031e6186c1866f4",
+        "node_id": "C_kwDOJRAMAtoAKDlmYWExNDJkMTI0ZDcwOTExN2UyMWY1ZDcwMzFlNjE4NmMxODY2ZjQ",
+        "commit": {
+            "author": {
+                "name": "yzfly",
+                "email": "contact@agibeta.com",
+                "date": "2023-05-06T00:22:52Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-05-06T00:22:52Z"
+            },
+            "message": "fix spell error \"langauge\" in markdown",
+            "tree": {
+                "sha": "2b4e3a3053e203d3f0f73343acf928a52897cc5b",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/2b4e3a3053e203d3f0f73343acf928a52897cc5b"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/9faa142d124d709117e21f5d7031e6186c1866f4",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkVZ3cCRBK7hj4Ov3rIwAAcvQIADhzr6M2IiJeW6MF89cwHndb\ngdq391DlcORgsti1dilskkGxNoLIDEdx5A2nReN56luxwJPp5GaJowwrCYW76QpR\new79sl+7F+jECo8Y/uPWvZ2s3c+on5IIYe16N2mIE7bp4ahRCiMuVqyI85j5XOQ5\nmjplSG0xDTEeW7xpuwEDA2ew1yb4BH3KVXzQ3UTGkshEpDvUt1k7DZzKRnn38Cxp\nwnN/nPEVMKiLoVubWa08RyDSdcJZ2v3KpwE9MSmRAREoybobViDSSWsY8qx4Rd7J\nfqlHau1sibCPdW+Ks72edLoZhRTfyUA19wuG5oGTiLxw+9+aWYE9Ef1EQA9S7bk=\n=Turm\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 2b4e3a3053e203d3f0f73343acf928a52897cc5b\nparent f17f68f9b6b9e9bb563dc47dd3a6934a188c0dbe\nauthor yzfly <contact@agibeta.com> 1683332572 +0800\ncommitter GitHub <noreply@github.com> 1683332572 +0800\n\nfix spell error \"langauge\" in markdown"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/9faa142d124d709117e21f5d7031e6186c1866f4",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/9faa142d124d709117e21f5d7031e6186c1866f4",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/9faa142d124d709117e21f5d7031e6186c1866f4/comments",
+        "author": {
+            "login": "yzfly",
+            "id": 46625232,
+            "node_id": "MDQ6VXNlcjQ2NjI1MjMy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/46625232?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/yzfly",
+            "html_url": "https://github.com/yzfly",
+            "followers_url": "https://api.github.com/users/yzfly/followers",
+            "following_url": "https://api.github.com/users/yzfly/following{/other_user}",
+            "gists_url": "https://api.github.com/users/yzfly/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/yzfly/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/yzfly/subscriptions",
+            "organizations_url": "https://api.github.com/users/yzfly/orgs",
+            "repos_url": "https://api.github.com/users/yzfly/repos",
+            "events_url": "https://api.github.com/users/yzfly/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/yzfly/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f17f68f9b6b9e9bb563dc47dd3a6934a188c0dbe",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/f17f68f9b6b9e9bb563dc47dd3a6934a188c0dbe",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/f17f68f9b6b9e9bb563dc47dd3a6934a188c0dbe"
+            }
+        ]
+    },
+    {
+        "sha": "f17f68f9b6b9e9bb563dc47dd3a6934a188c0dbe",
+        "node_id": "C_kwDOJRAMAtoAKGYxN2Y2OGY5YjZiOWU5YmI1NjNkYzQ3ZGQzYTY5MzRhMTg4YzBkYmU",
+        "commit": {
+            "author": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-05T16:30:10Z"
+            },
+            "committer": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-05T16:30:10Z"
+            },
+            "message": "Updated MD format to v2.4.11",
+            "tree": {
+                "sha": "9d024bdb2b9f387d2bcd1c806d746bf8fcea1060",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/9d024bdb2b9f387d2bcd1c806d746bf8fcea1060"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/f17f68f9b6b9e9bb563dc47dd3a6934a188c0dbe",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/f17f68f9b6b9e9bb563dc47dd3a6934a188c0dbe",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/f17f68f9b6b9e9bb563dc47dd3a6934a188c0dbe",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/f17f68f9b6b9e9bb563dc47dd3a6934a188c0dbe/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0c241cae41aef120376be49fd22cefd0785b959c",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/0c241cae41aef120376be49fd22cefd0785b959c",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/0c241cae41aef120376be49fd22cefd0785b959c"
+            }
+        ]
+    },
+    {
+        "sha": "0c241cae41aef120376be49fd22cefd0785b959c",
+        "node_id": "C_kwDOJRAMAtoAKDBjMjQxY2FlNDFhZWYxMjAzNzZiZTQ5ZmQyMmNlZmQwNzg1Yjk1OWM",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-05-05T16:24:04Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-05-05T16:24:04Z"
+            },
+            "message": "Merge pull request #16 from grantcarthew/markdown\n\nfeat: added markdown format",
+            "tree": {
+                "sha": "786e28ffab5b632e421e60945d8cf8524bcfb3fb",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/786e28ffab5b632e421e60945d8cf8524bcfb3fb"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/0c241cae41aef120376be49fd22cefd0785b959c",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkVS2lCRBK7hj4Ov3rIwAAZJcIACwaUs+51R38OCstCyk1AxIN\ntGb1cxMeI0D1Jxf8LGow/Trqo9lXL2wmk0tmM0TpyvPBguvycdhogTX/40zNcwcr\niOtiBRfbdqxc5XM0KZSm1hqEoYTtmXymUgmeoMCZXw+5MHOiFI/WD8mqGlEhxuGj\n5ak71ewTPrqafHbP7q0fR64JSZKNQim+RZCnrLD7RJpJ2WS3FlUIoYSzsCr76fIA\ncgp3APdnH6g+T1/Rv/eLBdquUw1byXZYKzkHglOaCbWNaF+WmoYbQQOH7QdSrA8D\nzgPpjYyzQILlwKn93FG1lpLYoa/e5OFHGFUA1n45vwS5CxWVBW8OGy/JX0A2FBQ=\n=6+Gy\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 786e28ffab5b632e421e60945d8cf8524bcfb3fb\nparent c6fc90c53ca19158a6ef9c275926c5677f604e57\nparent 3e21deafef9f4c94f5ab86c9d2ae479caef6da03\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1683303844 +1000\ncommitter GitHub <noreply@github.com> 1683303844 +1000\n\nMerge pull request #16 from grantcarthew/markdown\n\nfeat: added markdown format"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/0c241cae41aef120376be49fd22cefd0785b959c",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/0c241cae41aef120376be49fd22cefd0785b959c",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/0c241cae41aef120376be49fd22cefd0785b959c/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "c6fc90c53ca19158a6ef9c275926c5677f604e57",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/c6fc90c53ca19158a6ef9c275926c5677f604e57",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/c6fc90c53ca19158a6ef9c275926c5677f604e57"
+            },
+            {
+                "sha": "3e21deafef9f4c94f5ab86c9d2ae479caef6da03",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/3e21deafef9f4c94f5ab86c9d2ae479caef6da03",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/3e21deafef9f4c94f5ab86c9d2ae479caef6da03"
+            }
+        ]
+    },
+    {
+        "sha": "3e21deafef9f4c94f5ab86c9d2ae479caef6da03",
+        "node_id": "C_kwDOJRAMAtoAKDNlMjFkZWFmZWY5ZjRjOTRmNWFiODZjOWQyYWU0NzljYWVmNmRhMDM",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-05-05T16:22:49Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-05-05T16:22:49Z"
+            },
+            "message": "Merge branch 'main' into markdown",
+            "tree": {
+                "sha": "786e28ffab5b632e421e60945d8cf8524bcfb3fb",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/786e28ffab5b632e421e60945d8cf8524bcfb3fb"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/3e21deafef9f4c94f5ab86c9d2ae479caef6da03",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkVS1ZCRBK7hj4Ov3rIwAAkhUIAKtRtfEb7CBakbxFOo7eweFl\n0v+U7TUVmm+ZMFr7SHReyZ1XmnEdKdUIExJjyLAXwEbFOtv/KUfu2WOjKH9BQLo/\ne6TH15T+YDCgCZSwOFRVyS5PMxYagMto24nugt70+daDHhmaCmzXPPEBJ1utXDZq\nlVFjY1EHsRh1Yp8VM5pcQ+lZAzHz193vHY0WxNqgIvFqnH5Gp2zauZUVuaYpDIKh\n4S91VEgVvRSVjn/F1GjN+oVAZVbRupw8VrP0AqSBX+5t6Xgg9zqcFKmDtRRdghq1\noyPr0YThmzlrMURzwUHBuD44O8Gf4F9+FTkhMoxiPNo+siMLPBLde0ujSAMymtU=\n=xII2\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 786e28ffab5b632e421e60945d8cf8524bcfb3fb\nparent f89994e3d8ab4b896a3c8fb6c09373b642ea10f1\nparent c6fc90c53ca19158a6ef9c275926c5677f604e57\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1683303769 +1000\ncommitter GitHub <noreply@github.com> 1683303769 +1000\n\nMerge branch 'main' into markdown"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/3e21deafef9f4c94f5ab86c9d2ae479caef6da03",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/3e21deafef9f4c94f5ab86c9d2ae479caef6da03",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/3e21deafef9f4c94f5ab86c9d2ae479caef6da03/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f89994e3d8ab4b896a3c8fb6c09373b642ea10f1",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/f89994e3d8ab4b896a3c8fb6c09373b642ea10f1",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/f89994e3d8ab4b896a3c8fb6c09373b642ea10f1"
+            },
+            {
+                "sha": "c6fc90c53ca19158a6ef9c275926c5677f604e57",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/c6fc90c53ca19158a6ef9c275926c5677f604e57",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/c6fc90c53ca19158a6ef9c275926c5677f604e57"
+            }
+        ]
+    },
+    {
+        "sha": "c6fc90c53ca19158a6ef9c275926c5677f604e57",
+        "node_id": "C_kwDOJRAMAtoAKGM2ZmM5MGM1M2NhMTkxNThhNmVmOWMyNzU5MjZjNTY3N2Y2MDRlNTc",
+        "commit": {
+            "author": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-05T16:11:11Z"
+            },
+            "committer": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-05T16:11:11Z"
+            },
+            "message": "added comma",
+            "tree": {
+                "sha": "de47b3d2eb31a5a04f70ac978de6cc1c045069b4",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/de47b3d2eb31a5a04f70ac978de6cc1c045069b4"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/c6fc90c53ca19158a6ef9c275926c5677f604e57",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/c6fc90c53ca19158a6ef9c275926c5677f604e57",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/c6fc90c53ca19158a6ef9c275926c5677f604e57",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/c6fc90c53ca19158a6ef9c275926c5677f604e57/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "1b28f839493b468d588fffa2ac1c822774c03189",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/1b28f839493b468d588fffa2ac1c822774c03189",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/1b28f839493b468d588fffa2ac1c822774c03189"
+            }
+        ]
+    },
+    {
+        "sha": "1b28f839493b468d588fffa2ac1c822774c03189",
+        "node_id": "C_kwDOJRAMAtoAKDFiMjhmODM5NDkzYjQ2OGQ1ODhmZmZhMmFjMWM4MjI3NzRjMDMxODk",
+        "commit": {
+            "author": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-05T16:10:35Z"
+            },
+            "committer": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-05T16:10:35Z"
+            },
+            "message": "Updated token count",
+            "tree": {
+                "sha": "a35cf7c51090310532ce35ce1a27f163ba695573",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/a35cf7c51090310532ce35ce1a27f163ba695573"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/1b28f839493b468d588fffa2ac1c822774c03189",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/1b28f839493b468d588fffa2ac1c822774c03189",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/1b28f839493b468d588fffa2ac1c822774c03189",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/1b28f839493b468d588fffa2ac1c822774c03189/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "21288662c3ce1f43c6b09c2800c8b5c0e1e74156",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/21288662c3ce1f43c6b09c2800c8b5c0e1e74156",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/21288662c3ce1f43c6b09c2800c8b5c0e1e74156"
+            }
+        ]
+    },
+    {
+        "sha": "21288662c3ce1f43c6b09c2800c8b5c0e1e74156",
+        "node_id": "C_kwDOJRAMAtoAKDIxMjg4NjYyYzNjZTFmNDNjNmIwOWMyODAwYzhiNWMwZTFlNzQxNTY",
+        "commit": {
+            "author": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-05T16:06:06Z"
+            },
+            "committer": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-05T16:06:06Z"
+            },
+            "message": "Merge branch 'main' of https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor",
+            "tree": {
+                "sha": "ce9b0e9a14fc51622843a86e303f384a156f72b0",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/ce9b0e9a14fc51622843a86e303f384a156f72b0"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/21288662c3ce1f43c6b09c2800c8b5c0e1e74156",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/21288662c3ce1f43c6b09c2800c8b5c0e1e74156",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/21288662c3ce1f43c6b09c2800c8b5c0e1e74156",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/21288662c3ce1f43c6b09c2800c8b5c0e1e74156/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "fc6040d4fbf9ad036c0319cc5228b8c60973d135",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/fc6040d4fbf9ad036c0319cc5228b8c60973d135",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/fc6040d4fbf9ad036c0319cc5228b8c60973d135"
+            },
+            {
+                "sha": "465cf7faf0b74b96dcb9f9b485714975c6a43f6c",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/465cf7faf0b74b96dcb9f9b485714975c6a43f6c",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/465cf7faf0b74b96dcb9f9b485714975c6a43f6c"
+            }
+        ]
+    },
+    {
+        "sha": "fc6040d4fbf9ad036c0319cc5228b8c60973d135",
+        "node_id": "C_kwDOJRAMAtoAKGZjNjA0MGQ0ZmJmOWFkMDM2YzAzMTljYzUyMjhiOGM2MDk3M2QxMzU",
+        "commit": {
+            "author": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-05T16:05:46Z"
+            },
+            "committer": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-05T16:05:46Z"
+            },
+            "message": "updated .yaml to v2.4.11",
+            "tree": {
+                "sha": "29db5f42a564e1c018fc3df0020df5ef61d13610",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/29db5f42a564e1c018fc3df0020df5ef61d13610"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/fc6040d4fbf9ad036c0319cc5228b8c60973d135",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/fc6040d4fbf9ad036c0319cc5228b8c60973d135",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/fc6040d4fbf9ad036c0319cc5228b8c60973d135",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/fc6040d4fbf9ad036c0319cc5228b8c60973d135/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6"
+            }
+        ]
+    },
+    {
+        "sha": "465cf7faf0b74b96dcb9f9b485714975c6a43f6c",
+        "node_id": "C_kwDOJRAMAtoAKDQ2NWNmN2ZhZjBiNzRiOTZkY2I5ZjliNDg1NzE0OTc1YzZhNDNmNmM",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-05-05T15:45:50Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-05-05T15:45:50Z"
+            },
+            "message": "Update reasoning styles typo, \"Casual\" to \"Causal\" to avoid confusion\n\nUpdate reasoning styles typo, \"Casual\" to \"Causal\" to avoid confusion",
+            "tree": {
+                "sha": "00f139e2fa2e8b49d751460a2d724afeac6550aa",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/00f139e2fa2e8b49d751460a2d724afeac6550aa"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/465cf7faf0b74b96dcb9f9b485714975c6a43f6c",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkVSSuCRBK7hj4Ov3rIwAAW7sIADIMvYbFsVSDI/I6PABneIl8\nrHzNDorM63J0UEDgcbxE040uYzqoMIRsiu5dLBMFk//FXM671eyOLq9PDc+wTlhn\nPifepLJ/On12Tw19Zw2rO70HSZ3h91catgZD7tycCbrTWds9LtlvXb1/3WdnbYEc\nIHErHNm5gQZ+/k661Lg8aYxQjC+dw6CLPibOKh/gBTuN8gIliywN3JHJfFiVtAZq\nXYk2U+xxWjipIHteac0X5vOov8ZMO1Srh94SZ2cQg09vxmi6D5LrCsDqSHXt6bo/\nt90bK2kR+b5/+6gfoax8iVFNW4oFpP96EfusH/fxA4JxUnPQFIVUqOJjB6/9KE4=\n=pF/+\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 00f139e2fa2e8b49d751460a2d724afeac6550aa\nparent 31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6\nparent b35c2231fc93642b11018db9191824223d2eb13d\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1683301550 +1000\ncommitter GitHub <noreply@github.com> 1683301550 +1000\n\nUpdate reasoning styles typo, \"Casual\" to \"Causal\" to avoid confusion\n\nUpdate reasoning styles typo, \"Casual\" to \"Causal\" to avoid confusion"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/465cf7faf0b74b96dcb9f9b485714975c6a43f6c",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/465cf7faf0b74b96dcb9f9b485714975c6a43f6c",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/465cf7faf0b74b96dcb9f9b485714975c6a43f6c/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6"
+            },
+            {
+                "sha": "b35c2231fc93642b11018db9191824223d2eb13d",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/b35c2231fc93642b11018db9191824223d2eb13d",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/b35c2231fc93642b11018db9191824223d2eb13d"
+            }
+        ]
+    },
+    {
+        "sha": "b35c2231fc93642b11018db9191824223d2eb13d",
+        "node_id": "C_kwDOJRAMAtoAKGIzNWMyMjMxZmM5MzY0MmIxMTAxOGRiOTE5MTgyNDIyM2QyZWIxM2Q",
+        "commit": {
+            "author": {
+                "name": "Jush",
+                "email": "36951064+JushBJJ@users.noreply.github.com",
+                "date": "2023-05-05T15:45:28Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-05-05T15:45:28Z"
+            },
+            "message": "Merge branch 'main' into main",
+            "tree": {
+                "sha": "00f139e2fa2e8b49d751460a2d724afeac6550aa",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/00f139e2fa2e8b49d751460a2d724afeac6550aa"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/b35c2231fc93642b11018db9191824223d2eb13d",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkVSSYCRBK7hj4Ov3rIwAAuToIAACb0wq8nebYru/c7+ow3Pu+\nMKFF8ZNKXjj86TZzX0reuK42qrL2TbnjYgp0AVhqkikukhR+0vj7IgsjbLhELfe3\nxrUpvfSN15pwjqhjkMRLgPaV/BFQSwDGjYT8sABQxdEyE/lfyhXgcVMaOzguD/6Y\nSK1d9QNvI2jPI20sr8WAcolLZvTMpWNfA441yUaAnEvpyo00ynJTQes2HqW5Opv6\nMc7ThPlS8XhEVYDnJIWNq+6OStSn5M4JEgNhI9nERz7hyrkHZPhsMLYw9oFi5eJ8\nIfXoT9RAF511FTR+ZaKSNQKj2Az9YODtVLcguaaDeU6+pu+3cF4Syt4/wRB7i2A=\n=CKID\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 00f139e2fa2e8b49d751460a2d724afeac6550aa\nparent cad4d848fb6bfbfa6869e6d9c43c9ca59c3e6415\nparent 31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6\nauthor Jush <36951064+JushBJJ@users.noreply.github.com> 1683301528 +1000\ncommitter GitHub <noreply@github.com> 1683301528 +1000\n\nMerge branch 'main' into main"
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/b35c2231fc93642b11018db9191824223d2eb13d",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/b35c2231fc93642b11018db9191824223d2eb13d",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/b35c2231fc93642b11018db9191824223d2eb13d/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "cad4d848fb6bfbfa6869e6d9c43c9ca59c3e6415",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/cad4d848fb6bfbfa6869e6d9c43c9ca59c3e6415",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/cad4d848fb6bfbfa6869e6d9c43c9ca59c3e6415"
+            },
+            {
+                "sha": "31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6"
+            }
+        ]
+    },
+    {
+        "sha": "31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6",
+        "node_id": "C_kwDOJRAMAtoAKDMxZmJhY2FiNmQ0NWU0ZjFkMTVlYjJlNmExMWQzM2ViZjUxYWViYzY",
+        "commit": {
+            "author": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-05T15:43:08Z"
+            },
+            "committer": {
+                "name": "JushBJJ",
+                "email": "JushPacis@gmail.com",
+                "date": "2023-05-05T15:43:08Z"
+            },
+            "message": "updated docs.md",
+            "tree": {
+                "sha": "d9d9e0609eb73891ce28fdf93b27c80220576168",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/trees/d9d9e0609eb73891ce28fdf93b27c80220576168"
+            },
+            "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/git/commits/31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6",
+        "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6",
+        "comments_url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/31fbacab6d45e4f1d15eb2e6a11d33ebf51aebc6/comments",
+        "author": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "JushBJJ",
+            "id": 36951064,
+            "node_id": "MDQ6VXNlcjM2OTUxMDY0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36951064?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/JushBJJ",
+            "html_url": "https://github.com/JushBJJ",
+            "followers_url": "https://api.github.com/users/JushBJJ/followers",
+            "following_url": "https://api.github.com/users/JushBJJ/following{/other_user}",
+            "gists_url": "https://api.github.com/users/JushBJJ/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/JushBJJ/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/JushBJJ/subscriptions",
+            "organizations_url": "https://api.github.com/users/JushBJJ/orgs",
+            "repos_url": "https://api.github.com/users/JushBJJ/repos",
+            "events_url": "https://api.github.com/users/JushBJJ/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/JushBJJ/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "7e5d9f02bc494e9d1ea88b740c88ee84b3d036fe",
+                "url": "https://api.github.com/repos/JushBJJ/Mr.-Ranedeer-AI-Tutor/commits/7e5d9f02bc494e9d1ea88b740c88ee84b3d036fe",
+                "html_url": "https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/commit/7e5d9f02bc494e9d1ea88b740c88ee84b3d036fe"
+            }
+        ]
+    }
+]

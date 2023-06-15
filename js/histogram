@@ -1,0 +1,129 @@
+var width;
+var height;
+var margin;
+
+function load_histogram(div_name, data, title) {
+    // set the dimensions and margins of the graph
+    margin = { top: window.innerHeight * 0.5 * 0.05, right: window.innerWidth * 0.05, bottom: window.innerHeight * 0.5 * 0.1, left: window.innerWidth * 0.05 },
+    width = window.innerWidth;
+    height = window.innerHeight * 0.5;
+
+    const COLOR_PALETTE = ["var(--color-severe-fg)"];
+
+    // append the svg object to the body of the page
+    var svg = d3.select(div_name)
+        .append("svg")
+        .attr("viewBox", [0, 0, width + margin.left + margin.right, height + margin.top + margin.bottom])
+        .style("background-color", "#f2f2f2")
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    let x_max = -1;
+    let x_min = Infinity;
+    for (i = 0; i < data.length; i++) {
+        x_max = Math.max(x_max, data[i].update_freq);
+        x_min = Math.min(x_min, data[i].update_freq);
+    }
+
+    // Y axis: scale and draw
+    var x = d3.scaleLog()
+        .domain([1, x_max])
+        .range([0, width]);
+
+    const xAxisG = svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x).ticks(10).tickValues(x.ticks()).tickFormat(d3.format(".0s")));
+
+    xAxisG.append("text")
+        .text("Number of updated lines")
+        .attr("class", "axis-label")
+        .attr("fill", "black")
+        .attr("x", width / 2)
+        .attr("y", 40);
+
+    // set the parameters for the histogram
+    var histogram = d3.histogram()
+        .value(function (d) { return d.update_freq; })
+        .domain(x.domain())
+        .thresholds(x.ticks(10));
+
+    // And apply this function to data to get the bins
+    var bins = histogram(data);
+
+    length_arr = [];
+
+    bins.forEach((item) => {
+        if (item.length > 0)
+            length_arr.push(item.length);
+    })
+
+    length_arr.sort(function (a, b) { return a - b });
+
+    color = d3.scaleOrdinal()
+        .domain(length_arr)
+        .range(COLOR_PALETTE);
+
+    // X axis: scale and draw
+    var y = d3.scaleLinear()
+        .range([height, 0]);
+    y.domain([0, d3.max(bins, function (d) { return d.length; })]);
+
+    const yAxisG = svg.append("g")
+        .call(d3.axisLeft(y));
+
+    yAxisG.append("text")
+        .text("Number of files")
+        .attr("class", "axis-label")
+        .attr("fill", "black")
+        .attr("x", -height / 2)
+        .attr("y", -35)
+        .attr("transform", "rotate(-90)");
+
+    // append the bar rectangles to the svg element
+    svg.selectAll("rect")
+        .data(bins)
+        .enter()
+        .append("rect")
+        .attr("class", "histogram-rect")
+        .attr("y", function (d) { return y(d.length); })
+        .attr("height", function (d) { return height - y(d.length); })
+        .attr("x", function (d) { return x(d.x0); })
+        .attr("width", function (d) { return x(d.x1) - x(d.x0); })
+        .style("fill", function (d) { return color(d.length); })
+        .style("opacity", 0.8)
+        .style("stroke", "black")
+        .on("mouseover", function () {
+            d3.select(this)
+                .style("opacity", 1);
+        })
+        .on("mouseout", function (d) {
+            d3.select(this)
+                .style("opacity", 0.8);
+        })
+        .on("click", function (d, i) {
+            var mouseCoordinates = d3.pointer(event, this);
+            var mouseX = mouseCoordinates[0];
+            var mouseY = mouseCoordinates[1];
+            
+            var clickedRectIndex = -1;
+            var rects = d3.selectAll("rect.histogram-rect");
+            rects.each(function (rectData, rectIndex) {
+                var rectX = +d3.select(this).attr("x");
+                var rectY = +d3.select(this).attr("y");
+                var rectWidth = +d3.select(this).attr("width");
+                var rectHeight = +d3.select(this).attr("height");
+    
+                if (mouseX >= rectX && mouseX <= rectX + rectWidth && mouseY >= rectY && mouseY <= rectY + rectHeight) {
+                    clickedRectIndex = rectIndex;
+                }
+            });
+    
+            console.log(clickedRectIndex);
+            selectedUpdateFreq(bins[clickedRectIndex].x0, bins[clickedRectIndex].x1);
+        })
+        .append("title")
+        .text(function (d) {
+            return d.length + " files have been updated " + d.x0 + "-" + d.x1 + " times";
+        });
+}

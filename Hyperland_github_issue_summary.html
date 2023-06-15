@@ -1,0 +1,839 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+
+<head>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+    <!-- <script src="https://d3js.org/d3.v5.js"
+        integrity="sha384-qbNa7U27VV0Cghe/43y8zEMkmA5M4VxV6MI0k0vdVJKTrBoT2SnBqwccpD0vX+Is"
+        crossorigin="anonymous"></script> -->
+
+    <script src="https://d3js.org/d3.v6.js"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+    <!-- <script type="text/javascript" src="src/jquery.multiselect.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/sankey.js"></script>
+    <!--*******************************************-->
+    <!--***** IMPORT EXTERNAL JAVASCRIPT CODE *****-->
+    <script src="js/load_network.js"></script>
+    <script src="js/bar_chart.js"></script>
+    <script src="js/donut_chart.js"></script>
+    <script src="js/histogram"></script>
+    <script src="js/sankey.js"></script>
+    <script src="js/loadSankey.js"></script>
+    <!--*******************************************-->
+
+    <!-- 
+    <title>CAP 4744/5745 - Interactive Data Visualization - Project 3</title> -->
+
+</head>
+
+<body>
+
+    <div class="page">
+        <div>
+            <button id="vizToggleBtn" class="toggle-viz-button" onclick="changeViz()">Show File Update Summary</button>
+        </div>
+        <div id="commit-details-div">
+            <div class="dropdown-container-div">
+                <select id="issueOptionSelect">
+                    <option value="state">Show issues state</option>
+                    <option value="label">Show issue labels</option>
+                </select>
+            </div>
+            <div class="container-div"><svg id="timeline" name="timeline" class="default_svg"></svg></div>
+        </div>
+        <div id="commit-details-sankey-div" style="display: none">
+            <button id="backBtn" class="default-button" style="float: left" onclick="goBack()"><i
+                    class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back</button>
+            <div id="commits" style="display: none"></div>
+
+            <div id="sankey">
+                <div id="network-container">
+
+                </div>
+                <div class="container-div"><svg id="vis_4" name="vis_4" class="sankey_svg"></svg></div>
+            </div>
+        </div>
+        <div id="file-update-summary-div" style="display: none">
+
+            <!-- Trigger/Open The Modal -->
+            <button id="optionsBtn" class="default-button">Options <i class="fa fa-ellipsis-v"
+                    aria-hidden="true"></i></button>
+
+            <div id="file_update" style="text-align:center; width: 100%;" ></div>
+            <div id="histogram" style="text-align:center; width: 100%;" ></div>
+            <!-- <div class="float-container">
+               
+            </div> -->
+        </div>
+        <!-- The Modal -->
+        <div id="optionsModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div>
+                    <span class="close">&times;</span>
+                </div>
+                <div>
+                    <h1>Files to display</h1>
+                    <h2 id="displayedFilesListHeader"></h2>
+                    <select id="displayedFilesList" class="js-select2"
+                        onchange="updateLineCountChange('#displayedFilesList')" multiple="multiple">
+                    </select>
+
+                    <h2 id="otherFilesListHeader"></h2>
+                    <select id="otherFilesList" class="js-select2" onchange="updateLineCountChange('#otherFilesList')"
+                        multiple="multiple">
+                    </select>
+                </div>
+                <div>
+                    <h1>Show file update frequency as: </h1>
+                    <label class="container">Number of Lines
+                        <input id="numberOfLines" type="radio" checked="checked" name="radio"
+                            onclick="updateFileFreqDisplay()">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Percentage
+                        <input id="percentage" type="radio" name="radio" onclick="updateFileFreqDisplay()">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div>
+                    <h1>Filter files: </h1>
+                    <label class="container">All updated files
+                        <input id="allUpdatedFiles" type="radio" checked="checked" name="radio1"
+                            onclick="updateFilesToBeDisplayed()">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Files updated during bug fix only
+                        <input id="bugFixFiles" type="radio" name="radio1" onclick="updateFilesToBeDisplayed()">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let data = null;
+        let timeline = null;
+        let commits = null;
+        let commit_div = document.getElementById('commits');
+        let file_update = null;
+        let updated_files_summary = [];
+        let file_update_freq = [];
+        let data_to_show = [];
+        let histogram = null;
+        let threshold = 19;
+        let lowerBound = threshold;
+        let upperBound = -1;
+
+        // load_sankey("#vis_4")
+
+        d3.csv("data/Hyperland/commit_details.csv", (row, i) => {
+            return {
+                message: row.message,
+                created: row.created * 1000, // millisecond
+                files_updated: row.files_updated,
+                diff: row.diff,
+                author: row.author
+            };
+        }).then(rows => {
+
+            commits = rows;
+            let file_list = [];
+            let file_update_count = {};
+            let file_update_for_bugfix_map = {};
+            commits.forEach((commit) => {
+                let files = commit.files_updated.replace("[", "").replace("]", "").replaceAll("'", "").split(',');
+                let files_diff = getFilesDiffList(commit.diff);
+                files.forEach(file => {
+                    let fileName = file.trim();
+                    // if (fileName.includes("Compositor.cpp")) {
+                    //     console.log("here");
+                    // }
+
+                    if (!file_list.find(file => file == fileName)) {
+                        file_list.push(fileName);
+                    }
+                    if (commit.message.includes("fix") && file_update_for_bugfix_map[fileName] == undefined) {
+                        file_update_for_bugfix_map[fileName] = true;
+                    }
+                    files_diff.forEach(file_diff => {
+                        if (file_update_count[fileName] == undefined) {
+                            file_update_count[fileName] = 0;
+                        }
+                        if (file_diff.name == fileName) {
+                            file_update_count[fileName] += file_diff.added_lines.length + file_diff.deleted_lines.length;
+                        }
+                    });
+                });
+            });
+
+            //initialize filter modal
+            initializeOptionModal();
+
+            var dropDownForFilesBeingDisplayed = document.getElementById("displayedFilesList");
+            var dropDownForOtherFiles = document.getElementById("otherFilesList");
+            document.getElementById("displayedFilesListHeader").innerHTML = "Top 5 files with most updates";
+            document.getElementById("otherFilesListHeader").innerHTML = "Other files";
+            file_list.forEach(file => {
+                file_update_freq.push({ name: file, update_freq: file_update_count[file] == undefined ? 1 : file_update_count[file], bugfix: file_update_for_bugfix_map[file] == undefined ? false : file_update_for_bugfix_map[file]});
+            });
+            file_update_freq.sort((a, b) => { return b.update_freq - a.update_freq});
+            let fileListLen = file_update_freq.length;
+            lowerBound = fileListLen < 5 ? file_update_freq[fileListLen - 1].update_freq : file_update_freq[4].update_freq;
+            upperBound = file_update_freq[0].update_freq;
+            console.log(file_update_freq)
+
+            var option = document.createElement("option");
+            option.value = -1; // setting index of the entry as value to access it easy later on
+            option.text = "Select All";
+            option.id = "selectAllOtherFiles"
+            dropDownForOtherFiles.appendChild(option);
+
+            option = document.createElement("option");
+            option.value = -1; // setting index of the entry as value to access it easy later on
+            option.text = "De-select All";
+            option.id = "selectAllDisplayedUpdates"
+            dropDownForFilesBeingDisplayed.appendChild(option);
+
+            let top_five = [];
+            let i = 0;
+            file_update_freq.forEach(entry => {
+                option = document.createElement("option");
+                option.value = i; // setting index of the entry as value to access it easy later on
+                option.text = entry.name;
+
+                if (top_five.length != 5) {
+                    top_five.push(i);
+                    dropDownForFilesBeingDisplayed.appendChild(option);
+                }
+                else {
+                    dropDownForOtherFiles.appendChild(option);
+                }
+
+                i++;
+            });
+
+            $("#displayedFilesList").val(top_five);
+
+            let freqCounter = 0;
+            file_update_freq.forEach((file) => {
+                if (file.update_freq == undefined) {
+                    file.update_freq = 0;
+                }
+                if (data_to_show.length < 5) {
+                    data_to_show.push(file);
+                }
+                else {
+                    freqCounter += file.update_freq;
+                }
+            });
+
+            data_to_show.push({ name: "other", update_freq: freqCounter, bugfix: false });
+            //show top 5 most updated files
+            file_update = load_file_update_summary("#file_update", data_to_show, "number of lines");
+            histogram = load_histogram("#histogram", file_update_freq)
+
+            d3.csv("data/Hyperland/issue_details.csv", (row, i) => {
+                // console.log(row.created)
+                // row.created = new Date(row.created);
+                row.closed = row.closed == '' | row.closed == NaN ? new Date().getTime() : parseInt(row.closed) * 1000;
+
+                jsonString = row.labels.replace(/'/g, '"').replace(/\bFalse\b/g, 'false')
+                    .replace(/\bTrue\b/g, 'true')
+                    .replace(/"s(\s|")/g, "'s$1")
+                    .replace(/"t(\s|")/g, "'t$1");
+
+
+
+                if (jsonString == "[]") {
+                    jsonString = '[{"id": 0, "node_id": "0", "url": "", "name": "no label", "color": "4682B4", "default": false, "description": ""}]'
+                }
+                label_list = JSON.parse(jsonString);
+
+
+
+                return {
+                    id: row.issue_id,
+                    number: row.issue_number,
+                    title: row.title,
+                    created: parseInt(row.created) * 1000, // millisec
+                    closed: row.closed,
+                    labels: label_list,
+                    state: row.state,
+                    user: row.user,
+                    assignees: row.assignees,
+                    closed_by: row.closed_by
+                };
+            }).then(rows => {
+                data = rows;
+                let title = "Issues with their creation and closing dates";
+                let x_title = "Date";
+                let type = 'state'
+                timeline = load_timeline("#timeline", data, title, "created", "closed", "title", x_title, type);
+            }).catch(error => {
+                console.log(error);
+            });
+
+        }).catch(error => {
+            console.log(error);
+        });
+
+
+        function showCommitBetweenWithSankey(selected_issue) {
+            time1 = selected_issue.created
+            time2 = selected_issue.closed
+            title = selected_issue.title
+            var sankeyJson = {
+                "nodes": [],
+                "links": []
+            };
+            var i = 0;
+            var file_dict = [];
+            var author_dict = [];
+            let creator_id = i;
+            sankeyJson.nodes.push({
+                "id": i,
+                "name": JSON.parse(selected_issue["user"].replace(/'/g, '"').replace(/\bFalse\b/g, 'false')
+                    .replace(/\bTrue\b/g, 'true')
+                    .replace(/"s(\s|")/g, "'s$1"))["login"],
+                "type": "creator"
+            })
+
+            i++;
+            issue_id = i
+            // this order matters in the network graph
+            sankeyJson.nodes.push({
+                "id": i,
+                "name": selected_issue["title"],
+                "type": "issue",
+                "state": selected_issue["state"]
+            })
+
+            sankeyJson.links.push({
+                "source": creator_id,
+                "target": issue_id,
+                "value": 2
+            })
+
+            i++;
+            // assignee_list = JSON.parse(selected_issue["assignees"])
+
+            // assignee_list.forEach(assignee => {
+            //     sankeyJson.nodes.push({
+            //         "id": i,
+            //         "name": assignee["login"],
+            //         "type": "assignee"
+            //     })
+            //         sankeyJson.links.push({
+            //         "source": issue_id,
+            //         "target": i
+            //     })
+            //     i++;
+            // });
+
+            sankeyJson.nodes.push({
+                "id": i,
+                "name": selected_issue["closed_by"],
+                "type": "closed by"
+            })
+
+            sankeyJson.links.push({
+                "source": issue_id,
+                "target": i,
+                "value": 2
+            })
+
+
+            i++;
+
+            commits.forEach(commit => {
+                if (commit.created >= time1 && commit.created <= time2) {
+                    let label;
+                    if (commit.message.includes(title)) {
+                        label = "important";
+                    }
+                    else if (commit.message.includes("fix")) {
+                        label = "bugfix";
+                    }
+                    sankeyJson.nodes.push({
+                        "id": i,
+                        "name": commit.message,
+                        "type": "commit",
+                        "label": label
+                    })
+                    sankeyJson.links.push({
+                        "source": issue_id,
+                        "target": i,
+                        "value": 2
+                    })
+
+                    var commit_index = i;
+                    i++;
+
+                    if (author_dict[commit.author] == undefined) {
+                        sankeyJson.nodes.push({
+                            "id": i,
+                            "name": commit.author,
+                            "type": "commit author"
+                        })
+
+                        author_dict[commit.author] = i;
+                        var author_index = i;
+                        i++;
+                    } else {
+                        var author_index = author_dict[commit.author];
+                    }
+
+                    // delete the first and last square bracket and also the first quotes
+                    let files = commit.files_updated.replace("[", "").replace("]", "").replaceAll("'", "").split(', ');
+                    let files_diff = getFilesDiffList(commit.diff);
+                    files.forEach(file => {
+                        if (file_dict[file] == undefined) {
+
+                            file_dict[file] = i;
+                            sankeyJson.nodes.push({
+                                "id": i,
+                                "name": file,
+                                "type": "file"
+                            })
+
+                            sankeyJson.links.push({
+                                "source": commit_index,
+                                "target": i,
+                                "value": 2
+                            })
+
+                            sankeyJson.links.push({
+                                "source": i,
+                                "target": author_index,
+                                "value": 2
+                            })
+
+                            i++;
+                        }
+                        else {
+                            sankeyJson.links.push({
+                                "source": commit_index,
+                                "target": file_dict[file],
+                                "value": 2
+                            })
+
+                            sankeyJson.links.push({
+                                "source": file_dict[file],
+                                "target": author_index,
+                                "value": 2
+                            })
+                        }
+
+
+                    })
+
+                }
+
+            });
+            document.getElementById("commit-details-div").style = "display: none";
+            document.getElementById("commit-details-sankey-div").style = "display: block ";
+            // load_sankey("#vis_4", sankeyJson);
+            load_network(sankeyJson, selected_issue)
+        }
+
+        function showCommitBetween(time1, time2, title) {
+            commit_div.innerHTML = '';
+            var i = 0;
+            commits.forEach(commit => {
+                if (commit.created >= time1 && commit.created <= time2) {
+                    if (commit.message.includes(title)) {
+                        commit_div.innerHTML += '<button type="button" style="background-color: red" class="collapsible">' + commit.message + '</button><div class="content" id=' + i + '></div>';
+                    }
+                    else if (commit.message.includes("fix")) {
+                        commit_div.innerHTML += '<button type="button" style="background-color: darkorange" class="collapsible">' + commit.message + '</button><div class="content" id=' + i + '></div>';
+                    }
+                    else {
+                        commit_div.innerHTML += '<button type="button" class="collapsible">' + commit.message + '</button><div class="content" id=' + i + '></div>';
+                    }
+
+                    // delete the first and last square bracket and also the first quotes
+                    let files = commit.files_updated.replace("[", "").replace("]", "").replaceAll("'", "").split(', ');
+                    let files_diff = getFilesDiffList(commit.diff);
+                    files.forEach(file => {
+                        document.getElementById(i).innerHTML += '<p>' + file;
+
+                        files_diff.forEach(diff => {
+                            if (diff.name == file) {
+                                document.getElementById(i).innerHTML += "Added lines: " + diff.added_lines.length
+                                document.getElementById(i).innerHTML += " Deleted lines: " + diff.deleted_lines.length + '</p> </div>'
+                            }
+                        });
+                    })
+                }
+
+                i++;
+            });
+
+            var coll = document.getElementsByClassName("collapsible");
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        }
+
+        function getCommitBetween(time1, time2) {
+            var commitBetweenInterval = [];
+            commits.forEach(commit => {
+
+                if (commit.created >= time1 && commit.created <= time2) {
+                    commitBetweenInterval.push(commit);
+                }
+
+            });
+
+            return commitBetweenInterval;
+        }
+
+        function getFilesDiffList(diffString) {
+            if (diffString == "") return [];
+            diff = diffString.replace('[', '');
+            indexOfLastSquareBracket = diff.lastIndexOf(']');
+            diff = diff.substr(0, indexOfLastSquareBracket);
+            diff = diff.split("),");
+            files_diff_list = [];
+
+            diff.forEach((file => {
+                // console.log(file);
+                file = file.replace('(', '').replace(')', '').split(', [');
+                files_diff = { name: "", deleted_lines: [], added_lines: [] };
+                files_diff.name = file[0].replaceAll("'", '').replace(' ', '');
+                files_diff.deleted_lines = file[1].replace(']', '').split(', ');
+                files_diff.added_lines = file[2].replace(']', '').split(', ');
+                files_diff_list.push(files_diff);
+            }));
+
+            return files_diff_list;
+        }
+
+        function initializeOptionModal() {
+            // Get the modal
+            var modal = document.getElementById("optionsModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("optionsBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+
+        function updateLineCountChange(selectedDropDown) {
+            let selected = $(selectedDropDown).select2('data');
+            let otherDropDown = selectedDropDown == '#otherFilesList' ? $('#displayedFilesList').select2('data') : $('#otherFilesList').select2('data')
+            let data = [];
+            let selectDeselectAll = false;
+            selected.forEach(selection => {
+                if (selection.id == -1) {
+                    selectAllFiles(selection, selectedDropDown, otherDropDown);
+                    selectDeselectAll = true;
+                    return;
+                }
+                data.push(file_update_freq[selection.id])
+            });
+
+            if (selectDeselectAll)
+                return;
+
+            otherDropDown.forEach(selection => {
+                if (selection.id != -1) {
+                    data.push(file_update_freq[selection.id]);
+                }
+            });
+
+            let freqCounter = 0;
+            file_update_freq.forEach((file) => {
+                if (data.find(({ name }) => name === file.name) == undefined) {
+                    freqCounter += file.update_freq;
+                }
+            })
+            data.push({ name: "other", update_freq: freqCounter, bugfix: false });
+            document.getElementById("allUpdatedFiles").checked = true;
+            data_to_show = data;
+            loadData(data_to_show);
+        }
+
+        function selectAllFiles(option, dropDown, otherDropDown) {
+            let data = [];
+            let selectedOptions = [];
+            let displayDropDown = dropDown == '#displayedFilesList' ? true : false;
+            $(dropDown).select2('close');
+
+            if (option.text == "Select All") {
+                option.text = "De-select All";
+                let i = 0;
+                file_update_freq.forEach((file) => {
+                    if (displayDropDown && file.update_freq >= lowerBound && (upperBound == -1 || file.update_freq <= upperBound)) {
+                        data.push({ name: file.name, update_freq: file.update_freq, bugfix: file.bugfix });
+                        selectedOptions.push(i);
+                    }
+                    else if (!displayDropDown && (file.update_freq < lowerBound || (upperBound == -1 || file.update_freq > upperBound))) {
+                        data.push({ name: file.name, update_freq: file.update_freq, bugfix: file.bugfix });
+                        selectedOptions.push(i);
+                    }
+                    i++;
+                });
+            }
+            else {
+                option.text = "Select All";
+            }
+
+            $(dropDown).val(selectedOptions);
+
+            otherDropDown.forEach(selection => {
+                if (selection.id != -1) {
+                    data.push(file_update_freq[selection.id]);
+                }
+            });
+
+            let freqCounter = 0;
+            file_update_freq.forEach((file) => {
+                if (data.find(({ name }) => name === file.name) == undefined) {
+                    freqCounter += file.update_freq;
+                }
+            })
+            data.push({ name: "other", update_freq: freqCounter, bugfix: false });
+            document.getElementById("allUpdatedFiles").checked = true;
+            data_to_show = data;
+            loadData(data_to_show);
+        }
+
+        function loadData(data) {
+            let status = document.getElementById("numberOfLines").checked;
+            let type = status == true ? "number of lines" : "percentage";
+            file_update = null;
+            file_update = load_file_update_summary("#file_update", data, type);
+        }
+
+        function updateFileFreqDisplay() {
+            //checking status of number of lines button. if it is false, percentage button is pressed
+            // status = document.getElementById("numberOfLines").checked;
+
+            // if (status){
+            //     update_file_freq_display("number of lines");
+            // }
+            // else{
+            //     update_file_freq_display("percentage");
+            // }
+            loadData(data_to_show);
+
+        }
+
+        function changeViz() {
+            var btn = document.getElementById("vizToggleBtn");
+            document.getElementById("commit-details-sankey-div").style = "display: none";
+            if (btn.innerText == "Show File Update Summary") {
+                btn.innerText = "Show Commit Details";
+                document.getElementById("commit-details-div").style = "display: none";
+                document.getElementById("file-update-summary-div").style = "display: block";
+            }
+            else {
+                btn.innerText = "Show File Update Summary";
+                document.getElementById("commit-details-div").style = "display: block";
+                document.getElementById("file-update-summary-div").style = "display: none";
+            }
+        }
+
+        function selectedUpdateFreq(lBound, uBound) {
+            let freqCounter = 0;
+            let data = [];
+            lowerBound = lBound;
+            upperBound = uBound;
+
+            // file_update_freq.forEach((file) => {
+            //     if (data.find(({ name }) => name === file.name) == undefined) {
+            //         freqCounter += file.update_freq;
+            //     }
+            // })
+            // data.push({ name: "other", update_freq: freqCounter });
+
+            var dropDownForFilesBeingDisplayed = document.getElementById("displayedFilesList");
+            var dropDownForOtherFiles = document.getElementById("otherFilesList");
+            document.getElementById("displayedFilesListHeader").innerHTML = "Files with " + lowerBound + " - " + upperBound + " lines of updates";
+            document.getElementById("otherFilesListHeader").innerHTML = "Files with more than " + upperBound + " lines of updates";
+
+            clearChildren(dropDownForFilesBeingDisplayed);
+            clearChildren(dropDownForOtherFiles);
+            var option = document.createElement("option");
+            option.value = -1; // setting index of the entry as value to access it easy later on
+            option.text = "Select All";
+            option.id = "selectAllOtherFiles"
+            dropDownForOtherFiles.appendChild(option);
+
+            option = document.createElement("option");
+            option.value = -1; // setting index of the entry as value to access it easy later on
+            option.text = "Select All";
+            option.id = "selectAllDisplayedUpdates"
+            dropDownForFilesBeingDisplayed.appendChild(option);
+
+            let selected = [];
+            let i = 0;
+            file_update_freq.forEach(entry => {
+                option = document.createElement("option");
+                option.value = i; // setting index of the entry as value to access it easy later on
+                option.text = entry.name;
+
+                if (entry.update_freq >= lowerBound && entry.update_freq <= upperBound) {
+                    dropDownForFilesBeingDisplayed.appendChild(option);
+                    data.push(entry);
+                    selected.push(i);
+                }
+                else
+                    dropDownForOtherFiles.appendChild(option);
+
+                i++;
+            });
+
+            $("#displayedFilesList").val(selected);
+
+            document.getElementById("allUpdatedFiles").checked = true;
+            data_to_show = data;
+            loadData(data_to_show);
+        }
+
+        function clearChildren(parent) {
+            var child = parent.lastElementChild;
+            while (child) {
+                parent.removeChild(child);
+                child = parent.lastElementChild;
+            }
+        }
+
+        function goBack() {
+            document.getElementById("commit-details-div").style = "display: block";
+            document.getElementById("commit-details-sankey-div").style = "display: none ";
+        }
+
+        function commitViewChange() {
+            if (document.getElementById("commits").style.display == "none") {
+                document.getElementById("commits").style.display = "block";
+                document.getElementById("sankey").style.display = "none";
+                document.getElementById("viewChangeBtn").innerHTML = "Diagram view"
+            }
+            else {
+                document.getElementById("sankey").style.display = "block";
+                document.getElementById("commits").style.display = "none";
+                document.getElementById("viewChangeBtn").innerHTML = "List view"
+            }
+        }
+
+        function updateFilesToBeDisplayed() {
+            let status = document.getElementById("bugFixFiles").checked;
+            if (!status) {
+                loadData(data_to_show);
+                return;
+            }
+            let data = [];
+            data_to_show.forEach(file => {
+                if (status && file.bugfix) {
+                    data.push(file);
+                }
+
+            });
+
+            loadData(data);
+        }
+
+        //$('#updateCountSelectButton').select2().find('option').prop('selected', 'selected').end().select2();
+        $('#displayedFilesList').select2({ placeholder: "Select files" });
+        $('#otherFilesList').select2({ placeholder: "Select files" });
+        // $('#updateCountSelectButton').val(file_list);
+
+        // Method to handle the change event of the select element
+        function handleOptionChange() {
+            var selectedOption = document.getElementById("issueOptionSelect").value;
+            // Perform actions based on the selected option
+            if (selectedOption === "state") {
+                // Call a method to show issues state
+                showIssuesState();
+            } else if (selectedOption === "label") {
+                // Call a method to show issue labels
+                showIssueLabels();
+            }
+        }
+
+        // Attach the event listener to the select element
+        document.getElementById("issueOptionSelect").addEventListener("change", handleOptionChange);
+
+        // Methods to show issues state and issue labels
+        function showIssuesState() {
+            console.log("Showing issues state");
+            let title = "Issues with their creation and closing dates";
+            let x_title = "Date";
+            timeline = load_timeline("#timeline", data, title, "created", "closed", "title", x_title, "state");
+        }
+
+        function showIssueLabels() {
+            let title = "Issues with their creation and closing dates";
+            let x_title = "Date";
+            timeline = load_timeline("#timeline", data, title, "created", "closed", "title", x_title, "label");
+        }
+
+    </script>
+
+</body>
+
+</html>

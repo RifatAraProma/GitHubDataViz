@@ -1,0 +1,2372 @@
+[
+    {
+        "sha": "a7e5c96a3d11671ed45b5d4f02334e8cc988ce9e",
+        "node_id": "C_kwDOAbrxp9oAKGE3ZTVjOTZhM2QxMTY3MWVkNDViNWQ0ZjAyMzM0ZThjYzk4OGNlOWU",
+        "commit": {
+            "author": {
+                "name": "Nick Gerleman",
+                "email": "ngerlem@meta.com",
+                "date": "2023-06-13T22:50:01Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T22:50:01Z"
+            },
+            "message": "Localize Talkback strings (#37856)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37856\n\nThese strings are spoken to the user when using an ascessibility role or state not natively supported by Talkback.\n\nWe can enable these for translation by removing flags to disable localization, and adding descriptions to each string. These are derived from MDN for ARIA (used for iOS strings), along with Android and iOS documentation.\n\nNote that this was explicitly disabled as part of D15087192 because of creating spam which was hitting the GitHub repo, but when translation was enabled for the dev menu, this ended up being a non-issue after initial translation. And we really do want these to be localized.\n\nChangelog:\n[Android][Fixed] - Localize Talkback strings\n\nReviewed By: cortinico\n\nDifferential Revision: D46692127\n\nfbshipit-source-id: 6da4a181e03f46bad850e4385b94155695a142a8",
+            "tree": {
+                "sha": "f605175ec7087c39ac6002ed6e1290a2e39c19c1",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/f605175ec7087c39ac6002ed6e1290a2e39c19c1"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/a7e5c96a3d11671ed45b5d4f02334e8cc988ce9e",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/a7e5c96a3d11671ed45b5d4f02334e8cc988ce9e",
+        "html_url": "https://github.com/facebook/react-native/commit/a7e5c96a3d11671ed45b5d4f02334e8cc988ce9e",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/a7e5c96a3d11671ed45b5d4f02334e8cc988ce9e/comments",
+        "author": {
+            "login": "NickGerleman",
+            "id": 835219,
+            "node_id": "MDQ6VXNlcjgzNTIxOQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/835219?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/NickGerleman",
+            "html_url": "https://github.com/NickGerleman",
+            "followers_url": "https://api.github.com/users/NickGerleman/followers",
+            "following_url": "https://api.github.com/users/NickGerleman/following{/other_user}",
+            "gists_url": "https://api.github.com/users/NickGerleman/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/NickGerleman/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/NickGerleman/subscriptions",
+            "organizations_url": "https://api.github.com/users/NickGerleman/orgs",
+            "repos_url": "https://api.github.com/users/NickGerleman/repos",
+            "events_url": "https://api.github.com/users/NickGerleman/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/NickGerleman/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "75a5ec05bd3e269c9ad3b7c5d39ff8bb926993c9",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/75a5ec05bd3e269c9ad3b7c5d39ff8bb926993c9",
+                "html_url": "https://github.com/facebook/react-native/commit/75a5ec05bd3e269c9ad3b7c5d39ff8bb926993c9"
+            }
+        ]
+    },
+    {
+        "sha": "75a5ec05bd3e269c9ad3b7c5d39ff8bb926993c9",
+        "node_id": "C_kwDOAbrxp9oAKDc1YTVlYzA1YmQzZTI2OWM5YWQzYjdjNWQzOWZmOGJiOTI2OTkzYzk",
+        "commit": {
+            "author": {
+                "name": "Nick Gerleman",
+                "email": "ngerlem@meta.com",
+                "date": "2023-06-13T21:38:13Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T21:38:13Z"
+            },
+            "message": "Descriptive CocoaPods error if CMake is not installed (#37839)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37839\n\nThe CocoaPods build assumes that a `cmake` command is present during `pod install`. It acts gracefully if it is not and propagates an empty string path, leading to a confusing error during the build, and requiring a `pod deintegrate` after CMake is installed because of when the binary is set.\n\nThis replaces the usage with `Pod::Executable::which!`, the built-in CocoaPods method of finding an executable from `PATH` which errors out the build if not found. This will cause a failure during `pod install`, when we are looking for the command, and specify that `cmake` is the missing executable.\n\nThis branch is only taken for source builds, so this will not show up in the cases where we do not need CocoaPods.\n\nChangelog:\n[iOS][Fixed] - Descriptive Cocoapods Error if CMake is not installed\n\nReviewed By: cipolleschi\n\nDifferential Revision: D46670007\n\nfbshipit-source-id: d508743d51f9b99e1bce7d4d3cef6395d5abf46d",
+            "tree": {
+                "sha": "d33d9f7523965872439cd575c8f5f3e9a5fd6d1a",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/d33d9f7523965872439cd575c8f5f3e9a5fd6d1a"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/75a5ec05bd3e269c9ad3b7c5d39ff8bb926993c9",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/75a5ec05bd3e269c9ad3b7c5d39ff8bb926993c9",
+        "html_url": "https://github.com/facebook/react-native/commit/75a5ec05bd3e269c9ad3b7c5d39ff8bb926993c9",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/75a5ec05bd3e269c9ad3b7c5d39ff8bb926993c9/comments",
+        "author": {
+            "login": "NickGerleman",
+            "id": 835219,
+            "node_id": "MDQ6VXNlcjgzNTIxOQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/835219?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/NickGerleman",
+            "html_url": "https://github.com/NickGerleman",
+            "followers_url": "https://api.github.com/users/NickGerleman/followers",
+            "following_url": "https://api.github.com/users/NickGerleman/following{/other_user}",
+            "gists_url": "https://api.github.com/users/NickGerleman/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/NickGerleman/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/NickGerleman/subscriptions",
+            "organizations_url": "https://api.github.com/users/NickGerleman/orgs",
+            "repos_url": "https://api.github.com/users/NickGerleman/repos",
+            "events_url": "https://api.github.com/users/NickGerleman/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/NickGerleman/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "a4dae044df58f37ac0e760045bb8b3587ea3ae7e",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/a4dae044df58f37ac0e760045bb8b3587ea3ae7e",
+                "html_url": "https://github.com/facebook/react-native/commit/a4dae044df58f37ac0e760045bb8b3587ea3ae7e"
+            }
+        ]
+    },
+    {
+        "sha": "a4dae044df58f37ac0e760045bb8b3587ea3ae7e",
+        "node_id": "C_kwDOAbrxp9oAKGE0ZGFlMDQ0ZGY1OGYzN2FjMGU3NjAwNDViYjhiMzU4N2VhM2FlN2U",
+        "commit": {
+            "author": {
+                "name": "Phillip Pan",
+                "email": "phillippan@meta.com",
+                "date": "2023-06-13T21:24:12Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T21:24:12Z"
+            },
+            "message": "test RCTInstance initialization (#37860)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37860\n\nChangelog: [Internal]\n\nReviewed By: cipolleschi\n\nDifferential Revision: D46547013\n\nfbshipit-source-id: 2b1593799ce2b5d29e7ea6df4373ff6c92b51065",
+            "tree": {
+                "sha": "bbfc0b770881fd9379a28642bae114401e77d30b",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/bbfc0b770881fd9379a28642bae114401e77d30b"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/a4dae044df58f37ac0e760045bb8b3587ea3ae7e",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/a4dae044df58f37ac0e760045bb8b3587ea3ae7e",
+        "html_url": "https://github.com/facebook/react-native/commit/a4dae044df58f37ac0e760045bb8b3587ea3ae7e",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/a4dae044df58f37ac0e760045bb8b3587ea3ae7e/comments",
+        "author": {
+            "login": "philIip",
+            "id": 5687023,
+            "node_id": "MDQ6VXNlcjU2ODcwMjM=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5687023?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/philIip",
+            "html_url": "https://github.com/philIip",
+            "followers_url": "https://api.github.com/users/philIip/followers",
+            "following_url": "https://api.github.com/users/philIip/following{/other_user}",
+            "gists_url": "https://api.github.com/users/philIip/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/philIip/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/philIip/subscriptions",
+            "organizations_url": "https://api.github.com/users/philIip/orgs",
+            "repos_url": "https://api.github.com/users/philIip/repos",
+            "events_url": "https://api.github.com/users/philIip/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/philIip/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "be2b0e2d8a3cab9de93959d37d398b2144f301ab",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/be2b0e2d8a3cab9de93959d37d398b2144f301ab",
+                "html_url": "https://github.com/facebook/react-native/commit/be2b0e2d8a3cab9de93959d37d398b2144f301ab"
+            }
+        ]
+    },
+    {
+        "sha": "be2b0e2d8a3cab9de93959d37d398b2144f301ab",
+        "node_id": "C_kwDOAbrxp9oAKGJlMmIwZTJkOGEzY2FiOWRlOTM5NTlkMzdkMzk4YjIxNDRmMzAxYWI",
+        "commit": {
+            "author": {
+                "name": "Phillip Pan",
+                "email": "phillippan@meta.com",
+                "date": "2023-06-13T21:24:12Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T21:24:12Z"
+            },
+            "message": "lift out ShimRCTInstance to RCTTestUtils (#37859)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37859\n\nChangelog: [Internal]\n\nas title\n\nReviewed By: cipolleschi\n\nDifferential Revision: D46547014\n\nfbshipit-source-id: ca89d659d24fa0fcef1c39fc47fc758cee34f7d8",
+            "tree": {
+                "sha": "79a691bd7fb72710edb87741b8b540de5a289e25",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/79a691bd7fb72710edb87741b8b540de5a289e25"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/be2b0e2d8a3cab9de93959d37d398b2144f301ab",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/be2b0e2d8a3cab9de93959d37d398b2144f301ab",
+        "html_url": "https://github.com/facebook/react-native/commit/be2b0e2d8a3cab9de93959d37d398b2144f301ab",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/be2b0e2d8a3cab9de93959d37d398b2144f301ab/comments",
+        "author": {
+            "login": "philIip",
+            "id": 5687023,
+            "node_id": "MDQ6VXNlcjU2ODcwMjM=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5687023?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/philIip",
+            "html_url": "https://github.com/philIip",
+            "followers_url": "https://api.github.com/users/philIip/followers",
+            "following_url": "https://api.github.com/users/philIip/following{/other_user}",
+            "gists_url": "https://api.github.com/users/philIip/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/philIip/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/philIip/subscriptions",
+            "organizations_url": "https://api.github.com/users/philIip/orgs",
+            "repos_url": "https://api.github.com/users/philIip/repos",
+            "events_url": "https://api.github.com/users/philIip/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/philIip/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "03c978d2ccac719acdee0cd9c8275f0d476c8bf1",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/03c978d2ccac719acdee0cd9c8275f0d476c8bf1",
+                "html_url": "https://github.com/facebook/react-native/commit/03c978d2ccac719acdee0cd9c8275f0d476c8bf1"
+            }
+        ]
+    },
+    {
+        "sha": "03c978d2ccac719acdee0cd9c8275f0d476c8bf1",
+        "node_id": "C_kwDOAbrxp9oAKDAzYzk3OGQyY2NhYzcxOWFjZGVlMGNkOWM4Mjc1ZjBkNDc2YzhiZjE",
+        "commit": {
+            "author": {
+                "name": "Phillip Pan",
+                "email": "phillippan@meta.com",
+                "date": "2023-06-13T21:24:12Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T21:24:12Z"
+            },
+            "message": "add unit test for start method on RCTHost (#37858)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37858\n\nChangelog: [Internal]\n\nin this diff, i add a test that runs `start` validates that the lifecycle `hostDidStart:` is called as a result.\n\nnotably, i created a custom shim for `RCTInstance` to completely stub out its behavior.\n\nReviewed By: cipolleschi\n\nDifferential Revision: D46508066\n\nfbshipit-source-id: e815aee64d06b160f2cbdc52720a8e698d11c680",
+            "tree": {
+                "sha": "2fbc0f5aba10313b6254dbbe91fc30b35bcb80a8",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/2fbc0f5aba10313b6254dbbe91fc30b35bcb80a8"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/03c978d2ccac719acdee0cd9c8275f0d476c8bf1",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/03c978d2ccac719acdee0cd9c8275f0d476c8bf1",
+        "html_url": "https://github.com/facebook/react-native/commit/03c978d2ccac719acdee0cd9c8275f0d476c8bf1",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/03c978d2ccac719acdee0cd9c8275f0d476c8bf1/comments",
+        "author": {
+            "login": "philIip",
+            "id": 5687023,
+            "node_id": "MDQ6VXNlcjU2ODcwMjM=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5687023?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/philIip",
+            "html_url": "https://github.com/philIip",
+            "followers_url": "https://api.github.com/users/philIip/followers",
+            "following_url": "https://api.github.com/users/philIip/following{/other_user}",
+            "gists_url": "https://api.github.com/users/philIip/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/philIip/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/philIip/subscriptions",
+            "organizations_url": "https://api.github.com/users/philIip/orgs",
+            "repos_url": "https://api.github.com/users/philIip/repos",
+            "events_url": "https://api.github.com/users/philIip/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/philIip/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "d631e0d9e950e74576f672f95b86cbfadfd98bf8",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/d631e0d9e950e74576f672f95b86cbfadfd98bf8",
+                "html_url": "https://github.com/facebook/react-native/commit/d631e0d9e950e74576f672f95b86cbfadfd98bf8"
+            }
+        ]
+    },
+    {
+        "sha": "d631e0d9e950e74576f672f95b86cbfadfd98bf8",
+        "node_id": "C_kwDOAbrxp9oAKGQ2MzFlMGQ5ZTk1MGU3NDU3NmY2NzJmOTViODZjYmZhZGZkOThiZjg",
+        "commit": {
+            "author": {
+                "name": "Luna Wei",
+                "email": "luwe@meta.com",
+                "date": "2023-06-13T20:28:12Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T20:28:12Z"
+            },
+            "message": "test-e2e-local dont launch emulator if device connected (#37862)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37862\n\nChangelog: [Internal] - Don't launch android emulator if you already have a device connected.\n\nReviewed By: cortinico\n\nDifferential Revision: D46688735\n\nfbshipit-source-id: 1256792f96ef6989465e7cbe43385469502b46fe",
+            "tree": {
+                "sha": "9c745e3d3ed4bca91410e6bb13db2585ae2958f6",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/9c745e3d3ed4bca91410e6bb13db2585ae2958f6"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/d631e0d9e950e74576f672f95b86cbfadfd98bf8",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/d631e0d9e950e74576f672f95b86cbfadfd98bf8",
+        "html_url": "https://github.com/facebook/react-native/commit/d631e0d9e950e74576f672f95b86cbfadfd98bf8",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/d631e0d9e950e74576f672f95b86cbfadfd98bf8/comments",
+        "author": {
+            "login": "lunaleaps",
+            "id": 1309636,
+            "node_id": "MDQ6VXNlcjEzMDk2MzY=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1309636?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/lunaleaps",
+            "html_url": "https://github.com/lunaleaps",
+            "followers_url": "https://api.github.com/users/lunaleaps/followers",
+            "following_url": "https://api.github.com/users/lunaleaps/following{/other_user}",
+            "gists_url": "https://api.github.com/users/lunaleaps/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/lunaleaps/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/lunaleaps/subscriptions",
+            "organizations_url": "https://api.github.com/users/lunaleaps/orgs",
+            "repos_url": "https://api.github.com/users/lunaleaps/repos",
+            "events_url": "https://api.github.com/users/lunaleaps/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/lunaleaps/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "922681f15bc373110a0154212f8b596d07656667",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/922681f15bc373110a0154212f8b596d07656667",
+                "html_url": "https://github.com/facebook/react-native/commit/922681f15bc373110a0154212f8b596d07656667"
+            }
+        ]
+    },
+    {
+        "sha": "922681f15bc373110a0154212f8b596d07656667",
+        "node_id": "C_kwDOAbrxp9oAKDkyMjY4MWYxNWJjMzczMTEwYTAxNTQyMTJmOGI1OTZkMDc2NTY2Njc",
+        "commit": {
+            "author": {
+                "name": "Ruslan Shestopalyuk",
+                "email": "rshest@meta.com",
+                "date": "2023-06-13T18:54:54Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T18:54:54Z"
+            },
+            "message": "Add getTestId into views/common (#37851)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37851\n\n## Changelog\n[Internal] -\n\nThe `testId` value in practice can be used for other things than e2e tests - e.g. there is already a use case for Accessibility, but also we may want to log it as an extra data point with e.g. performance metrics.\n\nThis exposes a helper function to extract a `testId` from a view.\n\nDifferential Revision: D46684365\n\nfbshipit-source-id: 17602307c468a906ef4d0679e826dbcd1eb651b7",
+            "tree": {
+                "sha": "5f2ee2bbce0263dbd3406ba87659ef1067f6a556",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/5f2ee2bbce0263dbd3406ba87659ef1067f6a556"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/922681f15bc373110a0154212f8b596d07656667",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/922681f15bc373110a0154212f8b596d07656667",
+        "html_url": "https://github.com/facebook/react-native/commit/922681f15bc373110a0154212f8b596d07656667",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/922681f15bc373110a0154212f8b596d07656667/comments",
+        "author": {
+            "login": "rshest",
+            "id": 495813,
+            "node_id": "MDQ6VXNlcjQ5NTgxMw==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/495813?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/rshest",
+            "html_url": "https://github.com/rshest",
+            "followers_url": "https://api.github.com/users/rshest/followers",
+            "following_url": "https://api.github.com/users/rshest/following{/other_user}",
+            "gists_url": "https://api.github.com/users/rshest/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/rshest/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/rshest/subscriptions",
+            "organizations_url": "https://api.github.com/users/rshest/orgs",
+            "repos_url": "https://api.github.com/users/rshest/repos",
+            "events_url": "https://api.github.com/users/rshest/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/rshest/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "09d357c0df0c901304ca2d44de3c32f351c2005e",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/09d357c0df0c901304ca2d44de3c32f351c2005e",
+                "html_url": "https://github.com/facebook/react-native/commit/09d357c0df0c901304ca2d44de3c32f351c2005e"
+            }
+        ]
+    },
+    {
+        "sha": "09d357c0df0c901304ca2d44de3c32f351c2005e",
+        "node_id": "C_kwDOAbrxp9oAKDA5ZDM1N2MwZGYwYzkwMTMwNGNhMmQ0NGRlM2MzMmYzNTFjMjAwNWU",
+        "commit": {
+            "author": {
+                "name": "Nick Gerleman",
+                "email": "ngerlem@meta.com",
+                "date": "2023-06-13T15:06:24Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T15:06:24Z"
+            },
+            "message": "Fix undefined symbols `_FBcoreLocalexxHash48` and `_RCTLocalizedStringFromKey` in OSS (#37838)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37838\n\nWe see a linker failure in the OSS build because our header exports C-style functions (not ObjC), that Objective C will assume are C ABI, but we build them as C++ functions.\n\nInternally these are all marked as `extern \"C\"`, so to not deviate I did the same here to expose these always as plain C functions.\n\nChangelog: [Internal]\n\nReviewed By: cipolleschi\n\nDifferential Revision: D46671506\n\nfbshipit-source-id: 5b3005074303763d55801c4d24ac9250b96d45ba",
+            "tree": {
+                "sha": "19b4dc30e36d6d814e478090042a54ce8cbde726",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/19b4dc30e36d6d814e478090042a54ce8cbde726"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/09d357c0df0c901304ca2d44de3c32f351c2005e",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/09d357c0df0c901304ca2d44de3c32f351c2005e",
+        "html_url": "https://github.com/facebook/react-native/commit/09d357c0df0c901304ca2d44de3c32f351c2005e",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/09d357c0df0c901304ca2d44de3c32f351c2005e/comments",
+        "author": {
+            "login": "NickGerleman",
+            "id": 835219,
+            "node_id": "MDQ6VXNlcjgzNTIxOQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/835219?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/NickGerleman",
+            "html_url": "https://github.com/NickGerleman",
+            "followers_url": "https://api.github.com/users/NickGerleman/followers",
+            "following_url": "https://api.github.com/users/NickGerleman/following{/other_user}",
+            "gists_url": "https://api.github.com/users/NickGerleman/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/NickGerleman/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/NickGerleman/subscriptions",
+            "organizations_url": "https://api.github.com/users/NickGerleman/orgs",
+            "repos_url": "https://api.github.com/users/NickGerleman/repos",
+            "events_url": "https://api.github.com/users/NickGerleman/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/NickGerleman/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "b5f52216b07c0aec1d621392639620894c6dd50a",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/b5f52216b07c0aec1d621392639620894c6dd50a",
+                "html_url": "https://github.com/facebook/react-native/commit/b5f52216b07c0aec1d621392639620894c6dd50a"
+            }
+        ]
+    },
+    {
+        "sha": "b5f52216b07c0aec1d621392639620894c6dd50a",
+        "node_id": "C_kwDOAbrxp9oAKGI1ZjUyMjE2YjA3YzBhZWMxZDYyMTM5MjYzOTYyMDg5NGM2ZGQ1MGE",
+        "commit": {
+            "author": {
+                "name": "Gabriel Donadel",
+                "email": "donadeldev@gmail.com",
+                "date": "2023-06-13T14:45:47Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T14:45:47Z"
+            },
+            "message": "Add getObjectProperties function to Parser (#37789)\n\nSummary:\n[Codegen 128] This PR add a `getObjectProperties` function to the Parser interface, which returns the properties of an object represented by a type annotation as requested on https://github.com/facebook/react-native/issues/34872\n\n## Changelog:\n\n[INTERNAL] [ADDED] - Add getObjectProperties function to codegen Parser\n\nPull Request resolved: https://github.com/facebook/react-native/pull/37789\n\nTest Plan: Run `yarn jest react-native-codegen` and ensure CI is green\n\nReviewed By: cipolleschi\n\nDifferential Revision: D46584748\n\nPulled By: rshest\n\nfbshipit-source-id: 7f509b6f8754472a9b3048214345dc94265604ba",
+            "tree": {
+                "sha": "49f7828620cc7c110efc957332d07c777bf24589",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/49f7828620cc7c110efc957332d07c777bf24589"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/b5f52216b07c0aec1d621392639620894c6dd50a",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/b5f52216b07c0aec1d621392639620894c6dd50a",
+        "html_url": "https://github.com/facebook/react-native/commit/b5f52216b07c0aec1d621392639620894c6dd50a",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/b5f52216b07c0aec1d621392639620894c6dd50a/comments",
+        "author": {
+            "login": "gabrieldonadel",
+            "id": 11707729,
+            "node_id": "MDQ6VXNlcjExNzA3NzI5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/11707729?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/gabrieldonadel",
+            "html_url": "https://github.com/gabrieldonadel",
+            "followers_url": "https://api.github.com/users/gabrieldonadel/followers",
+            "following_url": "https://api.github.com/users/gabrieldonadel/following{/other_user}",
+            "gists_url": "https://api.github.com/users/gabrieldonadel/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/gabrieldonadel/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/gabrieldonadel/subscriptions",
+            "organizations_url": "https://api.github.com/users/gabrieldonadel/orgs",
+            "repos_url": "https://api.github.com/users/gabrieldonadel/repos",
+            "events_url": "https://api.github.com/users/gabrieldonadel/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/gabrieldonadel/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "e82bb7beb525d6de4e0210da352341ec91c94498",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/e82bb7beb525d6de4e0210da352341ec91c94498",
+                "html_url": "https://github.com/facebook/react-native/commit/e82bb7beb525d6de4e0210da352341ec91c94498"
+            }
+        ]
+    },
+    {
+        "sha": "e82bb7beb525d6de4e0210da352341ec91c94498",
+        "node_id": "C_kwDOAbrxp9oAKGU4MmJiN2JlYjUyNWQ2ZGU0ZTAyMTBkYTM1MjM0MWVjOTFjOTQ0OTg",
+        "commit": {
+            "author": {
+                "name": "Luna Wei",
+                "email": "luwe@meta.com",
+                "date": "2023-06-13T14:32:13Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T14:32:13Z"
+            },
+            "message": "rn-ci-e2e-test CircleCI using wrong parameters (#37852)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37852\n\nChangelog: [Internal] - rn-ci-e2e-test is running on CircleCI but has been passing in the wrong parameter with `--version` -- which didn't evaluate the script, it would early exit as `--version` is a reserved parameter in yargs.\n\nYou can see if you do `node scripts/set-rn-version.js --help`\n\nWhen I fixed this [here](https://www.internalfb.com/diff/D46511840?dst_version_fbid=827076485041949&transaction_fbid=625055476222975), forgot to pass `build-type` parameter\n\nThis will fix the broken testjs e2e builds here: https://app.circleci.com/pipelines/github/facebook/react-native/25703/workflows/11a41ba1-c731-44e4-b515-a8b209ae0848/jobs/732035\n\nReviewed By: rshest\n\nDifferential Revision: D46672741\n\nfbshipit-source-id: 4a189127e4d0545192a03c1e7abc995dff6f83ae",
+            "tree": {
+                "sha": "32ea7162269522f6b7288aba32b3b77920bb085c",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/32ea7162269522f6b7288aba32b3b77920bb085c"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/e82bb7beb525d6de4e0210da352341ec91c94498",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/e82bb7beb525d6de4e0210da352341ec91c94498",
+        "html_url": "https://github.com/facebook/react-native/commit/e82bb7beb525d6de4e0210da352341ec91c94498",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/e82bb7beb525d6de4e0210da352341ec91c94498/comments",
+        "author": {
+            "login": "lunaleaps",
+            "id": 1309636,
+            "node_id": "MDQ6VXNlcjEzMDk2MzY=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1309636?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/lunaleaps",
+            "html_url": "https://github.com/lunaleaps",
+            "followers_url": "https://api.github.com/users/lunaleaps/followers",
+            "following_url": "https://api.github.com/users/lunaleaps/following{/other_user}",
+            "gists_url": "https://api.github.com/users/lunaleaps/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/lunaleaps/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/lunaleaps/subscriptions",
+            "organizations_url": "https://api.github.com/users/lunaleaps/orgs",
+            "repos_url": "https://api.github.com/users/lunaleaps/repos",
+            "events_url": "https://api.github.com/users/lunaleaps/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/lunaleaps/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "9c9945a5bfb2e9c9da0810c57e81922ad1dd83c8",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/9c9945a5bfb2e9c9da0810c57e81922ad1dd83c8",
+                "html_url": "https://github.com/facebook/react-native/commit/9c9945a5bfb2e9c9da0810c57e81922ad1dd83c8"
+            }
+        ]
+    },
+    {
+        "sha": "9c9945a5bfb2e9c9da0810c57e81922ad1dd83c8",
+        "node_id": "C_kwDOAbrxp9oAKDljOTk0NWE1YmZiMmU5YzlkYTA4MTBjNTdlODE5MjJhZDFkZDgzYzg",
+        "commit": {
+            "author": {
+                "name": "Gabriel Donadel",
+                "email": "donadeldev@gmail.com",
+                "date": "2023-06-13T14:29:02Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T14:29:02Z"
+            },
+            "message": "Revert \"fix: border width top/bottom not matching the border radius\" (#37840)\n\nSummary:\nIn an effort to fix https://github.com/facebook/react-native/issues/37753, this PR reverts the changes introduced by https://github.com/facebook/react-native/commit/cd6a91343ee24af83c7437b3f2449b41e97760e9 and https://github.com/facebook/react-native/commit/1d5103227851ab92de889d5e7e910393b5d8743a so border-radius width calculations work as expected\n\n## Changelog:\n\n[ANDROID] [FIXED] - Fix border-radius width calculations\n\nPull Request resolved: https://github.com/facebook/react-native/pull/37840\n\nTest Plan:\nTest border colors along with border-radius through RNTester\n<img width=\"538\" alt=\"image\" src=\"https://github.com/facebook/react-native/assets/11707729/4b148d4b-35dc-4737-be00-c5ff156b0865\">\n\nReviewed By: dmytrorykun\n\nDifferential Revision: D46684071\n\nPulled By: cipolleschi\n\nfbshipit-source-id: cf7a80d0d63009b457f03d690b632e332a9b4a02",
+            "tree": {
+                "sha": "c41c41a86d9d325f774b41b8e4707fbfbef9dde7",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/c41c41a86d9d325f774b41b8e4707fbfbef9dde7"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/9c9945a5bfb2e9c9da0810c57e81922ad1dd83c8",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/9c9945a5bfb2e9c9da0810c57e81922ad1dd83c8",
+        "html_url": "https://github.com/facebook/react-native/commit/9c9945a5bfb2e9c9da0810c57e81922ad1dd83c8",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/9c9945a5bfb2e9c9da0810c57e81922ad1dd83c8/comments",
+        "author": {
+            "login": "gabrieldonadel",
+            "id": 11707729,
+            "node_id": "MDQ6VXNlcjExNzA3NzI5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/11707729?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/gabrieldonadel",
+            "html_url": "https://github.com/gabrieldonadel",
+            "followers_url": "https://api.github.com/users/gabrieldonadel/followers",
+            "following_url": "https://api.github.com/users/gabrieldonadel/following{/other_user}",
+            "gists_url": "https://api.github.com/users/gabrieldonadel/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/gabrieldonadel/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/gabrieldonadel/subscriptions",
+            "organizations_url": "https://api.github.com/users/gabrieldonadel/orgs",
+            "repos_url": "https://api.github.com/users/gabrieldonadel/repos",
+            "events_url": "https://api.github.com/users/gabrieldonadel/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/gabrieldonadel/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "3006a33bafc64a1fd699d8895c74fadac84654ad",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/3006a33bafc64a1fd699d8895c74fadac84654ad",
+                "html_url": "https://github.com/facebook/react-native/commit/3006a33bafc64a1fd699d8895c74fadac84654ad"
+            }
+        ]
+    },
+    {
+        "sha": "3006a33bafc64a1fd699d8895c74fadac84654ad",
+        "node_id": "C_kwDOAbrxp9oAKDMwMDZhMzNiYWZjNjRhMWZkNjk5ZDg4OTVjNzRmYWRhYzg0NjU0YWQ",
+        "commit": {
+            "author": {
+                "name": "Pieter De Baets",
+                "email": "pieterdb@meta.com",
+                "date": "2023-06-13T12:30:20Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T12:30:20Z"
+            },
+            "message": "Remove unused CookieHandler from ForwardingCookieHandler (#37775)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37775\n\nMost of this code was made irrelevant when we dropped support for API < 21 in D24548084.\n\nChangelog: [Internal]\n\nReviewed By: NickGerleman\n\nDifferential Revision: D46557892\n\nfbshipit-source-id: 6af85a24d476fe1010eb62126b4c5e9df14a0ea2",
+            "tree": {
+                "sha": "0f6ea337213a5f9b9e7cc228443b283169f77284",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/0f6ea337213a5f9b9e7cc228443b283169f77284"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/3006a33bafc64a1fd699d8895c74fadac84654ad",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/3006a33bafc64a1fd699d8895c74fadac84654ad",
+        "html_url": "https://github.com/facebook/react-native/commit/3006a33bafc64a1fd699d8895c74fadac84654ad",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/3006a33bafc64a1fd699d8895c74fadac84654ad/comments",
+        "author": {
+            "login": "javache",
+            "id": 5676,
+            "node_id": "MDQ6VXNlcjU2NzY=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5676?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/javache",
+            "html_url": "https://github.com/javache",
+            "followers_url": "https://api.github.com/users/javache/followers",
+            "following_url": "https://api.github.com/users/javache/following{/other_user}",
+            "gists_url": "https://api.github.com/users/javache/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/javache/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/javache/subscriptions",
+            "organizations_url": "https://api.github.com/users/javache/orgs",
+            "repos_url": "https://api.github.com/users/javache/repos",
+            "events_url": "https://api.github.com/users/javache/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/javache/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "efc5f73f27de1cc63c7182811293a87de4436359",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/efc5f73f27de1cc63c7182811293a87de4436359",
+                "html_url": "https://github.com/facebook/react-native/commit/efc5f73f27de1cc63c7182811293a87de4436359"
+            }
+        ]
+    },
+    {
+        "sha": "efc5f73f27de1cc63c7182811293a87de4436359",
+        "node_id": "C_kwDOAbrxp9oAKGVmYzVmNzNmMjdkZTFjYzYzYzcxODI4MTEyOTNhODdkZTQ0MzYzNTk",
+        "commit": {
+            "author": {
+                "name": "TatianaKapos",
+                "email": "tatianakapos@microsoft.com",
+                "date": "2023-06-13T12:30:16Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T12:30:16Z"
+            },
+            "message": "Specify float value in ParagraphLayoutManager (#37660)\n\nSummary:\nReact-Native-Windows had to override this file because we treat certain warning as errors. This fix adds in the \"f suffix\" to remove the unspecified float error.\n\n## Changelog:\n[GENERAL] [FIXED] - Specify float value in ParagraphLayoutManager\n\nPull Request resolved: https://github.com/facebook/react-native/pull/37660\n\nTest Plan: Tested with RNW tests\n\nReviewed By: NickGerleman\n\nDifferential Revision: D46560099\n\nPulled By: javache\n\nfbshipit-source-id: de593cbe60677533f5194ab8fd7e650607b5829e",
+            "tree": {
+                "sha": "015c75540fcde58cf0623c9b9dbb69b038b521b4",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/015c75540fcde58cf0623c9b9dbb69b038b521b4"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/efc5f73f27de1cc63c7182811293a87de4436359",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/efc5f73f27de1cc63c7182811293a87de4436359",
+        "html_url": "https://github.com/facebook/react-native/commit/efc5f73f27de1cc63c7182811293a87de4436359",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/efc5f73f27de1cc63c7182811293a87de4436359/comments",
+        "author": {
+            "login": "TatianaKapos",
+            "id": 42554868,
+            "node_id": "MDQ6VXNlcjQyNTU0ODY4",
+            "avatar_url": "https://avatars.githubusercontent.com/u/42554868?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/TatianaKapos",
+            "html_url": "https://github.com/TatianaKapos",
+            "followers_url": "https://api.github.com/users/TatianaKapos/followers",
+            "following_url": "https://api.github.com/users/TatianaKapos/following{/other_user}",
+            "gists_url": "https://api.github.com/users/TatianaKapos/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/TatianaKapos/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/TatianaKapos/subscriptions",
+            "organizations_url": "https://api.github.com/users/TatianaKapos/orgs",
+            "repos_url": "https://api.github.com/users/TatianaKapos/repos",
+            "events_url": "https://api.github.com/users/TatianaKapos/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/TatianaKapos/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "3f7507bae955a59e33a3220fe41a9fe76303ef1e",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/3f7507bae955a59e33a3220fe41a9fe76303ef1e",
+                "html_url": "https://github.com/facebook/react-native/commit/3f7507bae955a59e33a3220fe41a9fe76303ef1e"
+            }
+        ]
+    },
+    {
+        "sha": "3f7507bae955a59e33a3220fe41a9fe76303ef1e",
+        "node_id": "C_kwDOAbrxp9oAKDNmNzUwN2JhZTk1NWE1OWUzM2EzMjIwZmU0MWE5ZmU3NjMwM2VmMWU",
+        "commit": {
+            "author": {
+                "name": "David Vacca",
+                "email": "dvacca@meta.com",
+                "date": "2023-06-13T03:19:06Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T03:19:06Z"
+            },
+            "message": "Move BridgelessReactPackage to com.facebook.react package (#37697)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37697\n\nMove BridgelessReactPackage to com.facebook.react package.\nThis is necessary because BridgelessReactPackage is a core package that needs to be part of RN (and should not be re-defined by all apps)\n\nI will revisit naming in a later diff\n\nbypass-github-export-checks\n\nchangelog: [internal] internal\n\nReviewed By: cortinico, philIip\n\nDifferential Revision: D46408934\n\nfbshipit-source-id: ac172d22a6d70c9d33d2e119da93b25736d85383",
+            "tree": {
+                "sha": "1a2e3546f8435622eb9d38c2193bca81c0f33000",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/1a2e3546f8435622eb9d38c2193bca81c0f33000"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/3f7507bae955a59e33a3220fe41a9fe76303ef1e",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/3f7507bae955a59e33a3220fe41a9fe76303ef1e",
+        "html_url": "https://github.com/facebook/react-native/commit/3f7507bae955a59e33a3220fe41a9fe76303ef1e",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/3f7507bae955a59e33a3220fe41a9fe76303ef1e/comments",
+        "author": {
+            "login": "mdvacca",
+            "id": 515103,
+            "node_id": "MDQ6VXNlcjUxNTEwMw==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/515103?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/mdvacca",
+            "html_url": "https://github.com/mdvacca",
+            "followers_url": "https://api.github.com/users/mdvacca/followers",
+            "following_url": "https://api.github.com/users/mdvacca/following{/other_user}",
+            "gists_url": "https://api.github.com/users/mdvacca/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/mdvacca/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/mdvacca/subscriptions",
+            "organizations_url": "https://api.github.com/users/mdvacca/orgs",
+            "repos_url": "https://api.github.com/users/mdvacca/repos",
+            "events_url": "https://api.github.com/users/mdvacca/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/mdvacca/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "8351b08088c265d4018561ff9ca0a501ceff0a19",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/8351b08088c265d4018561ff9ca0a501ceff0a19",
+                "html_url": "https://github.com/facebook/react-native/commit/8351b08088c265d4018561ff9ca0a501ceff0a19"
+            }
+        ]
+    },
+    {
+        "sha": "8351b08088c265d4018561ff9ca0a501ceff0a19",
+        "node_id": "C_kwDOAbrxp9oAKDgzNTFiMDgwODhjMjY1ZDQwMTg1NjFmZjljYTBhNTAxY2VmZjBhMTk",
+        "commit": {
+            "author": {
+                "name": "David Vacca",
+                "email": "dvacca@meta.com",
+                "date": "2023-06-13T03:19:06Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T03:19:06Z"
+            },
+            "message": "Fix lint warnings (#37699)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37699\n\nFix lint warnings\n\nbypass-github-export-checks\n\nchangelog: [internal] internal\n\nReviewed By: cortinico, philIip\n\nDifferential Revision: D46407027\n\nfbshipit-source-id: 80acd2a811f712be6a4b228ec3450dcbdf0d3ce3",
+            "tree": {
+                "sha": "1a6d9b3d743ee135935fdd877c12fde37056ece7",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/1a6d9b3d743ee135935fdd877c12fde37056ece7"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/8351b08088c265d4018561ff9ca0a501ceff0a19",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/8351b08088c265d4018561ff9ca0a501ceff0a19",
+        "html_url": "https://github.com/facebook/react-native/commit/8351b08088c265d4018561ff9ca0a501ceff0a19",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/8351b08088c265d4018561ff9ca0a501ceff0a19/comments",
+        "author": {
+            "login": "mdvacca",
+            "id": 515103,
+            "node_id": "MDQ6VXNlcjUxNTEwMw==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/515103?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/mdvacca",
+            "html_url": "https://github.com/mdvacca",
+            "followers_url": "https://api.github.com/users/mdvacca/followers",
+            "following_url": "https://api.github.com/users/mdvacca/following{/other_user}",
+            "gists_url": "https://api.github.com/users/mdvacca/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/mdvacca/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/mdvacca/subscriptions",
+            "organizations_url": "https://api.github.com/users/mdvacca/orgs",
+            "repos_url": "https://api.github.com/users/mdvacca/repos",
+            "events_url": "https://api.github.com/users/mdvacca/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/mdvacca/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f821797e515661b42bb1d82157face618f91e837",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/f821797e515661b42bb1d82157face618f91e837",
+                "html_url": "https://github.com/facebook/react-native/commit/f821797e515661b42bb1d82157face618f91e837"
+            }
+        ]
+    },
+    {
+        "sha": "f821797e515661b42bb1d82157face618f91e837",
+        "node_id": "C_kwDOAbrxp9oAKGY4MjE3OTdlNTE1NjYxYjQyYmIxZDgyMTU3ZmFjZTYxOGY5MWU4Mzc",
+        "commit": {
+            "author": {
+                "name": "David Vacca",
+                "email": "dvacca@meta.com",
+                "date": "2023-06-13T03:19:06Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T03:19:06Z"
+            },
+            "message": "Reduce visibility of NativeModule methods in ReactHost (#37692)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37692\n\nIn this diff I'm reducing visibility of NativeModule methods in ReactHost (from public to package)\n\nbypass-github-export-checks\n\nchangelog: [internal] ineternal\n\nReviewed By: cortinico, philIip, RSNara\n\nDifferential Revision: D46296987\n\nfbshipit-source-id: d50ff9f855c71ee9565f0bc81ffe8be2fd0e2368",
+            "tree": {
+                "sha": "8a1d3a2f77d902a0765ff2c35aeba8ea064cd75a",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/8a1d3a2f77d902a0765ff2c35aeba8ea064cd75a"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/f821797e515661b42bb1d82157face618f91e837",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/f821797e515661b42bb1d82157face618f91e837",
+        "html_url": "https://github.com/facebook/react-native/commit/f821797e515661b42bb1d82157face618f91e837",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/f821797e515661b42bb1d82157face618f91e837/comments",
+        "author": {
+            "login": "mdvacca",
+            "id": 515103,
+            "node_id": "MDQ6VXNlcjUxNTEwMw==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/515103?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/mdvacca",
+            "html_url": "https://github.com/mdvacca",
+            "followers_url": "https://api.github.com/users/mdvacca/followers",
+            "following_url": "https://api.github.com/users/mdvacca/following{/other_user}",
+            "gists_url": "https://api.github.com/users/mdvacca/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/mdvacca/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/mdvacca/subscriptions",
+            "organizations_url": "https://api.github.com/users/mdvacca/orgs",
+            "repos_url": "https://api.github.com/users/mdvacca/repos",
+            "events_url": "https://api.github.com/users/mdvacca/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/mdvacca/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "579d11ca9e321909c284a5ed97df29128fe63342",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/579d11ca9e321909c284a5ed97df29128fe63342",
+                "html_url": "https://github.com/facebook/react-native/commit/579d11ca9e321909c284a5ed97df29128fe63342"
+            }
+        ]
+    },
+    {
+        "sha": "579d11ca9e321909c284a5ed97df29128fe63342",
+        "node_id": "C_kwDOAbrxp9oAKDU3OWQxMWNhOWUzMjE5MDljMjg0YTVlZDk3ZGYyOTEyOGZlNjMzNDI",
+        "commit": {
+            "author": {
+                "name": "David Vacca",
+                "email": "dvacca@meta.com",
+                "date": "2023-06-13T03:19:06Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T03:19:06Z"
+            },
+            "message": "Rename ReactHost.preload -> ReactHost.start (#37694)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37694\n\nRename ReactHost.preload -> ReactHost.start to adhere to stable api\n\nbypass-github-export-checks\n\nchangelog: [internal] internal\n\nReviewed By: RSNara\n\nDifferential Revision: D46294685\n\nfbshipit-source-id: 683683a557c28759db8925e0c0dd6629463511eb",
+            "tree": {
+                "sha": "2199e654bb39db3284999b81305a1a7f3ee7e9c7",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/2199e654bb39db3284999b81305a1a7f3ee7e9c7"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/579d11ca9e321909c284a5ed97df29128fe63342",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/579d11ca9e321909c284a5ed97df29128fe63342",
+        "html_url": "https://github.com/facebook/react-native/commit/579d11ca9e321909c284a5ed97df29128fe63342",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/579d11ca9e321909c284a5ed97df29128fe63342/comments",
+        "author": {
+            "login": "mdvacca",
+            "id": 515103,
+            "node_id": "MDQ6VXNlcjUxNTEwMw==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/515103?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/mdvacca",
+            "html_url": "https://github.com/mdvacca",
+            "followers_url": "https://api.github.com/users/mdvacca/followers",
+            "following_url": "https://api.github.com/users/mdvacca/following{/other_user}",
+            "gists_url": "https://api.github.com/users/mdvacca/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/mdvacca/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/mdvacca/subscriptions",
+            "organizations_url": "https://api.github.com/users/mdvacca/orgs",
+            "repos_url": "https://api.github.com/users/mdvacca/repos",
+            "events_url": "https://api.github.com/users/mdvacca/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/mdvacca/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "001e182f088ed5032728cf36022d0ad3ba1d8098",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/001e182f088ed5032728cf36022d0ad3ba1d8098",
+                "html_url": "https://github.com/facebook/react-native/commit/001e182f088ed5032728cf36022d0ad3ba1d8098"
+            }
+        ]
+    },
+    {
+        "sha": "001e182f088ed5032728cf36022d0ad3ba1d8098",
+        "node_id": "C_kwDOAbrxp9oAKDAwMWUxODJmMDg4ZWQ1MDMyNzI4Y2YzNjAyMmQwYWQzYmExZDgwOTg",
+        "commit": {
+            "author": {
+                "name": "Vincent Riemer",
+                "email": "vincentriemer@meta.com",
+                "date": "2023-06-13T02:27:14Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T02:27:14Z"
+            },
+            "message": "Add PointerEventCaptureMouse WPT test (#37603)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37603\n\nChangelog: [Internal] - Add PointerEventCaptureMouse WPT test\n\nThis diff introduces a port of the wpt test \"pointerevent_capture_mouse\" (https://github.com/web-platform-tests/wpt/blob/master/pointerevents/pointerevent_capture_mouse.html) in preparation of validating our pointer capture implementation.\n\nReviewed By: adanoff\n\nDifferential Revision: D46230497\n\nfbshipit-source-id: ebdfaad23935b96d35da98e30bd326ae1b50759a",
+            "tree": {
+                "sha": "5d8ba271cf14db31359a36abf28716584cddeada",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/5d8ba271cf14db31359a36abf28716584cddeada"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/001e182f088ed5032728cf36022d0ad3ba1d8098",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/001e182f088ed5032728cf36022d0ad3ba1d8098",
+        "html_url": "https://github.com/facebook/react-native/commit/001e182f088ed5032728cf36022d0ad3ba1d8098",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/001e182f088ed5032728cf36022d0ad3ba1d8098/comments",
+        "author": {
+            "login": "vincentriemer",
+            "id": 1398555,
+            "node_id": "MDQ6VXNlcjEzOTg1NTU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1398555?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/vincentriemer",
+            "html_url": "https://github.com/vincentriemer",
+            "followers_url": "https://api.github.com/users/vincentriemer/followers",
+            "following_url": "https://api.github.com/users/vincentriemer/following{/other_user}",
+            "gists_url": "https://api.github.com/users/vincentriemer/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/vincentriemer/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/vincentriemer/subscriptions",
+            "organizations_url": "https://api.github.com/users/vincentriemer/orgs",
+            "repos_url": "https://api.github.com/users/vincentriemer/repos",
+            "events_url": "https://api.github.com/users/vincentriemer/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/vincentriemer/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "1ae1cc01ab29f65dddc0f1c636db66738df356c5",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/1ae1cc01ab29f65dddc0f1c636db66738df356c5",
+                "html_url": "https://github.com/facebook/react-native/commit/1ae1cc01ab29f65dddc0f1c636db66738df356c5"
+            }
+        ]
+    },
+    {
+        "sha": "1ae1cc01ab29f65dddc0f1c636db66738df356c5",
+        "node_id": "C_kwDOAbrxp9oAKDFhZTFjYzAxYWIyOWY2NWRkZGMwZjFjNjM2ZGI2NjczOGRmMzU2YzU",
+        "commit": {
+            "author": {
+                "name": "Vincent Riemer",
+                "email": "vincentriemer@meta.com",
+                "date": "2023-06-13T02:27:14Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-13T02:27:14Z"
+            },
+            "message": "Add plumbing/boilerplate for an iOS implementation of the `gotpointercapture` and `lostpointercapture` events (#37602)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37602\n\nChangelog: [Internal] - Add plumbing/boilerplate for an iOS implementation of the `gotpointercapture` and `lostpointercapture` events\n\nThis diff simply adds the boilerplate necessary to hook up the `gotpointercapture` and `lostpointercapture` events to the fabric iOS touch handler. This diff does not contain any actual implementation of their behavior as that will occur in future diffs.\n\nReviewed By: yungsters\n\nDifferential Revision: D44977499\n\nfbshipit-source-id: c9da5691d399f612f1980c7692c4ca62877901a9",
+            "tree": {
+                "sha": "a64589237e837dae63f2a0559334fbf174d43aa2",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/a64589237e837dae63f2a0559334fbf174d43aa2"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/1ae1cc01ab29f65dddc0f1c636db66738df356c5",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/1ae1cc01ab29f65dddc0f1c636db66738df356c5",
+        "html_url": "https://github.com/facebook/react-native/commit/1ae1cc01ab29f65dddc0f1c636db66738df356c5",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/1ae1cc01ab29f65dddc0f1c636db66738df356c5/comments",
+        "author": {
+            "login": "vincentriemer",
+            "id": 1398555,
+            "node_id": "MDQ6VXNlcjEzOTg1NTU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1398555?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/vincentriemer",
+            "html_url": "https://github.com/vincentriemer",
+            "followers_url": "https://api.github.com/users/vincentriemer/followers",
+            "following_url": "https://api.github.com/users/vincentriemer/following{/other_user}",
+            "gists_url": "https://api.github.com/users/vincentriemer/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/vincentriemer/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/vincentriemer/subscriptions",
+            "organizations_url": "https://api.github.com/users/vincentriemer/orgs",
+            "repos_url": "https://api.github.com/users/vincentriemer/repos",
+            "events_url": "https://api.github.com/users/vincentriemer/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/vincentriemer/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "83d7a48a46c00b99c52a8ac5897c013924e10152",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/83d7a48a46c00b99c52a8ac5897c013924e10152",
+                "html_url": "https://github.com/facebook/react-native/commit/83d7a48a46c00b99c52a8ac5897c013924e10152"
+            }
+        ]
+    },
+    {
+        "sha": "83d7a48a46c00b99c52a8ac5897c013924e10152",
+        "node_id": "C_kwDOAbrxp9oAKDgzZDdhNDhhNDZjMDBiOTljNTJhOGFjNTg5N2MwMTM5MjRlMTAxNTI",
+        "commit": {
+            "author": {
+                "name": "Bernhard Owen Josephus",
+                "email": "bernhard.josephus@gmail.com",
+                "date": "2023-06-12T22:28:56Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-12T22:28:56Z"
+            },
+            "message": "Resubmit D46501420 (#37790)\n\nSummary:\nMultiline text in Android shows some extra space. It's easily noticeable when you set the text `alignSelf` to `flex-start`. This is because we are using `layout.getLineWidth` which will include trailing whitespace.\n<img width=\"300\" alt=\"image\" src=\"https://github.com/facebook/react-native/assets/50919443/8939092b-caef-4ad8-9b34-2ccef5d20968\">\n\nBased on Android doc, `getLineMax` exclude trailing whitespace.\n<img width=\"625\" alt=\"image\" src=\"https://github.com/facebook/react-native/assets/50919443/0b32e842-5fab-4fc7-8fd9-299877b9c553\">\n\n## Changelog:\n\n<!-- Help reviewers and the release process by writing your own changelog entry.\n\nPick one each for the category and type tags:\n\n[ANDROID] [FIXED] - Exclude trailing whitespace from newline character on measuring text line width\n\nFor more details, see:\nhttps://reactnative.dev/contributing/changelogs-in-pull-requests\n-->\n\n[ANDROID] [FIXED] - Exclude trailing whitespace from newline character on measuring text line width\n\nPull Request resolved: https://github.com/facebook/react-native/pull/37790\n\nTest Plan:\nAfter applying the changes:\n<img width=\"300\" alt=\"image\" src=\"https://github.com/facebook/react-native/assets/50919443/bfbf52b0-7e7d-4c89-8958-6af38d8bc1c7\">\n\nCode snippet:\n```\n<Text style={{backgroundColor: 'red', alignSelf: 'flex-start', color: 'white'}}>\n    1{'\\n'}\n</Text>\n```\n\nReviewed By: cortinico\n\nDifferential Revision: D46586516\n\nPulled By: NickGerleman\n\nfbshipit-source-id: 3ea9c150ad92082f9b4d1da453ba0ef04b09ce51",
+            "tree": {
+                "sha": "8d545570cf301f9cd87638692d721df86a3bf5fa",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/8d545570cf301f9cd87638692d721df86a3bf5fa"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/83d7a48a46c00b99c52a8ac5897c013924e10152",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/83d7a48a46c00b99c52a8ac5897c013924e10152",
+        "html_url": "https://github.com/facebook/react-native/commit/83d7a48a46c00b99c52a8ac5897c013924e10152",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/83d7a48a46c00b99c52a8ac5897c013924e10152/comments",
+        "author": {
+            "login": "bernhardoj",
+            "id": 50919443,
+            "node_id": "MDQ6VXNlcjUwOTE5NDQz",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50919443?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/bernhardoj",
+            "html_url": "https://github.com/bernhardoj",
+            "followers_url": "https://api.github.com/users/bernhardoj/followers",
+            "following_url": "https://api.github.com/users/bernhardoj/following{/other_user}",
+            "gists_url": "https://api.github.com/users/bernhardoj/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/bernhardoj/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/bernhardoj/subscriptions",
+            "organizations_url": "https://api.github.com/users/bernhardoj/orgs",
+            "repos_url": "https://api.github.com/users/bernhardoj/repos",
+            "events_url": "https://api.github.com/users/bernhardoj/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/bernhardoj/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "1f45459414d683a4baa740f9bbd051073472dab2",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/1f45459414d683a4baa740f9bbd051073472dab2",
+                "html_url": "https://github.com/facebook/react-native/commit/1f45459414d683a4baa740f9bbd051073472dab2"
+            }
+        ]
+    },
+    {
+        "sha": "1f45459414d683a4baa740f9bbd051073472dab2",
+        "node_id": "C_kwDOAbrxp9oAKDFmNDU0NTk0MTRkNjgzYTRiYWE3NDBmOWJiZDA1MTA3MzQ3MmRhYjI",
+        "commit": {
+            "author": {
+                "name": "Nick Gerleman",
+                "email": "ngerlem@meta.com",
+                "date": "2023-06-12T22:22:05Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-12T22:22:05Z"
+            },
+            "message": "Localize Voiceover strings in Fabric (#37679)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37679\n\nThis reuses the localizations from the last diff on the stack, on top of the new logic added with D45797554.\n\nChangelog:\n[iOS][Fixed] - Localize Voiceover strings in Fabric\n\nReviewed By: philIip\n\nDifferential Revision: D46426571\n\nfbshipit-source-id: 7e6adc9eff5e6387299e95b6ea5eba8e2607386a",
+            "tree": {
+                "sha": "8af9cc3d06ea8c310ae3f88b845568a3b5f7a72a",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/8af9cc3d06ea8c310ae3f88b845568a3b5f7a72a"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/1f45459414d683a4baa740f9bbd051073472dab2",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/1f45459414d683a4baa740f9bbd051073472dab2",
+        "html_url": "https://github.com/facebook/react-native/commit/1f45459414d683a4baa740f9bbd051073472dab2",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/1f45459414d683a4baa740f9bbd051073472dab2/comments",
+        "author": {
+            "login": "NickGerleman",
+            "id": 835219,
+            "node_id": "MDQ6VXNlcjgzNTIxOQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/835219?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/NickGerleman",
+            "html_url": "https://github.com/NickGerleman",
+            "followers_url": "https://api.github.com/users/NickGerleman/followers",
+            "following_url": "https://api.github.com/users/NickGerleman/following{/other_user}",
+            "gists_url": "https://api.github.com/users/NickGerleman/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/NickGerleman/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/NickGerleman/subscriptions",
+            "organizations_url": "https://api.github.com/users/NickGerleman/orgs",
+            "repos_url": "https://api.github.com/users/NickGerleman/repos",
+            "events_url": "https://api.github.com/users/NickGerleman/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/NickGerleman/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0e99b192577d1ac5c73fdc55902fea1d79d247b7",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/0e99b192577d1ac5c73fdc55902fea1d79d247b7",
+                "html_url": "https://github.com/facebook/react-native/commit/0e99b192577d1ac5c73fdc55902fea1d79d247b7"
+            }
+        ]
+    },
+    {
+        "sha": "0e99b192577d1ac5c73fdc55902fea1d79d247b7",
+        "node_id": "C_kwDOAbrxp9oAKDBlOTliMTkyNTc3ZDFhYzVjNzNmZGM1NTkwMmZlYTFkNzlkMjQ3Yjc",
+        "commit": {
+            "author": {
+                "name": "Nick Gerleman",
+                "email": "ngerlem@meta.com",
+                "date": "2023-06-12T22:22:05Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-12T22:22:05Z"
+            },
+            "message": "RCTLocalizedString: Replace usages of AccessibilityResources (#37680)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37680\n\nChangelog:\n[iOS][Fixed] - Localize Voiceover strings in Paper\n\n## Stack\n\nReact Native on iOS adds strings to Voiceover interactions to supply more information to users . Internally, and out-of-the-box externally, these are today always announced in English instead of being localized.\n\nThis stack adds a limited new internal API, `RCTLocalizedString(string, description)` to allow auto-translated strings which are consumed by both Meta and OSS.\n\nReviewed By: cipolleschi\n\nDifferential Revision: D46415273\n\nfbshipit-source-id: 4174e38cef4eee251fa2d59e10763cde8e8681ad",
+            "tree": {
+                "sha": "fb1946fd245646c9897c9e2885ae870ab25f179a",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/fb1946fd245646c9897c9e2885ae870ab25f179a"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/0e99b192577d1ac5c73fdc55902fea1d79d247b7",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/0e99b192577d1ac5c73fdc55902fea1d79d247b7",
+        "html_url": "https://github.com/facebook/react-native/commit/0e99b192577d1ac5c73fdc55902fea1d79d247b7",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/0e99b192577d1ac5c73fdc55902fea1d79d247b7/comments",
+        "author": {
+            "login": "NickGerleman",
+            "id": 835219,
+            "node_id": "MDQ6VXNlcjgzNTIxOQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/835219?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/NickGerleman",
+            "html_url": "https://github.com/NickGerleman",
+            "followers_url": "https://api.github.com/users/NickGerleman/followers",
+            "following_url": "https://api.github.com/users/NickGerleman/following{/other_user}",
+            "gists_url": "https://api.github.com/users/NickGerleman/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/NickGerleman/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/NickGerleman/subscriptions",
+            "organizations_url": "https://api.github.com/users/NickGerleman/orgs",
+            "repos_url": "https://api.github.com/users/NickGerleman/repos",
+            "events_url": "https://api.github.com/users/NickGerleman/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/NickGerleman/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f83ca12c4049180969e1a755f70e29deae5d8a42",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/f83ca12c4049180969e1a755f70e29deae5d8a42",
+                "html_url": "https://github.com/facebook/react-native/commit/f83ca12c4049180969e1a755f70e29deae5d8a42"
+            }
+        ]
+    },
+    {
+        "sha": "f83ca12c4049180969e1a755f70e29deae5d8a42",
+        "node_id": "C_kwDOAbrxp9oAKGY4M2NhMTJjNDA0OTE4MDk2OWUxYTc1NWY3MGUyOWRlYWU1ZDhhNDI",
+        "commit": {
+            "author": {
+                "name": "Nick Gerleman",
+                "email": "ngerlem@meta.com",
+                "date": "2023-06-12T22:22:05Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-12T22:22:05Z"
+            },
+            "message": "RCTLocalizedString: Extract FBTs to bundle for CocoaPods (#37678)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37678\n\n## Stack\n\nReact Native on iOS adds strings to Voiceover interactions to supply more information to users . Internally, and out-of-the-box externally, these are today always announced in English instead of being localized.\n\nThis stack adds a limited new internal API, `RCTLocalizedString(string, description)` to allow auto-translated strings which are consumed by both Meta and OSS.\n\nReviewed By: cipolleschi\n\nDifferential Revision: D46414630\n\nfbshipit-source-id: 1137182dbbd89d959b3d143ce534229968bdb8f7",
+            "tree": {
+                "sha": "0331f086bd88337e7a568e485dcee619a7e33854",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/0331f086bd88337e7a568e485dcee619a7e33854"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/f83ca12c4049180969e1a755f70e29deae5d8a42",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/f83ca12c4049180969e1a755f70e29deae5d8a42",
+        "html_url": "https://github.com/facebook/react-native/commit/f83ca12c4049180969e1a755f70e29deae5d8a42",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/f83ca12c4049180969e1a755f70e29deae5d8a42/comments",
+        "author": {
+            "login": "NickGerleman",
+            "id": 835219,
+            "node_id": "MDQ6VXNlcjgzNTIxOQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/835219?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/NickGerleman",
+            "html_url": "https://github.com/NickGerleman",
+            "followers_url": "https://api.github.com/users/NickGerleman/followers",
+            "following_url": "https://api.github.com/users/NickGerleman/following{/other_user}",
+            "gists_url": "https://api.github.com/users/NickGerleman/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/NickGerleman/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/NickGerleman/subscriptions",
+            "organizations_url": "https://api.github.com/users/NickGerleman/orgs",
+            "repos_url": "https://api.github.com/users/NickGerleman/repos",
+            "events_url": "https://api.github.com/users/NickGerleman/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/NickGerleman/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "9b47148dd8f819b3548bea8034efee276baf5c89",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/9b47148dd8f819b3548bea8034efee276baf5c89",
+                "html_url": "https://github.com/facebook/react-native/commit/9b47148dd8f819b3548bea8034efee276baf5c89"
+            }
+        ]
+    },
+    {
+        "sha": "9b47148dd8f819b3548bea8034efee276baf5c89",
+        "node_id": "C_kwDOAbrxp9oAKDliNDcxNDhkZDhmODE5YjM1NDhiZWE4MDM0ZWZlZTI3NmJhZjVjODk",
+        "commit": {
+            "author": {
+                "name": "Nick Gerleman",
+                "email": "ngerlem@meta.com",
+                "date": "2023-06-12T22:22:05Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-12T22:22:05Z"
+            },
+            "message": "RCTLocalizedString: Add RCTLocalizedString (#37677)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37677\n\n## Stack\n\nReact Native on iOS adds strings to Voiceover interactions to supply more information to users . Internally, and out-of-the-box externally, these are today always announced in English instead of being localized.\n\nThis stack adds a limited new internal API, `RCTLocalizedString(string, description)` to allow auto-translated strings which are consumed by both Meta and OSS.\n\nReviewed By: shwanton\n\nDifferential Revision: D46414631\n\nfbshipit-source-id: 567a3500d39c1cb830e050edb1a644e3d8d502d3",
+            "tree": {
+                "sha": "72ccd09358c6f7e6de8e85d4a35292d82e728c38",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/72ccd09358c6f7e6de8e85d4a35292d82e728c38"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/9b47148dd8f819b3548bea8034efee276baf5c89",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/9b47148dd8f819b3548bea8034efee276baf5c89",
+        "html_url": "https://github.com/facebook/react-native/commit/9b47148dd8f819b3548bea8034efee276baf5c89",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/9b47148dd8f819b3548bea8034efee276baf5c89/comments",
+        "author": {
+            "login": "NickGerleman",
+            "id": 835219,
+            "node_id": "MDQ6VXNlcjgzNTIxOQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/835219?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/NickGerleman",
+            "html_url": "https://github.com/NickGerleman",
+            "followers_url": "https://api.github.com/users/NickGerleman/followers",
+            "following_url": "https://api.github.com/users/NickGerleman/following{/other_user}",
+            "gists_url": "https://api.github.com/users/NickGerleman/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/NickGerleman/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/NickGerleman/subscriptions",
+            "organizations_url": "https://api.github.com/users/NickGerleman/orgs",
+            "repos_url": "https://api.github.com/users/NickGerleman/repos",
+            "events_url": "https://api.github.com/users/NickGerleman/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/NickGerleman/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "15bdaefe7ba9ee0da3abc900ce3be5a66eea4f9a",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/15bdaefe7ba9ee0da3abc900ce3be5a66eea4f9a",
+                "html_url": "https://github.com/facebook/react-native/commit/15bdaefe7ba9ee0da3abc900ce3be5a66eea4f9a"
+            }
+        ]
+    },
+    {
+        "sha": "15bdaefe7ba9ee0da3abc900ce3be5a66eea4f9a",
+        "node_id": "C_kwDOAbrxp9oAKDE1YmRhZWZlN2JhOWVlMGRhM2FiYzkwMGNlM2JlNWE2NmVlYTRmOWE",
+        "commit": {
+            "author": {
+                "name": "Nick Gerleman",
+                "email": "ngerlem@meta.com",
+                "date": "2023-06-12T22:22:05Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-12T22:22:05Z"
+            },
+            "message": "RCTLocalizedString: Dirsync FBXXHashUtils to OSS (#37676)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37676\n\n## Stack\n\nReact Native on iOS adds strings to Voiceover interactions to supply more information to users . Internally, and out-of-the-box externally, these are today always announced in English instead of being localized.\n\nThis stack adds a limited new internal API, `RCTLocalizedString(string, description)` to allow auto-translated strings which are consumed by both Meta and OSS.\n\nReviewed By: javache\n\nDifferential Revision: D46399962\n\nfbshipit-source-id: 2188a1faba9339cff00f897990b727febc178361",
+            "tree": {
+                "sha": "e24e313fc1c06abccfe52d81f783bd9065865a93",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/e24e313fc1c06abccfe52d81f783bd9065865a93"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/15bdaefe7ba9ee0da3abc900ce3be5a66eea4f9a",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/15bdaefe7ba9ee0da3abc900ce3be5a66eea4f9a",
+        "html_url": "https://github.com/facebook/react-native/commit/15bdaefe7ba9ee0da3abc900ce3be5a66eea4f9a",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/15bdaefe7ba9ee0da3abc900ce3be5a66eea4f9a/comments",
+        "author": {
+            "login": "NickGerleman",
+            "id": 835219,
+            "node_id": "MDQ6VXNlcjgzNTIxOQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/835219?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/NickGerleman",
+            "html_url": "https://github.com/NickGerleman",
+            "followers_url": "https://api.github.com/users/NickGerleman/followers",
+            "following_url": "https://api.github.com/users/NickGerleman/following{/other_user}",
+            "gists_url": "https://api.github.com/users/NickGerleman/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/NickGerleman/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/NickGerleman/subscriptions",
+            "organizations_url": "https://api.github.com/users/NickGerleman/orgs",
+            "repos_url": "https://api.github.com/users/NickGerleman/repos",
+            "events_url": "https://api.github.com/users/NickGerleman/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/NickGerleman/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "2eba6ab5acdb2e706a56df7f1cc84acaac559eb5",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/2eba6ab5acdb2e706a56df7f1cc84acaac559eb5",
+                "html_url": "https://github.com/facebook/react-native/commit/2eba6ab5acdb2e706a56df7f1cc84acaac559eb5"
+            }
+        ]
+    },
+    {
+        "sha": "2eba6ab5acdb2e706a56df7f1cc84acaac559eb5",
+        "node_id": "C_kwDOAbrxp9oAKDJlYmE2YWI1YWNkYjJlNzA2YTU2ZGY3ZjFjYzg0YWNhYWM1NTllYjU",
+        "commit": {
+            "author": {
+                "name": "Facebook Community Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-12T21:34:52Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-06-12T21:34:52Z"
+            },
+            "message": "Re-sync with internal repository (#37831)\n\nCo-authored-by: Facebook Community Bot <6422482+facebook-github-bot@users.noreply.github.com>",
+            "tree": {
+                "sha": "644a42758f6b20aea7522a07f5f50506d6ac13b3",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/644a42758f6b20aea7522a07f5f50506d6ac13b3"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/2eba6ab5acdb2e706a56df7f1cc84acaac559eb5",
+            "comment_count": 1,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkh498CRBK7hj4Ov3rIwAApGYIAIXovaXoqH4rr6uHQSTb0tOp\nQ6dGSNByZ3zv19W1x85ip1bLfxe4AuPwPhvmRKS/luuwWhC0lqwwaxL3Wuf5pvgY\nd2QUCeEV0pA34lyomkq/IOhqkka0RHGf+9JYaFT3f6BcXc8Ukta0PUqnxRdnrVD4\n0C5ViuV/5ezXW4/uJS4Z83n9s2NoHO1ntYCthCAzFvRDAe6UgF32dB70fpUH0TVi\nCJdBIFZ69iAjS30VhdpHDCgTyt85cYBNBOb6aqZK+ZFg2Tks0rRxCpoYn8P/IWrX\nEtM+IHpqD7fePOCROWENWbUkEhlyyofkOg4PsSsrkujHOIMAJx9I6o3ybpsr8z8=\n=Q1ey\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 644a42758f6b20aea7522a07f5f50506d6ac13b3\nparent a300a35f285260b5e8fd8927c2a8da7545c1e703\nauthor Facebook Community Bot <facebook-github-bot@users.noreply.github.com> 1686605692 -0700\ncommitter GitHub <noreply@github.com> 1686605692 -0400\n\nRe-sync with internal repository (#37831)\n\nCo-authored-by: Facebook Community Bot <6422482+facebook-github-bot@users.noreply.github.com>"
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/2eba6ab5acdb2e706a56df7f1cc84acaac559eb5",
+        "html_url": "https://github.com/facebook/react-native/commit/2eba6ab5acdb2e706a56df7f1cc84acaac559eb5",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/2eba6ab5acdb2e706a56df7f1cc84acaac559eb5/comments",
+        "author": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "a300a35f285260b5e8fd8927c2a8da7545c1e703",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/a300a35f285260b5e8fd8927c2a8da7545c1e703",
+                "html_url": "https://github.com/facebook/react-native/commit/a300a35f285260b5e8fd8927c2a8da7545c1e703"
+            }
+        ]
+    },
+    {
+        "sha": "a300a35f285260b5e8fd8927c2a8da7545c1e703",
+        "node_id": "C_kwDOAbrxp9oAKGEzMDBhMzVmMjg1MjYwYjVlOGZkODkyN2MyYThkYTc1NDVjMWU3MDM",
+        "commit": {
+            "author": {
+                "name": "Phillip Pan",
+                "email": "phillippan@meta.com",
+                "date": "2023-06-12T20:37:39Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-12T20:37:39Z"
+            },
+            "message": "introduce RCTTestUtils (#37810)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37810\n\nChangelog: [Internal]\n\nin this change, i introduce a helper file for swizzling selectors that can be used for building custom shims and fakes. i tried putting this in the cxx target, but i struggled a lot with managing the dependencies and understanding the extra behavior that was happening from being in a `rn_xplat_cxx_library`. this file is also not obj-c++, so i feel like we should decouple if possible.\n\nit does seem like this is a new practice i'm introducing, so let me know if there's something that i'm missing.\n\nReviewed By: cipolleschi\n\nDifferential Revision: D46507803\n\nfbshipit-source-id: 9be63d992b9838e9a98ee0c1c6d684fc59c3fc80",
+            "tree": {
+                "sha": "95ec21a5f684b46f0ebe7c094164081d66c373fd",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/95ec21a5f684b46f0ebe7c094164081d66c373fd"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/a300a35f285260b5e8fd8927c2a8da7545c1e703",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/a300a35f285260b5e8fd8927c2a8da7545c1e703",
+        "html_url": "https://github.com/facebook/react-native/commit/a300a35f285260b5e8fd8927c2a8da7545c1e703",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/a300a35f285260b5e8fd8927c2a8da7545c1e703/comments",
+        "author": {
+            "login": "philIip",
+            "id": 5687023,
+            "node_id": "MDQ6VXNlcjU2ODcwMjM=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5687023?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/philIip",
+            "html_url": "https://github.com/philIip",
+            "followers_url": "https://api.github.com/users/philIip/followers",
+            "following_url": "https://api.github.com/users/philIip/following{/other_user}",
+            "gists_url": "https://api.github.com/users/philIip/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/philIip/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/philIip/subscriptions",
+            "organizations_url": "https://api.github.com/users/philIip/orgs",
+            "repos_url": "https://api.github.com/users/philIip/repos",
+            "events_url": "https://api.github.com/users/philIip/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/philIip/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ee38c4a40c9d301c30fad4d127e8d020a6100b8e",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/ee38c4a40c9d301c30fad4d127e8d020a6100b8e",
+                "html_url": "https://github.com/facebook/react-native/commit/ee38c4a40c9d301c30fad4d127e8d020a6100b8e"
+            }
+        ]
+    },
+    {
+        "sha": "ee38c4a40c9d301c30fad4d127e8d020a6100b8e",
+        "node_id": "C_kwDOAbrxp9oAKGVlMzhjNGE0MGM5ZDMwMWMzMGZhZDRkMTI3ZThkMDIwYTYxMDBiOGU",
+        "commit": {
+            "author": {
+                "name": "Phillip Pan",
+                "email": "phillippan@meta.com",
+                "date": "2023-06-12T20:37:39Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-12T20:37:39Z"
+            },
+            "message": "introduce build boilerplate for ios unit tests (#37811)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37811\n\nChangelog: [Internal]\n\ni am looking to add ios unit tests to venice and this is the first unit test suite that will test native ios code in the new architecture afaik, so i wanted to open this up to discussion.\n\ncurrently, all `XCTest` in `react-native-github` are coupled with the `RNTester` target. my main qualm with this is i am concerned that it won't scale well. currently we have only ~30ish tests but ultimately if we want a proper testing suite, surely this count will be in the hundreds and that won't be able to reasonably live in a single test target.\n\nhowever, the trade is that this test will not show up in RNTester. i have added a unit test to RNTester before in D31949237, however the experience was extremely painful as i had to manually update the `project.pbxproj` to include my file, and i had to manually determine what hex value was the next one (for whatever reason, this doesn't increment at the endian...).\n\ni am wondering if we can treat the current unit testing experience in RNTester as pretty much maintenance mode and start thinking of a improved version starting with something more modular like this.\n\nReviewed By: cipolleschi\n\nDifferential Revision: D46467229\n\nfbshipit-source-id: 09de9cf8bc5f8b9c86abcaf7750a6f63686d8d1a",
+            "tree": {
+                "sha": "b1982a3738a9ed7827c895377ce1432b14ccf1b0",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/b1982a3738a9ed7827c895377ce1432b14ccf1b0"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/ee38c4a40c9d301c30fad4d127e8d020a6100b8e",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/ee38c4a40c9d301c30fad4d127e8d020a6100b8e",
+        "html_url": "https://github.com/facebook/react-native/commit/ee38c4a40c9d301c30fad4d127e8d020a6100b8e",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/ee38c4a40c9d301c30fad4d127e8d020a6100b8e/comments",
+        "author": {
+            "login": "philIip",
+            "id": 5687023,
+            "node_id": "MDQ6VXNlcjU2ODcwMjM=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5687023?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/philIip",
+            "html_url": "https://github.com/philIip",
+            "followers_url": "https://api.github.com/users/philIip/followers",
+            "following_url": "https://api.github.com/users/philIip/following{/other_user}",
+            "gists_url": "https://api.github.com/users/philIip/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/philIip/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/philIip/subscriptions",
+            "organizations_url": "https://api.github.com/users/philIip/orgs",
+            "repos_url": "https://api.github.com/users/philIip/repos",
+            "events_url": "https://api.github.com/users/philIip/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/philIip/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "466742c9ce61428199e3760798613932ddc0f800",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/466742c9ce61428199e3760798613932ddc0f800",
+                "html_url": "https://github.com/facebook/react-native/commit/466742c9ce61428199e3760798613932ddc0f800"
+            }
+        ]
+    },
+    {
+        "sha": "466742c9ce61428199e3760798613932ddc0f800",
+        "node_id": "C_kwDOAbrxp9oAKDQ2Njc0MmM5Y2U2MTQyODE5OWUzNzYwNzk4NjEzOTMyZGRjMGY4MDA",
+        "commit": {
+            "author": {
+                "name": "Phillip Pan",
+                "email": "phillippan@meta.com",
+                "date": "2023-06-12T20:37:39Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-12T20:37:39Z"
+            },
+            "message": "rename ReactInstanceTest directory from hermes to cxx (#37812)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37812\n\nChangelog: [Internal]\n\nI would like to add iOS unit tests, but this testing directory has a subdirectory based on features and not platform, which makes the organization challenging, so i'm moving it to a more aptly named directory.\n\nReviewed By: javache\n\nDifferential Revision: D46467041\n\nfbshipit-source-id: f2ba714dc79ecb509b86b4708320c68235354240",
+            "tree": {
+                "sha": "8089884a748210658812dbb95ef90ff03bb5fa6a",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/8089884a748210658812dbb95ef90ff03bb5fa6a"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/466742c9ce61428199e3760798613932ddc0f800",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/466742c9ce61428199e3760798613932ddc0f800",
+        "html_url": "https://github.com/facebook/react-native/commit/466742c9ce61428199e3760798613932ddc0f800",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/466742c9ce61428199e3760798613932ddc0f800/comments",
+        "author": {
+            "login": "philIip",
+            "id": 5687023,
+            "node_id": "MDQ6VXNlcjU2ODcwMjM=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5687023?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/philIip",
+            "html_url": "https://github.com/philIip",
+            "followers_url": "https://api.github.com/users/philIip/followers",
+            "following_url": "https://api.github.com/users/philIip/following{/other_user}",
+            "gists_url": "https://api.github.com/users/philIip/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/philIip/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/philIip/subscriptions",
+            "organizations_url": "https://api.github.com/users/philIip/orgs",
+            "repos_url": "https://api.github.com/users/philIip/repos",
+            "events_url": "https://api.github.com/users/philIip/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/philIip/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "3a246ed024da04c6f4b8e5f2a776337f83d50664",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/3a246ed024da04c6f4b8e5f2a776337f83d50664",
+                "html_url": "https://github.com/facebook/react-native/commit/3a246ed024da04c6f4b8e5f2a776337f83d50664"
+            }
+        ]
+    },
+    {
+        "sha": "3a246ed024da04c6f4b8e5f2a776337f83d50664",
+        "node_id": "C_kwDOAbrxp9oAKDNhMjQ2ZWQwMjRkYTA0YzZmNGI4ZTVmMmE3NzYzMzdmODNkNTA2NjQ",
+        "commit": {
+            "author": {
+                "name": "Nicola Corti",
+                "email": "ncor@meta.com",
+                "date": "2023-06-12T19:46:00Z"
+            },
+            "committer": {
+                "name": "Facebook GitHub Bot",
+                "email": "facebook-github-bot@users.noreply.github.com",
+                "date": "2023-06-12T19:46:00Z"
+            },
+            "message": "Remove CallInvoker parameter from toJs method in Codegen (#37832)\n\nSummary:\nPull Request resolved: https://github.com/facebook/react-native/pull/37832\n\nThis parameter is currently unused and is causing Android builds to fail\nas they compile with `-Wall`\n\nThis is a follow-up to https://github.com/facebook/react-native/pull/37454/ as that PR updated only the `fromJs` and not the `toJs` method as well.\n\nChangelog:\n[Internal] [Changed] - Remove CallInvoker parameter from toJs method in Codegen\n\nReviewed By: rshest\n\nDifferential Revision: D46647110\n\nfbshipit-source-id: 1f3e22aca7a3df11ac02b5c4b89c9311b8b1798c",
+            "tree": {
+                "sha": "0e187a5dd484978db4863eefced16db58053df12",
+                "url": "https://api.github.com/repos/facebook/react-native/git/trees/0e187a5dd484978db4863eefced16db58053df12"
+            },
+            "url": "https://api.github.com/repos/facebook/react-native/git/commits/3a246ed024da04c6f4b8e5f2a776337f83d50664",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/facebook/react-native/commits/3a246ed024da04c6f4b8e5f2a776337f83d50664",
+        "html_url": "https://github.com/facebook/react-native/commit/3a246ed024da04c6f4b8e5f2a776337f83d50664",
+        "comments_url": "https://api.github.com/repos/facebook/react-native/commits/3a246ed024da04c6f4b8e5f2a776337f83d50664/comments",
+        "author": {
+            "login": "cortinico",
+            "id": 3001957,
+            "node_id": "MDQ6VXNlcjMwMDE5NTc=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3001957?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/cortinico",
+            "html_url": "https://github.com/cortinico",
+            "followers_url": "https://api.github.com/users/cortinico/followers",
+            "following_url": "https://api.github.com/users/cortinico/following{/other_user}",
+            "gists_url": "https://api.github.com/users/cortinico/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/cortinico/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/cortinico/subscriptions",
+            "organizations_url": "https://api.github.com/users/cortinico/orgs",
+            "repos_url": "https://api.github.com/users/cortinico/repos",
+            "events_url": "https://api.github.com/users/cortinico/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/cortinico/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "facebook-github-bot",
+            "id": 6422482,
+            "node_id": "MDQ6VXNlcjY0MjI0ODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6422482?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/facebook-github-bot",
+            "html_url": "https://github.com/facebook-github-bot",
+            "followers_url": "https://api.github.com/users/facebook-github-bot/followers",
+            "following_url": "https://api.github.com/users/facebook-github-bot/following{/other_user}",
+            "gists_url": "https://api.github.com/users/facebook-github-bot/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/facebook-github-bot/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/facebook-github-bot/subscriptions",
+            "organizations_url": "https://api.github.com/users/facebook-github-bot/orgs",
+            "repos_url": "https://api.github.com/users/facebook-github-bot/repos",
+            "events_url": "https://api.github.com/users/facebook-github-bot/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/facebook-github-bot/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "48cdc603f5be87309d202ace5035e1b40ad85b53",
+                "url": "https://api.github.com/repos/facebook/react-native/commits/48cdc603f5be87309d202ace5035e1b40ad85b53",
+                "html_url": "https://github.com/facebook/react-native/commit/48cdc603f5be87309d202ace5035e1b40ad85b53"
+            }
+        ]
+    }
+]

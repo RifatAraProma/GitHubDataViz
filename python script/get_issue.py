@@ -92,8 +92,8 @@ def getClosedBy(issue_number):
 
 
 # Replace with your GitHub repository details
-owner = 'facebook'
-repo = 'react-native'
+owner = 'airbnb'
+repo = 'javascript'
 
 # Set the API endpoint
 url = f'https://api.github.com/repos/{owner}/{repo}/issues'

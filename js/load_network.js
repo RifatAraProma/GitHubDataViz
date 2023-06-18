@@ -13,11 +13,25 @@ function node_redius_mapper(d){
     nodeRadius = 10
     if(node_list[d.index].type == 'issue')
         mult = 2;
-    else if(node_list[d.index].type == 'commit')
-        mult = 1.25
+    // else if(node_list[d.index].type == 'commit')
+    //     mult = 1.25
+    else if(node_list[d.index].type == 'creator' || node_list[d.index].type == 'closed by')
+        mult = 1.5
 
     return mult * nodeRadius;
 }
+
+
+function link_strength_mapper(d){
+
+    if(d.source == 1)
+        return 0;
+
+    else
+        return 0.5;
+}
+
+
 
 function load_network(selected_issue_json, selected_issue) {
     clearDiv()
@@ -31,6 +45,7 @@ function load_network(selected_issue_json, selected_issue) {
         linkStrokeWidth: l => Math.sqrt(l.value),
         width: window.innerWidth,
         height: window.innerHeight * 1.5,
+        linkStrength: link_strength_mapper,
         // // invalidation // a promise to stop the simulation when the cell is re-run
     })
     console.log(selected_issue_json)
@@ -50,7 +65,7 @@ function ForceGraph({
     nodeGroups, // an array of ordinal values representing the node groups
     nodeTitle, // given d in nodes, a title string
     nodeFill = "currentColor", // node stroke fill (if not using a group color encoding)
-    nodeStroke = "#fff", // node stroke color
+    nodeStroke = "darkgrey", // node stroke color
     nodeStrokeWidth = 1.5, // node stroke width, in pixels
     nodeStrokeOpacity = 1, // node stroke opacity
     nodeRadius = 5, // node radius, in pixels
@@ -62,14 +77,14 @@ function ForceGraph({
     linkStrokeWidth = 4, // given d in links, returns a stroke width in pixels
     linkStrokeLinecap = "round", // link stroke linecap
     linkStrength,
-    colors = ["#a6cee3",
+    colors = ["#fb9a99",
     "#1f78b4",
     "#b2df8a",
-    "#33a02c",
-    "#fb9a99",
     "#e31a1c",
-    "#fdbf6f",
-    "#ff7f00"], // an array of color strings, for the node groups
+    "#a6cee3",
+    "#e31a1c",
+    "#33a02c",
+    "#a6cee3"], // an array of color strings, for the node groups
     width = 640, // outer width, in pixels
     height = 400, // outer height, in pixels
     invalidation // when this promise resolves, stop the simulation
@@ -84,6 +99,7 @@ function ForceGraph({
     const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);
     const W = typeof linkStrokeWidth !== "function" ? null : d3.map(links, linkStrokeWidth);
     const L = typeof linkStroke !== "function" ? null : d3.map(links, linkStroke);
+    //const LStrength = typeof linkStrength !== "function" ? null : d3.map(links, linkStrength)
 
     // Replace the input nodes and links with mutable objects for the simulation.
     nodes_copy = nodes;
@@ -99,7 +115,7 @@ function ForceGraph({
 
     // Construct the forces.
     const forceNode = d3.forceManyBody();
-    const forceLink = d3.forceLink(links).id(({ index: i }) => N[i]);
+    const forceLink = d3.forceLink(links).id(({ index: i }) => N[i]).distance(60);
     if (nodeStrength !== undefined) forceNode.strength(nodeStrength);
     if (linkStrength !== undefined) forceLink.strength(linkStrength);
 
@@ -110,6 +126,7 @@ function ForceGraph({
         .on("tick", ticked);
 
     const svg = d3.create("svg")
+        .attr("id", "network")
         .attr("width", width)
         .attr("height", height)
         .attr("viewBox", [-width / 2, -height / 2, width, height])

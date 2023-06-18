@@ -1,0 +1,2220 @@
+[
+    {
+        "sha": "7916d6f538028e91129e65fd5633b7d6fa85d000",
+        "node_id": "C_kwDOAGMovNoAKDc5MTZkNmY1MzgwMjhlOTExMjllNjVmZDU2MzNiN2Q2ZmE4NWQwMDA",
+        "commit": {
+            "author": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-05-15T17:21:09Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-05-15T17:21:09Z"
+            },
+            "message": "[guide] Add documentation for `no-use-before-define` rule under hoisting section",
+            "tree": {
+                "sha": "3c65fe853ab1ab019985644d0688651988124d2c",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/3c65fe853ab1ab019985644d0688651988124d2c"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/7916d6f538028e91129e65fd5633b7d6fa85d000",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJkdlsKAAoJEJ9qaB4174tWrfYP/2AY0OkR4rEa6cTFagu4uC54\noOJjwkfVADnq0sgdY8dmKsRAx4FgsgiL8PMQum/Qi/cBBdfWh4MDYUq0Wq7Z5RB0\nWx5UiXzDr8QbQiQUPpt3quljepKvZ2+isc7TgrOyIDsVPrNu5/0uERx8jPlz4bIn\nfbt+55bRpYwoi5aUDy0NpImpv30CJt4FVDqh/8IhJWytsl0VlnAzfgZr/UYhdTq0\n0d7FJUc7NNHyFNg0fcdD7So17yKoA3tL1ZluFgY+6u2QRN9/wJuYsONWFELS2cxr\nhrl0/LC0lDYgy16VyTzhU5zzLYQhxdIC2jpYkY/bLEn7tvG1WsZ+m3/ef74R2kad\nQAk5ve1RP/NPd7jxeUfIEEyAY0qBVe0NX0cz3JtA3TSW4EQmoe8rG2DDMXZcREDJ\n7f0RKQH7wGuXVQnTi0eQ2IwLSOHc1zNTaohAf9yiiD+nW9hxeK8WyK2/8S2+hGn9\nHAQgj5cfQQMGgyVIaO/lcydvcu1Faa+AlA+Z0uaM89HNls9z4REf0AQDxZxTbJZh\nfz1UwNUazRAU6YtKa3gr35kfrnW2ADtXEd/f+wk0w3Hc+xwVgGmWjJywCUz2B1H9\nHuXd5oHXL4/yQ6EkFT1OrfLUsYQpqAb2Fp2Yp7Kl1nz8vpCJYw/Oqjk4grGAjCEe\nqNcjIp4dJzh7xdlfd2Xi\n=oKyd\n-----END PGP SIGNATURE-----",
+                "payload": "tree 3c65fe853ab1ab019985644d0688651988124d2c\nparent 01f046dc0567e4495762e8e4fc4dde7b87dd5eb8\nauthor Jordan Harband <ljharb@gmail.com> 1684171269 -0700\ncommitter Jordan Harband <ljharb@gmail.com> 1684171269 -0700\n\n[guide] Add documentation for `no-use-before-define` rule under hoisting section\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/7916d6f538028e91129e65fd5633b7d6fa85d000",
+        "html_url": "https://github.com/airbnb/javascript/commit/7916d6f538028e91129e65fd5633b7d6fa85d000",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/7916d6f538028e91129e65fd5633b7d6fa85d000/comments",
+        "author": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "01f046dc0567e4495762e8e4fc4dde7b87dd5eb8",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/01f046dc0567e4495762e8e4fc4dde7b87dd5eb8",
+                "html_url": "https://github.com/airbnb/javascript/commit/01f046dc0567e4495762e8e4fc4dde7b87dd5eb8"
+            }
+        ]
+    },
+    {
+        "sha": "01f046dc0567e4495762e8e4fc4dde7b87dd5eb8",
+        "node_id": "C_kwDOAGMovNoAKDAxZjA0NmRjMDU2N2U0NDk1NzYyZThlNGZjNGRkZTdiODdkZDVlYjg",
+        "commit": {
+            "author": {
+                "name": "zhesha",
+                "email": "savzhe@gmail.com",
+                "date": "2023-05-23T12:10:23Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-05-23T12:10:23Z"
+            },
+            "message": "[guide] added second link to eslint rule for item 7.1",
+            "tree": {
+                "sha": "ebafed94a71e18d39335876ad9235b7b399fa62e",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/ebafed94a71e18d39335876ad9235b7b399fa62e"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/01f046dc0567e4495762e8e4fc4dde7b87dd5eb8",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJkbO+uAAoJEJ9qaB4174tW7IUQAI7aT1m9JfqIfaSgKLrb1jgF\nPNNK3wT+8efP4kOPF/cVtoDG+QM8if5Af7jQxKyKm0HZ1l7rsN845zEgEFEjW3PV\nzg5+XIPcY6G/NOS1X9qhmlu/2uKBxiNfvjSnxRfoenUGGJYJ3/n3Zb8MP4esstbp\nhRI+ScBgI8WiI3ZjYKnj87+u95udpMl8fpKiCAtfNjkGrK30QVdD5/0bDkBVV9lh\nT2V60hbAoukZmYOsF76xqn22hRbqkW18SsIuzi7LIrJRMWxRZdI2UvHvvKOTbrSf\nhkTcM9MZ5OT2p3D96J3XNOqXsaJ7BWmKdphr7S5bbZazZUhhdXAu0w2WUduEOInA\nfPCxkYlhIGbq/igXtRmSqFC+91+7H3ptr3jpp4rQRJmPDxq6N+yr7j4kolheSx1X\nyR0vcleY6446HB3JOsoiWhsj7J4aVbZVImLb2fuqC2y2P377kHYLw4+MhUu/WzHq\nWSMbKwvFNvlBqoVc5lpwWGsBEmKeOatezltXf+dWdKctcZDstX03IEG7v5RFLpHI\nOIzHiz/asKa/OTzeMTfFXK0oToDBoHc5XnbqrpZEGWEKsqQ54upj33nCUqDd16In\nt3RJ1t35tIf4/XXrfL8owZm7fHgOqo4ZZH2GAIu0JWaHI8bvYFnnTvYGEfg8atpd\nqcMwxx0prNV19YDEXgut\n=czuA\n-----END PGP SIGNATURE-----",
+                "payload": "tree ebafed94a71e18d39335876ad9235b7b399fa62e\nparent 0f3ca32323b8d5770de3301036e65511c6d18e00\nauthor zhesha <savzhe@gmail.com> 1684843823 +0300\ncommitter Jordan Harband <ljharb@gmail.com> 1684843823 +0300\n\n[guide] added second link to eslint rule for item 7.1\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/01f046dc0567e4495762e8e4fc4dde7b87dd5eb8",
+        "html_url": "https://github.com/airbnb/javascript/commit/01f046dc0567e4495762e8e4fc4dde7b87dd5eb8",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/01f046dc0567e4495762e8e4fc4dde7b87dd5eb8/comments",
+        "author": {
+            "login": "zhesha",
+            "id": 2378593,
+            "node_id": "MDQ6VXNlcjIzNzg1OTM=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/2378593?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/zhesha",
+            "html_url": "https://github.com/zhesha",
+            "followers_url": "https://api.github.com/users/zhesha/followers",
+            "following_url": "https://api.github.com/users/zhesha/following{/other_user}",
+            "gists_url": "https://api.github.com/users/zhesha/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/zhesha/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/zhesha/subscriptions",
+            "organizations_url": "https://api.github.com/users/zhesha/orgs",
+            "repos_url": "https://api.github.com/users/zhesha/repos",
+            "events_url": "https://api.github.com/users/zhesha/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/zhesha/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0f3ca32323b8d5770de3301036e65511c6d18e00",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/0f3ca32323b8d5770de3301036e65511c6d18e00",
+                "html_url": "https://github.com/airbnb/javascript/commit/0f3ca32323b8d5770de3301036e65511c6d18e00"
+            }
+        ]
+    },
+    {
+        "sha": "0f3ca32323b8d5770de3301036e65511c6d18e00",
+        "node_id": "C_kwDOAGMovNoAKDBmM2NhMzIzMjNiOGQ1NzcwZGUzMzAxMDM2ZTY1NTExYzZkMThlMDA",
+        "commit": {
+            "author": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-05-15T17:21:09Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-05-15T17:21:09Z"
+            },
+            "message": "[eslint config] [*] [deps] update `object.entries`",
+            "tree": {
+                "sha": "352b47ea240aca14999848041f7c171e70ada6ef",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/352b47ea240aca14999848041f7c171e70ada6ef"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/0f3ca32323b8d5770de3301036e65511c6d18e00",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJkYmpBAAoJEJ9qaB4174tWjMkQAJZAzM8jr5ITdAPx9lD6dqs8\nmQSf/KFV50F9tSiDPQsLH5ctDwTdN/eCWuVoDcjhX8+HqYF/g41W6yZmDItn4pds\nPYn1r+B8MUOfW045iRojyu9anG1TPcGBYYl0ZeM7n3WQvP7yzXRAg7pPmQ4V8mmE\n72xv7Z+aqGahOOOiwhvWJvutl7XdpXLK1rRP65jSRd+N0XTSaPiSdPyCuFxaZ/IG\nUOH0RoLJFkhMC/HFfA3qzN1NW1DaZMVJU6cBkaZuG6wto/wu7oM8Epl/ttCWAPEb\nx3uokRJDzohvTT3rqBugCfa1GRX38hVsKCwxG+JS26h8LM8z9OysNH0BAUsgv0sY\nESxOK/BlZXzD16LmKwYTpEyIuczqQPbn49hIqGx6UIDdLuBHSQccfEWdvFCPUg7R\n8dAH1kj2t4+ppvtcyMAZ3zLkMaZ4XWwNxGf6MStA4DgGgt4VS8FX0QFdGSA6RXvJ\nXlwFzgucl33hpg++had/K1zK5nHkL9rBR5ZMvXQVMbRzAI64Wmkfwj3VNanwMYU/\ntJzuYcaSeAKpOr/o41Iml1pv653vhK5ggy98bRmeTQHqsMvE6s25NUh7bEJwzzGT\n5JNCoD/njswt+0f5X64Cmq0aqt4t3VhwCmz0giBM2ypQic+wj37sHz4RL83rd/zj\nhtKYS1X3f33v7eNC1fjW\n=/PCd\n-----END PGP SIGNATURE-----",
+                "payload": "tree 352b47ea240aca14999848041f7c171e70ada6ef\nparent 95b6b43d634814c3ea81a350a9ab9c0b7d12457e\nauthor Jordan Harband <ljharb@gmail.com> 1684171269 -0700\ncommitter Jordan Harband <ljharb@gmail.com> 1684171269 -0700\n\n[eslint config] [*] [deps] update `object.entries`\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/0f3ca32323b8d5770de3301036e65511c6d18e00",
+        "html_url": "https://github.com/airbnb/javascript/commit/0f3ca32323b8d5770de3301036e65511c6d18e00",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/0f3ca32323b8d5770de3301036e65511c6d18e00/comments",
+        "author": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "95b6b43d634814c3ea81a350a9ab9c0b7d12457e",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/95b6b43d634814c3ea81a350a9ab9c0b7d12457e",
+                "html_url": "https://github.com/airbnb/javascript/commit/95b6b43d634814c3ea81a350a9ab9c0b7d12457e"
+            }
+        ]
+    },
+    {
+        "sha": "95b6b43d634814c3ea81a350a9ab9c0b7d12457e",
+        "node_id": "C_kwDOAGMovNoAKDk1YjZiNDNkNjM0ODE0YzNlYTgxYTM1MGE5YWI5YzBiN2QxMjQ1N2U",
+        "commit": {
+            "author": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-05-15T17:20:15Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-05-15T17:20:15Z"
+            },
+            "message": "[eslint-config] [*] [dev deps] update `@babel/runtime`",
+            "tree": {
+                "sha": "428e308440d0aa47d8eb05b89c8bb79ee6e99b7b",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/428e308440d0aa47d8eb05b89c8bb79ee6e99b7b"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/95b6b43d634814c3ea81a350a9ab9c0b7d12457e",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJkYmpBAAoJEJ9qaB4174tWlFkQAKhP8UWETbvQMNH3xg1qGqe7\nYlscDd87pEoc/ughJ2lBQeuPpveJULqlzm5MJbgj7nCMVBU3EMGJVQ04N9YmiXl+\ntk5CTCwESmPQIIGuygIQf144Gte4roSp+dtacx4w2RMC5bJ4wyTnA8wmPSGHXUqv\nPbz46tDvkCf0SecfE0oW7OXqm5Ge3LeEY7Dj6hEtgcuTlgWo9XtLLqiUFBf3JLA5\nSnyYaxHQKSCRpgjq3qMf1snRLPHNDmYsm8l85VElA6VkhB75wbAufmY/qnQu2ZO5\n8R/vzbDF0mEDulfh2KUmzC57A12P3WbnW3diV1rT8IEplGlCjVu2yIkv7wrAChTv\nZW5IE897EVsryup0uHAUEjr0T+1wpGo/femgEdo0ljLjKiocWNwj04VvKoISehrt\nGuEG1uE06Lpd0FLOm90az+v70hCB/r/G/QOcHqF5/bZgyB8SbuAhXjJvnLKO7KWZ\nzSA0kmpG80jbGPrUDn5izhYyA2fRg1m0g67LZrnhHYC2KiCMh5oS1oyvP8PCu8WB\nkAPITmOlBqTP6JZLAxugIT9jw3jHa2l8sWk7jHlm6ytdkk7wOz7KkPQ5UUP0RYF+\nB8SjxZbatQ47UC8Ow+11vxguliBgsiebESAmo1rMMNcnQ3kFoKwuR0NhIb2KhG6H\nw/6o6ZjWpVNT+8YfBy9U\n=cTVJ\n-----END PGP SIGNATURE-----",
+                "payload": "tree 428e308440d0aa47d8eb05b89c8bb79ee6e99b7b\nparent 240a3789db57dd285545e51d7484fcbc3cc2a3e1\nauthor Jordan Harband <ljharb@gmail.com> 1684171215 -0700\ncommitter Jordan Harband <ljharb@gmail.com> 1684171215 -0700\n\n[eslint-config] [*] [dev deps] update `@babel/runtime`\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/95b6b43d634814c3ea81a350a9ab9c0b7d12457e",
+        "html_url": "https://github.com/airbnb/javascript/commit/95b6b43d634814c3ea81a350a9ab9c0b7d12457e",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/95b6b43d634814c3ea81a350a9ab9c0b7d12457e/comments",
+        "author": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "240a3789db57dd285545e51d7484fcbc3cc2a3e1",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/240a3789db57dd285545e51d7484fcbc3cc2a3e1",
+                "html_url": "https://github.com/airbnb/javascript/commit/240a3789db57dd285545e51d7484fcbc3cc2a3e1"
+            }
+        ]
+    },
+    {
+        "sha": "240a3789db57dd285545e51d7484fcbc3cc2a3e1",
+        "node_id": "C_kwDOAGMovNoAKDI0MGEzNzg5ZGI1N2RkMjg1NTQ1ZTUxZDc0ODRmY2JjM2NjMmEzZTE",
+        "commit": {
+            "author": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-05-15T17:19:05Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-05-15T17:19:05Z"
+            },
+            "message": "[Dev Deps] update `markdownlint`, `markdownlint-cli`",
+            "tree": {
+                "sha": "d23e101362287e5752a6b4af4efe3fd33dff0fa7",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/d23e101362287e5752a6b4af4efe3fd33dff0fa7"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/240a3789db57dd285545e51d7484fcbc3cc2a3e1",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJkYmpBAAoJEJ9qaB4174tWnvkP/0KuwTMZoLmgndt1OehJXjZO\nE3Ugvq+eX+9/RmfHusxcDRQOXMbSWLAmBJTJaHLSZEkJC0iNhW/gY+VbexuLWQx5\nV5lpFn6efjVLGIeAZM7koADxZqJHyNKKKP9awuzoRrkSL+dvMKfztshmzIxT4RY6\nOFBZsKXQePhXT7uNf8mRf5TOf9wKtjGcHvt6wZKkNcrQ28VLCthqZp+CTZgu+eKP\nIbCA/l/3f4+jJz3xwnvy//0OZESRn4GwAvSSHTGWyvsZ5OARX9zRIAVGVqtLWJzo\n9Fot6m0bQWhvYyseVKTaYCiL7EA+37byXX4EXpnFp8lExlV0nbruf8C0sXT4IwqM\ndCQ6XYFBiGlbY7FGpJ1XtIUd7LZuSXLpDq52rPbDEaVwh64T6j5Z65G7c75bDYw8\ngtUnUFOavTARvTqhkqXxv89PeDPYXh5255QrBwUHFgzLqu/NFFknZGaIA3i/37Zg\nzM9/2vEB4ooIlsLFjttr/UheJAgZOSb40i/HFLjYIR/CnyipgRpNMsVpxeokU9Oo\nVBHmxiZDOq7s4QKzVJo1NmI60P6KJchIQwTjHipV6EehbjSegK0KDP4ffTpyvrCI\nIdf7zeglKFgu5IVOcPlA//JQL68is1rt1TQF2ooy6utwTIG79+FC5tchD6iQuY7l\nqgWIkXiq0QjK1UZBHLCZ\n=M5xk\n-----END PGP SIGNATURE-----",
+                "payload": "tree d23e101362287e5752a6b4af4efe3fd33dff0fa7\nparent 0e627e2fa32e16296e309af314eb3cdaae00de66\nauthor Jordan Harband <ljharb@gmail.com> 1684171145 -0700\ncommitter Jordan Harband <ljharb@gmail.com> 1684171145 -0700\n\n[Dev Deps] update `markdownlint`, `markdownlint-cli`\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/240a3789db57dd285545e51d7484fcbc3cc2a3e1",
+        "html_url": "https://github.com/airbnb/javascript/commit/240a3789db57dd285545e51d7484fcbc3cc2a3e1",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/240a3789db57dd285545e51d7484fcbc3cc2a3e1/comments",
+        "author": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0e627e2fa32e16296e309af314eb3cdaae00de66",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/0e627e2fa32e16296e309af314eb3cdaae00de66",
+                "html_url": "https://github.com/airbnb/javascript/commit/0e627e2fa32e16296e309af314eb3cdaae00de66"
+            }
+        ]
+    },
+    {
+        "sha": "0e627e2fa32e16296e309af314eb3cdaae00de66",
+        "node_id": "C_kwDOAGMovNoAKDBlNjI3ZTJmYTMyZTE2Mjk2ZTMwOWFmMzE0ZWIzY2RhYWUwMGRlNjY",
+        "commit": {
+            "author": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-05-15T17:15:59Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-05-15T17:15:59Z"
+            },
+            "message": "[readme] update eslint plugin repo URLs",
+            "tree": {
+                "sha": "a273dcbdae2b2e4a81fefe52c80e61389f22aa1e",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/a273dcbdae2b2e4a81fefe52c80e61389f22aa1e"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/0e627e2fa32e16296e309af314eb3cdaae00de66",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJkYmpBAAoJEJ9qaB4174tW9/MP/jL84wGlruHrnMrvwhh1HWeZ\nsEF4AW5QRAd9RNw3kI8T1GVh1Io4ZsHUp7lboF4+9nPfLvWBbD5IWJkNTUZ5KNJX\ndUPF8eIhgoNyyZm1AEQVz20e9hozJWOilt8OacqwHr+Yor2hWVMkUKD1HmY1hqni\nsNnGVPcUcrbYv7wzJWen7GXxP9LKsDoijfuDgU8Tm4h95evsSCk0f4GaCDNwGHMf\nz7bnxLfIna0V8OLDrI3MkEToP/c/aCtTTZZ/hLfQYoqj6w3bRG6ZuwVZfQyUcbOC\n94paarC96HggCoahlDPZSj0kuz3s3SkvqgpWaTJVCnXkykFfXnP5ZQ0rXpoyMyUW\n92efh3On97nOKVbv56NlzParrf730BTYKZKUVZO9pMGd6yoIIw+jfDvyggO04uWo\nMCI57RnSHCRZ6RLoT8QsFh3C3wQkfCr3oUNv5kfEVA0zypkzY5Jhu9qvNrG36yNe\nAf8Wv6y6Z4ctmnvz9+sWZnwg/1nwm4ZSrfEpjNzi/q6ZZ0KKBu4ISzG59wYI1zWg\nV0K3UIALBFhvp1RnLNyHrPhuoiCMfdDak5ftlwgF++KNWPW+Dv+uU7XZTYuTCQuM\nZyRdWYl7xdSX7un7n9PbPPNuJai6TngL8HSFbLz+QjwCViDRoPJl8QUhWyw/98gM\njKGgb8h8RgRX8v3XDzYt\n=N9od\n-----END PGP SIGNATURE-----",
+                "payload": "tree a273dcbdae2b2e4a81fefe52c80e61389f22aa1e\nparent 7982931ba745c0f57ba6934fc7e6cc43901dac76\nauthor Jordan Harband <ljharb@gmail.com> 1684170959 -0700\ncommitter Jordan Harband <ljharb@gmail.com> 1684170959 -0700\n\n[readme] update eslint plugin repo URLs\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/0e627e2fa32e16296e309af314eb3cdaae00de66",
+        "html_url": "https://github.com/airbnb/javascript/commit/0e627e2fa32e16296e309af314eb3cdaae00de66",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/0e627e2fa32e16296e309af314eb3cdaae00de66/comments",
+        "author": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "7982931ba745c0f57ba6934fc7e6cc43901dac76",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/7982931ba745c0f57ba6934fc7e6cc43901dac76",
+                "html_url": "https://github.com/airbnb/javascript/commit/7982931ba745c0f57ba6934fc7e6cc43901dac76"
+            }
+        ]
+    },
+    {
+        "sha": "7982931ba745c0f57ba6934fc7e6cc43901dac76",
+        "node_id": "C_kwDOAGMovNoAKDc5ODI5MzFiYTc0NWMwZjU3YmE2OTM0ZmM3ZTZjYzQzOTAxZGFjNzY",
+        "commit": {
+            "author": {
+                "name": "Christian Koop",
+                "email": "contact@sprax2013.de",
+                "date": "2023-05-02T17:45:36Z"
+            },
+            "committer": {
+                "name": "Christian Koop",
+                "email": "contact@sprax2013.de",
+                "date": "2023-05-02T17:49:09Z"
+            },
+            "message": "[readme] Updates ESLint rule in section 12.3 (exponentiation-operator)\n\nThe change itself has already been made in f3d3a075cda2acc02011e71991c10bb5b4a15278\n(tracked in/acording to https://github.com/airbnb/javascript/issues/2421#issuecomment-1371305010).\n\n\n#2421\nRemove Math.pow from `no-restricted-properties` and use `prefer-exponentiation-operator` instead.",
+            "tree": {
+                "sha": "78d423a328df02887d48dce60690617923a809fd",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/78d423a328df02887d48dce60690617923a809fd"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/7982931ba745c0f57ba6934fc7e6cc43901dac76",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCAAdFiEEnhIpGCXKZpYsoWxjiagYE4TgEKMFAmRRTRUACgkQiagYE4Tg\nEKOmvg//cKf/UCwhIuMPLpsvNzG4UJ4L4YrXaPeZ1s1+cDEQi+J7iVy4ALnsYLTF\nT2GHSiLlayS4rGxylnDldqTA/zypmJghtD1xH7cY/HAkF0jKbZYB/sZ9RQRAoTyx\nnG6d70p1ejRfJyDV5QohW6SOR88GkbIuuRGIBSNrwgbO7VGFDVZ7uFw+A1KgxoXT\n7QC6swwmcyk5iodhuYH7i/qkVGNSZoqqioQSdcQgwv5p2sgH5rm4crNgJbeHdTfo\nAWnIV/cm+732TsJwxSA8IRYaxVEBlWhdt/n2aohiLulkFD9owdaCBjnx/tOLC8YI\n0b9iGmTUlagS1lDlUaswjtEu2bBd6mdx6hSCdLhKI6XH8nE5ocambxvTjNc/20Ew\nGmFfpThdDhxpBNQT/9GK46yhfc+MZd0cmFqeD2tVnGmaj5ZSSNvZK3Z+9UtzrUUx\nSKeT0bw9VdvXCd+uQyvAPNhaiF4AmKouo7cFDMXeg6qD3gd32iuub5+ugmOg8eLd\nmrpDcOuHVYxExaPDHjW6yIPyXJDaVNnkpwYCQns5p3gpwAKzLioRpJzq3kZdHzBq\nRrZJjRkLLHN5Rh02vI/yBgCw3Zo6EzCsMs5tbtHaUGm2RsrIZ2HYTe2tAlTTb7Nj\n+YTLhxmKgm9kPc4h4WUecWhnbhTbl9jwEuZXKlIxrLPZKR1Dgwc=\n=Jns9\n-----END PGP SIGNATURE-----",
+                "payload": "tree 78d423a328df02887d48dce60690617923a809fd\nparent 69fc1bf1953a9113f30f07ef93b69caaf498c689\nauthor Christian Koop <contact@sprax2013.de> 1683049536 +0200\ncommitter Christian Koop <contact@sprax2013.de> 1683049749 +0200\n\n[readme] Updates ESLint rule in section 12.3 (exponentiation-operator)\n\nThe change itself has already been made in f3d3a075cda2acc02011e71991c10bb5b4a15278\n(tracked in/acording to https://github.com/airbnb/javascript/issues/2421#issuecomment-1371305010).\n\n\n#2421\nRemove Math.pow from `no-restricted-properties` and use `prefer-exponentiation-operator` instead.\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/7982931ba745c0f57ba6934fc7e6cc43901dac76",
+        "html_url": "https://github.com/airbnb/javascript/commit/7982931ba745c0f57ba6934fc7e6cc43901dac76",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/7982931ba745c0f57ba6934fc7e6cc43901dac76/comments",
+        "author": {
+            "login": "SpraxDev",
+            "id": 7331598,
+            "node_id": "MDQ6VXNlcjczMzE1OTg=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/7331598?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/SpraxDev",
+            "html_url": "https://github.com/SpraxDev",
+            "followers_url": "https://api.github.com/users/SpraxDev/followers",
+            "following_url": "https://api.github.com/users/SpraxDev/following{/other_user}",
+            "gists_url": "https://api.github.com/users/SpraxDev/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/SpraxDev/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/SpraxDev/subscriptions",
+            "organizations_url": "https://api.github.com/users/SpraxDev/orgs",
+            "repos_url": "https://api.github.com/users/SpraxDev/repos",
+            "events_url": "https://api.github.com/users/SpraxDev/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/SpraxDev/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "SpraxDev",
+            "id": 7331598,
+            "node_id": "MDQ6VXNlcjczMzE1OTg=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/7331598?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/SpraxDev",
+            "html_url": "https://github.com/SpraxDev",
+            "followers_url": "https://api.github.com/users/SpraxDev/followers",
+            "following_url": "https://api.github.com/users/SpraxDev/following{/other_user}",
+            "gists_url": "https://api.github.com/users/SpraxDev/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/SpraxDev/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/SpraxDev/subscriptions",
+            "organizations_url": "https://api.github.com/users/SpraxDev/orgs",
+            "repos_url": "https://api.github.com/users/SpraxDev/repos",
+            "events_url": "https://api.github.com/users/SpraxDev/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/SpraxDev/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "69fc1bf1953a9113f30f07ef93b69caaf498c689",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/69fc1bf1953a9113f30f07ef93b69caaf498c689",
+                "html_url": "https://github.com/airbnb/javascript/commit/69fc1bf1953a9113f30f07ef93b69caaf498c689"
+            }
+        ]
+    },
+    {
+        "sha": "69fc1bf1953a9113f30f07ef93b69caaf498c689",
+        "node_id": "C_kwDOAGMovNoAKDY5ZmMxYmYxOTUzYTkxMTNmMzBmMDdlZjkzYjY5Y2FhZjQ5OGM2ODk",
+        "commit": {
+            "author": {
+                "name": "Felipe Garcia Diaz",
+                "email": "41710468+felipeGarciaDiaz@users.noreply.github.com",
+                "date": "2023-04-28T07:33:28Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2023-04-28T07:33:28Z"
+            },
+            "message": "spell checking, fixed grammar error.",
+            "tree": {
+                "sha": "9e019a48ad27dcddc62e5764927556c9a83cd644",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/9e019a48ad27dcddc62e5764927556c9a83cd644"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/69fc1bf1953a9113f30f07ef93b69caaf498c689",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJkS3bJCRBK7hj4Ov3rIwAA0oIIAGB/czc6H36gCMo7APb2TNlk\nWyxFduscIELG6v336Euj2ylP6DyKkyhWGpJtb0BqdYz9hmEvEhDMaSfcbVAX4zXj\nk3BRTjytWTcf6H+Wla1TNfgb3GBHVkFmaYfSMMu1+kEXQNkfybNSX7FCJWb6gr/C\nrHyRRWxCtDBCt41b4OhNNYLikrk4MYPvZZUinxPHTfKmo/BqQoT2Qk0cMlDmx89i\nmURajHCEaVwXbRQTru6vEldYLNrGqO8ygM94uVLwJGV6+GkSBzDBczmnXAjYQqa4\nd5areCxDZrYVyBhdHPZ05+MkSqaP424aE/lk8gMf3wRXyB8Rld3+RNbpVUioVR0=\n=8Jyo\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 9e019a48ad27dcddc62e5764927556c9a83cd644\nparent 5c01a1094986c4dd50a6ee4d9f7617abdfabb58a\nauthor Felipe Garcia Diaz <41710468+felipeGarciaDiaz@users.noreply.github.com> 1682667208 -0400\ncommitter GitHub <noreply@github.com> 1682667208 -0400\n\nspell checking, fixed grammar error."
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/69fc1bf1953a9113f30f07ef93b69caaf498c689",
+        "html_url": "https://github.com/airbnb/javascript/commit/69fc1bf1953a9113f30f07ef93b69caaf498c689",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/69fc1bf1953a9113f30f07ef93b69caaf498c689/comments",
+        "author": {
+            "login": "felipeGarciaDiaz",
+            "id": 41710468,
+            "node_id": "MDQ6VXNlcjQxNzEwNDY4",
+            "avatar_url": "https://avatars.githubusercontent.com/u/41710468?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/felipeGarciaDiaz",
+            "html_url": "https://github.com/felipeGarciaDiaz",
+            "followers_url": "https://api.github.com/users/felipeGarciaDiaz/followers",
+            "following_url": "https://api.github.com/users/felipeGarciaDiaz/following{/other_user}",
+            "gists_url": "https://api.github.com/users/felipeGarciaDiaz/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/felipeGarciaDiaz/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/felipeGarciaDiaz/subscriptions",
+            "organizations_url": "https://api.github.com/users/felipeGarciaDiaz/orgs",
+            "repos_url": "https://api.github.com/users/felipeGarciaDiaz/repos",
+            "events_url": "https://api.github.com/users/felipeGarciaDiaz/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/felipeGarciaDiaz/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "5c01a1094986c4dd50a6ee4d9f7617abdfabb58a",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/5c01a1094986c4dd50a6ee4d9f7617abdfabb58a",
+                "html_url": "https://github.com/airbnb/javascript/commit/5c01a1094986c4dd50a6ee4d9f7617abdfabb58a"
+            }
+        ]
+    },
+    {
+        "sha": "5c01a1094986c4dd50a6ee4d9f7617abdfabb58a",
+        "node_id": "C_kwDOAGMovNoAKDVjMDFhMTA5NDk4NmM0ZGQ1MGE2ZWU0ZDlmNzYxN2FiZGZhYmI1OGE",
+        "commit": {
+            "author": {
+                "name": "syedmouaazfarrukh",
+                "email": "97732099+syedmouaazfarrukh@users.noreply.github.com",
+                "date": "2023-02-07T19:17:51Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-02-07T19:17:51Z"
+            },
+            "message": "[readme] added JavaScript Roadmap link",
+            "tree": {
+                "sha": "e50e70a87baff48be76f68d4b3b764149ba33e28",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/e50e70a87baff48be76f68d4b3b764149ba33e28"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/5c01a1094986c4dd50a6ee4d9f7617abdfabb58a",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJj5J9tAAoJEJ9qaB4174tWoS0P/A+0/4R1krY1DaTdeMfXhBih\nZCFGf4iDZ0vV+PBjqQk4pF9PQYHBcyyMB/jvcPWpEdcf/3LlqVM7rBZlYZApA7E4\nW4dlHB+q1Ai98vXTL6Rs23R1RQZ9iIN/AgUrUN/h/KmUzvyOkGjWPmMCg7hFPn3h\nlauS+o9HcvJLBprkmpPAUJ7NcXu39MgMH11kaDnacVSYeUBPLsZybU6jGAaPbcL9\nNysgx19T0DPEHRLUdcXaUqpVT/cYpqA1v4o4aMOnQmfNrCrkDI3ROJEDaUcSVfjd\n0SX3fa+B526mzlJpijWtG9OlzmfsJnv3El6UWZsJGBY927KZ9eGKf0rs4zOxNh+V\nUETYEfO6PwPpgLnaNraYlZsSxA2BMF0X8GLUAFAiqH0eOtF0rY/wLxuXsDf0WJpa\ntNNm7AvcdIKmWAPTVCWZopLHYgcgTBjbKzR5feAI2hcBjdBeCZW+HRbSSZaz06yj\neCm+F3SGhNytpcqEiHs8sfDxfoy2KWgUNJxjcwjVaB7iDr/YfcNU2sC8fbAX7gEe\nVoCukq7AHQVG14zJnx+nC/+Q7yWujwXj4q26PrHxYtf4TC+SxZq661dEDQtaY13C\nWIYrSarmHrRVYJn4hlGlrlbynMtAIw9NaTgDwxqT2gddB9dXb+CuRIcAFsMA+vaz\n0DuQBHpEFuIY38blrlDS\n=FgPi\n-----END PGP SIGNATURE-----",
+                "payload": "tree e50e70a87baff48be76f68d4b3b764149ba33e28\nparent bf536566cee0b7f239e00f105ca422bb95be2d62\nauthor syedmouaazfarrukh <97732099+syedmouaazfarrukh@users.noreply.github.com> 1675797471 -0800\ncommitter Jordan Harband <ljharb@gmail.com> 1675797471 -0800\n\n[readme] added JavaScript Roadmap link\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/5c01a1094986c4dd50a6ee4d9f7617abdfabb58a",
+        "html_url": "https://github.com/airbnb/javascript/commit/5c01a1094986c4dd50a6ee4d9f7617abdfabb58a",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/5c01a1094986c4dd50a6ee4d9f7617abdfabb58a/comments",
+        "author": {
+            "login": "syedmouaazfarrukh",
+            "id": 97732099,
+            "node_id": "U_kgDOBdNGAw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/97732099?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/syedmouaazfarrukh",
+            "html_url": "https://github.com/syedmouaazfarrukh",
+            "followers_url": "https://api.github.com/users/syedmouaazfarrukh/followers",
+            "following_url": "https://api.github.com/users/syedmouaazfarrukh/following{/other_user}",
+            "gists_url": "https://api.github.com/users/syedmouaazfarrukh/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/syedmouaazfarrukh/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/syedmouaazfarrukh/subscriptions",
+            "organizations_url": "https://api.github.com/users/syedmouaazfarrukh/orgs",
+            "repos_url": "https://api.github.com/users/syedmouaazfarrukh/repos",
+            "events_url": "https://api.github.com/users/syedmouaazfarrukh/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/syedmouaazfarrukh/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "bf536566cee0b7f239e00f105ca422bb95be2d62",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/bf536566cee0b7f239e00f105ca422bb95be2d62",
+                "html_url": "https://github.com/airbnb/javascript/commit/bf536566cee0b7f239e00f105ca422bb95be2d62"
+            }
+        ]
+    },
+    {
+        "sha": "bf536566cee0b7f239e00f105ca422bb95be2d62",
+        "node_id": "C_kwDOAGMovNoAKGJmNTM2NTY2Y2VlMGI3ZjIzOWUwMGYxMDVjYTQyMmJiOTViZTJkNjI",
+        "commit": {
+            "author": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-02-09T06:59:18Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-02-09T06:59:18Z"
+            },
+            "message": "[eslint config] [deps] update `eslint-plugin-react`, `eslint-plugin-jsx-a11y`",
+            "tree": {
+                "sha": "8cc97b530580081bf7d8c7a9f325500729007504",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/8cc97b530580081bf7d8c7a9f325500729007504"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/bf536566cee0b7f239e00f105ca422bb95be2d62",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJj5J9tAAoJEJ9qaB4174tWMdkQAJ8ywmGZW5XSvc8JtxcpfOTh\n3wUTrWIc4IRT4jQpW12Jrp4VyuA7Xsn/ZOFbBaTCGBAMPkaWQO55u36ILmIUhjQG\nNdqw6ThHnDGRfZCgDxGhXzZApDpcPnv7zlM8pesn+prSsb7XF6qm5QCM+eqhaLLS\nmNor3pDqmrDBzkiNtObO7f8vchjY+N+CBLEbcfTeS/DOYfdUFmvINZVNqsyoYisH\nMoe9p3AosrXIR6v+pxDGDPW535L1tqM+63KeGT6ErMIBBIboY5h8X/Z+lcak6u23\nwJkOrWIJz9JCfwe8ZSdiLGz63d9HQuyhRRGByMAzNTIxqdu8yQpWIqn5ToxGrtpn\nGXFGH+rRGzw2zEvg7ZTo6utu1OHCB+J2g1HBFL6zrIXeXAzZn5PSu7Yk0vtHIBIj\nFbh3yyLghEE4wIsA7nEKlCqtvQMhDyIhRCQurwGeqAItuamZ1OCCw5W8FfID3XEJ\nGzRvJ5yF4FBvGaUV1z5rSzCroVKN7Nptsh3CCkRRmsKLgqyWKHkCjEMsUq+wUsMy\nlnypoL2XrklSElzWwoCTMY1Pukt49Eadoyl58AiKdohgcorcwIPkULx+POjHrXd0\nYFQ7+xnc7xy6OHfReaEDcwp+2+8CL6iji3APkoSYYYG2lDyaSMM2NmRupyFibKTf\n2BfBxQ1XMVp87kBJWrtQ\n=9kYV\n-----END PGP SIGNATURE-----",
+                "payload": "tree 8cc97b530580081bf7d8c7a9f325500729007504\nparent 917c8d92a30db5bc35ddef85ec417f1aad0dc2c1\nauthor Jordan Harband <ljharb@gmail.com> 1675925958 -0800\ncommitter Jordan Harband <ljharb@gmail.com> 1675925958 -0800\n\n[eslint config] [deps] update `eslint-plugin-react`, `eslint-plugin-jsx-a11y`\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/bf536566cee0b7f239e00f105ca422bb95be2d62",
+        "html_url": "https://github.com/airbnb/javascript/commit/bf536566cee0b7f239e00f105ca422bb95be2d62",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/bf536566cee0b7f239e00f105ca422bb95be2d62/comments",
+        "author": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "917c8d92a30db5bc35ddef85ec417f1aad0dc2c1",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/917c8d92a30db5bc35ddef85ec417f1aad0dc2c1",
+                "html_url": "https://github.com/airbnb/javascript/commit/917c8d92a30db5bc35ddef85ec417f1aad0dc2c1"
+            }
+        ]
+    },
+    {
+        "sha": "917c8d92a30db5bc35ddef85ec417f1aad0dc2c1",
+        "node_id": "C_kwDOAGMovNoAKDkxN2M4ZDkyYTMwZGI1YmMzNWRkZWY4NWVjNDE3ZjFhYWQwZGMyYzE",
+        "commit": {
+            "author": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-02-09T06:19:53Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-02-09T06:19:53Z"
+            },
+            "message": "[*] [deps] update `eslint-plugin-import`",
+            "tree": {
+                "sha": "e85597481f54871d22755457e97ba64a6627ada6",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/e85597481f54871d22755457e97ba64a6627ada6"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/917c8d92a30db5bc35ddef85ec417f1aad0dc2c1",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJj5J9tAAoJEJ9qaB4174tW5wsP/jwPHfE6oDkFh4/P9uoYgzzg\n+LAWaW+6dUF9+Izm+0rYp+5DDM6qVyMPyomd4NnAkc9pTxTViNnLEFB2Puuj71PX\n7hTHnxXRmHrDPmmPHQ+9mg2dZHXkzHXjrrVjMbutg6U3z6wldhEQbqQu+ZneR8A3\nabEziks3ZMnNz4JPsBFiDTsPa+pMc00L9UXjVpjEcWj4DwImbT5u1boc690tykwA\notXb11FRhw3fJWfaV9MmJpr/GuteMrnOtapfy0kkSTZpgq+Efn2V5xAwweXzonRS\n5ddPHUfBTh5o1YX6aw1OdL6YzQeL6gQ4xfGsEZRu7qi1b7Jb7XunC5BRshC4W+4/\n0VY5m5BamN9rsl1juB7lzFnMU5lk8PaQW6hXRg0HnJEGIaf7uCrotttg/WNaL2BC\nZp5J0y18smkHbEJl0CzKqcpJ5VnzglEWfraj6yBv/oCehlFHJy88OoyY81zyIP/1\nYe7xYks4Zra+TiR+sFVAxraiMvwWgIy9JT8DSjlpDjG/DQov+b3BuJVzE0+UorNr\nQNzloZj6rc3A05JcOZ7j3Gam88weVtVtuV97gokZulJc/QdsqiMUBY+AwTlCJpZJ\nMOFFRPqnwwIjbAhqOCF4PIxeB7bvrMmU+0zo/hNM8e2sWVJ/Ye/1hNdpBoPhhKlW\n18T2C2RgD0rCI5b0ZoF0\n=1Gz1\n-----END PGP SIGNATURE-----",
+                "payload": "tree e85597481f54871d22755457e97ba64a6627ada6\nparent 8091e39343b86ccc8524ed068cd218a3fd928105\nauthor Jordan Harband <ljharb@gmail.com> 1675923593 -0800\ncommitter Jordan Harband <ljharb@gmail.com> 1675923593 -0800\n\n[*] [deps] update `eslint-plugin-import`\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/917c8d92a30db5bc35ddef85ec417f1aad0dc2c1",
+        "html_url": "https://github.com/airbnb/javascript/commit/917c8d92a30db5bc35ddef85ec417f1aad0dc2c1",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/917c8d92a30db5bc35ddef85ec417f1aad0dc2c1/comments",
+        "author": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "8091e39343b86ccc8524ed068cd218a3fd928105",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/8091e39343b86ccc8524ed068cd218a3fd928105",
+                "html_url": "https://github.com/airbnb/javascript/commit/8091e39343b86ccc8524ed068cd218a3fd928105"
+            }
+        ]
+    },
+    {
+        "sha": "8091e39343b86ccc8524ed068cd218a3fd928105",
+        "node_id": "C_kwDOAGMovNoAKDgwOTFlMzkzNDNiODZjY2M4NTI0ZWQwNjhjZDIxOGEzZmQ5MjgxMDU",
+        "commit": {
+            "author": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-02-09T06:11:42Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2023-02-09T06:11:42Z"
+            },
+            "message": "[*] [dev deps] update `@babel/runtime`, `tape`",
+            "tree": {
+                "sha": "10e0effb02425323dab07eecb3e163d9113357ab",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/10e0effb02425323dab07eecb3e163d9113357ab"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/8091e39343b86ccc8524ed068cd218a3fd928105",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJj5J9tAAoJEJ9qaB4174tW8gYP/0/jKhVj3TpXR76t3IfN6FOm\n5xav78wx8dtgQgUGiBTb2zMGGZOcRph+u5yTGovuUDLmnxNaSW8J8RXja0TQ28cs\nIB2KB3W6AGhrypilOCWZc+tIkNZgE14aZGNMABvPq5cO7oFAwSsM+09AVAhU5pti\nMuXAv8VLxLcTW7ayI2IZ2QUInNP352WBAJ4DxgLkJ4qwBVb0oUuQzZ50SiEfjAZW\nxz+J9m1DDVdTV0b00caUjXVsskmiEmRH+rVE62VYdZj9X6W2jeVKCA1RclXFThxp\nW5R45oxF7GlO4W0oEN44WwqUKK4qcjC+OVeNYeqCgg9bDX3BNjxp+GRO6wqV/gdr\nPyFQym8r8P86Q6YwzPQXS7hUHKUd3cLkcKeV8KGEebK1rxaGZ4X5MOui8h5+xaV5\nO4dzsAdpMj/22nr7crm5ZpSqqqf1mTnOFsfVhtOylD58BGLNiyo8hx/9J4mtCVpK\nmLXpJPEw0BeNGtt+OOtV3dnb2xJ5fdQ+WtR3mJst0WFhwdVSCz661U0JpQrHP4Yy\n2EjHwc7iDJ3lCnKT8TDf66MqpmSlAFlMEffCx3i177exuxf5hLA2ZtS8PKR78axP\nr82TMgQbKrspO82k/Fp4UupFhER7W4dxyP3n7Bm/gOvamT+NU5+t5dELs8CKzz0b\naELlo2+hFxqPM5xgn5Tu\n=78nq\n-----END PGP SIGNATURE-----",
+                "payload": "tree 10e0effb02425323dab07eecb3e163d9113357ab\nparent fd96a4fd57be26d4d9d2f2d24b373a2df7c23548\nauthor Jordan Harband <ljharb@gmail.com> 1675923102 -0800\ncommitter Jordan Harband <ljharb@gmail.com> 1675923102 -0800\n\n[*] [dev deps] update `@babel/runtime`, `tape`\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/8091e39343b86ccc8524ed068cd218a3fd928105",
+        "html_url": "https://github.com/airbnb/javascript/commit/8091e39343b86ccc8524ed068cd218a3fd928105",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/8091e39343b86ccc8524ed068cd218a3fd928105/comments",
+        "author": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "fd96a4fd57be26d4d9d2f2d24b373a2df7c23548",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/fd96a4fd57be26d4d9d2f2d24b373a2df7c23548",
+                "html_url": "https://github.com/airbnb/javascript/commit/fd96a4fd57be26d4d9d2f2d24b373a2df7c23548"
+            }
+        ]
+    },
+    {
+        "sha": "fd96a4fd57be26d4d9d2f2d24b373a2df7c23548",
+        "node_id": "C_kwDOAGMovNoAKGZkOTZhNGZkNTdiZTI2ZDRkOWQyZjJkMjRiMzczYTJkZjdjMjM1NDg",
+        "commit": {
+            "author": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-12-30T22:48:36Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-12-30T22:48:36Z"
+            },
+            "message": "[eslint config] [*] [refactor] use object spread instead of `Object.assign`",
+            "tree": {
+                "sha": "9299cd9f61423768a1f1c49911a1b4fbb9ba65e5",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/9299cd9f61423768a1f1c49911a1b4fbb9ba65e5"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/fd96a4fd57be26d4d9d2f2d24b373a2df7c23548",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjr2rEAAoJEJ9qaB4174tWrvMP/16x6ZoAP1ehnV4XzeScmjtW\nXSL6dGo0cFtKV9GO4bIlet6+WzLJNtD2W1oH2f5szW8WgM7SpkZ9LeaLMhJQbKiU\niswoEfpu6lte/852KHSbvq5krUe0ah4OnrpDUj0fA0eBp4NIx5m/t9gQKC31b2yd\noHxoMH3jagD3vE9NB5E/6bVwtaZhjbuhC/5G4WqqDUT79ut41jp+mUJvauLOseD4\nJmkvCDAsTZR55EFoUvk4eq1+n6bJ/u+trLlkF3bFd6jGkldFKhNOQyJEHAoddDdY\n1nVAZ5b19dXtsxmaPs9JBGul0Q/UT+gg5r+IFQ6Zeo3E5bgVVk+PXcYLM/VtIZEe\nwTyaYQIxg8XO2Ff812cFz1dgmFGLtmaLDBXWU9zajOsL/yu3nyJSEJ3vHClU6lUj\nfwwQ+v1pGLbGW+QDH57Ve/cXQKm4Nu9U0omTfnW/3CBllvQoQ9OgEMvKsSJqEHKs\nBqXF7uEwl8MgJwCZXP8V6Dy/aG6fiISrOUh9wBCBNeHAVuR4SKQLAzNYtIjlKudB\n0ugeT6K0LVP2RUBvAxjIxO00L/88bIsRl+X/3oQR1bkvevkiuFtxUu/Dfj8Tdlwn\nccl9RhYQ50vI0g6wykBhjk+YgXYIDql7rCQUyWsCjXE3jnqoKffe6NGZkgZs/3IY\naRdAZGs3IGq+XhTtF62W\n=Kkuw\n-----END PGP SIGNATURE-----",
+                "payload": "tree 9299cd9f61423768a1f1c49911a1b4fbb9ba65e5\nparent 81157eec2309449b31f36bf8940493623f2530c6\nauthor Jordan Harband <ljharb@gmail.com> 1672440516 -0800\ncommitter Jordan Harband <ljharb@gmail.com> 1672440516 -0800\n\n[eslint config] [*] [refactor] use object spread instead of `Object.assign`\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/fd96a4fd57be26d4d9d2f2d24b373a2df7c23548",
+        "html_url": "https://github.com/airbnb/javascript/commit/fd96a4fd57be26d4d9d2f2d24b373a2df7c23548",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/fd96a4fd57be26d4d9d2f2d24b373a2df7c23548/comments",
+        "author": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "81157eec2309449b31f36bf8940493623f2530c6",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/81157eec2309449b31f36bf8940493623f2530c6",
+                "html_url": "https://github.com/airbnb/javascript/commit/81157eec2309449b31f36bf8940493623f2530c6"
+            }
+        ]
+    },
+    {
+        "sha": "81157eec2309449b31f36bf8940493623f2530c6",
+        "node_id": "C_kwDOAGMovNoAKDgxMTU3ZWVjMjMwOTQ0OWIzMWYzNmJmODk0MDQ5MzYyM2YyNTMwYzY",
+        "commit": {
+            "author": {
+                "name": "Mustafa UZUN",
+                "email": "mustafa.uzun@std.izmirekonomi.edu.tr",
+                "date": "2022-11-17T17:15:09Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-11-17T17:15:09Z"
+            },
+            "message": "[guide] add `Object.hasOwn`",
+            "tree": {
+                "sha": "e57a86d68c16d0f8aed1316311c2d7749c3b8909",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/e57a86d68c16d0f8aed1316311c2d7749c3b8909"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/81157eec2309449b31f36bf8940493623f2530c6",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjj4sbAAoJEJ9qaB4174tWqjQP/A48abkYVWhEJXzeS7Qt7wGp\n1sTtd+sQQbSTb4u5cry9mcMr6h7IVRyk9IEjpOPXcCfZup0gwIFVOLxvvxuSS2zB\nlqoSDcKf1fEAJSZy49ov/wbIgUcuonJBCGrPr6Nsq2VquQKTRzFpm2o/oYdLElou\ndO9k/12c0EGonFVOByS7gXRGCehfwh7fUrL5JbSmaDIJUSpaiTnU8flC4HaDcOaY\ngColZ6joaUWI8z9tJSqe4ciqitmC9DvrXHOIMNALZZoe+bKRTx3mYxygyIPKTgpG\neAO5erzM0kfP7TcLMmbpAMWUT5sDaYnAgZ4jJ+wqKk7hvTbwKVYnbllMNbAaVwwi\ndiZbrtMdqvReibeI2c4T4ayIPobN81IjdJzVsAaqVI5KbTMm49VOgUUHYH6eATTy\nffTHmOXEOErQQMDVgJKSUKZ7lveEt/5XX36iCljhBXgrPPRLSIqeSpGtPVtrpRai\nt6htm4YWk3/u1+cIzY29L0BBBxxUt7knNIQIlzPHNiz4gGu93XZ9yIjwrhwQSTyX\nvMzGPE3Cvhgk8v+mdcke1iR5B9pIIP+D7HhPBAmT7bGm3tor4o0cr+N5TiVFodh7\nq/3FAAHRvTfZxrfh6FohVTbeBJdRLl6fUBSmys7iYjRLTP6M9BxOPzKagx9Y0NH3\nvGeDUrZMprzkAWji2SnJ\n=NsFO\n-----END PGP SIGNATURE-----",
+                "payload": "tree e57a86d68c16d0f8aed1316311c2d7749c3b8909\nparent 4ef69edc633972a559cb7418e8aee8172cc9fbad\nauthor Mustafa UZUN <mustafa.uzun@std.izmirekonomi.edu.tr> 1668705309 +0300\ncommitter Jordan Harband <ljharb@gmail.com> 1668705309 +0300\n\n[guide] add `Object.hasOwn`\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/81157eec2309449b31f36bf8940493623f2530c6",
+        "html_url": "https://github.com/airbnb/javascript/commit/81157eec2309449b31f36bf8940493623f2530c6",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/81157eec2309449b31f36bf8940493623f2530c6/comments",
+        "author": null,
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "4ef69edc633972a559cb7418e8aee8172cc9fbad",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/4ef69edc633972a559cb7418e8aee8172cc9fbad",
+                "html_url": "https://github.com/airbnb/javascript/commit/4ef69edc633972a559cb7418e8aee8172cc9fbad"
+            }
+        ]
+    },
+    {
+        "sha": "4ef69edc633972a559cb7418e8aee8172cc9fbad",
+        "node_id": "C_kwDOAGMovNoAKDRlZjY5ZWRjNjMzOTcyYTU1OWNiNzQxOGU4YWVlODE3MmNjOWZiYWQ",
+        "commit": {
+            "author": {
+                "name": "Mert Can Alt\u0131n",
+                "email": "mertgold60@gmail.com",
+                "date": "2022-12-03T21:32:01Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-12-03T21:32:01Z"
+            },
+            "message": "[Tests] refactor test paths",
+            "tree": {
+                "sha": "5e52d1d098d49dc7ee672fd82525ddd0147fb832",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/5e52d1d098d49dc7ee672fd82525ddd0147fb832"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/4ef69edc633972a559cb7418e8aee8172cc9fbad",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJji83rAAoJEJ9qaB4174tWVDIP/0bFMF1zrndRKPeSRIvi7kB8\nxQjcmxyg+wN3mnJ3+XHvYCWzDg3bGondMZKLR/pGR5TSDzvh8qPF4JlbGzPdE9Wd\nphEqHgd0pdaKn+YmRC+sO3jf7UDEq7SPSgu7JEvHJZRYVh6STfmtRJqaJWFpBqCz\n+8ZbF23haE/uT3kh6Kux6Ct5kJkp3fVA1oLr+0NSMY3VtSkxg8jS6PKoXAY+0FHd\nQNFLa7+egr8iLzsMzT42N1ADzXERhEqlFDUDZipr1ihufZCrUgqKsCFYwR7LfMqB\nMyBwWlV4dEQB24hoSnvqim3Jc+B54BTdIt+JQwpc4/wybsU2QyFXz3UPss/iYc2A\nExISB+A92F/CXCOF9kWHD6qgzn0xeWmIknyTxHZx0Q3af9OyZFHRifR8u9sf0kVt\nXy7eUjNYdhxUEpo9PeGVqtBu4pcyE8KE3aZW0ekFqplPYb/qEaZMDh6cZeoT/xWs\n3hsyQ1mwmCu6s7WH8XGtKkzm6KXElKTP6j9ePDYvjfbK4jKLXt6U0I7tHd7OUR5x\nneWQwUE4ZHl/8yTrqU3oT2g7FRrvUtKSlXTzZ7f1X0G0XpAI9EZnO15WqrpzCjJE\n/BY6o6q3zDNBLBHqE88hucpggPMjxtD224nvkTWLw2ukAgHT1ID1TZg7pUEdRURD\ntizYqnZcBpqQ6isgunRG\n=AdW/\n-----END PGP SIGNATURE-----",
+                "payload": "tree 5e52d1d098d49dc7ee672fd82525ddd0147fb832\nparent d60170173096486bde4eff320a22148e79acff48\nauthor Mert Can Alt\u0131n <mertgold60@gmail.com> 1670103121 +0300\ncommitter Jordan Harband <ljharb@gmail.com> 1670103121 +0300\n\n[Tests] refactor test paths\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/4ef69edc633972a559cb7418e8aee8172cc9fbad",
+        "html_url": "https://github.com/airbnb/javascript/commit/4ef69edc633972a559cb7418e8aee8172cc9fbad",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/4ef69edc633972a559cb7418e8aee8172cc9fbad/comments",
+        "author": {
+            "login": "mertcanaltin",
+            "id": 37827216,
+            "node_id": "MDQ6VXNlcjM3ODI3MjE2",
+            "avatar_url": "https://avatars.githubusercontent.com/u/37827216?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/mertcanaltin",
+            "html_url": "https://github.com/mertcanaltin",
+            "followers_url": "https://api.github.com/users/mertcanaltin/followers",
+            "following_url": "https://api.github.com/users/mertcanaltin/following{/other_user}",
+            "gists_url": "https://api.github.com/users/mertcanaltin/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/mertcanaltin/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/mertcanaltin/subscriptions",
+            "organizations_url": "https://api.github.com/users/mertcanaltin/orgs",
+            "repos_url": "https://api.github.com/users/mertcanaltin/repos",
+            "events_url": "https://api.github.com/users/mertcanaltin/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/mertcanaltin/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "d60170173096486bde4eff320a22148e79acff48",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/d60170173096486bde4eff320a22148e79acff48",
+                "html_url": "https://github.com/airbnb/javascript/commit/d60170173096486bde4eff320a22148e79acff48"
+            }
+        ]
+    },
+    {
+        "sha": "d60170173096486bde4eff320a22148e79acff48",
+        "node_id": "C_kwDOAGMovNoAKGQ2MDE3MDE3MzA5NjQ4NmJkZTRlZmYzMjBhMjIxNDhlNzlhY2ZmNDg",
+        "commit": {
+            "author": {
+                "name": "Mustafa UZUN",
+                "email": "mustafa.uzun@std.izmirekonomi.edu.tr",
+                "date": "2022-10-29T23:00:29Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-10-29T23:00:29Z"
+            },
+            "message": "[readme] wayback machine, or remove, broken links",
+            "tree": {
+                "sha": "02f1f84435f1e22d980b95930b580597d52664c8",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/02f1f84435f1e22d980b95930b580597d52664c8"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/d60170173096486bde4eff320a22148e79acff48",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjdrB3AAoJEJ9qaB4174tW2OkP/RzD3gNTb/JLqZMpAFBEVpYq\n5hDv95oIVsT5wY0LDscw60fb/kkf1zkfkSXL7oxcfheooEjOW2cFfKSM9UJgekUo\ncd6yjqRaQZA9FvuklFhm84YonNy6Cjro29g0ul3+XhM/m0AA85epP81WIj+wahgS\n5bxmw2056UWD3QUJ75v5zMsvpYDfCtZ6X8+bb5bgdGl0z2a6LjQ+KDNJuPS5XsTV\nVWA4b9bzrAm1yRiXYnd+oF7eRcKXbgipgq65rZIpykEsZhy/rNXiSOJnl5kB+Owm\nfoMSwarK4upjo0KVAGnVCAiA4l/m4H15grBpXOWRjZWWOz6+HmRT9wu/jlZQcQST\nOGmVCrfoxS/Qhy7FG1VwOZqSWNi5lUsA89sFz/BYxIioLdRhsX419ZmkCUcDc6Zh\njenLltlhj1H5wtFU1wyjQNDv/Z8RFwBT0roTkcQ/SsJ8UHEpJoOdiSqS1T5u5miF\nFGJ96qw3LF2HsKa1F3v9XHDPTK45rEf0od5yRGkmw+VAoZS2baNa/YZupC9rcex8\nJ1le/FgPd6yA2OyhSQ/WwhCzuVQM/HLYbK2d/wg+ZNmHOyTVPNUW/tkUK6Sp8rMf\nknj/0IjY33tOhqJAb1k29jlPCJ7EBPfYxwpUBGxir+IX3/55LrLl/wTLpSrdhac1\n64aViyHUlJTwmulvjr1l\n=xOoj\n-----END PGP SIGNATURE-----",
+                "payload": "tree 02f1f84435f1e22d980b95930b580597d52664c8\nparent 49d08a2f134f4d6524e99aacce57914b8957994e\nauthor Mustafa UZUN <mustafa.uzun@std.izmirekonomi.edu.tr> 1667084429 +0300\ncommitter Jordan Harband <ljharb@gmail.com> 1667084429 +0300\n\n[readme] wayback machine, or remove, broken links\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/d60170173096486bde4eff320a22148e79acff48",
+        "html_url": "https://github.com/airbnb/javascript/commit/d60170173096486bde4eff320a22148e79acff48",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/d60170173096486bde4eff320a22148e79acff48/comments",
+        "author": null,
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "49d08a2f134f4d6524e99aacce57914b8957994e",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/49d08a2f134f4d6524e99aacce57914b8957994e",
+                "html_url": "https://github.com/airbnb/javascript/commit/49d08a2f134f4d6524e99aacce57914b8957994e"
+            }
+        ]
+    },
+    {
+        "sha": "49d08a2f134f4d6524e99aacce57914b8957994e",
+        "node_id": "C_kwDOAGMovNoAKDQ5ZDA4YTJmMTM0ZjRkNjUyNGU5OWFhY2NlNTc5MTRiODk1Nzk5NGU",
+        "commit": {
+            "author": {
+                "name": "Mustafa UZUN",
+                "email": "mustafa.uzun@std.izmirekonomi.edu.tr",
+                "date": "2022-10-29T20:49:43Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-10-29T20:49:43Z"
+            },
+            "message": "[readme] prefer `const`/`let` over `var` in examples\n\n2.1 Use const for all of your references; avoid using var. eslint: prefer-const, no-const-assign",
+            "tree": {
+                "sha": "dcda7443cfb7af681478a66ea79435405164147c",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/dcda7443cfb7af681478a66ea79435405164147c"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/49d08a2f134f4d6524e99aacce57914b8957994e",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjdrB3AAoJEJ9qaB4174tWtbsP/0pqnu7rEO4lrxqOP+AL9M9/\n0TfL1jl6LV1Xc5gVD4IlV+wjx8/AaxF8hqrHLBKtZEpxYlzT9FMf31EF/0AI+HoD\nAPn5dcuaVwHagGlrlOUw2rjOfqks7l6e2otFvtzGA/WL0g8uMkTSpEeDICBzdkCx\ns4u+jzDcs68zKJ3ydW3dREMphezZbCyCZmSUmyOvXSH2/1CcYJiMnpXuvMHKSkIQ\n6N6VsRxPw1dfmCqwwtlDm8zVgj/E7wwnRfyqG3zzslVPoA/REjTulKmuq2CHdalN\ngreRYoH4uoweJjUiwtjJRAIBaJNw1SPJYWupVTj57QOoodH2+5FhbcuoVGqeQWXE\ncxHcQuLUcVEa7EIqZWaqzLV/Qxg5PS9LOa1aMjWAb0M/D+bi26JcPGbbLZMKt8oU\n9sAmxlcSHxfUYhlhaDvUhoWNqZfjGEMgj9lOCRsiqBdhvkj5zgZVNZ/ZRTtRLHD7\n1Q3qCY8vnzgaJAFcOu30pHv8tD7YLsUBkI10H2j6zNCfgO+HPwbNxWcZYgPH/G49\nKy8eBbvZuNopqlqjSF5+4yfn910vbEjlMk8iFTM3RLea6K/jRbK2teAU5DYpNGXy\np8ux0E/4+cpd9oow3xnkF744kyExhoinNe5/BbhwBaGeTQcH/ix05ahGyBXXfEbv\nZNDhitQ7icy2FWKYD9RJ\n=jW6d\n-----END PGP SIGNATURE-----",
+                "payload": "tree dcda7443cfb7af681478a66ea79435405164147c\nparent 0d747c6d96f94e54d24d8c005da0c87105bf0fd5\nauthor Mustafa UZUN <mustafa.uzun@std.izmirekonomi.edu.tr> 1667076583 +0300\ncommitter Jordan Harband <ljharb@gmail.com> 1667076583 +0300\n\n[readme] prefer `const`/`let` over `var` in examples\n\n2.1 Use const for all of your references; avoid using var. eslint: prefer-const, no-const-assign\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/49d08a2f134f4d6524e99aacce57914b8957994e",
+        "html_url": "https://github.com/airbnb/javascript/commit/49d08a2f134f4d6524e99aacce57914b8957994e",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/49d08a2f134f4d6524e99aacce57914b8957994e/comments",
+        "author": null,
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0d747c6d96f94e54d24d8c005da0c87105bf0fd5",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/0d747c6d96f94e54d24d8c005da0c87105bf0fd5",
+                "html_url": "https://github.com/airbnb/javascript/commit/0d747c6d96f94e54d24d8c005da0c87105bf0fd5"
+            }
+        ]
+    },
+    {
+        "sha": "0d747c6d96f94e54d24d8c005da0c87105bf0fd5",
+        "node_id": "C_kwDOAGMovNoAKDBkNzQ3YzZkOTZmOTRlNTRkMjRkOGMwMDVkYTBjODcxMDViZjBmZDU",
+        "commit": {
+            "author": {
+                "name": "Pushpendra Pal",
+                "email": "94526347+Pushpendra100@users.noreply.github.com",
+                "date": "2022-11-13T23:24:20Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-11-13T23:24:20Z"
+            },
+            "message": "[readme] add space before code blocks",
+            "tree": {
+                "sha": "4ed2939a80ea3b8ca3d5f9b3b4ab1d5d239bdb06",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/4ed2939a80ea3b8ca3d5f9b3b4ab1d5d239bdb06"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/0d747c6d96f94e54d24d8c005da0c87105bf0fd5",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjdq4XAAoJEJ9qaB4174tWYP4P/2jSuk2woDiL24Y+ApgadD7H\nlaKeHCSZ0m2IOIgEjITzquU8SRaKo+Bx++JAP8n4GYxz7N5bzgz+M5/uwGEaJC7Q\nJ1FTlSPj5OC11umGDGgO3mZvjU6gTq32qBFRwAl/rVPavXvvBWKgWRswD4eeW1wh\nDKL9L/msKEzi1ugdMQRdp6lTtdDXHXsj35GV+uD6N5nYpmz9DWswTozcwFrtxNKc\n1mOl/qs35HBvK31LfOwR15QPdypaA3eNp9vIOgK0GBnkU5wGCky5ezcMkr8lVAPx\n/mkVXRAXbT/WfxENARwt5RTRpWyswhQFIxfNAgYCbhLEo1+JjXpXUOQq7IBRoKnV\ndyqNPdnW51/hQK4EI/XEfQ7KCp4B56vM0j+Kcg4GugVUvNsa/+sxTSFJVp/Mu1h5\nRguULpmxuL52TJMVooZ/rvC6ch2+DkD4ZGkIy7oSD/iA505DEcRlL9P/CQyuuSfs\n0b/ONZXjhRq73CQ9yNEs0yEeml24aAdNVeVB5On+wVOpsQaI/Wtje572j2+xRo2p\nGqS1vm4JnSZTPzZ1wMDycSc29QU6vBV4mxdTNUP5xfuRQRbtK/HhYhD1iwwyhECC\nprZPCop4HJ7Z3bANt9yatxHkxkCQ6o5iMUV1JyDXgmeQwESdfrXPFmiWTfZs/iId\nV6l3OyZi9yl5GvIOjARP\n=sSoT\n-----END PGP SIGNATURE-----",
+                "payload": "tree 4ed2939a80ea3b8ca3d5f9b3b4ab1d5d239bdb06\nparent 1fb7d76adde6f0822471c924bfda4ccd49879bc0\nauthor Pushpendra Pal <94526347+Pushpendra100@users.noreply.github.com> 1668381860 +0530\ncommitter Jordan Harband <ljharb@gmail.com> 1668381860 +0530\n\n[readme] add space before code blocks\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/0d747c6d96f94e54d24d8c005da0c87105bf0fd5",
+        "html_url": "https://github.com/airbnb/javascript/commit/0d747c6d96f94e54d24d8c005da0c87105bf0fd5",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/0d747c6d96f94e54d24d8c005da0c87105bf0fd5/comments",
+        "author": {
+            "login": "Pushpendra100",
+            "id": 94526347,
+            "node_id": "U_kgDOBaJbiw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/94526347?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Pushpendra100",
+            "html_url": "https://github.com/Pushpendra100",
+            "followers_url": "https://api.github.com/users/Pushpendra100/followers",
+            "following_url": "https://api.github.com/users/Pushpendra100/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Pushpendra100/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Pushpendra100/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Pushpendra100/subscriptions",
+            "organizations_url": "https://api.github.com/users/Pushpendra100/orgs",
+            "repos_url": "https://api.github.com/users/Pushpendra100/repos",
+            "events_url": "https://api.github.com/users/Pushpendra100/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Pushpendra100/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "1fb7d76adde6f0822471c924bfda4ccd49879bc0",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/1fb7d76adde6f0822471c924bfda4ccd49879bc0",
+                "html_url": "https://github.com/airbnb/javascript/commit/1fb7d76adde6f0822471c924bfda4ccd49879bc0"
+            }
+        ]
+    },
+    {
+        "sha": "1fb7d76adde6f0822471c924bfda4ccd49879bc0",
+        "node_id": "C_kwDOAGMovNoAKDFmYjdkNzZhZGRlNmYwODIyNDcxYzkyNGJmZGE0Y2NkNDk4NzliYzA",
+        "commit": {
+            "author": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-11-17T21:56:33Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-11-17T21:56:33Z"
+            },
+            "message": "[eslint config] [patch] add new disabled core rules",
+            "tree": {
+                "sha": "d24ac6dfca69e2521c7d06b3a70b337fb3bc5c84",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/d24ac6dfca69e2521c7d06b3a70b337fb3bc5c84"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/1fb7d76adde6f0822471c924bfda4ccd49879bc0",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjdq4XAAoJEJ9qaB4174tWUPoP/j+2ci+fZ+C4nX3Vo0c4febk\nRbbKU4dIJhvKrnxXU4bvnIKWZEPbtmK1RywzHAK8bCy3aJsK+NWSMGiIXYZHs67P\nJSxPi5XrLmgcuFZRJcaXKcihLYhA1FuyXHjx8x1W6r4RSP6eXZHofXiAkEIom8oq\nT00JN4Y3zBrVtndByN8yk3UKxIv3XUUQYGmbrcgzj242IjCkBlDqQrXqRJeg9PEa\nPP5Ae3ggBDt3cj+ukUAFYuxyxWtwT/ydxamJTyZfyoQb/Ccb1Ckc6PS1bShSqtTk\n+M3ObA0q5x7T8/IxHP6Q1G1BnNhHu8zMGEbBu14Pru+N8onaG3Q0wSXW1sRBzG1Y\nlGNWHuWqG51DJUyoBY3Lp83yDjOEGNWQ1z6lSwRdp0sVopR1YtKyUfZEQ3C+bRmc\nQTeFhqzwG8GULjEeJgAcQCyD5fktLpMOpDI4rv0WwL0vah0zDiWvKrc8/XJndG2A\n4pYqd8WhMIi9w0SRDxgAu9/qN8iTvO4wnd0XNJw5KhhNjr7oBmUkAJ38vmqbb8LH\n2QwSDrtUroqqKxqEhUrtwKCS2coHMo1Vl+ckTjeAb6/B4cq4B25TAqAqdsRoxJkv\nElntNgphmp/0qO89zusQOc1HGgi//ac1k1HgcOuNqlAO6MCPaYxSuyK34MEJCvw6\nuxKNARy/5CM+QzBnY6B0\n=56rD\n-----END PGP SIGNATURE-----",
+                "payload": "tree d24ac6dfca69e2521c7d06b3a70b337fb3bc5c84\nparent 38f1488918ef19f56191e855f624fa5da988d547\nauthor Jordan Harband <ljharb@gmail.com> 1668722193 -0800\ncommitter Jordan Harband <ljharb@gmail.com> 1668722193 -0800\n\n[eslint config] [patch] add new disabled core rules\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/1fb7d76adde6f0822471c924bfda4ccd49879bc0",
+        "html_url": "https://github.com/airbnb/javascript/commit/1fb7d76adde6f0822471c924bfda4ccd49879bc0",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/1fb7d76adde6f0822471c924bfda4ccd49879bc0/comments",
+        "author": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "38f1488918ef19f56191e855f624fa5da988d547",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/38f1488918ef19f56191e855f624fa5da988d547",
+                "html_url": "https://github.com/airbnb/javascript/commit/38f1488918ef19f56191e855f624fa5da988d547"
+            }
+        ]
+    },
+    {
+        "sha": "38f1488918ef19f56191e855f624fa5da988d547",
+        "node_id": "C_kwDOAGMovNoAKDM4ZjE0ODg5MThlZjE5ZjU2MTkxZTg1NWY2MjRmYTVkYTk4OGQ1NDc",
+        "commit": {
+            "author": {
+                "name": "Maksim Ploski",
+                "email": "50287455+plplmax@users.noreply.github.com",
+                "date": "2022-10-31T18:57:59Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2022-10-31T18:57:59Z"
+            },
+            "message": "[guide] fix typo in `space-before-blocks`",
+            "tree": {
+                "sha": "1a66b8eb6b5bd81796f498dac5c4fcae2d808c98",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/1a66b8eb6b5bd81796f498dac5c4fcae2d808c98"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/38f1488918ef19f56191e855f624fa5da988d547",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJjYBq3CRBK7hj4Ov3rIwAAXnAIAB7tfCiKoEnZqKj1oAwb4eH0\nMfVK7WYM04YdX+h4lmuGr6JVEQ9PGQOXMjn70zbXHbqA3Xag873gebkm8n2+prvo\nHSUMl1gtWFhCV5Hx8m+oMCDVBwM4rZ1HwFi89HkVQDv0G1X17pDudaLTM90tonuk\nenUU3LssXlCxq/OMpOIGI2uayuYvZk7Ghf3MDOLEAyvnK/qAgm96VM193dym/BHr\nwWGnAubCPO1DHyOfDgLkv5JmgZwQGP78qeFlnOyLDm0Kij+zJIYHil4MxRmINzEY\nFqoUNII+8QE7fBzcW80aRPJK6SV3qLhXGxpSkdOzW/j0jNzlpTAPpqPu+4kFfVo=\n=A402\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 1a66b8eb6b5bd81796f498dac5c4fcae2d808c98\nparent c6b1a43c489d2c242f9c6c6d12966c95d27d9dfa\nauthor Maksim Ploski <50287455+plplmax@users.noreply.github.com> 1667242679 +0300\ncommitter GitHub <noreply@github.com> 1667242679 +0300\n\n[guide] fix typo in `space-before-blocks`"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/38f1488918ef19f56191e855f624fa5da988d547",
+        "html_url": "https://github.com/airbnb/javascript/commit/38f1488918ef19f56191e855f624fa5da988d547",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/38f1488918ef19f56191e855f624fa5da988d547/comments",
+        "author": {
+            "login": "plplmax",
+            "id": 50287455,
+            "node_id": "MDQ6VXNlcjUwMjg3NDU1",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50287455?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/plplmax",
+            "html_url": "https://github.com/plplmax",
+            "followers_url": "https://api.github.com/users/plplmax/followers",
+            "following_url": "https://api.github.com/users/plplmax/following{/other_user}",
+            "gists_url": "https://api.github.com/users/plplmax/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/plplmax/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/plplmax/subscriptions",
+            "organizations_url": "https://api.github.com/users/plplmax/orgs",
+            "repos_url": "https://api.github.com/users/plplmax/repos",
+            "events_url": "https://api.github.com/users/plplmax/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/plplmax/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "c6b1a43c489d2c242f9c6c6d12966c95d27d9dfa",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/c6b1a43c489d2c242f9c6c6d12966c95d27d9dfa",
+                "html_url": "https://github.com/airbnb/javascript/commit/c6b1a43c489d2c242f9c6c6d12966c95d27d9dfa"
+            }
+        ]
+    },
+    {
+        "sha": "c6b1a43c489d2c242f9c6c6d12966c95d27d9dfa",
+        "node_id": "C_kwDOAGMovNoAKGM2YjFhNDNjNDg5ZDJjMjQyZjljNmM2ZDEyOTY2Yzk1ZDI3ZDlkZmE",
+        "commit": {
+            "author": {
+                "name": "Mustafa UZUN",
+                "email": "mustafa.uzun@std.izmirekonomi.edu.tr",
+                "date": "2022-10-26T10:44:17Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-10-26T10:44:17Z"
+            },
+            "message": "[guide] rename `qux` to `quux`\n\nFixes #2661",
+            "tree": {
+                "sha": "a66027fe5d10760f81010e58685afa656c11fef1",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/a66027fe5d10760f81010e58685afa656c11fef1"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/c6b1a43c489d2c242f9c6c6d12966c95d27d9dfa",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjWYKAAAoJEJ9qaB4174tWVOoP/0z4VI6PR8tInilDTb2HcIWl\n4MQOyh4aG4yMKgLrwpdkfGRKXvnRsrW/uWrsiKIptWCmbk3ckz29Ds9Ihv8bvoxK\nax8Wfw9fdGKxKdg9gXALPBQDLkr9XCS+1bJhUGM5JwiPD1Nq27z+ckRgHxmluE3H\naNKLBJY6SqYGTEaZkwYngeaPFLRt0b0MP6nBZxKDYff/lqPGjacF0y0Zfj9UB8ab\nqXhtABVjrBgX77JeOmJMmZ/kV5/tplY9Z+S4tpfoVxeMSPjxu8lM+3Nm/Z4zPoSG\nvNREVTmeW2RgOsoibCW1ytMqrtwV4u0Btk/ARFgZnjXUnFsl87koLd9XAEW3d796\n1iaHP4zEnhQyafyE64kK1iQURp9OlNKWs8Ob1hV/QVlTg9GSL7uCr7BqaIFG814S\nZmqZuPJi9b3Z58fY/oaTu8AsdZJBCr9EVSK0aelO9rnSkxjHwJ2vmaM4JYToqk47\n6UV34YqWbJlNr/RcVyYoTG7Hohg9YEo6MGq+0Qn1/8sbRWOxA80esslZTUEfBR6Q\n7JBvSpb+g2UhwQKLZeeA9yIOvx1VlAITYIdiYsq8FEPAZ6rhCDiTdbtlEqiakoCZ\n+SNhfh/MSzdgU49ifpRmTwC6GZu/nl3mPx/jU9VjOwPwra5IooKAqHFucGYL84Rm\nUMwClotslkb3sAwx6/4y\n=4r5N\n-----END PGP SIGNATURE-----",
+                "payload": "tree a66027fe5d10760f81010e58685afa656c11fef1\nparent 6947138ee34319133da0e28a0e59abad987f1586\nauthor Mustafa UZUN <mustafa.uzun@std.izmirekonomi.edu.tr> 1666781057 +0300\ncommitter Jordan Harband <ljharb@gmail.com> 1666781057 +0300\n\n[guide] rename `qux` to `quux`\n\nFixes #2661\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/c6b1a43c489d2c242f9c6c6d12966c95d27d9dfa",
+        "html_url": "https://github.com/airbnb/javascript/commit/c6b1a43c489d2c242f9c6c6d12966c95d27d9dfa",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/c6b1a43c489d2c242f9c6c6d12966c95d27d9dfa/comments",
+        "author": null,
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "6947138ee34319133da0e28a0e59abad987f1586",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/6947138ee34319133da0e28a0e59abad987f1586",
+                "html_url": "https://github.com/airbnb/javascript/commit/6947138ee34319133da0e28a0e59abad987f1586"
+            }
+        ]
+    },
+    {
+        "sha": "6947138ee34319133da0e28a0e59abad987f1586",
+        "node_id": "C_kwDOAGMovNoAKDY5NDcxMzhlZTM0MzE5MTMzZGEwZTI4YTBlNTlhYmFkOTg3ZjE1ODY",
+        "commit": {
+            "author": {
+                "name": "Mustafa UZUN",
+                "email": "mustafa.uzun@std.izmirekonomi.edu.tr",
+                "date": "2022-10-26T13:17:38Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-10-26T13:17:38Z"
+            },
+            "message": "[guide] add comma to the end of the property",
+            "tree": {
+                "sha": "41ce144b378a00e8419bb96d6d2cb3629377ef17",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/41ce144b378a00e8419bb96d6d2cb3629377ef17"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/6947138ee34319133da0e28a0e59abad987f1586",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjWYDcAAoJEJ9qaB4174tWK3AP/3Gm74teyqj3yAzoGeSwFcaW\n6YCF/ZbnfZwlzbt97PgCWXEa+qFZvR69PyThaFdoA7jQihpY07Jl3Q+WXGYxn/tD\nPN9S85ftuxn585npwR7zWisJ1AsOtknWTs14CHoG9O7bfiFZYZwQXUL0uaqltWDd\neZHoWJcQU7ZARMyDLtxPDJRQHDQyG4kcV7m83koAazZOAFl2yHkGPByFcS5PHzuj\n4SsC33IDkW1nx9pv/BMe5AQe2mKUHpVMMeeJOEPvp1MApQ7tmfObTotnjErGNa0v\nNI7YbW3aVkwiwCxFPrQwDBJPrlmCI2fQEdf1rbltkdNaXQNy2T+X+sd/W3d5lvnU\nwF7Rq6m6dbpehnGcb90v9SV4hMCxXKLj97VBje2MnTzqWFsU6NYgHz+P2xF405BD\nr+M7Sl34wHSbjBnFQ7bhfW3BYLrd5l0eJ7LyVHd6lYGM6wqqtk8x+kfFQtSXBvFS\nhJekII0/coG/W2HVVi+F1xWRPf36A4Xh3cGt0g2jht1B5vRlMfNZPLBffoCRDbix\nz3XOhpKuZibCspyTzxrAiCwn1+En3KzkWWTO2pprB1zdjYX8FFkMHEaPsjI/38G8\n1BWyMSeq32PX99qrA3OoVskivhFic6cYuozKGvN2C7H0busfgNcZsDeSzUamZ92g\nlioczMFjdY8HsNn7pCG0\n=UY3o\n-----END PGP SIGNATURE-----",
+                "payload": "tree 41ce144b378a00e8419bb96d6d2cb3629377ef17\nparent 6fb4f8e878264f7b913dc29bc6919520eb6be6c8\nauthor Mustafa UZUN <mustafa.uzun@std.izmirekonomi.edu.tr> 1666790258 +0300\ncommitter Jordan Harband <ljharb@gmail.com> 1666790258 +0300\n\n[guide] add comma to the end of the property\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/6947138ee34319133da0e28a0e59abad987f1586",
+        "html_url": "https://github.com/airbnb/javascript/commit/6947138ee34319133da0e28a0e59abad987f1586",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/6947138ee34319133da0e28a0e59abad987f1586/comments",
+        "author": null,
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "6fb4f8e878264f7b913dc29bc6919520eb6be6c8",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/6fb4f8e878264f7b913dc29bc6919520eb6be6c8",
+                "html_url": "https://github.com/airbnb/javascript/commit/6fb4f8e878264f7b913dc29bc6919520eb6be6c8"
+            }
+        ]
+    },
+    {
+        "sha": "6fb4f8e878264f7b913dc29bc6919520eb6be6c8",
+        "node_id": "C_kwDOAGMovNoAKDZmYjRmOGU4NzgyNjRmN2I5MTNkYzI5YmM2OTE5NTIwZWI2YmU2Yzg",
+        "commit": {
+            "author": {
+                "name": "Mustafa UZUN",
+                "email": "mustafa.uzun@std.izmirekonomi.edu.tr",
+                "date": "2022-10-25T21:06:26Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-10-25T21:06:26Z"
+            },
+            "message": "[guide] add Optional Chaining",
+            "tree": {
+                "sha": "d419875c96b6ab9e6d164523a4793a88b7a0d4c7",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/d419875c96b6ab9e6d164523a4793a88b7a0d4c7"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/6fb4f8e878264f7b913dc29bc6919520eb6be6c8",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjWXj+AAoJEJ9qaB4174tWL/MP/2NlDY7qMeJhkfY7mKJgLVJL\nPZOs7WtSJjI90OOh4y4oCAnnc4fRtZjixDv9lA73UERolmfP4IA36SiLY30/btqv\ngzvyhX5xckZa1/knqmy02Pn5U3RtzI+83gICXVxixUjkoRbkfoL7VFPzk6GvDXUf\nTb7BgiBTmHO+Sa0LSV/BDs0hkAbnSvgJib024Qs1NQlBBkcBZrpAd9/3MaCCapX6\nzJ+Me6JjODzm4MEKG7w3OvNqk+pIz78ET+9kct/PocY8TDBf9JY7DcBqmyQuxf97\nyCj8gg6+WzqlWo5uirn95ZuXvGgfbsadCx2OhpoGM9gUpkJW6pukCiKdRgXYKY49\nAOYVrNhLawH2mxuqrQOzMaC7wvKiCM/F6BRNR8KhmQsgMAVqoiGN9u4KZa6FRwPz\n3pPvCORXBWmKzcNHo8mQmL+k7vcBDwB3V3ieA0F6WFptocMA8RN7ny8daZmh+ypv\nGyQN+Trb5YRAFuM5Qp5T312eTVdz1coQIjx7nPeuC0mdPtu0H5u2cj81kV4gSTlW\niGekb0IVbJYi/9ZrDmHRdMpf5Fwy/sBVIGHw9/Mhnk0U/T16T02bGGCbgT4K9vjw\nflqQjG+kVAtOnkdyM4As3GY+83Ug7L7WoGJOuTJfea89GVzXsTDuqfO2eYZYf2uP\nhTadkzs8n1Wf7OVXHdO+\n=TqM3\n-----END PGP SIGNATURE-----",
+                "payload": "tree d419875c96b6ab9e6d164523a4793a88b7a0d4c7\nparent ca0ff97f17f355d10afc7ccd4f5ae11815d62637\nauthor Mustafa UZUN <mustafa.uzun@std.izmirekonomi.edu.tr> 1666731986 +0300\ncommitter Jordan Harband <ljharb@gmail.com> 1666731986 +0300\n\n[guide] add Optional Chaining\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/6fb4f8e878264f7b913dc29bc6919520eb6be6c8",
+        "html_url": "https://github.com/airbnb/javascript/commit/6fb4f8e878264f7b913dc29bc6919520eb6be6c8",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/6fb4f8e878264f7b913dc29bc6919520eb6be6c8/comments",
+        "author": null,
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "ca0ff97f17f355d10afc7ccd4f5ae11815d62637",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/ca0ff97f17f355d10afc7ccd4f5ae11815d62637",
+                "html_url": "https://github.com/airbnb/javascript/commit/ca0ff97f17f355d10afc7ccd4f5ae11815d62637"
+            }
+        ]
+    },
+    {
+        "sha": "ca0ff97f17f355d10afc7ccd4f5ae11815d62637",
+        "node_id": "C_kwDOAGMovNoAKGNhMGZmOTdmMTdmMzU1ZDEwYWZjN2NjZDRmNWFlMTE4MTVkNjI2Mzc",
+        "commit": {
+            "author": {
+                "name": "Mustafa UZUN",
+                "email": "mustafa.uzun@std.izmirekonomi.edu.tr",
+                "date": "2022-10-25T20:26:56Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-10-25T20:26:56Z"
+            },
+            "message": "[guide] add Nullish Coalescing operator",
+            "tree": {
+                "sha": "14ef517f8823a7744cb0cc69e10bfb6277ec15d0",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/14ef517f8823a7744cb0cc69e10bfb6277ec15d0"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/ca0ff97f17f355d10afc7ccd4f5ae11815d62637",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjWXfVAAoJEJ9qaB4174tWpdwP/2RedbCkLuLj+XHz+VL2NXPJ\nrXKEvZFtPtqDj1wLSjlSDUemS6BpRPcHrl3cYFQmy+j7VrxztGOvP0eCu59XbUug\n0j2LgKcQLt2eTiQ8tvacAS43QFZyHDmI3g4W3dykmI3FhTtXPXIxjQXfmcxtuHzQ\n29ox8ZRkDrIYDdQv0Qf7scQUiEzzFUNHYCiI8M3CUKhtlqphbZWdMSwWs1y52yk8\nE3eSV0t6/UOoq5EXvFXUNqOPq7dNcj4ogtB9bXRaVhsUUeDKQFJ5fQMDMTg40H0k\nbE9Ws2XKPqeSdk0C8nwZ2sFwKhrxWllAnBL23vOoWPkEP0hDLMk8EfG3T2akaHSQ\nuJSSi5zOEa8N+8CcZpoU0JfyQHS4XLOORdujNtIyJMHeoNo8GT7tPbxfUBc9ok0V\nbUg4LUW/7cUT9CBf4lhC2fIbfD2hfNj+Z/6Z20KDOc94PZ6RfGFDA0LIqVoi2EmR\nRuviI6AEZA9LXISUx/UaISxsYYySyPjynQBUGvyWKMmZe9i6XzWCXgk0Cx0P5jB4\nH5ZPLzEOdDirFvZnCiPQldoh4Z8N1bQmsqk8TG0KaeAC702IA69+trePg3CACaOO\nX2mDMTTaC+VNLUMpu+zlDnUE25dxZEgL/4efj0k9q57D/N0F/ZZ7TbtgKM8ObCqi\n6P8zQ3W/jB0GwBT6IOJx\n=L8WO\n-----END PGP SIGNATURE-----",
+                "payload": "tree 14ef517f8823a7744cb0cc69e10bfb6277ec15d0\nparent 0b1f62372ee0ce9e228a1a9a98d948d323d1737f\nauthor Mustafa UZUN <mustafa.uzun@std.izmirekonomi.edu.tr> 1666729616 +0300\ncommitter Jordan Harband <ljharb@gmail.com> 1666729616 +0300\n\n[guide] add Nullish Coalescing operator\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/ca0ff97f17f355d10afc7ccd4f5ae11815d62637",
+        "html_url": "https://github.com/airbnb/javascript/commit/ca0ff97f17f355d10afc7ccd4f5ae11815d62637",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/ca0ff97f17f355d10afc7ccd4f5ae11815d62637/comments",
+        "author": null,
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0b1f62372ee0ce9e228a1a9a98d948d323d1737f",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/0b1f62372ee0ce9e228a1a9a98d948d323d1737f",
+                "html_url": "https://github.com/airbnb/javascript/commit/0b1f62372ee0ce9e228a1a9a98d948d323d1737f"
+            }
+        ]
+    },
+    {
+        "sha": "0b1f62372ee0ce9e228a1a9a98d948d323d1737f",
+        "node_id": "C_kwDOAGMovNoAKDBiMWY2MjM3MmVlMGNlOWUyMjhhMWE5YTk4ZDk0OGQzMjNkMTczN2Y",
+        "commit": {
+            "author": {
+                "name": "Mustafa UZUN",
+                "email": "mustafa.uzun@std.izmirekonomi.edu.tr",
+                "date": "2022-10-25T13:03:37Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-10-25T13:03:37Z"
+            },
+            "message": "[editorial] convert example to use single instead of double quotes",
+            "tree": {
+                "sha": "80f98bfdb2bef29611bdbcec6af2696ffb6f3c7f",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/80f98bfdb2bef29611bdbcec6af2696ffb6f3c7f"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/0b1f62372ee0ce9e228a1a9a98d948d323d1737f",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjWBIEAAoJEJ9qaB4174tWw40P/AmKVtj6iJwVH7mtM38hnqBK\n35fOSsc1nwm2Z7z04JERA2RRU4ROAACy9dMhANJjoNRfyCRjgTo80NUksbjruLtp\nGdM5plLk+Ghpe1xDeUEftPOEE2+TifTs8Mq9R2FYiRKRC92dfVDrEJnr+XAJAxyl\nTpdr509r5MDK6S4XuMoHCb6fq5WZUpaCruJrl0MuzBDN+EtkTEz0NkDnj3PmFRiD\nTzs9GiFdR6Mi1DMDm2Z79q+SgMsLTZp3L6EzAD7ihYyHHy0JULlZTIj137pqci3k\ninGYSSd9hvN2L+msBilt7kNYECbI/gCCV1VfGufKSj1oTuROvWiND6kRjXBZOaw+\nl/H5e1Cojlc/XJcTwTdPKc2J1Nk8oZztTisZ0FIaTAo/UxEZQsEfR3WeNFG8f/eH\nVG2Wcao+0j66IJx9ioDvdg2D68420+ku++fJVJDcUt2gxE9LoNS5KAMjV0xAEXuS\nHZTQzbYJAzXSYMNPSWphm9oG3wIKoe0JgVQonBWjGx5b55PwvHYxv0Se/sz//dxR\nxeDXxqE/3Re+SFQK37sVXuRc/JJV+Llp/mLgHBXrxZ7LB8qejfFY2olmILmGnq7g\nscgUD4zM90CRNx6lr0yv6Sir8QTD+LBFYBWz8WRsP8DJLpn9ogFPVg+zSKQZtZSo\nCt3/s0ZGw0nVtM1GAuR2\n=YIy/\n-----END PGP SIGNATURE-----",
+                "payload": "tree 80f98bfdb2bef29611bdbcec6af2696ffb6f3c7f\nparent 7dbb7b154ffe38297f451440e7f59e3876a18ef7\nauthor Mustafa UZUN <mustafa.uzun@std.izmirekonomi.edu.tr> 1666703017 +0300\ncommitter Jordan Harband <ljharb@gmail.com> 1666703017 +0300\n\n[editorial] convert example to use single instead of double quotes\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/0b1f62372ee0ce9e228a1a9a98d948d323d1737f",
+        "html_url": "https://github.com/airbnb/javascript/commit/0b1f62372ee0ce9e228a1a9a98d948d323d1737f",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/0b1f62372ee0ce9e228a1a9a98d948d323d1737f/comments",
+        "author": null,
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "7dbb7b154ffe38297f451440e7f59e3876a18ef7",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/7dbb7b154ffe38297f451440e7f59e3876a18ef7",
+                "html_url": "https://github.com/airbnb/javascript/commit/7dbb7b154ffe38297f451440e7f59e3876a18ef7"
+            }
+        ]
+    },
+    {
+        "sha": "7dbb7b154ffe38297f451440e7f59e3876a18ef7",
+        "node_id": "C_kwDOAGMovNoAKDdkYmI3YjE1NGZmZTM4Mjk3ZjQ1MTQ0MGU3ZjU5ZTM4NzZhMThlZjc",
+        "commit": {
+            "author": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-10-25T16:42:25Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-10-25T16:42:25Z"
+            },
+            "message": "[eslint config] [base] add disabled `logical-assignment-operators` rule",
+            "tree": {
+                "sha": "197189307e67e95b07c1fcf15c99e5adaa8cb9c0",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/197189307e67e95b07c1fcf15c99e5adaa8cb9c0"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/7dbb7b154ffe38297f451440e7f59e3876a18ef7",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjWBIEAAoJEJ9qaB4174tWMj8P/0eWj12Btz25h5uohGzM1GnY\nN4DLBFWjKf6gO+0N+wDcnQ/aO3Gfwzzky/ZVN/fUw5ufBNXi5D57T8isGQ+oc+kh\nwtSci62EN5Avi/3Sthnle+GUvG3aZ+8LczNUrL3m98QDpYiMW/c5veBEKZoBhX+N\nObvBZxrbcwMq9XCDqfwGgnrccZKYoiC4rFkX8/RzFMe4byQU5tjqs8wGj7yJTf/w\n2gXAL17lGlWJEKFyWgwloUhAEzV2N9i1XlxJ7H9NGvHPGT71ZTc0YPMdOpjoAixl\n0Tf8Tvx8ZCjuzT1dktaGDWXi8Xt3d1Yi3WnqoDFjYtCuAvsud1RBafUqzVzusVv8\nxPh1p/02TiLpKOcsQUBgF8Exdt5wUcFH/viKKnx05fB58khzt0i5SNv9NJnj58zJ\neP6RdXnYIfADQlQYsPeeEvDLKNeVvF+wayblaDIqejGYh2Mnq4CczS6zuwG6YWS/\nYNfsD98xvNeP87YrtoKgKx49uYYqclPhNZc1cwFX/R8RAOOBFy3IymeK7e+92GBh\nM9Nh1yd5kuJ4IITZje47kT8Rtyu8TxoUeycQkfQC/p3XWt7xQcRyEXSArdc0uOSG\nF5Tuh+MEus0um0ULA4VZ5STZ2RXM/ghKkPoEy4V3Ti9TmBXmVlm3PyVGXZ7XiEeF\nO4LRuYLxxhwL5rFWU+GN\n=k67+\n-----END PGP SIGNATURE-----",
+                "payload": "tree 197189307e67e95b07c1fcf15c99e5adaa8cb9c0\nparent 75a908aacfe9ad86a18f3930cfff9c4636ffd644\nauthor Jordan Harband <ljharb@gmail.com> 1666716145 -0700\ncommitter Jordan Harband <ljharb@gmail.com> 1666716145 -0700\n\n[eslint config] [base] add disabled `logical-assignment-operators` rule\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/7dbb7b154ffe38297f451440e7f59e3876a18ef7",
+        "html_url": "https://github.com/airbnb/javascript/commit/7dbb7b154ffe38297f451440e7f59e3876a18ef7",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/7dbb7b154ffe38297f451440e7f59e3876a18ef7/comments",
+        "author": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "75a908aacfe9ad86a18f3930cfff9c4636ffd644",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/75a908aacfe9ad86a18f3930cfff9c4636ffd644",
+                "html_url": "https://github.com/airbnb/javascript/commit/75a908aacfe9ad86a18f3930cfff9c4636ffd644"
+            }
+        ]
+    },
+    {
+        "sha": "75a908aacfe9ad86a18f3930cfff9c4636ffd644",
+        "node_id": "C_kwDOAGMovNoAKDc1YTkwOGFhY2ZlOWFkODZhMThmMzkzMGNmZmY5YzQ2MzZmZmQ2NDQ",
+        "commit": {
+            "author": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-09-19T05:21:48Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-09-19T05:21:48Z"
+            },
+            "message": "[eslint config] [deps] update `eslint-plugin-jsx-a11y`, `eslint-plugin-react`, `eslint-plugin-react-hooks`",
+            "tree": {
+                "sha": "7bd61f35017580128ffd5d7e39c017714b631ac5",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/7bd61f35017580128ffd5d7e39c017714b631ac5"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/75a908aacfe9ad86a18f3930cfff9c4636ffd644",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjJ/xsAAoJEJ9qaB4174tW3wQP/1di5fblL00kGj4qTJO+rM5U\ndyYqLX++2ZvJFut+MqfJjljZ7iYJwGplIgsJODXEDe/rNEqbCFpSSTJd3vDfkMZe\ncoxty32HasSRzzYNH4k5c8jAS1ksMr/FSWb0lqYZG5XsB1NNpWBFVqnvt43pfT31\n9J6EC9z8UDYpDo4BjIFx5uYcnB90oaepsMKrk48VLNJiOyKtrq9rVV2v7y6cXYxh\neUCHBGiQA1crcskpi950yJz5xFIcEBNJcGaSN0XjSaoZ0aHV3p2VczC1f0tvFbGy\nBvApBPOoWjrpk4xNsbaoMHULw26IvxP3bhfdJ9Rsl/yPg7s6Du20/Gv4kbzzXVDY\niduw51f1oTt7UrOLzjHiVhD/sqCx81Er6acl6p8Tzsq+LUQkqp3UEp/rqkWKerHj\nta+qNLt7sGgZvPEpTPFEe1AcSs9RQAbWdkpdryeGDDQUCzin7iGYFtBWueho/ZEv\nCGjdsjFN7fw3uWDLI/D3vQ0A0mRD5DkG+JEXI4e2QY3g/4dgPo3yBUzoHWBJTI/9\nkha6IkdKZ1Z04DcNLeVjvg9CJ0WI3BLAtDWJ7EzTUhoW8OST07rXMnjMqF8fu+tk\neETK02x/lGFKTWm8JOM2BmJjGuNBjpVBFqTedDxymMbrRtAuzHEjZ2hbhSvln/sW\nlIg43ysNWvb+jISaxg32\n=4Bkw\n-----END PGP SIGNATURE-----",
+                "payload": "tree 7bd61f35017580128ffd5d7e39c017714b631ac5\nparent f6f63b89f602006278eff0ba4ad3cae617705cc3\nauthor Jordan Harband <ljharb@gmail.com> 1663564908 -0700\ncommitter Jordan Harband <ljharb@gmail.com> 1663564908 -0700\n\n[eslint config] [deps] update `eslint-plugin-jsx-a11y`, `eslint-plugin-react`, `eslint-plugin-react-hooks`\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/75a908aacfe9ad86a18f3930cfff9c4636ffd644",
+        "html_url": "https://github.com/airbnb/javascript/commit/75a908aacfe9ad86a18f3930cfff9c4636ffd644",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/75a908aacfe9ad86a18f3930cfff9c4636ffd644/comments",
+        "author": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f6f63b89f602006278eff0ba4ad3cae617705cc3",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/f6f63b89f602006278eff0ba4ad3cae617705cc3",
+                "html_url": "https://github.com/airbnb/javascript/commit/f6f63b89f602006278eff0ba4ad3cae617705cc3"
+            }
+        ]
+    },
+    {
+        "sha": "f6f63b89f602006278eff0ba4ad3cae617705cc3",
+        "node_id": "C_kwDOAGMovNoAKGY2ZjYzYjg5ZjYwMjAwNjI3OGVmZjBiYTRhZDNjYWU2MTc3MDVjYzM",
+        "commit": {
+            "author": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-09-19T05:18:57Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-09-19T05:18:57Z"
+            },
+            "message": "[eslint config] [*] [deps] update `object.assign`",
+            "tree": {
+                "sha": "ab05dfa3b131ab68b9613c4b86803eee2f467b23",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/ab05dfa3b131ab68b9613c4b86803eee2f467b23"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/f6f63b89f602006278eff0ba4ad3cae617705cc3",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjJ/vBAAoJEJ9qaB4174tWojAP/30+LLpE68uGh+98XbfRI38G\nnslcQLeuFYbF3zyXgBnJA+OudowNxgcMSQTsMEiIDbOVgisHkGuEQ8uyL01Krv2i\nagFF0lMrf0DbanEWww/K9Gq/zHtqc6EksB5l8rEAPTDgeWQhvlUGKDSxGtia8s7f\nmOG/GsGtzvrNEQoj1f1s6Cb+TXu4KLec/0Ne9M+Ihi8SvOEvBXcuzJOpcITMbnhR\nG8TBOQ+V1/c5noMycjBaD02n2RXIhDQttvNHSAEEUInbOv6Qnb5NVUYReDU1AZBt\nSQb5RcaHTmWL6mvqVdnwb84eGZ2+I70tHo+fUC7239+oRbkXnCoJi7yBNI5UGbDF\n35tJ7BFoPeuLJY9vws5OTRoMUsj9Y4mrRJmuZX5teSEM3xYqKcY9fE6OyrHGXkwl\nd/sjBjzsWGuf3/bVoDkx4BhOPgdTE+TouN9xMc0dP9vV6eobb5o0K4m163gGhAvQ\nDiXuDedTwGu3hayyWZxomiVwLL//ZTyopiEjb0yAaa5osdORrRXnSgNjdUOA6X9j\nOIzu0OGnUCrawgav0f7c2ogv/I2NmRlczdNxk5XXT2zgz1ZyWvpA3Dwl/yr87WOn\nDPRNVN7Uq22A+xIOogvVSLZdvgqlGaUay5Hx6f4bD9M315wDkfT0rHeF2QHHoHPe\nJlK9tuU1BqZ+7vbwp29z\n=1ksL\n-----END PGP SIGNATURE-----",
+                "payload": "tree ab05dfa3b131ab68b9613c4b86803eee2f467b23\nparent 866f441d05ae07fccdd7e6c3946125875594d6f3\nauthor Jordan Harband <ljharb@gmail.com> 1663564737 -0700\ncommitter Jordan Harband <ljharb@gmail.com> 1663564737 -0700\n\n[eslint config] [*] [deps] update `object.assign`\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/f6f63b89f602006278eff0ba4ad3cae617705cc3",
+        "html_url": "https://github.com/airbnb/javascript/commit/f6f63b89f602006278eff0ba4ad3cae617705cc3",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/f6f63b89f602006278eff0ba4ad3cae617705cc3/comments",
+        "author": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "866f441d05ae07fccdd7e6c3946125875594d6f3",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/866f441d05ae07fccdd7e6c3946125875594d6f3",
+                "html_url": "https://github.com/airbnb/javascript/commit/866f441d05ae07fccdd7e6c3946125875594d6f3"
+            }
+        ]
+    },
+    {
+        "sha": "866f441d05ae07fccdd7e6c3946125875594d6f3",
+        "node_id": "C_kwDOAGMovNoAKDg2NmY0NDFkMDVhZTA3ZmNjZGQ3ZTZjMzk0NjEyNTg3NTU5NGQ2ZjM",
+        "commit": {
+            "author": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-09-19T05:18:17Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-09-19T05:18:17Z"
+            },
+            "message": "[eslint config] [*] update `@babel/runtime`, `tape`",
+            "tree": {
+                "sha": "d9bbc52de3144e780e2ae0dcc1713d5e918d71c5",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/d9bbc52de3144e780e2ae0dcc1713d5e918d71c5"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/866f441d05ae07fccdd7e6c3946125875594d6f3",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjJ/uhAAoJEJ9qaB4174tWKe0P/A+ErOVyCHSNRJNhrB/XUuWJ\n99d+FcdCMnl1I5zcSFIimwYI0pD73Mwmn9ncizsX89vxZnd3YzAauDCCNbz/KwTG\nQqB3spHk/sU+vakVIH7RGW2R3z+QoWfVpxZEtFQ6QyTld6LAvBiApj4MfpsYhQyL\nmf+js52m41EnOqL0q+HD8TebJowWFyF7XbxheIjuJk+e3lRYxo4jiBMNEm1g+aN2\nPSgqQY1D/rk9bwusLCn9EWzvmshURfsYUgAYFwI+uUonOpKDH0FG4aheRLd7Gwdd\nDMn+QkJ838gCw+CMJbGfaCU1bAkEndOjW0oTVxTLjqsngv1PmCKuTJk6SdsKXfgb\nd/CoRVe4E3fBMjXtEuz9M/ZAsTe9098Q/GY+Tcbx/+gfKxOMA5GHw6sriCPhorDu\nCkipxzCHWhNwf/obqX2cZk2KzLphuBfX1igJlmpt5a3yVfbrS4CJtWIrc08kTZYv\n2L4/EujXbQGGT11S4bwJyQksIcG7+Rd7JJJATjWD7jbB6kHjnEX2SJGh+jHt2uWj\nngvF8lyLaOmnHDJ7GqKB0hF8NjdXCtMnVWg97XV/P/2+heSIaeORDXdeom3hufFM\nZFg88MFz7yLTqv8ZVn7oagVpeNtmG+Wy7gSqRklsoREppz4f86M7bhNi06VCliv8\neHnAPoQkj/4/HHoxjdcr\n=Jo/D\n-----END PGP SIGNATURE-----",
+                "payload": "tree d9bbc52de3144e780e2ae0dcc1713d5e918d71c5\nparent 5143a7a97a6969dd690fb905acee54d9f753667c\nauthor Jordan Harband <ljharb@gmail.com> 1663564697 -0700\ncommitter Jordan Harband <ljharb@gmail.com> 1663564697 -0700\n\n[eslint config] [*] update `@babel/runtime`, `tape`\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/866f441d05ae07fccdd7e6c3946125875594d6f3",
+        "html_url": "https://github.com/airbnb/javascript/commit/866f441d05ae07fccdd7e6c3946125875594d6f3",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/866f441d05ae07fccdd7e6c3946125875594d6f3/comments",
+        "author": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "5143a7a97a6969dd690fb905acee54d9f753667c",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/5143a7a97a6969dd690fb905acee54d9f753667c",
+                "html_url": "https://github.com/airbnb/javascript/commit/5143a7a97a6969dd690fb905acee54d9f753667c"
+            }
+        ]
+    },
+    {
+        "sha": "5143a7a97a6969dd690fb905acee54d9f753667c",
+        "node_id": "C_kwDOAGMovNoAKDUxNDNhN2E5N2E2OTY5ZGQ2OTBmYjkwNWFjZWU1NGQ5Zjc1MzY2N2M",
+        "commit": {
+            "author": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-09-19T05:16:08Z"
+            },
+            "committer": {
+                "name": "Jordan Harband",
+                "email": "ljharb@gmail.com",
+                "date": "2022-09-19T05:16:08Z"
+            },
+            "message": "[Dev Deps] update `markdownlint`, `markdownlint-cli`",
+            "tree": {
+                "sha": "b8634d2aa1f143989e96af70cb7ff7b0e8f5ffed",
+                "url": "https://api.github.com/repos/airbnb/javascript/git/trees/b8634d2aa1f143989e96af70cb7ff7b0e8f5ffed"
+            },
+            "url": "https://api.github.com/repos/airbnb/javascript/git/commits/5143a7a97a6969dd690fb905acee54d9f753667c",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\nComment: GPGTools - https://gpgtools.org\n\niQIcBAABCgAGBQJjJ/uhAAoJEJ9qaB4174tWep4P/RO7Ob3ewIOoF5EdmEqZuOVo\ncuDmEwCmki1tYWcXSkSaqRbgOWRb3WPpvu5V4BlxmoLgEmWi5knFx51WqSXNXPB6\nMXfMfHgIzDL04siFiXGQfLtEq6F+X4+WO2Hl8tvPi6Ax1bfqjs5au06l9rqxDzru\nS8pAApL3CyuqW5VdkXace2DFu7hVXfklu/fXJBWQpJliQDUS5BwSiQvlzsi/I6Tu\nNht8sGIKicP+GJgNHzjBJy1y+vbq8zC6dQ5BKBA7idd6C3Abrm85dSWetjj2uWuP\ndwCKfqzoY8ZPmpWqNXJbfouxRZrrTdi+VpZ8+7TbJHXjT9//lNHhqLttBsZA0hRB\n33q9nFwU6ad6Wc32nL6NVkxypuPf+6KcynIM9UMYmb1rkFJ6FcqI1zNA/fjYfQZ0\np1u+k61CPX21cAfbe7p6z7/C47XM28KL8hcpRvhc3SzDG6mIH56KJv/vmQ2e+lxw\nVLdimfpOWrYyEzdEgAMtr0iXVaL/m4bUyUvP3Y3R2tXTZDgerl70LlnEifrqcwRs\nhfolNAKft1OzvjOWssSKingmT/zh7YdKqrfqrrECr/FkF4P6T+asB0QwMrHhax3t\n1uYBnhiP7VDgxAP/lFNHql8bs0vnvj8XhU50VJWAkPCMAnIs9y+Tk3VbqXP/Gwio\nZNaatNc6wMrt1firKTjr\n=yYAv\n-----END PGP SIGNATURE-----",
+                "payload": "tree b8634d2aa1f143989e96af70cb7ff7b0e8f5ffed\nparent 3cbf96de7cde974aab99f4ca85bd23ea0556c34a\nauthor Jordan Harband <ljharb@gmail.com> 1663564568 -0700\ncommitter Jordan Harband <ljharb@gmail.com> 1663564568 -0700\n\n[Dev Deps] update `markdownlint`, `markdownlint-cli`\n"
+            }
+        },
+        "url": "https://api.github.com/repos/airbnb/javascript/commits/5143a7a97a6969dd690fb905acee54d9f753667c",
+        "html_url": "https://github.com/airbnb/javascript/commit/5143a7a97a6969dd690fb905acee54d9f753667c",
+        "comments_url": "https://api.github.com/repos/airbnb/javascript/commits/5143a7a97a6969dd690fb905acee54d9f753667c/comments",
+        "author": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "ljharb",
+            "id": 45469,
+            "node_id": "MDQ6VXNlcjQ1NDY5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/45469?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ljharb",
+            "html_url": "https://github.com/ljharb",
+            "followers_url": "https://api.github.com/users/ljharb/followers",
+            "following_url": "https://api.github.com/users/ljharb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ljharb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ljharb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ljharb/subscriptions",
+            "organizations_url": "https://api.github.com/users/ljharb/orgs",
+            "repos_url": "https://api.github.com/users/ljharb/repos",
+            "events_url": "https://api.github.com/users/ljharb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ljharb/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "3cbf96de7cde974aab99f4ca85bd23ea0556c34a",
+                "url": "https://api.github.com/repos/airbnb/javascript/commits/3cbf96de7cde974aab99f4ca85bd23ea0556c34a",
+                "html_url": "https://github.com/airbnb/javascript/commit/3cbf96de7cde974aab99f4ca85bd23ea0556c34a"
+            }
+        ]
+    }
+]

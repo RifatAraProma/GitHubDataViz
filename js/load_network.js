@@ -1,5 +1,7 @@
 var node_list = []
 
+var color_map = {"creator": "#e31a1c" , "closed by": "#fb9a99", "commit": "#1f78b4", "commit author": "#b2df8a" , "file": "#a6cee3"}
+
 function linkStroke_mapper(link){
     if (node_list[link.target].label === "bugfix")  return "var(--bug)";
 
@@ -22,17 +24,6 @@ function node_redius_mapper(d){
 }
 
 
-function link_strength_mapper(d){
-
-    if(d.source == 1)
-        return 0;
-
-    else
-        return 0.5;
-}
-
-
-
 function load_network(selected_issue_json, selected_issue) {
     clearDiv()
     node_list = selected_issue_json.nodes
@@ -45,7 +36,7 @@ function load_network(selected_issue_json, selected_issue) {
         linkStrokeWidth: l => Math.sqrt(l.value),
         width: window.innerWidth,
         height: window.innerHeight * 1.5,
-        linkStrength: link_strength_mapper,
+        colors: color_map
         // // invalidation // a promise to stop the simulation when the cell is re-run
     })
     console.log(selected_issue_json)
@@ -76,15 +67,8 @@ function ForceGraph({
     linkStrokeOpacity = 1, // link stroke opacity
     linkStrokeWidth = 4, // given d in links, returns a stroke width in pixels
     linkStrokeLinecap = "round", // link stroke linecap
-    linkStrength,
-    colors = ["#fb9a99",
-    "#1f78b4",
-    "#b2df8a",
-    "#e31a1c",
-    "#a6cee3",
-    "#e31a1c",
-    "#33a02c",
-    "#a6cee3"], // an array of color strings, for the node groups
+    linkStrength  = 0.5,
+    colors, // an array of color strings, for the node groups
     width = 640, // outer width, in pixels
     height = 400, // outer height, in pixels
     invalidation // when this promise resolves, stop the simulation
@@ -99,7 +83,6 @@ function ForceGraph({
     const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);
     const W = typeof linkStrokeWidth !== "function" ? null : d3.map(links, linkStrokeWidth);
     const L = typeof linkStroke !== "function" ? null : d3.map(links, linkStroke);
-    //const LStrength = typeof linkStrength !== "function" ? null : d3.map(links, linkStrength)
 
     // Replace the input nodes and links with mutable objects for the simulation.
     nodes_copy = nodes;
@@ -111,7 +94,8 @@ function ForceGraph({
     if (G && nodeGroups === undefined) nodeGroups = d3.sort(G);
 
     // Construct the scales.
-    const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);
+    // const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);
+    const color = colors;
 
     // Construct the forces.
     const forceNode = d3.forceManyBody();
@@ -154,7 +138,7 @@ function ForceGraph({
 
     if (W) link.attr("stroke-width", ({ index: i }) => W[i]);
     if (L) link.attr("stroke", ({ index: i }) => L[i]);
-    if (G) node.attr("fill", ({ index: i }) => G[i] == 'issue' ? "var(--" + issue_node["state"] + "-issue-color)" : color(G[i]));
+    if (G) node.attr("fill", ({ index: i }) => G[i] == 'issue' ? "var(--" + issue_node["state"] + "-issue-color)" : color[G[i]]);
     if (T) node.append("title").text(({ index: i }) => nodes_copy[i]["name"]);
     if (invalidation != null) invalidation.then(() => simulation.stop());
 
@@ -166,7 +150,7 @@ function ForceGraph({
     nodeGroups.forEach(group =>{
         if(legend_dict[group] != undefined) return;
         legend_dict[group] = true
-        svg.append("rect").attr("x", 600).attr("y", legend_distance_y).attr("width", 20).attr("height", 20).style("fill", () => { return group == 'issue' ?  "var(--" + issue_node["state"] + "-issue-color)" : color(group)})
+        svg.append("rect").attr("x", 600).attr("y", legend_distance_y).attr("width", 20).attr("height", 20).style("fill", () => { return group == 'issue' ?  "var(--" + issue_node["state"] + "-issue-color)" : color[group]})
         svg.append("text").attr("class", "legend-text").attr("x", 650).attr("y", legend_distance_y + 10).text(group).style("font-size", "16px").style("font-weight", "600").attr("alignment-baseline", "middle")
         legend_distance_y = legend_distance_y + 30
     })

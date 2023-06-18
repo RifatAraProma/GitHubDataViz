@@ -4,7 +4,6 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
       let chart_width = $(svg_name).width()* 0.95;
       let chart_height = $(svg_name).height()* 0.95;
       let chart = d3.select(svg_name).append("svg")
-                  .attr("id", "timeline-bar-" + type)
                   .attr("viewBox", [0, 0, chart_width, chart_height])
                   .attr("width", chart_width)
                   .attr("height", chart_height);

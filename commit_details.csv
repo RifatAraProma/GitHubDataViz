@@ -1,2 +1,0 @@
-sha,message,created,files_updated,diff,author
-b8634d2aa1f143989e96af70cb7ff7b0e8f5ffed,"[Dev Deps] update `markdownlint`, `markdownlint-cli`",1663564568.0,"['README.md', 'package.json']","[('README.md', [3742], [3742]), ('package.json', [43, 44], [43, 44]), ('packages/eslint-config-airbnb-base/package.json', [71, 80, 91], [71, 80, 91]), ('packages/eslint-config-airbnb-base/rules/best-practices.js', [70], []), ('packages/eslint-config-airbnb/package.json', [70, 74, 81, 82, 83, 87, 92, 93, 94], [70, 74, 81, 82, 83, 87, 92, 93, 94])]",Jordan Harband

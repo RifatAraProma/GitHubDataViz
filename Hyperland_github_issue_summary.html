@@ -70,7 +70,6 @@
                     <option value="state">Show issues state</option>
                     <option value="label">Show issue labels</option>
                 </select>
-                <button onclick="downloadSVG('timeline-bar-label', 'hyperland_issue_timeline_label')">Download svg</button>
             </div>
             <div class="container-div"><svg id="timeline" name="timeline" class="default_svg"></svg></div>
         </div>
@@ -297,7 +296,7 @@
                     state: row.state,
                     user: row.user,
                     assignees: row.assignees,
-                    closed_by: row.closed_by
+                    closed_by: row.closed_by == "" ? "closed by an external event" : row.closed_by
                 };
             }).then(rows => {
                 data = rows;
@@ -366,20 +365,22 @@
             //     i++;
             // });
 
-            sankeyJson.nodes.push({
-                "id": i,
-                "name": selected_issue["closed_by"],
-                "type": "closed by"
-            })
+            if (selected_issue["state"] == closed) {
+                sankeyJson.nodes.push({
+                    "id": i,
+                    "name": selected_issue["closed_by"],
+                    "type": "closed by"
+                })
 
-            sankeyJson.links.push({
-                "source": issue_id,
-                "target": i,
-                "value": 2
-            })
+                sankeyJson.links.push({
+                    "source": issue_id,
+                    "target": i,
+                    "value": 2
+                })
 
 
-            i++;
+                i++;
+            }
 
             commits.forEach(commit => {
                 if (commit.created >= time1 && commit.created <= time2) {

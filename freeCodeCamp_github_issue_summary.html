@@ -39,7 +39,6 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-
     <!-- <script type="text/javascript" src="src/jquery.multiselect.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/sankey.js"></script>
@@ -70,8 +69,11 @@
                     <option value="state">Show issues state</option>
                     <option value="label">Show issue labels</option>
                 </select>
+                <button onclick="downloadSVG('timeline-bar-label', 'freeCodecamp_issue_timeline')">Download svg</button>
             </div>
-            <div class="container-div"><svg id="timeline" name="timeline" class="default_svg"></svg></div>
+            <div class="container-div"><svg id="timeline" name="timeline" class="default_svg"></svg>
+
+            </div>
         </div>
         <div id="commit-details-sankey-div" style="display: none">
             <button id="backBtn" class="default-button" style="float: left" onclick="goBack()"><i
@@ -91,8 +93,8 @@
             <button id="optionsBtn" class="default-button">Options <i class="fa fa-ellipsis-v"
                     aria-hidden="true"></i></button>
 
-            <div id="file_update" style="text-align:center; width: 100%;" ></div>
-            <div id="histogram" style="text-align:center; width: 100%;" ></div>
+            <div id="file_update" style="text-align:center; width: 100%;"></div>
+            <div id="histogram" style="text-align:center; width: 100%;"></div>
             <!-- <div class="float-container">
                
             </div> -->
@@ -209,9 +211,9 @@
             document.getElementById("displayedFilesListHeader").innerHTML = "Top 5 files with most updates";
             document.getElementById("otherFilesListHeader").innerHTML = "Other files";
             file_list.forEach(file => {
-                file_update_freq.push({ name: file, update_freq: file_update_count[file] == undefined ? 1 : file_update_count[file], bugfix: file_update_for_bugfix_map[file] == undefined ? false : file_update_for_bugfix_map[file]});
+                file_update_freq.push({ name: file, update_freq: file_update_count[file] == undefined ? 1 : file_update_count[file], bugfix: file_update_for_bugfix_map[file] == undefined ? false : file_update_for_bugfix_map[file] });
             });
-            file_update_freq.sort((a, b) => { return b.update_freq - a.update_freq});
+            file_update_freq.sort((a, b) => { return b.update_freq - a.update_freq });
             let fileListLen = file_update_freq.length;
             lowerBound = fileListLen < 5 ? file_update_freq[fileListLen - 1].update_freq : file_update_freq[4].update_freq;
             upperBound = file_update_freq[0].update_freq;
@@ -422,9 +424,9 @@
                     let files = commit.files_updated.replace("[", "").replace("]", "").replaceAll("'", "").split(', ');
                     let files_diff = getFilesDiffList(commit.diff);
                     files.forEach(file => {
-                        if (file_dict[file] == undefined) {
+                        if (file_dict[file + commit.message] == undefined) {
 
-                            file_dict[file] = i;
+                            file_dict[file + commit.message] = i;
                             sankeyJson.nodes.push({
                                 "id": i,
                                 "name": file,
@@ -448,12 +450,12 @@
                         else {
                             sankeyJson.links.push({
                                 "source": commit_index,
-                                "target": file_dict[file],
+                                "target": file_dict[file + commit.message],
                                 "value": 2
                             })
 
                             sankeyJson.links.push({
-                                "source": file_dict[file],
+                                "source": file_dict[file + commit.message],
                                 "target": author_index,
                                 "value": 2
                             })
@@ -831,6 +833,42 @@
             let x_title = "Date";
             timeline = load_timeline("#timeline", data, title, "created", "closed", "title", x_title, "label");
         }
+
+        function downloadSVG(_svgElement, fileName) {
+            const svgElement = document.getElementById(_svgElement);
+            // Create a new SVG element with the same contents
+            const clonedSvg = svgElement.cloneNode(true);
+
+            // Get the computed style of the SVG element
+            const computedStyle = getComputedStyle(svgElement);
+
+            // Copy computed styles to the cloned SVG element
+            const clonedStyle = document.createElement('style');
+            clonedStyle.textContent = `
+                        :root { ${computedStyle.cssText} }
+                        `;
+            clonedSvg.insertBefore(clonedStyle, clonedSvg.firstChild);
+
+            // Convert SVG element to XML text
+            const serializer = new XMLSerializer();
+            const svgString = serializer.serializeToString(clonedSvg);
+
+            // Create a Blob object with the SVG XML
+            const blob = new Blob([svgString], { type: 'image/svg+xml' });
+
+            // Create a download link
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = fileName;
+
+            // Simulate a click on the link to trigger the download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(link.href);
+        }
+
+
 
     </script>
 

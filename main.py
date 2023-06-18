@@ -194,10 +194,10 @@ def get_commit_list (url):
 
     # If the JSON file contains a list, you can access it directly
     commit_json_list = data
-
+    print(type(commit_json_list))
     commit_list = []
     print(len(data))
-    for i in range(13, len(data)):
+    for i in range(29, len(data)):
         if(i >= len(commit_json_list)):
             break
         ref = commit_json_list[i]["sha"]
@@ -251,7 +251,12 @@ def get_commit_list (url):
 # print(list_of_commits)
 # write_commit_to_csv(list_of_commits)
 
-# list_of_commits = get_commits("https://api.github.com/repos/facebook/react-native/commits")
-list_of_commits = get_commit_list("https://api.github.com/repos/facebook/react-native/commits")
+# # list_of_commits = get_commits("https://api.github.com/repos/facebook/react-native/commits")
+# list_of_commits = get_commit_list("https://api.github.com/repos/facebook/react-native/commits")
+# print(list_of_commits)
+# write_commit_to_csv(list_of_commits)
+
+# list_of_commits = get_commits("https://api.github.com/repos/airbnb/javascript/commits")
+list_of_commits = get_commit_list("https://api.github.com/repos/airbnb/javascript/commits")
 print(list_of_commits)
 write_commit_to_csv(list_of_commits)

@@ -61,6 +61,7 @@
 <body>
 
     <div class="page">
+
         <div>
             <button id="vizToggleBtn" class="toggle-viz-button" onclick="changeViz()">Show File Update Summary</button>
         </div>
@@ -303,7 +304,7 @@
                 let title = "Issues with their creation and closing dates";
                 let x_title = "Date";
                 let type = 'state'
-                timeline = load_timeline("#timeline", data, title, "created", "closed", "title", x_title, type);
+                timeline = load_timeline("#timeline", data, title, "created", "closed", "number", x_title, type);
             }).catch(error => {
                 console.log(error);
             });
@@ -824,13 +825,13 @@
             console.log("Showing issues state");
             let title = "Issues with their creation and closing dates";
             let x_title = "Date";
-            timeline = load_timeline("#timeline", data, title, "created", "closed", "title", x_title, "state");
+            timeline = load_timeline("#timeline", data, title, "created", "closed", "number", x_title, "state");
         }
 
         function showIssueLabels() {
             let title = "Issues with their creation and closing dates";
             let x_title = "Date";
-            timeline = load_timeline("#timeline", data, title, "created", "closed", "title", x_title, "label");
+            timeline = load_timeline("#timeline", data, title, "created", "closed", "number", x_title, "label");
         }
 
         function downloadSVG(_svgElement, fileName) {

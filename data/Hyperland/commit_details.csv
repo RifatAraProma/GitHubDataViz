@@ -26,7 +26,7 @@ This reverts commit 75d9795a065c0122e42d622fbeb83b18c47d4bbc.
 d36d14529e8e85573c1ec46487e132df652849ee,"xwayland: disconnect events on destroy
 
 thanks Kirill Primak",1685991107,['src/events/Windows.cpp'],,vaxerski
-668cf6635f42142b1a229e49f449b13895db551f,window: recalc on deco remove,1685951361,['src/Window.cpp'],,vaxerski
+668cf6635f42142b1a229e49f449b13895db551f,window: recalc on deco remove,1685560280,['src/Window.cpp'],,vaxerski
 73eb4d4a0132b32ee12439ee969f67700ba70608,"Make movetoworkspace register previous workspace (#2436)
 
 * Make movetoworkspace register previous workspace

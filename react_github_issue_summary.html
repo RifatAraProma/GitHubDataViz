@@ -71,7 +71,7 @@
                     <option value="label">Show issue labels</option>
                 </select>
             </div>
-            <div class="container-div"><svg id="timeline" name="timeline" class="default_svg" style="background-color: #dfd3c3;"></svg></div>
+            <div class="container-div"><svg id="timeline" name="timeline" class="default_svg"></svg></div>
         </div>
         <div id="commit-details-sankey-div" style="display: none">
             <button id="backBtn" class="default-button" style="float: left" onclick="goBack()"><i
@@ -296,7 +296,7 @@
                     state: row.state,
                     user: row.user,
                     assignees: row.assignees,
-                    closed_by: row.closed_by == "" ? "closed by an external event" : row.closed_by
+                    closed_by: row.closed_by == "" ? "not closed yet" : row.closed_by
                 };
             }).then(rows => {
                 data = rows;

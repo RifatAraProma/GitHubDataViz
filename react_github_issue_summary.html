@@ -364,8 +364,7 @@
             //     })
             //     i++;
             // });
-
-            if (selected_issue["state"] == closed) {
+            if (selected_issue["state"] == "closed") {
                 sankeyJson.nodes.push({
                     "id": i,
                     "name": selected_issue["closed_by"],

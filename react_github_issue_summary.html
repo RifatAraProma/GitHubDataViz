@@ -61,6 +61,7 @@
 <body>
 
     <div class="page">
+
         <div>
             <button id="vizToggleBtn" class="toggle-viz-button" onclick="changeViz()">Show File Update Summary</button>
         </div>
@@ -71,7 +72,7 @@
                     <option value="label">Show issue labels</option>
                 </select>
             </div>
-            <div class="container-div"><svg id="timeline" name="timeline" class="default_svg" style="background-color: #dfd3c3;"></svg></div>
+            <div class="container-div"><svg id="timeline" name="timeline" class="default_svg"></svg></div>
         </div>
         <div id="commit-details-sankey-div" style="display: none">
             <button id="backBtn" class="default-button" style="float: left" onclick="goBack()"><i
@@ -296,14 +297,14 @@
                     state: row.state,
                     user: row.user,
                     assignees: row.assignees,
-                    closed_by: row.closed_by == "" ? "closed by an external event" : row.closed_by
+                    closed_by: row.closed_by == "" ? "not closed yet" : row.closed_by
                 };
             }).then(rows => {
                 data = rows;
                 let title = "Issues with their creation and closing dates";
                 let x_title = "Date";
                 let type = 'state'
-                timeline = load_timeline("#timeline", data, title, "created", "closed", "title", x_title, type);
+                timeline = load_timeline("#timeline", data, title, "created", "closed", "number", x_title, type);
             }).catch(error => {
                 console.log(error);
             });
@@ -824,13 +825,13 @@
             console.log("Showing issues state");
             let title = "Issues with their creation and closing dates";
             let x_title = "Date";
-            timeline = load_timeline("#timeline", data, title, "created", "closed", "title", x_title, "state");
+            timeline = load_timeline("#timeline", data, title, "created", "closed", "number", x_title, "state");
         }
 
         function showIssueLabels() {
             let title = "Issues with their creation and closing dates";
             let x_title = "Date";
-            timeline = load_timeline("#timeline", data, title, "created", "closed", "title", x_title, "label");
+            timeline = load_timeline("#timeline", data, title, "created", "closed", "number", x_title, "label");
         }
 
     </script>

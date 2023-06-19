@@ -66,7 +66,7 @@ function load_file_update_summary(div_name, donut_data, freq_type) {
 
     radius_scale = d3.scaleOrdinal()
         .domain(update_freq_arr)
-        .range([radius + 20, radius + 30])
+        .range([radius, radius])
 
     totalUpdatedLines = 0;
     donut_data.forEach(entry => {

@@ -173,6 +173,7 @@ function load_issue_status(g, xScale, yScale, x1_field, x2_field, y_field, inner
 
       bars.append("title")
             .text(function (d) {
+                  console.log(d)
                   var closed_time = d.state == 'open' ? '' : "\nclosed: " + new Date(d[x2_field]);
                   var tooltip = d["title"] + "\ncreated: " + new Date(d[x1_field]) + closed_time;
                   return tooltip;
@@ -285,6 +286,7 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
 
       labelRect.append("title")
       .text(function (d) {
+            console.log(d)
             var closed_time = d.state == 'open' ? '' : "\nclosed: " + new Date(d[x2_field]);
             var tooltip = d[y_field] + "\ncreated: " + new Date(d[x1_field]) + closed_time;
             return tooltip;

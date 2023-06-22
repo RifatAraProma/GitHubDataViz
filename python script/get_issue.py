@@ -109,12 +109,12 @@ params = {
 
 # Send GET request to GitHub API
 response1 = requests.get(url, params=params)
-response2 = requests.get(url, params=params)
+
 
 # Check if response is successful (HTTP status code 200)
-if response1.status_code == 200 and response2.status_code == 200:
+if response1.status_code == 200:
     # Extract the JSON response
-    issues = response1.json() + response2.json()
+    issues = response1.json()
     # Save issues to a file
     with open("issues.json", "w") as file:
         json.dump(issues, file, indent=4)
@@ -153,4 +153,4 @@ if response1.status_code == 200 and response2.status_code == 200:
 
 else:
     # Print an error message if request fails
-    print(f"Failed to fetch issues. HTTP status code: {response2.status_code}")
+    print(f"Failed to fetch issues. HTTP status code: {response1.status_code}")

@@ -87,7 +87,6 @@ function load_commit() {
         $("#displayedFilesList").val(top_five);
 
         let freqCounter = 0;
-        console.log(file_update_freq);
         file_update_freq.forEach((file) => {
             if(file.update_freq == undefined){
                 file.update_freq = 0;

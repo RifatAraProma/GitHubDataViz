@@ -214,8 +214,7 @@
             file_update_freq.sort((a, b) => { return b.update_freq - a.update_freq});
             let fileListLen = file_update_freq.length;
             lowerBound = fileListLen < 5 ? file_update_freq[fileListLen - 1].update_freq : file_update_freq[4].update_freq;
-            upperBound = file_update_freq[0].update_freq;
-            console.log(file_update_freq)
+            upperBound = file_update_freq[0].update_freq;            
 
             var option = document.createElement("option");
             option.value = -1; // setting index of the entry as value to access it easy later on

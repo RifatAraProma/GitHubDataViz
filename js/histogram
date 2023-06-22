@@ -3,9 +3,15 @@ var height;
 var margin;
 
 function load_histogram(div_name, data, title) {
+
+    var tooltip = d3.select("body")
+        .append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+
     // set the dimensions and margins of the graph
     margin = { top: window.innerHeight * 0.5 * 0.05, right: window.innerWidth * 0.05, bottom: window.innerHeight * 0.5 * 0.1, left: window.innerWidth * 0.05 },
-    width = window.innerWidth;
+        width = window.innerWidth;
     height = window.innerHeight * 0.5;
 
     const COLOR_PALETTE = ["var(--color-severe-fg)"];
@@ -93,19 +99,39 @@ function load_histogram(div_name, data, title) {
         .style("fill", function (d) { return color(d.length); })
         .style("opacity", 0.8)
         .style("stroke", "black")
-        .on("mouseover", function () {
+        .on("mouseover", function (d) {
             d3.select(this)
                 .style("opacity", 1);
+
+            // Show tooltip
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", 0.9);
+
+            // Safely access event properties
+            var pageX = event.pageX || d3.event.pageX;
+            var pageY = event.pageY || d3.event.pageY;
+            var tooltip_text = d.currentTarget.__data__.length + " files have been updated " + d.currentTarget.__data__.x0 + "-" + d.currentTarget.__data__.x1 + " times";
+
+            // Position the tooltip
+            tooltip.html(tooltip_text)
+                .style("left", (pageX) + "px")
+                .style("top", (pageY - 28) + "px");
         })
         .on("mouseout", function (d) {
             d3.select(this)
                 .style("opacity", 0.8);
+
+            // Hide tooltip
+            tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
         })
         .on("click", function (d, i) {
             var mouseCoordinates = d3.pointer(event, this);
             var mouseX = mouseCoordinates[0];
             var mouseY = mouseCoordinates[1];
-            
+
             var clickedRectIndex = -1;
             var rects = d3.selectAll("rect.histogram-rect");
             rects.each(function (rectData, rectIndex) {
@@ -113,17 +139,12 @@ function load_histogram(div_name, data, title) {
                 var rectY = +d3.select(this).attr("y");
                 var rectWidth = +d3.select(this).attr("width");
                 var rectHeight = +d3.select(this).attr("height");
-    
+
                 if (mouseX >= rectX && mouseX <= rectX + rectWidth && mouseY >= rectY && mouseY <= rectY + rectHeight) {
                     clickedRectIndex = rectIndex;
                 }
             });
-    
-            console.log(clickedRectIndex);
+
             selectedUpdateFreq(bins[clickedRectIndex].x0, bins[clickedRectIndex].x1);
-        })
-        .append("title")
-        .text(function (d) {
-            return d.length + " files have been updated " + d.x0 + "-" + d.x1 + " times";
         });
 }

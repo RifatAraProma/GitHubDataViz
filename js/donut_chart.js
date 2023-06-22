@@ -102,6 +102,10 @@ function updateDonutChart(data, freq_type) {
 }
 
 function showPercentage(data_ready, arc, arcOver) {
+    var tooltip = d3.select("body")
+                    .append("div")
+                    .attr("class", "tooltip")
+                    .style("opacity", 0);
     svg.selectAll('arc')
         .data(data_ready)
         .enter()
@@ -113,7 +117,7 @@ function showPercentage(data_ready, arc, arcOver) {
         .attr('fill', function (d) { return (color(d.data.update_freq)) })
         .attr("stroke", "black")
         .style("stroke-width", "2px")
-        .style("opacity", 1)
+        .style("opacity", 0.7)
         .on("mouseover", function (d) {
             d3.select(this).transition()
                 .duration(500)
@@ -125,6 +129,21 @@ function showPercentage(data_ready, arc, arcOver) {
                 .attr("class", "updatedLineCount")
                 .attr("text-anchor", "middle")
                 .text(updatedLineCount);
+            
+            // Show tooltip
+            tooltip.transition()
+                    .duration(200)
+                    .style("opacity", 0.9);
+
+            // Safely access event properties
+            var pageX = event.pageX || d3.event.pageX;
+            var pageY = event.pageY || d3.event.pageY;
+            var tooltip_text = d.currentTarget.__data__.data.name;
+
+            // Position the tooltip
+            tooltip.html(tooltip_text)
+                    .style("left", (pageX) + "px")
+                    .style("top", (pageY - 28) + "px");
         })
         .on("mouseout", function (d) {
             d3.select(this).transition()
@@ -134,15 +153,18 @@ function showPercentage(data_ready, arc, arcOver) {
                 .outerRadius(function(d) { return radius_scale(d.data.update_freq); })
             );
             svg.select(".updatedLineCount").remove();
-        })
-        .append("title")
-        .text(function (d) {
-
-            return d.data.name + '\n' + Math.round((d.data.update_freq / totalUpdatedLines) * 100) + "% of total change";
+               // Hide tooltip
+               tooltip.transition()
+               .duration(500)
+               .style("opacity", 0);
         });
 }
 
 function showNumberOfLines(data_ready, arc, arcOver) {
+    var tooltip = d3.select("body")
+                    .append("div")
+                    .attr("class", "tooltip")
+                    .style("opacity", 0);
     svg.selectAll('arc')
         .data(data_ready)
         .enter()
@@ -166,6 +188,20 @@ function showNumberOfLines(data_ready, arc, arcOver) {
                 .attr("class", "updatedLineCountTextClass")
                 .attr("text-anchor", "middle")
                 .text(updatedLineCount);
+            // Show tooltip
+            tooltip.transition()
+                    .duration(200)
+                    .style("opacity", 0.9);
+
+            // Safely access event properties
+            var pageX = event.pageX || d3.event.pageX;
+            var pageY = event.pageY || d3.event.pageY;
+            var tooltip_text = d.currentTarget.__data__.data.name;
+
+            // Position the tooltip
+            tooltip.html(tooltip_text)
+                    .style("left", (pageX) + "px")
+                    .style("top", (pageY - 28) + "px");
         })
         .on("mouseout", function (d) {
             d3.select(this).transition()
@@ -175,10 +211,11 @@ function showNumberOfLines(data_ready, arc, arcOver) {
                 .outerRadius(function(d) { return radius_scale(d.data.update_freq); })
             );
             svg.selectAll("text.updatedLineCountTextClass").remove();
-        })
-        .append("title")
-        .text(function (d) {
-            return d.data.name + '\n' + d.data.update_freq + " lines were updated";
+
+            // Hide tooltip
+            tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
         });
 
 }

@@ -124,6 +124,11 @@ function load_timeline(svg_name, data, title, x1_field, x2_field, y_field, x_tit
 function load_issue_status(g, xScale, yScale, x1_field, x2_field, y_field, innerWidth) {
       clearChart();
 
+      var tooltip = d3.select("body")
+                        .append("div")
+                        .attr("class", "tooltip")
+                        .style("opacity", 0);
+
       // Generate bars
       var selectedBar = null;
       var bars = g.selectAll("rect_issue")
@@ -135,6 +140,9 @@ function load_issue_status(g, xScale, yScale, x1_field, x2_field, y_field, inner
                   showCommitBetweenWithSankey(d.currentTarget.__data__);
                   // ...
             });
+
+
+
 
       bars.append("rect")
             .attr("class", "issue_duration_bars")
@@ -152,7 +160,30 @@ function load_issue_status(g, xScale, yScale, x1_field, x2_field, y_field, inner
             .attr("width", function (d) {
                   return Math.abs(xScale(d[x2_field]) - xScale(d[x1_field]) - 20);
             })
-            .attr("height", yScale.bandwidth());
+            .attr("height", yScale.bandwidth())
+            .on("mouseover", function(event, d) {
+                  // Show tooltip
+                  tooltip.transition()
+                    .duration(200)
+                    .style("opacity", 0.9);
+                
+                  // Safely access event properties
+                  var pageX = event.pageX || d3.event.pageX;
+                  var pageY = event.pageY || d3.event.pageY;
+                  var closed_time = d.state == 'open' ? '' : '<br>' +"closed: " + new Date(d[x2_field]);
+                  var tooltip_text = d["title"] + '<br>' +"created: " + new Date(d[x1_field]) + closed_time;
+
+                  // Position the tooltip
+                  tooltip.html(tooltip_text)
+                    .style("left", (pageX) + "px")
+                    .style("top", (pageY - 28) + "px");
+                })
+                .on("mouseout", function() {
+                  // Hide tooltip
+                  tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+                });
 
       bars.append("polygon")
             .attr("class", "bar_triangle")
@@ -171,13 +202,13 @@ function load_issue_status(g, xScale, yScale, x1_field, x2_field, y_field, inner
                   return "var(--" + d.state + "-issue-color)";
             });
 
-      bars.append("title")
-            .text(function (d) {
-                  console.log(d)
-                  var closed_time = d.state == 'open' ? '' : "\nclosed: " + new Date(d[x2_field]);
-                  var tooltip = d["title"] + "\ncreated: " + new Date(d[x1_field]) + closed_time;
-                  return tooltip;
-            });
+      // bars.append("title")
+      //       .text(function (d) {
+      //             console.log(d)
+      //             var closed_time = d.state == 'open' ? '' : "\nclosed: " + new Date(d[x2_field]);
+      //             var tooltip = d["title"] + "\ncreated: " + new Date(d[x1_field]) + closed_time;
+      //             return tooltip;
+      //       });
 
 
 
@@ -200,6 +231,10 @@ function load_issue_status(g, xScale, yScale, x1_field, x2_field, y_field, inner
 
 function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerWidth) {
       clearChart();
+      var tooltip = d3.select("body")
+                        .append("div")
+                        .attr("class", "tooltip")
+                        .style("opacity", 0);
 
       let labels = []
       let label_dict = {}
@@ -240,12 +275,46 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
                               .attr("height", yScale.bandwidth())
                               .attr("rx", 2)
                               .attr("ry", 2)
-                              .on('click', function () {
+                              .on("mouseover", function(event) {
+                                    // Show tooltip
+                                    tooltip.transition()
+                                      .duration(200)
+                                      .style("opacity", 0.9);
+                                  
+                                    // Safely access event properties
+                                    var pageX = event.pageX || d3.event.pageX;
+                                    var pageY = event.pageY || d3.event.pageY;
+                                    var closed_time = d.state == 'open' ? '' : "<br>closed: " + new Date(d[x2_field]);
+                                    var tooltip_text = d[y_field] + "<br>created: " + new Date(d[x1_field]) + closed_time + "<br>Labels: ";
+                                    
+                                    let labels = d.labels;
+                                    let first = true
+                                    labels.forEach(l =>{
+                                          console.log(l["name"])
+                                          if(first){
+                                                first = false
+                                                tooltip_text += l["name"]
+                                          }
+                                          else{
+                                                tooltip_text += ", " +l["name"] 
+                                          }
+                                               
+                                    })
+                        
+                                    // Position the tooltip
+                                    tooltip.html(tooltip_text)
+                                      .style("left", (pageX) + "px")
+                                      .style("top", (pageY - 28) + "px");
+                                  })
+                                  .on("mouseout", function() {
+                                    // Hide tooltip
+                                    tooltip.transition()
+                                      .duration(500)
+                                      .style("opacity", 0);
+                                  }).on('click', function () {
                                     showCommitBetweenWithSankey(d);
                                     // ...
                               })
-                              .append("title")
-                              .text(d["title"]);
 
                               delX += offset;
                               if(d["state"] == "open" && xScale(d[x1_field]) + delX + 20 >= xScale(d[x2_field])){
@@ -284,22 +353,6 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
             return color_dict[d["title"]];
       });
 
-      labelRect.append("title")
-      .text(function (d) {
-            console.log(d)
-            var closed_time = d.state == 'open' ? '' : "\nclosed: " + new Date(d[x2_field]);
-            var tooltip = d[y_field] + "\ncreated: " + new Date(d[x1_field]) + closed_time;
-            return tooltip;
-      });
-
-
-      
-      // labelRect.append("title")
-      //       .text(function (d) {
-      //             var closed_time = d.state == 'open' ? '' : "\nclosed: " + new Date(d[x2_field]);
-      //             var tooltip = d[y_field] + "\ncreated: " + new Date(d[x1_field]) + closed_time;
-      //             return tooltip;
-      //       });
 
       // Legends for Gantt
       legend_distance_x = innerWidth + 28

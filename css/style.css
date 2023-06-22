@@ -409,3 +409,12 @@ h3 {
 	height: 100%;
 	font-weight: 500;
   }
+
+  .tooltip {
+    position: absolute;
+    pointer-events: none;
+    background-color: #f0e5bc;
+    border: 1px solid #797979;
+    padding: 10px;
+    font-size: 14px;
+}

@@ -42,6 +42,7 @@ function load_network(selected_issue_json, selected_issue) {
     console.log(selected_issue_json)
     const div = d3.select("#network-container")
     div.node().appendChild(chart)
+    
 }
 
 // Copyright 2021 Observable, Inc.
@@ -97,6 +98,11 @@ function ForceGraph({
     // const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);
     const color = colors;
 
+    var tooltip = d3.select("body")
+                    .append("div")
+                    .attr("class", "tooltip")
+                    .style("opacity", 0);
+
     // Construct the forces.
     const forceNode = d3.forceManyBody();
     const forceLink = d3.forceLink(links).id(({ index: i }) => N[i]).distance(60);
@@ -139,7 +145,28 @@ function ForceGraph({
     if (W) link.attr("stroke-width", ({ index: i }) => W[i]);
     if (L) link.attr("stroke", ({ index: i }) => L[i]);
     if (G) node.attr("fill", ({ index: i }) => G[i] == 'issue' ? "var(--" + issue_node["state"] + "-issue-color)" : color[G[i]]);
-    if (T) node.append("title").text(({ index: i }) => nodes_copy[i]["name"]);
+    if (T) node.on("mouseover", function(event, d) {
+                // Show tooltip
+                tooltip.transition()
+                .duration(200)
+                .style("opacity", 0.9);
+                let i = d.index
+                // Safely access event properties
+                var pageX = event.pageX || d3.event.pageX;
+                var pageY = event.pageY || d3.event.pageY;
+                var tooltip_text = nodes_copy[i]["name"];
+
+                // Position the tooltip
+                tooltip.html(tooltip_text)
+                .style("left", (pageX) + "px")
+                .style("top", (pageY - 28) + "px");
+            })
+            .on("mouseout", function() {
+                // Hide tooltip
+                tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+            });
     if (invalidation != null) invalidation.then(() => simulation.stop());
 
     // Legends for Gantt

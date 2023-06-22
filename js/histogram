@@ -111,7 +111,7 @@ function load_histogram(div_name, data, title) {
             // Safely access event properties
             var pageX = event.pageX || d3.event.pageX;
             var pageY = event.pageY || d3.event.pageY;
-            var tooltip_text = d.currentTarget.__data__.length + " files have been updated " + d.currentTarget.__data__.x0 + "-" + d.currentTarget.__data__.x1 + " times";
+            var tooltip_text = d.currentTarget.__data__.x0 + "-" + d.currentTarget.__data__.x1 + " lines were updated in " + d.currentTarget.__data__.length + " files.";
 
             // Position the tooltip
             tooltip.html(tooltip_text)

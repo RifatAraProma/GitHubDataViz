@@ -285,7 +285,7 @@ function load_issue_label(g, xScale, yScale, x1_field, x2_field, y_field, innerW
                                     var pageX = event.pageX || d3.event.pageX;
                                     var pageY = event.pageY || d3.event.pageY;
                                     var closed_time = d.state == 'open' ? '' : "<br>closed: " + new Date(d[x2_field]);
-                                    var tooltip_text = d[y_field] + "<br>created: " + new Date(d[x1_field]) + closed_time + "<br>Labels: ";
+                                    var tooltip_text = d["title"] + '<br>' +"created: " + new Date(d[x1_field]) + closed_time;;
                                     
                                     let labels = d.labels;
                                     let first = true

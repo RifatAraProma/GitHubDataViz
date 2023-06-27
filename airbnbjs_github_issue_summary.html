@@ -162,7 +162,7 @@
 
         // load_sankey("#vis_4")
 
-        d3.csv("data/AirBnbJs/commit_details.csv", (row, i) => {
+        d3.csv("data/AirBnbJS/commit_details.csv", (row, i) => {
             return {
                 message: row.message,
                 created: row.created * 1000, // millisecond
@@ -268,7 +268,7 @@
             file_update = load_file_update_summary("#file_update", data_to_show, "number of lines");
             histogram = load_histogram("#histogram", file_update_freq)
 
-            d3.csv("data/AirBnbJs/issue_details.csv", (row, i) => {
+            d3.csv("data/AirBnbJ/issue_details.csv", (row, i) => {
                 // console.log(row.created)
                 // row.created = new Date(row.created);
                 row.closed = row.closed == '' | row.closed == NaN ? new Date().getTime() : parseInt(row.closed) * 1000;

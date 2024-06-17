@@ -76,7 +76,7 @@ function load_histogram(div_name, data, title) {
     y.domain([0, d3.max(bins, function (d) { return d.length; })]);
 
     const yAxisG = svg.append("g")
-        .call(d3.axisLeft(y));
+        .call(d3.axisLeft(y).tickValues(y.ticks().filter(tick => Number.isInteger(tick))));
 
     yAxisG.append("text")
         .text("Number of files")

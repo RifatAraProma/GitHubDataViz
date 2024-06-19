@@ -269,7 +269,7 @@
             d3.csv("data/AITutor/issue_details.csv", (row, i) => {
                 // console.log(row.created)
                 // row.created = new Date(row.created);
-                row.closed = row.closed == '' | row.closed == NaN ? new Date().getTime() : parseInt(row.closed) * 1000;
+                row.closed = row.closed == '' | row.closed == NaN ? new Date("2023-06-22").getTime() : parseInt(row.closed) * 1000;
 
                 jsonString = row.labels.replace(/'/g, '"').replace(/\bFalse\b/g, 'false')
                     .replace(/\bTrue\b/g, 'true')
